@@ -13,6 +13,7 @@ import {
     IS_UNIT_DOT,
     FORESHADOW_OF_WORMHOLE_PREFIX,
 } from '../../../../src/constants/lyrics'
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Ash Wednesday',
@@ -162,6 +163,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
                     description: [
                         `For a song about two people who couldn't be any more different, I juxtaposed`,
@@ -169,7 +171,7 @@ export default {
                             anchor: `Arabic maqam`,
                             wiki: `Arabic_maqam`,
                         },
-                        `in the verses against`,
+                        `in the verses with`,
                         {
                             anchor: `Renaissance polyphony`,
                             wiki: `Polyphony`,
@@ -194,6 +196,7 @@ export default {
                         `First we`,
                         {
                             anchor: `laid Tourette's`,
+                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
@@ -202,7 +205,7 @@ export default {
                                             anchor: `Tourette syndrome`,
                                             wiki: `Tourette_syndrome`,
                                         },
-                                        `, who suffer from involuntary tics, Catherine and I might've said some unpleasant things on impulse during the breakup.`,
+                                        `— who suffer from involuntary tics— Catherine and I might've said some unpleasant things on impulse during the breakup.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
@@ -297,9 +300,10 @@ export default {
                         `I purge, with a`,
                         {
                             anchor: `dirge she'd deride`,
+                            todo: REVIEW,
                             cards: [
                                 {
-                                    description: `Up until then, I'd thought of songwriting as just a matter of composing melodies and chords. But Catherine valued music for its lyrics— and because mine at the time were of the nonsensical variety, she wasn't impressed by any of my songs that I played for her.`,
+                                    description: `Up until then, I'd thought of songwriting as just a matter of crafting melodies and chords. But Catherine valued music for its lyrics— and since mine at the time were of the nonsensical type, she wasn't impressed by any of my songs that I played for her.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
@@ -450,8 +454,9 @@ export default {
                         `who tried but failed to win her heart`,
                         {
                             anchor: `poised with brains`,
+                            todo: REVIEW,
                             card: {
-                                description: `Catherine undervalued the artistic strengths I'd always counted on to cover up my many weaknesses. So if I were to be worth keeping someday, then I simply couldn't have any weaknesses.`,
+                                description: `Catherine undervalued the artistic strengths I'd always counted on to cover my many weaknesses. So if I were to be worth keeping someday, then I simply couldn't have any weaknesses.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -464,9 +469,10 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
                     description: [
-                        `While a major third gets divided into two whole steps in Western music, a minor third can only be divided between a whole and a half. But quarter tones allow a minor third to be traversed in two equal steps, creating the sensation of a squished major third. I liked how this confused my ears, so I went overboard with these rapid-fire minor-third runs on the`,
+                        `While a major third gets divided into two whole steps in Western music, a minor third can only be divided between a whole and a half. But quarter tones allow a minor third to be traversed in two equal steps, creating the sensation of a squished major third. I liked how this confused my ears, so I went overboard with these rapid-fire three-note runs on the`,
                         {
                             anchor: `Dobro`,
                             wiki: `Dobro`,
@@ -519,14 +525,15 @@ export default {
                         `in`,
                         {
                             anchor: `famous raincoat`,
+                            todo: REVIEW,
                             card: {
                                 description: [
-                                    `Catherine was the one who introduced me to the works of Leonard Cohen. It was her impassioned reading of his song "`,
+                                    `Catherine was the one who introduced me to the works of Leonard Cohen. Through her impassioned reading of his song "`,
                                     {
                                         anchor: `Famous Blue Raincoat`,
                                         wiki: `Famous_Blue_Raincoat`,
                                     },
-                                    `" that helped me understand the heights that great lyrics can reach.`,
+                                    `," I finally grasped the heights that great lyrics can reach.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -536,9 +543,10 @@ export default {
                         },
                         {
                             anchor: `unknown to roam`,
+                            todo: REVIEW,
                             cards: [
                                 {
-                                    description: `"Raincoat" is slang for a condom, of which the benefit is unknown to "Rome," given the Catholic Church's stance against birth control. Since Catherine had vowed not to engage in premarital sex, we never needed to use one.`,
+                                    description: `"Raincoat" is slang for a condom, of which the benefit is unknown to "Rome"— given the Catholic Church's stance against birth control. Since Catherine had vowed not to engage in premarital sex, we never needed to use one.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                         [PUN]: true,
@@ -589,9 +597,10 @@ export default {
                         },
                         {
                             anchor: `went clear`,
+                            todo: REVIEW,
                             card: {
                                 description: [
-                                    `After Catherine cleared me from her life, my hope was to win her back by reading books. Since she loved Leonard Cohen, I started with`,
+                                    `After Catherine cleared me from her life, my hope was to win her back by reading books. Since she loved Cohen, I started with`,
                                     {
                                         isItalic: true,
                                         lyric: `Beautiful Losers`,
@@ -616,6 +625,7 @@ export default {
                         `—`,
                         {
                             anchor: `my Tekakwitha`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     {
@@ -627,12 +637,12 @@ export default {
                                         isItalic: true,
                                         lyric: `Beautiful Losers`,
                                     },
-                                    `, so I assumed that going clear was also a reference to the legend that her`,
+                                    `, so I assumed that going clear also referred to the legend that her`,
                                     {
                                         anchor: `smallpox`,
                                         wiki: `Smallpox`,
                                     },
-                                    `scars vanished miraculously upon her death.`,
+                                    `scars miraculously vanished upon her death.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -809,9 +819,10 @@ export default {
                         `us wretched souls`,
                         {
                             anchor: `cursed to be born`,
+                            todo: REVIEW,
                             cards: [
                                 {
-                                    description: `I never understood why the Catholic Church extends its pro-life stance to the unborn of other faiths. After all, this just trades away the certainty of an aborted fetus going to heaven, for a living child's likelihood of going to hell.`,
+                                    description: `I never understood why the Catholic Church extends its pro-life stance to the unborn of other faiths. After all, this just trades away an aborted fetus's certainty of going to heaven, for a living child's likelihood of going to hell.`,
                                     dotKeys: {
                                         [OBSERVATION]: true,
                                     },
@@ -864,6 +875,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
                     // NOTE: Counterpoint is a wiki later in Garryowen.
                     description: [
@@ -877,7 +889,7 @@ export default {
                             anchor: `pitch shifted`,
                             wiki: `Pitch_shift`,
                         },
-                        `them up an octave. This now gives them a ghostly sheen, which suits the mood of a rain-soaked evening, I'd say.`,
+                        `them up an octave, thus lending them a ghostly sheen— which suits the mood of a rain-soaked evening, I'd say.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -934,6 +946,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
                     description: [
                         `While fleshing out the lyrics in this chorus, I noticed that a handful of words in the first stanza are`,
@@ -941,7 +954,7 @@ export default {
                             anchor: `homophones`,
                             wiki: `Homophone`,
                         },
-                        `of their counterparts in the second, like "mourn" with "morn," and "born" with "borne." So I tried to make the two stanzas match phonetically wherever possible, which then gave me the idea for doublespeaker rhyme later on.`,
+                        `of their counterparts in the second: "mourn" with "morn," for example, or "born" with "borne." So I tried to make the two stanzas match phonetically, which then gave me the idea for doublespeaker rhyme later on.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
