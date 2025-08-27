@@ -18,6 +18,7 @@ import {
     REFRAIN,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
+import { REST, REVIEW } from '../../../containers/Annotations/constants/todos'
 
 /**
  * NOTE: Ash Wednesday and Pchelka`s Starry Journey have been switched from the
@@ -162,8 +163,9 @@ export default {
                         `"Why'd you`,
                         {
                             anchor: `hit your baby brother`,
+                            todo: REVIEW,
                             card: {
-                                description: `The times when I physically hurt my brother were actually rare. They just cast a long shadow in my memory. Since he could never understand or even acknowledge my remorse, I could never feel forgiven.`,
+                                description: `The times when I physically hurt my brother were actually few; they just cast a long shadow in my memory. Since he could never understand or even acknowledge my remorse, I could never feel forgiven.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -249,8 +251,9 @@ export default {
                         `We`,
                         {
                             anchor: `didn't hear a peep`,
+                            todo: REVIEW,
                             card: {
-                                description: `My brother would play by himself while sitting beside me for hours, never once speaking or interacting. It was a strange closeness we shared.`,
+                                description: `My brother would play by himself for hours while sitting beside me, never once speaking or interacting. It was a strange closeness we shared.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -269,6 +272,7 @@ export default {
                         lyric: [
                             {
                                 anchor: `Poor Sam Peabody`,
+                                todo: REVIEW,
                                 card: {
                                     description: [
                                         `When my family visited Canada one late summer, the`,
@@ -276,7 +280,7 @@ export default {
                                             anchor: `white-throated sparrow`,
                                             wiki: `White-throated_sparrow`,
                                         },
-                                        `was in breeding season. I found its birdsong haunting and longed to hear it again ever afterward. "Poor Sam Peabody" is a mnemonic used by birdwatchers to mimic its cadence and pitch.`,
+                                        `was in breeding season. I found its birdsong haunting, and longed to hear it again ever afterward. "Poor Sam Peabody" is a mnemonic used by birdwatchers to mimic its cadence and pitch.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
@@ -442,6 +446,8 @@ export default {
                     lyric: [
                         {
                             anchor: `Red pouches unspent`,
+                            todo: REST,
+                            problem: `Specify Chinese-influenced cultures?`,
                             card: {
                                 description: [
                                     `In Asian cultures, children receive money in`,
@@ -476,8 +482,9 @@ export default {
                         `"`,
                         {
                             anchor: `Are you a Beyonder`,
+                            todo: REVIEW,
                             card: {
-                                description: `According to RI Research, Beyonders are an ancient race of astral beings who were scattered across the universe. The ones who came to Earth adopted the likeness of humans, after which they lost all memory of their stellar origins. Yet even so, they're beset by a silent discomfort that they don't truly belong.`,
+                                description: `According to RI Research, Beyonders are an ancient race of astral beings who were scattered across the universe. The ones who came to Earth adopted the likeness of humans— and then lost all memory of their stellar origins. Yet even so, they're beset by a nagging discomfort that they don't truly belong.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -677,6 +684,7 @@ export default {
                         `Beyonders bleed the most, their`,
                         {
                             anchor: `roots unknown to them`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Though I had no way to know this as a child, RI Research likely drew their material from the notion of`,
@@ -684,7 +692,7 @@ export default {
                                         anchor: `star people`,
                                         wiki: `Star_people_(New_Age_belief)`,
                                     },
-                                    `, a New Age belief in the '70s. Like Beyonders, star people lost all memory of their stellar origins once they arrived on Earth.`,
+                                    `, a New Age belief from the '70s. Like Beyonders, star people lost all memory of their stellar origins once they arrived on Earth.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -752,8 +760,9 @@ export default {
                         `one they'll find only once we build the`,
                         {
                             anchor: `mothership`,
+                            todo: REVIEW,
                             card: {
-                                description: `The letters promised to update me on new developments, including the construction of spacecraft that would allow Beyonders to make contact with their extraplanetary kin.`,
+                                description: `The letters promised to update me on new developments, including the construction of spacecraft that would allow us Beyonders to contact our extraplanetary kin.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -785,9 +794,10 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
                     description: [
-                        `I decided to learn Tuvan throat singing after my first girlfriend Catherine took me to see a documentary called`,
+                        `I decided I'd learn to throat sing after my first girlfriend Catherine took me to see`,
                         {
                             isItalic: true,
                             lyric: {
@@ -795,12 +805,17 @@ export default {
                                 wiki: `Genghis_Blues`,
                             },
                         },
-                        `. Within a week I was sounding out the main`,
+                        `, a documentary about blind blues musician`,
+                        {
+                            anchor: `Paul Pena`,
+                            wiki: `Paul_Pena`,
+                        },
+                        `. Unlike Pena, who learned by ear, I managed to find a library book on it— so within a week, I was sounding out the main`,
                         {
                             anchor: `partials`,
                             wiki: `Harmonic_series_(music)`,
                         },
-                        `, which impressed her greatly. I've been trying to recapture the glory of that moment ever since.`,
+                        `. This impressed Catherine greatly, and ever since, I've lived my life trying to recapture the glory of that moment.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
@@ -917,13 +932,14 @@ export default {
                         `as`,
                         {
                             anchor: `omerta`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     {
                                         anchor: `Omerta`,
                                         wiki: `Omertà`,
                                     },
-                                    `is the Mafia's code of silence, which discourages cooperation with authorities. I'm sure I wasn't the first kid who noticed similarities between the unspoken rules of the schoolyard and those of the criminal underworld.`,
+                                    `is the Mafia's code of silence, which discourages cooperation with authorities. I'm sure I wasn't the first kid who noticed similarities between the unspoken rules of the schoolyard, and those of the criminal underworld.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -950,6 +966,7 @@ export default {
                         `We knew the`,
                         {
                             anchor: `shortest ciphers`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `The shorter the`,
@@ -957,7 +974,7 @@ export default {
                                         anchor: `cryptogram`,
                                         wiki: `Cryptogram`,
                                     },
-                                    `, the fewer clues it gives away, and thus the more difficult it is to solve. In the same vein, the more unresponsive my manner, the fewer openings I gave the bullies to provoke a response from me— and the less they then bothered to try.`,
+                                    `, the fewer clues it exposes— and thus the harder it becomes to solve. In the same vein, the less responsive my manner, the fewer openings I gave the bullies to provoke a response from me— and then the less they bothered to try.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -1080,8 +1097,9 @@ export default {
                         `to`,
                         {
                             anchor: `his slaughter`,
+                            todo: REVIEW,
                             card: {
-                                description: `I wrote this song during the peak of my activism with the animal rights movement, which takes a dim view of sled dog racing. Not only are dogs routinely abandoned or killed when they outlive their usefulness, but the race itself is grueling enough to cause death by overexertion.`,
+                                description: `I wrote this song during the peak of my activism within the animal rights movement, which takes a dim view of sled dog racing. Not only are dogs abandoned or killed when they outlive their usefulness, but the race itself is grueling enough to cause death by overexertion.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -1148,6 +1166,7 @@ export default {
                     lyric: [
                         `Next cabins come equipped with`,
                         {
+                            // NOTE: It's "pentobarbital" in American English.
                             anchor: `pentobarbitone syringe`,
                             card: {
                                 // NOTE: Euthanasia has a wiki in Cremated.
@@ -1181,8 +1200,9 @@ export default {
                         `I'm`,
                         {
                             anchor: `sorry I bailed`,
+                            todo: REVIEW,
                             card: {
-                                description: `By wanting to rejoin the company of others, I felt like I was betraying my brother somehow. Unlike me, he wasn't a tourist in the land of autism. He wasn't free to come and go as he pleased.`,
+                                description: `By wanting to rejoin the company of others, I felt like I was betraying my brother somehow. Unlike me, he wasn't a tourist in the land of autism; he wasn't free to come and go as he pleased.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -1224,6 +1244,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
                     description: [
                         {
@@ -1235,7 +1256,7 @@ export default {
                             anchor: `Space Oddity`,
                             wiki: `Space_Oddity`,
                         },
-                        `" closes with an instrumental outro that evokes the idea of failing radio transmissions. To get the same effect, I scraped the strings of an electric guitar against the pickup. I also added the sound of a metal rod bouncing on a single string near the bridge.`,
+                        `" closes with an instrumental outro that evokes the idea of failing radio transmissions. To get the same effect, I scraped the strings of an electric guitar against the pickup, and then added the sound of a metal rod bouncing on a single string near the bridge.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -1271,8 +1292,9 @@ export default {
                         `Mushka,`,
                         {
                             anchor: `per their bargain`,
+                            todo: REVIEW,
                             card: {
-                                description: `Though I faked autism for only a year or so, the social repercussions lasted much longer, since I was now and forever the kid who did that really weird thing once. It's not that I lacked the will to repair my standing. But I was just as confused as anyone else about what had possessed me, and there were no guide books instructing me where to go from there.`,
+                                description: `Though I faked autism for only a year or so, the social repercussions lasted much longer, since I was now and forever the kid who did that really weird thing once. It's not that I lacked the will to repair my standing. But I was just as confused as anyone about what had possessed me, and there were no guide books instructing me where to go from there.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -1282,6 +1304,8 @@ export default {
                         `, I`,
                         {
                             anchor: `can't ever return`,
+                            todo: REST,
+                            problem: `Explain more clearly that the Christianity inexplicably came out of nowhere, and it started to become obvious that it was just some guy out of ideas.`,
                             card: {
                                 description: `Regardless, I'd grown disillusioned with RI Research by this point, as the letters had become overtly Christian in tone. It's not that I held Christianity to be conclusively false; it was just incongruous with all the previous talk of stellar origins.`,
                                 dotKeys: {
