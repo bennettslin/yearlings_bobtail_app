@@ -19,6 +19,7 @@ import {
     IS_UNIT_DOT,
     RESPONSE,
 } from '../../../../src/constants/lyrics'
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Odin',
@@ -33,7 +34,8 @@ export default {
     mixStartTime: `0:02:06.00`,
     playerReferenceTime: 559.438,
     playerStartTime: 555.277,
-    overview: `Taiwan showed me how differently I might've turned out if my parents hadn't come to America— yet I was still worlds away from what Sasha needed me to be. Life seemed both infinitely fluid and immovably fixed, and I wasn't sure which extreme frightened me more. Later that summer, when our house cat Odin died of old age, I sought spiritual explanations for my mortality. The finality of death was terrifying, after all— and yet, the eternal life promised by faith didn't feel any less so.`,
+    todo: REVIEW,
+    overview: `Taiwan showed me how differently I might've turned out had my parents not come to America… even as I was still worlds away from what Sasha needed me to be. Life seemed both infinitely fluid and immovably fixed, and I wasn't sure which extreme frightened me more. Later that summer, when our house cat Odin died of old age, I sought spiritual explanations for my mortality. The finality of death was terrifying, after all— and yet, the eternal life promised by faith didn't feel any less so.`,
     isDoublespeaker: true,
     lyricUnits: [
         {
@@ -80,6 +82,7 @@ export default {
                     lyricRight: [
                         {
                             anchor: `By lot`,
+                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `Lots are drawn by chance to decide an outcome, and it was my lot not to be born a Jew.`,
@@ -104,7 +107,7 @@ export default {
                                             anchor: `Sodom`,
                                             wiki: `Sodom_and_Gomorrah`,
                                         },
-                                        `. When his wife looked back, she was turned into a pillar of salt. Some see this as a cautionary tale for the faithful not to cohabit with the fallen.`,
+                                        `. When his wife looked back, she was turned into a pillar of salt— a cautionary tale, to some, for the faithful not to cohabit with the fallen.`,
                                     ],
                                     dotKeys: {
                                         [PUN]: true,
@@ -120,8 +123,9 @@ export default {
                     lyricLeft: [
                         {
                             anchor: `hiding place of retreat`,
+                            todo: REVIEW,
                             card: {
-                                description: `The "asleep" voice of the doublespeaker pair narrates a dream that melds the familiar setting of Los Angeles with the foreign sights of Taiwan. Having been absorbed in my drawings well into nighttime, I crawl out from the dusty space underneath my bed at home.`,
+                                description: `The "asleep" voice of the doublespeaker pair narrates a dream that melds the familiar setting of Los Angeles with the foreign sights of Taiwan: Having been absorbed in my drawings well into nighttime, I crawl out from the dusty space underneath my bed at home.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
@@ -133,6 +137,7 @@ export default {
                         `trifling`,
                         {
                             anchor: `tref must reseed the earth`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     {
@@ -144,7 +149,7 @@ export default {
                                         anchor: `kosher`,
                                         wiki: `Kashrut`,
                                     },
-                                    `. In Sasha's world, certain everyday foods weren't meant to be eaten. So one could also infer that certain boys in her everyday life weren't the kind she was meant to date…`,
+                                    `. In Sasha's world, certain everyday foods weren't meant to be eaten. One could then infer that certain boys in her everyday life weren't whom she was meant to date…`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -160,8 +165,9 @@ export default {
                         `This`,
                         {
                             anchor: `fridge's gallery in web's wake`,
+                            todo: REVIEW,
                             card: {
-                                description: `The cobwebs trailing from my clothes happen to cling to some of my drawings that I'd attached to the refrigerator, causing them to scatter onto the floor.`,
+                                description: `Attached to the refrigerator are some drawings of mine. The cobwebs trailing from my clothes happen to cling to them, scattering them onto the floor.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
@@ -172,8 +178,9 @@ export default {
                     lyricRight: [
                         {
                             anchor: `Indifferent galaxies`,
+                            todo: REVIEW,
                             card: {
-                                description: `The Buddhism of my upbringing didn't make much sense to me, partly because it clashed with the various faiths of my classmates. At the same time, it didn't make any more sense for them to be right, and my parents wrong. So with all beliefs equally suspect, I could only conceive of the universe as a limitless stretch of cold, empty space, in which we live and die to no greater concern.`,
+                                description: `The Buddhism of my upbringing didn't make much sense to me, partly because it clashed with the various faiths of my classmates. At the same time, it didn't make any more sense for them to be right, and my parents wrong. With all beliefs equally suspect, then, I could only conceive of the universe as a limitless expanse of cold, empty space— in which we live and die to no greater concern.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -191,9 +198,10 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
                     description: [
-                        `For this song, I wanted to capture the disorienting cycle of days spent among the foreign and nights dreaming of the familiar. And so I invented doublespeaker rhyme, a literary technique in which two columns of lyrics, written to rhyme syllable for syllable, are sung in harmony. Each voice is then isolated to an opposite speaker in the stereo mix, creating the audio version of a cinematic`,
+                        `For this song, I wanted to capture the disorienting cycle between days among the foreign, and nightly dreams of the familiar. And so I invented doublespeaker rhyme— a literary technique in which two columns of lyrics, written to rhyme syllable for syllable, are sung in harmony. Each voice is then isolated to an opposite speaker in the stereo mix, creating the audio version of a cinematic`,
                         {
                             anchor: `split screen`,
                             wiki: `Split_screen_(video_production)`,
