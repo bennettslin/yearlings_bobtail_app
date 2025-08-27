@@ -163,7 +163,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: [
                         `For a song about two people who couldn't be any more different, I juxtaposed`,
@@ -196,7 +195,6 @@ export default {
                         `First we`,
                         {
                             anchor: `laid Tourette's`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
@@ -303,7 +301,7 @@ export default {
                             todo: REVIEW,
                             cards: [
                                 {
-                                    description: `Up until then, I'd thought of songwriting as just a matter of crafting melodies and chords. But Catherine valued music for its lyrics— and since mine at the time were of the nonsensical type, she wasn't impressed by any of my songs that I played for her.`,
+                                    description: `Up until then, I'd thought of songwriting as just a matter of putting melodies and chords together. But Catherine valued music for its lyrics— and since mine were of the nonsensical variety, she wasn't impressed by any of my songs that I played for her.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
@@ -456,7 +454,7 @@ export default {
                             anchor: `poised with brains`,
                             todo: REVIEW,
                             card: {
-                                description: `Catherine undervalued the artistic strengths I'd always counted on to cover my many weaknesses. So if I were to be worth keeping someday, then I simply couldn't have any weaknesses.`,
+                                description: `Catherine undervalued the artistic strengths I'd always counted on to cover up my many weaknesses. So if I were to be worth keeping someday, then I simply couldn't have any weaknesses.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -472,7 +470,7 @@ export default {
                 todo: REVIEW,
                 card: {
                     description: [
-                        `While a major third gets divided into two whole steps in Western music, a minor third can only be divided between a whole and a half. But quarter tones allow a minor third to be traversed in two equal steps, creating the sensation of a squished major third. I liked how this confused my ears, so I went overboard with these rapid-fire three-note runs on the`,
+                        `While a major third gets divided into two whole steps in Western music, a minor third can only be divided between a whole and a half. But quarter tones allow a minor third to be traversed in two equal steps, creating the sensation of a squished major third. I liked the way this confused my ears, so I went overboard with these rapid-fire three-note runs on the`,
                         {
                             anchor: `Dobro`,
                             wiki: `Dobro`,
@@ -525,7 +523,6 @@ export default {
                         `in`,
                         {
                             anchor: `famous raincoat`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Catherine was the one who introduced me to the works of Leonard Cohen. Through her impassioned reading of his song "`,
@@ -543,7 +540,6 @@ export default {
                         },
                         {
                             anchor: `unknown to roam`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `"Raincoat" is slang for a condom, of which the benefit is unknown to "Rome"— given the Catholic Church's stance against birth control. Since Catherine had vowed not to engage in premarital sex, we never needed to use one.`,
@@ -597,7 +593,6 @@ export default {
                         },
                         {
                             anchor: `went clear`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `After Catherine cleared me from her life, my hope was to win her back by reading books. Since she loved Cohen, I started with`,
@@ -637,12 +632,12 @@ export default {
                                         isItalic: true,
                                         lyric: `Beautiful Losers`,
                                     },
-                                    `, so I assumed that going clear also referred to the legend that her`,
+                                    `, so I assumed that going clear also referred to the legend of her`,
                                     {
                                         anchor: `smallpox`,
                                         wiki: `Smallpox`,
                                     },
-                                    `scars miraculously vanished upon her death.`,
+                                    `scars, which miraculously vanished upon her death.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -822,7 +817,7 @@ export default {
                             todo: REVIEW,
                             cards: [
                                 {
-                                    description: `I never understood why the Catholic Church extends its pro-life stance to the unborn of other faiths. After all, this just trades away an aborted fetus's certainty of going to heaven, for a living child's likelihood of going to hell.`,
+                                    description: `I never understood why the Catholic Church extends its pro-life stance to the unborn of other faiths. After all, this just trades away an aborted fetus's certainty of heaven, for a living child's risk of hell.`,
                                     dotKeys: {
                                         [OBSERVATION]: true,
                                     },
@@ -889,7 +884,7 @@ export default {
                             anchor: `pitch shifted`,
                             wiki: `Pitch_shift`,
                         },
-                        `them up an octave, thus lending them a ghostly sheen— which suits the mood of a rain-soaked evening, I'd say.`,
+                        `them up an octave— thus lending them a ghostly sheen, which I came to like. It suits the mood of a rain-soaked evening, I'd say.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -954,7 +949,7 @@ export default {
                             anchor: `homophones`,
                             wiki: `Homophone`,
                         },
-                        `of their counterparts in the second: "mourn" with "morn," for example, or "born" with "borne." So I tried to make the two stanzas match phonetically, which then gave me the idea for doublespeaker rhyme later on.`,
+                        `of their counterparts in the second: "mourn" with "morn" and "born" with "borne," for example. So I tried to have the two stanzas match phonetically wherever possible, which then gave me the idea for doublespeaker rhyme later on.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
