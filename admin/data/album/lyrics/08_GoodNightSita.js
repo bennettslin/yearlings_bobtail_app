@@ -331,7 +331,7 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `Flashback to our first date, when Sita and I have arrived at a natural history museum: We start out by strolling past a display of Russian nesting dolls, known as`,
+                                    `Flashback to our first date, when Sita and I have arrived at a natural history museum: We set forth by strolling past a display of Russian nesting dolls, known as`,
                                     {
                                         anchor: `matryoshkas`,
                                         wiki: `Matryoshka_doll`,
@@ -601,7 +601,6 @@ export default {
                         `for if the`,
                         {
                             anchor: `tactic is to stall`,
-                            todo: REVIEW,
                             card: {
                                 description: `My friends used to advise me to wait three days before calling a woman— yet it was always agony when she'd take just as long to call me back.`,
                                 dotKeys: {
@@ -622,7 +621,6 @@ export default {
                         `what this`,
                         {
                             anchor: `understudy sought`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `As an`,
@@ -698,17 +696,17 @@ export default {
                 todo: REVIEW,
                 card: {
                     description: [
-                        `To keep going with the '70s feel of this song, I gathered ideas from`,
+                        `To keep going with the '70s feel of this song, I studied the complex interplay between the two lead guitarists from`,
                         {
                             anchor: `Television`,
                             wiki: `Television_(band)`,
                         },
-                        `, a band well known for the complex interplay between their two lead guitarists. The tumbling triplets heard here were inspired by their song "Friction," off the album`,
+                        `, a band recommended to me by a record store clerk. The song "Friction," off their album`,
                         {
                             anchor: `Marquee Moon`,
                             wiki: `Marquee_Moon`,
                         },
-                        `.`,
+                        `, inspired the tumbling triplets heard here.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -755,7 +753,7 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `I eventually learned to welcome rejection, since I could use it as subject matter to write new songs. But this, in turn, meant a lifetime of getting rejected can`,
+                                    `In time I learned to welcome rejection, since I could use it as inspiration to write new songs. But this, in turn, meant a lifetime of getting rejected can`,
                                     {
                                         isEmphasis: true,
                                         lyric: `itself`,
@@ -1051,7 +1049,7 @@ export default {
                             anchor: `An Occurrence at Owl Creek Bridge`,
                             wiki: `An_Occurrence_at_Owl_Creek_Bridge`,
                         },
-                        `," a short story with a twist ending, in which a seemingly long span of time is revealed to have passed in an instant. And now the entirety of this song, during which I've recalled every date with Sita so far, turns out to have taken place within a brief exchange of farewells.`,
+                        `," a short story with a twist ending, in which a seemingly long span of time is revealed to have passed in an instant. And now the entirety of this song— during which I've recalled every date with Sita so far— turns out to have taken place within a brief exchange of farewells.`,
                     ],
                     dotKeys: {
                         [NARRATIVE]: true,
