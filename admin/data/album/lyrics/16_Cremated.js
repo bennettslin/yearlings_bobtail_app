@@ -15,7 +15,7 @@ import {
     IS_UNIT_DOT,
     FORESHADOW_OF_WORMHOLE_PREFIX,
 } from '../../../../src/constants/lyrics'
-import { REST, REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
+import { REST, REVISE } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Cremated',
@@ -873,7 +873,6 @@ export default {
                         `, hears not a`,
                         {
                             anchor: `worrisome`,
-                            todo: REVIEW,
                             card: {
                                 description: `Given how self-centered I was with Sita, it seemed odd to have only good wishes for Miriam after we broke up. But it's because I came away knowing I was indeed worthy of dating the Maras of the world; I didn't have this certainty before, so it felt like an amazing bargain.`,
                                 dotKeys: {

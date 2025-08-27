@@ -1,5 +1,3 @@
-import { REVIEW } from '../../../containers/Annotations/constants/todos'
-
 export default {
     title: 'epilogue',
     isLogue: true,
@@ -9,11 +7,10 @@ export default {
      * song to repeat itself without the player ending first.
      */
     playerStartTime: 3576.7,
-    todo: REVIEW,
     overview: [
         `Thanks for listening! So what do I hope to gain by putting out this audio webcomic, almost two decades after the album itself was made? In brief, I'm still looking for help— whether in the form of a traditional label deal, or some modern arrangement devised by forward-thinking partners.`,
         [
-            `With the indie takeover of music, it's now on the artist to go from "zero to one"— that is, to get themselves known; only then does a partner help to take them "from one to`,
+            `With the indie takeover of music, it's now on the artist to go "from zero to one"— that is, to get themselves known; only then does a partner help to take them "from one to`,
             {
                 isItalic: true,
                 lyric: `n`,

@@ -17,7 +17,7 @@ import {
     OUTRO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REST, REVIEW } from '../../../containers/Annotations/constants/todos'
+import { REST } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Constellations!',
@@ -758,7 +758,6 @@ export default {
                         `of`,
                         {
                             anchor: `avatars`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `In Hinduism,`,
@@ -1060,7 +1059,6 @@ export default {
                         {
                             // NOTE: I changed from "Uighuress."
                             anchor: `a'duct We-yghuress`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `The Mongols would slay the men and seize the women of the lands they conquered. This fate was no doubt met by the`,
@@ -1748,7 +1746,6 @@ export default {
                     lyric: [
                         {
                             anchor: `Pullar switch`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `Back at Howie's parents' place, I'm crashing on a couch in the attic. There's an old black-and-white television set in front of me, and I "pull the" switch to turn it on.`,
@@ -1806,7 +1803,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: [
                         `For a song about recreational drug use, I naturally turned to the Beatles in their psychedelic era for musical ideas. "`,

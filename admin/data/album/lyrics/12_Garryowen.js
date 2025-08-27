@@ -16,7 +16,7 @@ import {
     OUTRO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REST, REVIEW } from '../../../containers/Annotations/constants/todos'
+import { REST } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Garryowen',
@@ -318,7 +318,6 @@ export default {
                         },
                         {
                             anchor: `aren't love`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Throughout our budding friendship, Sita had neglected to mention her sexual intimacy with past partners. When I found out, she tried to console me by pointing out that it was always shy of intercourse; and furthermore, this was`,
@@ -490,7 +489,6 @@ export default {
                         `fill up a package strapped to your`,
                         {
                             anchor: `scapegirl`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `In Biblical times, a community absolved its sins by ritually placing them`,
