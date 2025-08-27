@@ -131,7 +131,7 @@ export default {
                             anchor: `sadness with patience`,
                             todo: REVIEW,
                             card: {
-                                description: `Luckily, this was familiar terrain for me; after all, I'd spent my childhood channeling misery into various art projects. And remaking yourself into an attractive person is really just the ultimate art project.`,
+                                description: `Luckily, this was familiar terrain for me. After all, I'd spent my childhood channeling misery into various art projects— and remaking yourself into an attractive person is really just the ultimate art project.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -836,7 +836,7 @@ export default {
                             cards: [
                                 {
 
-                                    description: `In short, everyone does what you'd expect them to do, given what you can expect them to want— and a social scene is just the sum total of all that. No one gets in your way to spite you… which means you can only react with good humor, should your best-laid plans fall apart.`,
+                                    description: `In short, everyone does what you'd expect them to do, given what you can expect them to want… and a social scene is just the sum total of all that. No one gets in your way to spite you— which means you can only react with good humor, should your best-laid plans fall apart.`,
                                     dotKeys: {
                                         [OBSERVATION]: true,
                                     },
