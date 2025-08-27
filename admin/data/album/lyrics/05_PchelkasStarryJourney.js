@@ -163,9 +163,8 @@ export default {
                         `"Why'd you`,
                         {
                             anchor: `hit your baby brother`,
-                            todo: REVIEW,
                             card: {
-                                description: `The times when I physically hurt my brother were actually few; they just cast a long shadow in my memory. Since he could never understand or even acknowledge my remorse, I could never feel forgiven.`,
+                                description: `The times when I physically hurt my brother were actually rare; they just cast a long shadow in my memory. Since he could never understand or even acknowledge my remorse, I could never feel forgiven.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -251,7 +250,6 @@ export default {
                         `We`,
                         {
                             anchor: `didn't hear a peep`,
-                            todo: REVIEW,
                             card: {
                                 description: `My brother would play by himself for hours while sitting beside me, never once speaking or interacting. It was a strange closeness we shared.`,
                                 dotKeys: {
@@ -272,7 +270,6 @@ export default {
                         lyric: [
                             {
                                 anchor: `Poor Sam Peabody`,
-                                todo: REVIEW,
                                 card: {
                                     description: [
                                         `When my family visited Canada one late summer, the`,
@@ -484,7 +481,7 @@ export default {
                             anchor: `Are you a Beyonder`,
                             todo: REVIEW,
                             card: {
-                                description: `According to RI Research, Beyonders are an ancient race of astral beings who were scattered across the universe. The ones who came to Earth adopted the likeness of humans— and then lost all memory of their stellar origins. Yet even so, they're beset by a nagging discomfort that they don't truly belong.`,
+                                description: `According to RI Research, Beyonders are an ancient race of astral beings who were scattered across the universe. The ones who came to Earth adopted the likeness of humans— and then lost all memory of their stellar origins. Even so, however, they're beset by a nagging discomfort that they don't truly belong.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -684,7 +681,6 @@ export default {
                         `Beyonders bleed the most, their`,
                         {
                             anchor: `roots unknown to them`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Though I had no way to know this as a child, RI Research likely drew their material from the notion of`,
@@ -762,7 +758,7 @@ export default {
                             anchor: `mothership`,
                             todo: REVIEW,
                             card: {
-                                description: `The letters promised to update me on new developments, including the construction of spacecraft that would allow us Beyonders to contact our extraplanetary kin.`,
+                                description: `The letters promised to update me on new developments, such as spacecraft that would allow us Beyonders to make contact with our extraplanetary kin.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -810,12 +806,12 @@ export default {
                             anchor: `Paul Pena`,
                             wiki: `Paul_Pena`,
                         },
-                        `. Unlike Pena, who learned by ear, I managed to find a library book on it— so within a week, I was sounding out the main`,
+                        `. Unlike Pena, who learned by ear, I managed to find a library book on it, so I was sounding out the main`,
                         {
                             anchor: `partials`,
                             wiki: `Harmonic_series_(music)`,
                         },
-                        `. This impressed Catherine greatly, and ever since, I've lived my life trying to recapture the glory of that moment.`,
+                        `within days— which impressed Catherine greatly. I've been trying to recapture the glory of that moment ever since.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
@@ -932,7 +928,6 @@ export default {
                         `as`,
                         {
                             anchor: `omerta`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     {
@@ -969,12 +964,12 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `The shorter the`,
+                                    `The shorter a`,
                                     {
                                         anchor: `cryptogram`,
                                         wiki: `Cryptogram`,
                                     },
-                                    `, the fewer clues it exposes— and thus the harder it becomes to solve. In the same vein, the less responsive my manner, the fewer openings I gave the bullies to provoke a response from me— and then the less they bothered to try.`,
+                                    `, the fewer clues it reveals— and thus the harder it becomes to solve. In the same vein, the less responsive my manner, the fewer openings I gave the bullies to provoke a response from me— and then the less they bothered to try.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -1097,7 +1092,6 @@ export default {
                         `to`,
                         {
                             anchor: `his slaughter`,
-                            todo: REVIEW,
                             card: {
                                 description: `I wrote this song during the peak of my activism within the animal rights movement, which takes a dim view of sled dog racing. Not only are dogs abandoned or killed when they outlive their usefulness, but the race itself is grueling enough to cause death by overexertion.`,
                                 dotKeys: {
@@ -1200,7 +1194,6 @@ export default {
                         `I'm`,
                         {
                             anchor: `sorry I bailed`,
-                            todo: REVIEW,
                             card: {
                                 description: `By wanting to rejoin the company of others, I felt like I was betraying my brother somehow. Unlike me, he wasn't a tourist in the land of autism; he wasn't free to come and go as he pleased.`,
                                 dotKeys: {
@@ -1244,7 +1237,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: [
                         {
@@ -1294,7 +1286,7 @@ export default {
                             anchor: `per their bargain`,
                             todo: REVIEW,
                             card: {
-                                description: `Though I faked autism for only a year or so, the social repercussions lasted much longer, since I was now and forever the kid who did that really weird thing once. It's not that I lacked the will to repair my standing. But I was just as confused as anyone about what had possessed me, and there were no guide books instructing me where to go from there.`,
+                                description: `Though I faked autism for only a year or so, the social repercussions lasted much longer— since I was now and forever the kid who did that really weird thing once. It's not that I lacked the will to repair my standing; but I was just as confused as anyone else about what had got into me, and there were no guide books instructing where to go from there.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
