@@ -1,3 +1,4 @@
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'epilogue',
@@ -8,6 +9,7 @@ export default {
      * song to repeat itself without the player ending first.
      */
     playerStartTime: 3576.7,
+    todo: REVIEW,
     overview: [
         `Thanks for listening! So what do I hope to gain by putting out this audio webcomic, almost two decades after the album itself was made? In brief, I'm still looking for help— whether in the form of a traditional label deal, or some modern arrangement devised by forward-thinking partners.`,
         [
@@ -19,7 +21,7 @@ export default {
             `"— to make the public care. Young folks know of no other paradigm, of course… but I still refuse to accept it. And not just because I'm from an earlier time; it's a waste of everyone's strengths!`,
         ],
         [
-            `Let's face it: Music was better when the`,
+            `Let's face it, music was better when the`,
             {
                 isEmphasis: true,
                 lyric: `partner`,
