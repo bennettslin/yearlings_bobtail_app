@@ -481,7 +481,7 @@ export default {
                             anchor: `Are you a Beyonder`,
                             todo: REVIEW,
                             card: {
-                                description: `According to RI Research, Beyonders are an ancient race of astral beings who were scattered across the universe. The ones who came to Earth adopted the likeness of humans— and then lost all memory of their stellar origins. Even so, however, they're beset by a nagging discomfort that they don't truly belong.`,
+                                description: `According to RI Research, Beyonders are an ancient race of astral beings who were scattered across the universe. The ones who came to Earth adopted the likeness of humans— and then lost all memory of their stellar origins. Even so, they're beset by a nagging discomfort that they don't truly belong.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -758,7 +758,7 @@ export default {
                             anchor: `mothership`,
                             todo: REVIEW,
                             card: {
-                                description: `The letters promised to update me on new developments, such as spacecraft that would allow us Beyonders to make contact with our extraplanetary kin.`,
+                                description: `The letters promised to update me on new developments, like the construction of spacecraft— which would allow us Beyonders to make contact with our extraplanetary kin.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -790,7 +790,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: [
                         `I decided I'd learn to throat sing after my first girlfriend Catherine took me to see`,
@@ -961,7 +960,6 @@ export default {
                         `We knew the`,
                         {
                             anchor: `shortest ciphers`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `The shorter a`,
@@ -1286,7 +1284,7 @@ export default {
                             anchor: `per their bargain`,
                             todo: REVIEW,
                             card: {
-                                description: `Though I faked autism for only a year or so, the social repercussions lasted much longer— since I was now and forever the kid who did that really weird thing once. It's not that I lacked the will to repair my standing; but I was just as confused as anyone else about what had got into me, and there were no guide books instructing where to go from there.`,
+                                description: `Though I faked autism for only a year or so, the social repercussions lasted much longer— since I was now and forever the kid who did that really weird thing once. It's not that I lacked the will to repair my standing; but I was just as confused as anyone else about what had gotten into me, and there were no manuals to tell me where to go from there.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
