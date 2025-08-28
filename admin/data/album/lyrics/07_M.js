@@ -129,7 +129,6 @@ export default {
                         `Bit my`,
                         {
                             anchor: `sadness with patience`,
-                            todo: REVIEW,
                             card: {
                                 description: `Luckily, this was familiar terrain for me. After all, I'd spent my childhood channeling misery into various art projects— and remaking yourself into an attractive person is really just the ultimate art project.`,
                                 dotKeys: {
@@ -832,7 +831,6 @@ export default {
                     lyric: [
                         {
                             anchor: `to have a merry ol' laugh`,
-                            todo: REVIEW,
                             cards: [
                                 {
 

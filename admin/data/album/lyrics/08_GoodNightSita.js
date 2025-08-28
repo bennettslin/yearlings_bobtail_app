@@ -328,7 +328,6 @@ export default {
                         `for the`,
                         {
                             anchor: `innermost matryoshka`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Flashback to our first date, when Sita and I have arrived at a natural history museum: We set forth by strolling past a display of Russian nesting dolls, known as`,
@@ -696,12 +695,12 @@ export default {
                 todo: REVIEW,
                 card: {
                     description: [
-                        `To keep going with the '70s feel of this song, I studied the complex interplay between the two lead guitarists from`,
+                        `To continue with the '70s feel of this song, I mimicked the complex interplay between the two lead guitarists from`,
                         {
                             anchor: `Television`,
                             wiki: `Television_(band)`,
                         },
-                        `, a band recommended to me by a record store clerk. The song "Friction," off their album`,
+                        `. "Friction," off their debut album`,
                         {
                             anchor: `Marquee Moon`,
                             wiki: `Marquee_Moon`,
@@ -750,7 +749,6 @@ export default {
                         `brave`,
                         {
                             anchor: `rejection into art`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `In time I learned to welcome rejection, since I could use it as inspiration to write new songs. But this, in turn, meant a lifetime of getting rejected can`,
@@ -1049,7 +1047,7 @@ export default {
                             anchor: `An Occurrence at Owl Creek Bridge`,
                             wiki: `An_Occurrence_at_Owl_Creek_Bridge`,
                         },
-                        `," a short story with a twist ending, in which a seemingly long span of time is revealed to have passed in an instant. And now the entirety of this song— during which I've recalled every date with Sita so far— turns out to have taken place within a brief exchange of farewells.`,
+                        `," a short story whose twist ending is that a seemingly long span of time actually passed in an instant. And now the entirety of this song— in which I've recalled every date with Sita so far— turns out to have taken place within a brief exchange of farewells.`,
                     ],
                     dotKeys: {
                         [NARRATIVE]: true,
