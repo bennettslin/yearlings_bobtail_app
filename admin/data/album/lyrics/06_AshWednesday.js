@@ -13,7 +13,7 @@ import {
     IS_UNIT_DOT,
     FORESHADOW_OF_WORMHOLE_PREFIX,
 } from '../../../../src/constants/lyrics'
-import { REVIEW } from '../../../containers/Annotations/constants/todos'
+import { REST, REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Ash Wednesday',
@@ -523,6 +523,8 @@ export default {
                         `in`,
                         {
                             anchor: `famous raincoat`,
+                            todo: REST,
+                            problem: `Mention "Pennyroyal Tea."`,
                             card: {
                                 description: [
                                     `Catherine was the one who introduced me to the works of Leonard Cohen. Through her impassioned reading of his song "`,

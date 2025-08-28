@@ -44,8 +44,8 @@ const TodoSongHeader = ({ songIndex, areDoneTodosHidden }) => {
             <span>
                 {
                     areDoneTodosHidden ?
-                        `${redosCount} / ${revisionsCount} / ${reviewsCount} / ${totalTodosCount}` :
-                        `${restsCount} / ${totalCount}`
+                        `${restsCount} / ${redosCount} / ${revisionsCount} / ${reviewsCount} / ${totalTodosCount}` :
+                        `total: ${totalCount}`
                 }
             </span>
         </div>

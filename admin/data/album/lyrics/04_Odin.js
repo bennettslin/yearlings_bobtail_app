@@ -19,7 +19,7 @@ import {
     IS_UNIT_DOT,
     RESPONSE,
 } from '../../../../src/constants/lyrics'
-import { REVIEW } from '../../../containers/Annotations/constants/todos'
+import { REST, REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Odin',
@@ -231,6 +231,8 @@ export default {
                         `you drew with`,
                         {
                             anchor: `crayons least whittled`,
+                            todo: REST,
+                            problem: `Can't pinpoint any specific problems, but it sounds off to me. Revisit in the future.`,
                             card: {
                                 description: [
                                     `When we landed in Taiwan, my aunt presented me with a box of`,
@@ -252,8 +254,9 @@ export default {
                         `you`,
                         {
                             anchor: `ruminate on these riddles`,
+                            todo: REVIEW,
                             card: {
-                                description: `The "awake" voice of the doublespeaker pair echoes my thoughts as I lie on the floor mat, unable to sleep. The vastness of the universe, while terrifying, also suggests unlimited possibilities. Yet somehow, being with Sasha isn't one of them.`,
+                                description: `The "awake" voice of the doublespeaker pair echoes my thoughts as I lie on the floor mat, unable to sleep. The vastness of the universe, while terrifying, also suggests unlimited possibilities— yet somehow, being with Sasha isn't one of them.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -276,8 +279,9 @@ export default {
                         `The`,
                         {
                             anchor: `house settled in sheets`,
+                            todo: REVIEW,
                             card: {
-                                description: `Everyone else in the house is asleep, snug under their blankets. Of course, sheets are also used to cover the deceased.`,
+                                description: `Everyone else in the house is asleep, snug under their blankets. Of course, sheets are also used to cover the deceased…`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -295,9 +299,10 @@ export default {
                         `do`,
                         {
                             anchor: `sweet dream's ichors`,
+                            todo: REVIEW,
                             cards: [
                                 {
-                                    description: `As a child, I dreaded sleep. The nightly ordeal of swapping out my reasoned thoughts for irrational dreams felt as burdensome and frightening as a blood transfusion. And yet, things always seemed better in the morning because of it.`,
+                                    description: `As a child, I hated sleep; its nightly ordeal of swapping out reasoned thoughts for absurd dreams felt as burdensome and frightening as a blood transfusion. Still, things always seemed better in the morning because of it.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                         [OBSERVATION]: true,
@@ -344,6 +349,7 @@ export default {
                         `Like a`,
                         {
                             anchor: `salamander`,
+                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
@@ -360,7 +366,7 @@ export default {
                                     ],
                                 },
                                 {
-                                    description: `Writing doublespeaker rhyme was daunting, so I'd come up with silly challenges, like being sure to mention every Paracelsian elemental.`,
+                                    description: `Writing doublespeaker rhyme can be… a bit daunting. To motivate myself, then, I'd come up with silly challenges, like being sure to mention every Paracelsian elemental.`,
                                     dotKeys: {
                                         [SONGCRAFT]: true,
                                     },
@@ -481,6 +487,7 @@ export default {
                         `proves`,
                         {
                             anchor: `shibboleth`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `The`,
@@ -493,7 +500,7 @@ export default {
                                         anchor: `shibboleth`,
                                         wiki: `Shibboleth`,
                                     },
-                                    `," the Hebrew word for a river. Because the enemy tribe pronounced the letter`,
+                                    `"— the Hebrew word for a river. Because the enemy tribe pronounced the letter`,
                                     {
                                         isItalic: true,
                                         lyric: `shin`,
@@ -556,14 +563,15 @@ export default {
                         {
                             // NOTE: Add a bike bell sound in re-recording.
                             anchor: `rickshaw hiccoughs`,
+                            todo: REVIEW,
                             card: {
                                 description: [
-                                    `As I wander outside in my dream, the road's uneven surface causes a passing`,
+                                    `As I wander outside in my dream, a passing`,
                                     {
                                         anchor: `rickshaw`,
                                         wiki: `Rickshaw`,
                                     },
-                                    `to jounce abruptly.`,
+                                    `jounces abruptly on the road's uneven surface.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -601,9 +609,10 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
                     // TODO: Or bottled butterfly and jarred sibyl.
-                    description: `While the two doublespeaker voices seem to operate independently, they plant subtle ideas along each other's path— much as our conscious thoughts affect our dreams, and vice versa. In this stanza, for example, the mention of a staircase by the "asleep" voice precedes the plummeting spoken of by the "awake" voice.`,
+                    description: `Though the two doublespeaker voices seem to operate independently, they plant subtle ideas along each other's paths— just as our conscious thoughts affect our dreams, and vice versa. In this stanza, for example, the mention of a staircase by the "asleep" voice precedes the plummeting spoken of by the "awake" voice.`,
                     dotKeys: {
                         [OBSERVATION]: true,
                         [SONGCRAFT]: true,
@@ -622,6 +631,7 @@ export default {
                         `You seek the`,
                         {
                             anchor: `dunes once deemed a haven`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Like the Biblical`,
@@ -642,7 +652,7 @@ export default {
                                             wiki: `Moby-Dick`,
                                         },
                                     },
-                                    `is an outcast. While the former was banished to the desert, I follow the latter to wander the metaphorical dunes of the ocean.`,
+                                    `is an outcast. While the former was banished to the desert, I follow the latter— and wander the metaphorical dunes of the ocean.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -670,9 +680,10 @@ export default {
                         `that was`,
                         {
                             anchor: `safe for a heathen`,
+                            todo: REVIEW,
                             card: {
                                 description: [
-                                    `Being an illegitimate son, Ishmael wasn't to inherit the house of`,
+                                    `As an illegitimate son, Ishmael wasn't to inherit the house of`,
                                     {
                                         anchor: `Abraham`,
                                         wiki: `Abraham`,
@@ -777,6 +788,8 @@ export default {
                         `would the`,
                         {
                             anchor: `rondel of her eye`,
+                            todo: REST,
+                            problem: `Does "substituting my own" make sense? Do I mean my own reading, or my own intention?`,
                             card: {
                                 description: [
                                     `A`,
@@ -784,7 +797,7 @@ export default {
                                         anchor: `rondel`,
                                         wiki: `Rondel_(poem)`,
                                     },
-                                    `is a verse form that originated in French poetry, but it can also refer to any round object, like a ball; while "`,
+                                    `is a verse form that originated in French poetry, but it can refer to any round object, like a ball. Meanwhile, "`,
                                     {
                                         anchor: `the apple of one's eye`,
                                         wiki: `Apple_of_my_eye`,
@@ -999,6 +1012,7 @@ export default {
                         `Your`,
                         {
                             anchor: `seizures of spleen`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `In`,
@@ -1006,7 +1020,7 @@ export default {
                                         anchor: `Hippocratic medicine`,
                                         wiki: `Humorism`,
                                     },
-                                    `, the spleen was thought to induce melancholy. But in modern speech, it's a symbol of malice. I suppose my resentment toward the bullies had a bit of both.`,
+                                    `, the spleen was thought to induce melancholy; but in modern speech, it's a symbol of malice. I suppose my resentment toward the bullies had a bit of both.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -1036,6 +1050,7 @@ export default {
                         `you see the`,
                         {
                             anchor: `jarred sibyl`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `The`,
@@ -1056,7 +1071,7 @@ export default {
                                             wiki: `The_Waste_Land`,
                                         },
                                     },
-                                    `begins with an epigraph in which the Sibyl, hanging in a jar, is asked what she wants. She replies that she wants to die.`,
+                                    `begins with an epigraph in which the Sibyl, hanging in a jar, is asked what she wants. Her reply is that she wishes to die.`,
                                 ],
                             },
                         },
@@ -1069,8 +1084,9 @@ export default {
                         `and brought your raft behind the`,
                         {
                             anchor: `yellow-taped grills`,
+                            todo: REVIEW,
                             card: {
-                                description: `To prevent beachgoers from wading in the shark-infested waters, barricade tape has been tied onto the barbecue grills that line the shore.`,
+                                description: `To keep beachgoers from wading into the shark-infested waters, barricade tape has been tied onto the barbecue grills that line the shore.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
@@ -1138,9 +1154,10 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
                     description: [
-                        `As it turns out, recording vocals in doublespeaker rhyme is trickier than you'd expect. When singing, we don't break up our phrases evenly; instead, we shorten syllables or delay their onset to account for consonant clusters and such. So each voice in a doublespeaker pair might sound fine on its own— but disjointed when heard together. To perform them in sync, then, I came up with a system of notation that resembled medieval`,
+                        `As it turns out, recording vocals in doublespeaker rhyme was trickier than expected. When we sing, we don't break up our phrases evenly; instead, we shorten syllables or delay their onset to account for consonant clusters and such. So each voice in a doublespeaker pair might sound fine on its own— but disjointed when heard together. To perform them in sync, then, I came up with a system of notation that resembled medieval`,
                         {
                             anchor: `ligature`,
                             wiki: `Ligature_(music)`,
@@ -1164,6 +1181,8 @@ export default {
                     lyricLeft: [
                         {
                             anchor: `Buoy bobs`,
+                            todo: REST,
+                            problem: `Revisit. Right now, second sentence reads a little weird to me, particularly "also."`,
                             card: {
                                 description: `In my dream, I see myself adrift on a buoy as it bobs in an ocean filled with sea serpents. But who can say that this "boy" isn't also bobbing through life, oblivious to dangers lurking everywhere?`,
                                 dotKeys: {
@@ -1259,6 +1278,7 @@ export default {
                         `you frame`,
                         {
                             anchor: `silhouettes of torn rides`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Looking out into the ocean, I recall the`,
@@ -1266,7 +1286,7 @@ export default {
                                         anchor: `traveling carnival`,
                                         wiki: `Traveling_carnival`,
                                     },
-                                    `that once came into town every summer. Its amusement rides would suddenly tower above the skyline, only then to be just as quickly disassembled— like the rise and fall of ocean waves.`,
+                                    `that once came into town every summer. Its amusement rides would suddenly tower above the skyline, only then to be disassembled just as quickly— like the rise and fall of ocean waves.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -1326,8 +1346,9 @@ export default {
                         `when your`,
                         {
                             anchor: `day to die`,
+                            todo: REVIEW,
                             card: {
-                                description: `As a child, I suffered from night terrors related to my fear of death. My mother tried to comfort me with the promise of reincarnation— but this only filled me with even greater dread. It wasn't just death itself that frightened me; it was a lifetime of hurtling toward it. And all that reincarnation offered was more rounds of the same.`,
+                                description: `As a child, I suffered from night terrors related to my fear of death. My mother tried to comfort me with the promise of reincarnation— but this only deepened my dread. After all, it wasn't just death itself that frightened me; it was a lifetime of hurtling toward it. And all that reincarnation offered was more rounds of the same.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -1378,8 +1399,9 @@ export default {
                         `and`,
                         {
                             anchor: `just play dumb`,
+                            todo: REVIEW,
                             card: {
-                                description: `Neither heaven nor nirvana sounded all that pleasant, yet these were the best offers available— which confused me. After all, shouldn't their appeal be self-evident even to a thickheaded child?`,
+                                description: `Neither heaven nor nirvana sounded all that pleasant, yet these were the best offers available— which confused me. Because, shouldn't their appeal be self-evident even to a thickheaded child?`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -1544,8 +1566,9 @@ export default {
                         `The sudsy ocean shapes its`,
                         {
                             anchor: `padded bed`,
+                            todo: REVIEW,
                             card: {
-                                description: `As I make peace with the inevitable, the ocean begins to feel calm and inviting. But my dream is also ending, and I expect to wake soon in the comfort of my bed.`,
+                                description: `As I make peace with the inevitable, the ocean begins to feel calm and inviting. But my dream is also ending, and soon I expect to wake in the comfort of my bed.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
@@ -1578,14 +1601,15 @@ export default {
                         `while`,
                         {
                             anchor: `mermaids smile`,
+                            todo: REVIEW,
                             card: {
                                 description: [
-                                    `T.S. Eliot's "`,
+                                    `In Eliot's poem "`,
                                     {
                                         anchor: `The Love Song of J. Alfred Prufrock`,
                                         wiki: `The_Love_Song_of_J._Alfred_Prufrock`,
                                     },
-                                    `" examines themes of stunted growth and missed opportunities. Its narrator bemoans that while the mermaids may sing, they don't sing for him. Likewise, while my resignation has turned the fearsome sea serpents into smiling mermaids, they still don't smile for me.`,
+                                    `," which explores themes of stunted growth and missed chances, the narrator bemoans that while the mermaids may sing, they don't sing for him. Likewise, while my resignation has turned the fearsome sea serpents into smiling mermaids, they still don't smile for me.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -1599,8 +1623,9 @@ export default {
                         {
                             anchor: `Thursday's child`,
                             properNoun: true,
+                            todo: REVIEW,
                             card: {
-                                description: `Wednesday means "Odin's day" in Old English, and I was born on a Thursday . So my day literally begins where Odin's day ends.`,
+                                description: `Wednesday means "Odin's day" in Old English, and I was born on a Thursday. Thus my day literally begins where Odin's day ends.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
