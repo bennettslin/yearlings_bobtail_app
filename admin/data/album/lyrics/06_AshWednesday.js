@@ -298,7 +298,6 @@ export default {
                         `I purge, with a`,
                         {
                             anchor: `dirge she'd deride`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `Up until then, I'd thought of songwriting as just a matter of putting melodies and chords together. But Catherine valued music for its lyrics— and since mine were of the nonsensical variety, she wasn't impressed by any of my songs that I played for her.`,
@@ -454,7 +453,7 @@ export default {
                             anchor: `poised with brains`,
                             todo: REVIEW,
                             card: {
-                                description: `Catherine undervalued the artistic strengths I'd always counted on to cover up my many weaknesses. So if I were to be worth keeping someday, then I simply couldn't have any weaknesses.`,
+                                description: `Catherine undervalued the artistic strengths I'd always counted on to cover my many weaknesses. So if I were to be worth keeping someday, then I simply couldn't have any weaknesses.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -467,7 +466,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: [
                         `While a major third gets divided into two whole steps in Western music, a minor third can only be divided between a whole and a half. But quarter tones allow a minor third to be traversed in two equal steps, creating the sensation of a squished major third. I liked the way this confused my ears, so I went overboard with these rapid-fire three-note runs on the`,
@@ -634,7 +632,7 @@ export default {
                                         isItalic: true,
                                         lyric: `Beautiful Losers`,
                                     },
-                                    `, so I assumed that going clear also referred to the legend of her`,
+                                    `, so I assumed that "going clear" also referred to the legend of her`,
                                     {
                                         anchor: `smallpox`,
                                         wiki: `Smallpox`,
@@ -819,7 +817,7 @@ export default {
                             todo: REVIEW,
                             cards: [
                                 {
-                                    description: `I never understood why the Catholic Church extends its pro-life stance to the unborn of other faiths. After all, this just trades away an aborted fetus's certainty of heaven, for a living child's risk of hell.`,
+                                    description: `I never understood why the Catholic Church extends its pro-life stance to the unborn of other faiths. After all, this just trades away an aborted fetus's certainty of heaven, for a living child's chance of hell.`,
                                     dotKeys: {
                                         [OBSERVATION]: true,
                                     },
@@ -886,7 +884,7 @@ export default {
                             anchor: `pitch shifted`,
                             wiki: `Pitch_shift`,
                         },
-                        `them up an octave— thus lending them a ghostly sheen, which I came to like. It suits the mood of a rain-soaked evening, I'd say.`,
+                        `them up an octave— giving them a ghostly sheen that I've come to like. It suits the mood of a rain-soaked evening, I'd say.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -951,7 +949,7 @@ export default {
                             anchor: `homophones`,
                             wiki: `Homophone`,
                         },
-                        `of their counterparts in the second: "mourn" with "morn" and "born" with "borne," for example. So I tried to have the two stanzas match phonetically wherever possible, which then gave me the idea for doublespeaker rhyme later on.`,
+                        `of their counterparts in the second: "mourn" with "morn," and "born" with "borne," for example. So I tried to have the two stanzas match phonetically wherever possible, which then gave me the idea for doublespeaker rhyme later on.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
