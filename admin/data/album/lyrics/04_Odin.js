@@ -34,7 +34,6 @@ export default {
     mixStartTime: `0:02:06.00`,
     playerReferenceTime: 559.438,
     playerStartTime: 555.277,
-    todo: REVIEW,
     overview: `Taiwan showed me how differently I might've turned out had my parents not come to America… even as I was still worlds away from what Sasha needed me to be. Life seemed both infinitely fluid and immovably fixed, and I wasn't sure which extreme frightened me more. Later that summer, when our house cat Odin died of old age, I sought spiritual explanations for my mortality. The finality of death was terrifying, after all— and yet, the eternal life promised by faith didn't feel any less so.`,
     isDoublespeaker: true,
     lyricUnits: [
@@ -107,7 +106,7 @@ export default {
                                             anchor: `Sodom`,
                                             wiki: `Sodom_and_Gomorrah`,
                                         },
-                                        `. When his wife looked back, she was turned into a pillar of salt— a cautionary tale, to some, for the faithful not to cohabit with the fallen.`,
+                                        `. When his wife looked back, she was turned into a pillar of salt— a cautionary tale warning the faithful not to cohabit with the fallen.`,
                                     ],
                                     dotKeys: {
                                         [PUN]: true,
@@ -125,7 +124,7 @@ export default {
                             anchor: `hiding place of retreat`,
                             todo: REVIEW,
                             card: {
-                                description: `The "asleep" voice of the doublespeaker pair narrates a dream that melds the familiar setting of Los Angeles with the foreign sights of Taiwan: Having been absorbed in my drawings well into nighttime, I crawl out from the dusty space underneath my bed at home.`,
+                                description: `The "asleep" voice of the doublespeaker pair narrates a dream that melds the familiar setting of Los Angeles with the foreign sights of Taiwan. It begins with me coming out from the hiding place underneath my bed at home, having been absorbed in my drawings well into nighttime.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
@@ -137,7 +136,6 @@ export default {
                         `trifling`,
                         {
                             anchor: `tref must reseed the earth`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     {
@@ -178,7 +176,6 @@ export default {
                     lyricRight: [
                         {
                             anchor: `Indifferent galaxies`,
-                            todo: REVIEW,
                             card: {
                                 description: `The Buddhism of my upbringing didn't make much sense to me, partly because it clashed with the various faiths of my classmates. At the same time, it didn't make any more sense for them to be right, and my parents wrong. With all beliefs equally suspect, then, I could only conceive of the universe as a limitless expanse of cold, empty space— in which we live and die to no greater concern.`,
                                 dotKeys: {
@@ -254,7 +251,8 @@ export default {
                         `you`,
                         {
                             anchor: `ruminate on these riddles`,
-                            todo: REVIEW,
+                            todo: REST,
+                            problem: `Does the first sentence naturally flow into the second?`,
                             card: {
                                 description: `The "awake" voice of the doublespeaker pair echoes my thoughts as I lie on the floor mat, unable to sleep. The vastness of the universe, while terrifying, also suggests unlimited possibilities— yet somehow, being with Sasha isn't one of them.`,
                                 dotKeys: {
@@ -279,7 +277,6 @@ export default {
                         `The`,
                         {
                             anchor: `house settled in sheets`,
-                            todo: REVIEW,
                             card: {
                                 description: `Everyone else in the house is asleep, snug under their blankets. Of course, sheets are also used to cover the deceased…`,
                                 dotKeys: {
@@ -366,7 +363,7 @@ export default {
                                     ],
                                 },
                                 {
-                                    description: `Writing doublespeaker rhyme can be… a bit daunting. To motivate myself, then, I'd come up with silly challenges, like being sure to mention every Paracelsian elemental.`,
+                                    description: `Writing doublespeaker rhyme can be… a bit daunting. So to motivate myself, I'd come up with silly challenges, like being sure to mention every Paracelsian elemental.`,
                                     dotKeys: {
                                         [SONGCRAFT]: true,
                                     },
@@ -505,7 +502,7 @@ export default {
                                         isItalic: true,
                                         lyric: `shin`,
                                     },
-                                    `differently in their dialect, they would out themselves by saying "sibboleth," just like I do here in the recording.`,
+                                    `differently, they'd out themselves by saying "sibboleth," as I do here in the recording.`,
                                 ],
                                 dotKeys: {
                                     [SONGCRAFT]: true,
@@ -563,7 +560,6 @@ export default {
                         {
                             // NOTE: Add a bike bell sound in re-recording.
                             anchor: `rickshaw hiccoughs`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `As I wander outside in my dream, a passing`,
@@ -609,7 +605,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     // TODO: Or bottled butterfly and jarred sibyl.
                     description: `Though the two doublespeaker voices seem to operate independently, they plant subtle ideas along each other's paths— just as our conscious thoughts affect our dreams, and vice versa. In this stanza, for example, the mention of a staircase by the "asleep" voice precedes the plummeting spoken of by the "awake" voice.`,
@@ -652,7 +647,7 @@ export default {
                                             wiki: `Moby-Dick`,
                                         },
                                     },
-                                    `is an outcast. While the former was banished to the desert, I follow the latter— and wander the metaphorical dunes of the ocean.`,
+                                    `is an outcast. While the former was banished to the desert, I follow the latter, and wander the metaphorical dunes of the ocean.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -1058,7 +1053,7 @@ export default {
                                         anchor: `Cumaean Sibyl`,
                                         wiki: `Cumaean_Sibyl`,
                                     },
-                                    `was a Greek prophetess who was granted immortality but not eternal youth.`,
+                                    `was an ancient Greek prophetess who was granted immortality, but not eternal youth.`,
                                     {
                                         anchor: `T.S. Eliot`,
                                         wiki: `T._S._Eliot`,
@@ -1071,7 +1066,7 @@ export default {
                                             wiki: `The_Waste_Land`,
                                         },
                                     },
-                                    `begins with an epigraph in which the Sibyl, hanging in a jar, is asked what she wants. Her reply is that she wishes to die.`,
+                                    `begins with an epigraph in which the aged Sibyl, hanging in a jar, is asked what she wants. Her reply is that she wants to die.`,
                                 ],
                             },
                         },
@@ -1084,7 +1079,6 @@ export default {
                         `and brought your raft behind the`,
                         {
                             anchor: `yellow-taped grills`,
-                            todo: REVIEW,
                             card: {
                                 description: `To keep beachgoers from wading into the shark-infested waters, barricade tape has been tied onto the barbecue grills that line the shore.`,
                                 dotKeys: {
@@ -1154,7 +1148,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: [
                         `As it turns out, recording vocals in doublespeaker rhyme was trickier than expected. When we sing, we don't break up our phrases evenly; instead, we shorten syllables or delay their onset to account for consonant clusters and such. So each voice in a doublespeaker pair might sound fine on its own— but disjointed when heard together. To perform them in sync, then, I came up with a system of notation that resembled medieval`,
@@ -1286,7 +1279,7 @@ export default {
                                         anchor: `traveling carnival`,
                                         wiki: `Traveling_carnival`,
                                     },
-                                    `that once came into town every summer. Its amusement rides would suddenly tower above the skyline, only then to be disassembled just as quickly— like the rise and fall of ocean waves.`,
+                                    `that once came into town every summer. Its amusement rides would suddenly tower above the skyline, only to be disassembled just as quickly— much like the rise and fall of ocean waves.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -1346,7 +1339,6 @@ export default {
                         `when your`,
                         {
                             anchor: `day to die`,
-                            todo: REVIEW,
                             card: {
                                 description: `As a child, I suffered from night terrors related to my fear of death. My mother tried to comfort me with the promise of reincarnation— but this only deepened my dread. After all, it wasn't just death itself that frightened me; it was a lifetime of hurtling toward it. And all that reincarnation offered was more rounds of the same.`,
                                 dotKeys: {
@@ -1401,7 +1393,7 @@ export default {
                             anchor: `just play dumb`,
                             todo: REVIEW,
                             card: {
-                                description: `Neither heaven nor nirvana sounded all that pleasant, yet these were the best offers available— which confused me. Because, shouldn't their appeal be self-evident even to a thickheaded child?`,
+                                description: `Neither heaven nor nirvana sounded all that pleasant, yet these were the best offers available— which confused me. Shouldn't their appeal be self-evident to even the most thickheaded child?`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -1566,7 +1558,6 @@ export default {
                         `The sudsy ocean shapes its`,
                         {
                             anchor: `padded bed`,
-                            todo: REVIEW,
                             card: {
                                 description: `As I make peace with the inevitable, the ocean begins to feel calm and inviting. But my dream is also ending, and soon I expect to wake in the comfort of my bed.`,
                                 dotKeys: {
@@ -1609,7 +1600,7 @@ export default {
                                         anchor: `The Love Song of J. Alfred Prufrock`,
                                         wiki: `The_Love_Song_of_J._Alfred_Prufrock`,
                                     },
-                                    `," which explores themes of stunted growth and missed chances, the narrator bemoans that while the mermaids may sing, they don't sing for him. Likewise, while my resignation has turned the fearsome sea serpents into smiling mermaids, they still don't smile for me.`,
+                                    `," which explores themes of stunted growth and missed chances, the narrator bemoans that, while the mermaids may sing, they don't sing for him. Likewise, while my resignation has turned the fearsome sea serpents into smiling mermaids, they still don't smile for me.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -1623,7 +1614,6 @@ export default {
                         {
                             anchor: `Thursday's child`,
                             properNoun: true,
-                            todo: REVIEW,
                             card: {
                                 description: `Wednesday means "Odin's day" in Old English, and I was born on a Thursday. Thus my day literally begins where Odin's day ends.`,
                                 dotKeys: {
