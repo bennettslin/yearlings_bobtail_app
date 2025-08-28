@@ -13,6 +13,7 @@ import {
     REFRAIN,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Dear Saskia',
@@ -29,7 +30,15 @@ export default {
     playerStartTime: 384.329,
     // This is a magic number adjusted by ear. In the mix, it's actually 44.96.
     mixSamplingFrequency: 45.39,
-    overview: `Sasha was a childhood friend, as well as my first crush. The strength she drew from her Jewish identity fascinated me, but it also clued me in on a cruel paradox— namely, that nothing ever comes from longing to share in someone's faith and roots, which stay strong precisely by not being shared. Sasha moved away during middle school, at the peak of my struggles with some bullies. That summer, I wrote her a letter on a family trip to Taiwan.`,
+    todo: REVIEW,
+    overview: [
+        `Sasha was a childhood friend, as well as my first crush. The strength she drew from her Jewish identity fascinated me, but it also clued me in on a cruel paradox— namely, that nothing ever comes from longing to share in someone's faith and roots, which stay strong precisely by`,
+        {
+            isEmphasis: true,
+            lyric: `not`,
+        },
+        `being shared. Sasha moved away during middle school, at the peak of my struggles with some bullies. That summer, I wrote her a letter on a family trip to Taiwan.`,
+    ],
     lyricUnits: [
         {
             unitMap: {},
@@ -96,8 +105,9 @@ export default {
                         `It's nearing autumn here with`,
                         {
                             anchor: `record highs`,
+                            todo: REVIEW,
                             card: {
-                                description: `It's hard to write a letter. But one can always start by talking about the weather.`,
+                                description: `It's hard to write a letter… but one can always start by talking about the weather.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -116,8 +126,9 @@ export default {
                         `your`,
                         {
                             anchor: `first semester`,
+                            todo: REVIEW,
                             card: {
-                                description: `My family was spending the entire summer in Taiwan. We weren't to get back to the States until after Sasha had begun the new school year in Boston.`,
+                                description: `My family was spending the entire summer in Taiwan, so we wouldn't get back to the States until after Sasha had begun the new school year in Boston.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -200,8 +211,9 @@ export default {
                         `I should`,
                         {
                             anchor: `keep your kid name`,
+                            todo: REVIEW,
                             card: {
-                                description: `Sasha decided that once in Boston, she'd go by her given name. I asked if I should start calling her Saskia from now on as well. She said no, since it was nice to be reminded of which friends knew her first.`,
+                                description: `Sasha decided that, once in Boston, she'd go by her given name. I asked if I should start calling her Saskia from now on as well. She said no, since it'd be nice to be reminded of which friends knew her first.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -227,9 +239,10 @@ export default {
                         `, I felt you`,
                         {
                             anchor: `prepped to shed`,
+                            todo: REVIEW,
                             card: {
                                 description: [
-                                    `Sasha is prepped in more than one sense, since she's preparing to begin enrollment at a`,
+                                    `Sasha is prepped in more than one sense: She's preparing to begin enrollment at a`,
                                     {
                                         anchor: `prep school`,
                                         wiki: `College-preparatory_school`,
@@ -264,6 +277,7 @@ export default {
                         },
                         {
                             anchor: `amber eyes`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Sasha's eyes were of an amber color. But`,
@@ -271,7 +285,7 @@ export default {
                                         anchor: `amber`,
                                         wiki: `Amber`,
                                     },
-                                    `also refers to fossilized tree resin, which can preserve the remains of trapped insects from epochs past.`,
+                                    `also refers to fossilized tree resin, which can preserve the remains of trapped insects from past epochs.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -286,6 +300,7 @@ export default {
                     lyric: [
                         {
                             anchor: `your pupil's pupal fly`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Reflecting on my feelings for Sasha, I recall our last day together, when I caught my reflection in the`,
@@ -293,7 +308,7 @@ export default {
                                         anchor: `pupil`,
                                         wiki: `Pupil`,
                                     },
-                                    `of her eye. As she looked at me the way a teacher looks upon a pupil, I could sense that we were no longer on the same footing— if we'd ever been.`,
+                                    `of her eye. As she looked at me the way a teacher looks upon a pupil, I sensed we were no longer on the same footing— had we ever been.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -345,8 +360,9 @@ export default {
                         {
                             // NOTE: I decided to contract from "would have."
                             anchor: `I would've too`,
+                            todo: REVIEW,
                             card: {
-                                description: `Yet if Sasha had wanted me, then of course I'd have gladly converted to Judaism. It made no sense to be loyal to my own cultural identity, which I'd had no hand in choosing.`,
+                                description: `Yet had Sasha wanted me, then of course I'd have gladly converted to Judaism. It made no sense to be loyal to my own cultural identity, which I'd had no hand in choosing.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -403,14 +419,15 @@ export default {
                         `And I sniffled daily when you`,
                         {
                             anchor: `skipped a grade`,
+                            todo: REVIEW,
                             card: {
                                 description: [
-                                    `I panicked when Sasha was allowed to`,
+                                    `I panicked when Sasha`,
                                     {
-                                        anchor: `skip a grade`,
+                                        anchor: `skipped a grade`,
                                         wiki: `Grade_skipping`,
                                     },
-                                    `, as this opened new vistas for her that necessarily excluded me. I continued to be reminded of this in middle school, as Sasha effortlessly navigated the same social landscape that I found so treacherous.`,
+                                    `, since this opened new vistas for her that still excluded me. I then continued to be reminded of this in middle school, as she effortlessly navigated the social terrain that I found so treacherous.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -454,9 +471,10 @@ export default {
                         `caress, sun-streaked and loose, a`,
                         {
                             anchor: `wet-cheeked papoose`,
+                            todo: REVIEW,
                             card: {
                                 description: [
-                                    `Here, I recall an afternoon bus ride when Sasha sat in front of me. As her hair blew in my face, I felt like a`,
+                                    `Here, I recall an afternoon bus ride when Sasha sat in front of me. With her hair blowing in my face, I felt like a`,
                                     {
                                         anchor: `papoose`,
                                         wiki: `Papoose`,
@@ -722,13 +740,14 @@ export default {
                         `is a toss-up. But where some`,
                         {
                             anchor: `hemophile`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     {
                                         anchor: `Hemophilia`,
                                         wiki: `Haemophilia`,
                                     },
-                                    `is a disease in which blood fails to clot properly, leading to continuous bleeding.`,
+                                    `is a disease in which the blood fails to clot, leading to continuous bleeding.`,
                                 ],
                             },
                         },
