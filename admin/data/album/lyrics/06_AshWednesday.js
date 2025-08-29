@@ -451,7 +451,6 @@ export default {
                         `who tried but failed to win her heart`,
                         {
                             anchor: `poised with brains`,
-                            todo: REVIEW,
                             card: {
                                 description: `Catherine undervalued the artistic strengths I'd always counted on to cover my many weaknesses. So if I were to be worth keeping someday, then I simply couldn't have any weaknesses.`,
                                 dotKeys: {
@@ -620,7 +619,6 @@ export default {
                         `—`,
                         {
                             anchor: `my Tekakwitha`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     {
@@ -814,7 +812,6 @@ export default {
                         `us wretched souls`,
                         {
                             anchor: `cursed to be born`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `I never understood why the Catholic Church extends its pro-life stance to the unborn of other faiths. After all, this just trades away an aborted fetus's certainty of heaven, for a living child's chance of hell.`,
@@ -884,7 +881,7 @@ export default {
                             anchor: `pitch shifted`,
                             wiki: `Pitch_shift`,
                         },
-                        `them up an octave— giving them a ghostly sheen that I've come to like. It suits the mood of a rain-soaked evening, I'd say.`,
+                        `them up an octave— giving them a ghostly sheen that I came to like. It suits the mood of a rain-soaked evening, I'd say.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -941,7 +938,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: [
                         `While fleshing out the lyrics in this chorus, I noticed that a handful of words in the first stanza are`,

@@ -1035,7 +1035,7 @@ export default {
                             cards: [
                                 {
                                     description: [
-                                        `I sit up and notice my drunken scrawls on the sidewalk, playfully imagining what would've happened if I'd used`,
+                                        `I sit up and notice my drunken scrawls on the sidewalk, playfully imagining what would've happened had I used`,
                                         {
                                             anchor: `ant chalk`,
                                             wiki: `Ant_chalk`,

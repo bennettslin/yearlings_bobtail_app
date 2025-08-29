@@ -481,7 +481,7 @@ export default {
                             anchor: `Are you a Beyonder`,
                             todo: REVIEW,
                             card: {
-                                description: `According to RI Research, Beyonders are an ancient race of astral beings who were scattered across the universe. The ones who came to Earth adopted the likeness of humans— and then lost all memory of their stellar origins. Even so, they're beset by a nagging discomfort that they don't truly belong.`,
+                                description: `According to RI Research, Beyonders are an ancient race of beings who were scattered across the universe. The ones who came to Earth adopted the likeness of humans— then lost all recollection of their astral origins. Even so, they're beset by a quiet discomfort that they don't truly belong.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -758,7 +758,7 @@ export default {
                             anchor: `mothership`,
                             todo: REVIEW,
                             card: {
-                                description: `The letters promised to update me on new developments, like the construction of spacecraft— which would allow us Beyonders to make contact with our extraplanetary kin.`,
+                                description: `The letters promised to update me on new developments, such as the construction of spacecraft that would allow us Beyonders to contact our extraplanetary kin.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -1282,7 +1282,6 @@ export default {
                         `Mushka,`,
                         {
                             anchor: `per their bargain`,
-                            todo: REVIEW,
                             card: {
                                 description: `Though I faked autism for only a year or so, the social repercussions lasted much longer— since I was now and forever the kid who did that really weird thing once. It's not that I lacked the will to repair my standing; but I was just as confused as anyone else about what had gotten into me, and there were no manuals to tell me where to go from there.`,
                                 dotKeys: {
