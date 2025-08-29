@@ -106,7 +106,7 @@ export default {
                                             anchor: `Sodom`,
                                             wiki: `Sodom_and_Gomorrah`,
                                         },
-                                        `. When his wife looked back, she was turned into a pillar of salt— a cautionary tale warning the faithful not to cohabit with the fallen.`,
+                                        `. When his wife looked back, she was turned into a pillar of salt— a cautionary tale, some might say, warning the faithful not to cohabit with the fallen.`,
                                     ],
                                     dotKeys: {
                                         [PUN]: true,
@@ -165,7 +165,7 @@ export default {
                             anchor: `fridge's gallery in web's wake`,
                             todo: REVIEW,
                             card: {
-                                description: `Attached to the refrigerator are some drawings of mine. The cobwebs trailing from my clothes happen to cling to them, scattering them onto the floor.`,
+                                description: `Trailing from my clothes are cobwebs, which cling to some drawings of mine that were attached to the refrigerator, scattering them onto the floor.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
@@ -296,7 +296,8 @@ export default {
                         `do`,
                         {
                             anchor: `sweet dream's ichors`,
-                            todo: REVIEW,
+                            todo: REST,
+                            problem: `First sentence should be broken up, since it has too many big words.`,
                             cards: [
                                 {
                                     description: `As a child, I hated sleep; its nightly ordeal of swapping out reasoned thoughts for absurd dreams felt as burdensome and frightening as a blood transfusion. Still, things always seemed better in the morning because of it.`,
@@ -346,7 +347,6 @@ export default {
                         `Like a`,
                         {
                             anchor: `salamander`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
@@ -497,12 +497,12 @@ export default {
                                         anchor: `shibboleth`,
                                         wiki: `Shibboleth`,
                                     },
-                                    `"— the Hebrew word for a river. Because the enemy tribe pronounced the letter`,
+                                    `"— the Hebrew word for a river. Since the enemy tribe pronounced the letter`,
                                     {
                                         isItalic: true,
                                         lyric: `shin`,
                                     },
-                                    `differently, they'd out themselves by saying "sibboleth," as I do here in the recording.`,
+                                    `differently, they'd out themselves by saying "sibboleth"— as I do here in the recording.`,
                                 ],
                                 dotKeys: {
                                     [SONGCRAFT]: true,
@@ -629,7 +629,7 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `Like the Biblical`,
+                                    `Much like the Biblical`,
                                     {
                                         anchor: `Ishmael`,
                                         wiki: `Ishmael`,
@@ -647,7 +647,7 @@ export default {
                                             wiki: `Moby-Dick`,
                                         },
                                     },
-                                    `is an outcast. While the former was banished to the desert, I follow the latter, and wander the metaphorical dunes of the ocean.`,
+                                    `is an outcast. While the former was banished to the desert, I follow the latter, and wander the figurative dunes of the ocean.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -675,7 +675,6 @@ export default {
                         `that was`,
                         {
                             anchor: `safe for a heathen`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `As an illegitimate son, Ishmael wasn't to inherit the house of`,
@@ -1015,7 +1014,7 @@ export default {
                                         anchor: `Hippocratic medicine`,
                                         wiki: `Humorism`,
                                     },
-                                    `, the spleen was thought to induce melancholy; but in modern speech, it's a symbol of malice. I suppose my resentment toward the bullies had a bit of both.`,
+                                    `, the spleen was thought to induce melancholy; but in modern speech, it's a symbol of malice. I suppose my resentment toward the bullies carried a bit of both.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -1066,7 +1065,7 @@ export default {
                                             wiki: `The_Waste_Land`,
                                         },
                                     },
-                                    `begins with an epigraph in which the aged Sibyl, hanging in a jar, is asked what she wants. Her reply is that she wants to die.`,
+                                    `begins with an epigraph in which the aged Sibyl, hanging in a jar, is asked what she wants. Her reply… is that she wants to die.`,
                                 ],
                             },
                         },
@@ -1271,7 +1270,6 @@ export default {
                         `you frame`,
                         {
                             anchor: `silhouettes of torn rides`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Looking out into the ocean, I recall the`,
@@ -1393,7 +1391,7 @@ export default {
                             anchor: `just play dumb`,
                             todo: REVIEW,
                             card: {
-                                description: `Neither heaven nor nirvana sounded all that pleasant, yet these were the best offers available— which confused me. Shouldn't their appeal be self-evident to even the most thickheaded child?`,
+                                description: `Neither heaven nor nirvana sounded all that pleasant, yet these were the best offers available— which confused me. Shouldn't their appeal be self-evident even to the most thickheaded child?`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -1595,12 +1593,12 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `In Eliot's poem "`,
+                                    `In Eliot's "`,
                                     {
                                         anchor: `The Love Song of J. Alfred Prufrock`,
                                         wiki: `The_Love_Song_of_J._Alfred_Prufrock`,
                                     },
-                                    `," which explores themes of stunted growth and missed chances, the narrator bemoans that, while the mermaids may sing, they don't sing for him. Likewise, while my resignation has turned the fearsome sea serpents into smiling mermaids, they still don't smile for me.`,
+                                    `"— a poem exploring themes of stunted growth and missed chances— the narrator bemoans that, while the mermaids may sing, they don't sing for him. Likewise, while my resignation has turned the fearsome sea serpents into smiling mermaids, they still don't smile for me.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
