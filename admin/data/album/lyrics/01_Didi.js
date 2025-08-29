@@ -17,6 +17,7 @@ import {
     FLASHBACK_TO_WORMHOLE_PREFIX,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
+import { REST, REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: '弟弟 (Didi)',
@@ -144,9 +145,10 @@ export default {
                         `wondering to himself, who would`,
                         {
                             anchor: `tie his shoes`,
+                            todo: REVIEW,
                             cards: [
                                 {
-                                    description: `In preschool, we were taught to tie our shoes by making the bunny crisscross the tree. But being left-handed, I was never clear on which hand holds the bunny. My shoelaces always came undone as a result.`,
+                                    description: `In preschool, we were taught to tie our shoes by making the bunny crisscross the tree. But being left-handed, I was never clear on which hand holds the bunny. My shoelaces would always come undone as a result.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
@@ -173,6 +175,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
                     description: [
                         {
@@ -187,7 +190,7 @@ export default {
                                 wiki: `A_Portrait_of_the_Artist_as_a_Young_Man`,
                             },
                         },
-                        `, opens in childlike prose. Since my dream was to do for rock music what he'd done for modern literature, I had my band's first album do the same with this opening song.`,
+                        `, opens in childlike prose. Since my dream was to do for rock music what he'd done for modern literature, I did the same with this opening song.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -206,6 +209,8 @@ export default {
                         `Didi, you've been following, I`,
                         {
                             anchor: `didn't want you here`,
+                            todo: REST,
+                            problem: `I think there's a better way to phrase the first sentence.`,
                             card: {
                                 description: `My sister was fiercely protective of me, and I'd often tag along with her. Still, there were times when she and her friends would insist on doing girl stuff by themselves, which always left me in a panic.`,
                                 dotKeys: {
@@ -258,9 +263,10 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
                     description: [
-                        `I wanted this song to capture the flurry of activity and transience of emotion that a child experiences in a single day. So as the rhythm jumps in and out of a`,
+                        `I wanted this song to capture both the flurry of activity and transience of emotion that a child experiences within a day. So while the rhythm jumps in and out of a`,
                         {
                             anchor: `half-time`,
                             wiki: `Half-time_(music)`,
@@ -310,10 +316,11 @@ export default {
                         {
                             anchor: `Safeway paper bag`,
                             properNoun: true,
+                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
-                                        `The nurse placed my soiled pants in a shopping bag for me to take home. The bag may or may not have been from`,
+                                        `The nurse placed my soiled pants in a shopping bag for me to take home. I don't actually recall whether the bag was from`,
                                         {
                                             anchor: `Safeway`,
                                             wiki: `Safeway_Inc.`,
@@ -368,8 +375,9 @@ export default {
                         `Didi, you've`,
                         {
                             anchor: `been in the bath`,
+                            todo: REVIEW,
                             card: {
-                                description: `My mother picked me up from school and took me home. I remember taking a long while to bathe myself.`,
+                                description: `My mother picked me up from school and drove me home. I remember taking a long while to bathe myself.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -418,8 +426,9 @@ export default {
                         `with your`,
                         {
                             anchor: `sheriff's badge and gun`,
+                            todo: REVIEW,
                             card: {
-                                description: `Like many other Taiwanese teenagers of her generation, my mother prized all things labeled American, despite not knowing exactly what that label entailed. Back then, their only source for imports was a local bootleg industry that combed through the relics of America's past. And so my sister and I grew up listening to my mother's old country records and sharing her fondness for classic Western films.`,
+                                description: `Like many other Taiwanese teenagers of her generation, my mother prized all things labeled American, despite not knowing exactly what that label entailed. Back then, their only source for imports was a local bootleg industry that combed through the relics of America's past. And so my sister and I grew up listening to my mother's old country records, and sharing her interest in classic Western films.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -446,8 +455,10 @@ export default {
                         `taped to all the`,
                         {
                             anchor: `girls' mirrors`,
+                            todo: REST,
+                            problem: `Sentence was too long, but now comma feels off.`,
                             card: {
-                                description: `My sister used to cut out pictures of pop stars from teenybopper magazines and tape them to her mirror.`,
+                                description: `My sister would cut out pictures of superstars from her fan magazines, and tape them to the bathroom mirror.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -572,6 +583,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
                     description: [
                         `The tonic triads of the three major keys heard thus far— A, C, and E\u2011flat— all belong to the same`,
@@ -579,7 +591,7 @@ export default {
                             anchor: `octatonic collection`,
                             wiki: `Octatonic_scale`,
                         },
-                        `. The song now ends on the fourth and remaining major triad of that collection, G\u2011flat, to suggest the excitement of undiscovered vistas awaiting a young child.`,
+                        `. The song now ends on G\u2011flat, the collection's fourth and final major key, to suggest the excitement of undiscovered vistas awaiting a young child.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
