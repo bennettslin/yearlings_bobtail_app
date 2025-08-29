@@ -17,6 +17,7 @@ import {
     FLASHBACK_TO_WORMHOLE_PREFIX,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
+import { REST, REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Willy the Cocoa',
@@ -27,15 +28,17 @@ export default {
     referenceDescription: `Keyboards in anacrusis`,
     playerStartTime: 177.396,
     mixStartTime: `0:01:03.00`,
-    overview: `After my younger brother was diagnosed with autism, a neighbor told us about Willy the Cocoa, a mentally disabled man who'd once wandered the neighborhood collecting recyclables. Tragically, Willy was killed in a fight with some gangsters, who smashed his head open with a bottle. Hearing this story affected me greatly, and for years to come, I'd recall it whenever pondering my brother's likely future.`,
+    todo: REVIEW,
+    overview: `After my younger brother was diagnosed with autism, a neighbor told us about Willy the Cocoa, a mentally disabled man who'd once wandered the neighborhood collecting recyclables. Tragically, Willy was killed in a fight after some gangsters smashed his head open with a bottle. Hearing this story affected me to no end, and for years to come, I'd recall it whenever pondering my brother's likely future.`,
     lyricUnits: [
         {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
                     description: [
-                        `Willy was known as "the Cocoa," referring both to the Coke bottles he collected and to his seeming a bit cuckoo and`,
+                        `Willy was known as "the Cocoa," referring both to the Coke bottles he collected, and to his seeming a bit cuckoo and`,
                         {
                             isItalic: true,
                             lyric: `loco`,
@@ -125,8 +128,9 @@ export default {
                         `in`,
                         {
                             anchor: `tarred pavement mirage`,
+                            todo: REVIEW,
                             card: {
-                                description: `In the mirages created by the summer heat, the reflections of the Valley's surrounding mountains point downward. So one could playfully suggest that their jagged peaks are like fangs biting down on the asphalt.`,
+                                description: `In the mirages created by the summer heat, the reflections of the Valley's surrounding mountains point downward. So one can playfully suggest that their jagged peaks are like fangs biting down on the asphalt.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -199,8 +203,9 @@ export default {
                         `Swill pop poured from`,
                         {
                             anchor: `wayside bottle`,
+                            todo: REVIEW,
                             card: {
-                                description: `Willy begins his daily rounds by filling his shopping cart with discarded bottles and cans found littered along the sidewalks.`,
+                                description: `Willy begins his daily rounds, filling his shopping cart with bottles and cans littered along the sidewalks.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
@@ -271,8 +276,9 @@ export default {
                         `licking lips`,
                         {
                             anchor: `he ends his stroll`,
+                            todo: REVIEW,
                             card: {
-                                description: `In most legends, the changeling is a witting participant in the deceitful replacement of a human child. As such, it takes pains to hide its true form while in the company of other humans. And so, before Willy goes off to cash in his recyclables, he ends "as troll" by donning his human guise.`,
+                                description: `In most legends, the changeling is a witting participant in the deceitful replacement of a human child. As such, it takes pains to hide its true form while in the company of other humans. And so, before Willy goes off to cash in his recyclables, he ends "as troll" by donning a human guise.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true,
@@ -345,9 +351,10 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
                     description: [
-                        `In some legends, a changeling hints at its true identity by handling common tools in a peculiar way. I figured their manner of playing instruments would be no less peculiar, so I experimented with unconventional techniques like pairing`,
+                        `In some legends, a changeling hints at its true identity by handling common tools in a peculiar way. I figured their manner of playing instruments would be no less peculiar, so I experimented with unconventional techniques— like pairing`,
                         {
                             anchor: `palm mutes`,
                             wiki: `Palm_mute`,
@@ -394,8 +401,9 @@ export default {
                         `launching`,
                         {
                             anchor: `pair of seizures`,
+                            todo: REVIEW,
                             card: {
-                                description: `My brother's sudden outburst knocks the "scissors" from my mother's hand and sends them flying across the lawn.`,
+                                description: `My brother's sudden outburst knocks the "scissors" from my mother's hand, sending them flying across the lawn.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true,
@@ -415,6 +423,8 @@ export default {
                         `Oh ma'am, I`,
                         {
                             anchor: `see your kid with whiskers`,
+                            todo: REST,
+                            problem: `Possible to rewrite so "he" is clear, and also avoid saying "Willy" twice?`,
                             card: {
                                 description: [
                                     `Noting my brother's distaste for haircuts, Willy jokingly predicts that he'll go unshaven as an adult. But Willy's curious phrasing invites the possibility that my brother, in fact,`,
@@ -456,6 +466,7 @@ export default {
                         `And three years howling is the`,
                         {
                             anchor: `longest cowlick`,
+                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
@@ -472,12 +483,12 @@ export default {
                                 },
                                 {
                                     description: [
-                                        `Willy observes that my brother has yet to outgrow his "`,
+                                        `Willy mulls over why my brother still hasn't outgrown his "`,
                                         {
                                             anchor: `colic`,
                                             wiki: `Baby_colic`,
                                         },
-                                        `," a period of excessive crying in infants. In the past, such inexplicable delays in early development helped give rise to a belief in changelings.`,
+                                        `"— a period of excessive crying in infants. In the past, such inexplicable delays in early development helped give rise to a belief in changelings.`,
                                     ],
                                     dotKeys: {
                                         [PUN]: true,
@@ -491,6 +502,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
                     description: [
                         `I first learned of`,
@@ -498,7 +510,7 @@ export default {
                             anchor: `autism`,
                             wiki: `Autism`,
                         },
-                        `when I overheard my parents talk about my brother's diagnosis in their Taiwanese accents. The next day, I explained to classmates that my brother was "artistic." So I wanted the lyrics in this song to convey a child's mishearing of adult conversation, and to explore how this might lead to roundabout understanding.`,
+                        `by overhearing my parents talk about my brother's diagnosis in their Taiwanese accents. The next day, I explained to classmates that my brother was "artistic." So I wanted the lyrics in this song to convey a child's mishearing of adult conversation, and to explore how this might lead to roundabout understanding.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
@@ -536,6 +548,7 @@ export default {
                         `, enraged at`,
                         {
                             anchor: `pages clawed`,
+                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `My brother enjoyed cutting shapes of alphabet letters out of scrap paper. Since this was a creative activity that kept him occupied, my parents kept a pile of old magazines freshly stocked for him.`,
@@ -544,7 +557,7 @@ export default {
                                     },
                                 },
                                 {
-                                    description: `Unfortunately, the comic book I was reading on the floor just a moment ago has somehow made its way into my brother's scrap pile.`,
+                                    description: `Unfortunately, my comic book, which I was reading on the floor just a moment ago, has somehow made its way into my brother's scrap pile.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                     },
@@ -570,8 +583,9 @@ export default {
                         `the`,
                         {
                             anchor: `bearded baby`,
+                            todo: REVIEW,
                             card: {
-                                description: `My brother's odd behavior frustrated me to no end, and I longed to believe he was just displaying wisdom meant for a different world. So upon reading about changeling legends many years later, I could sympathize with those villagers in times past who told tales of grownup trolls disguised as human children.`,
+                                description: `My brother's odd behavior frustrated me to no end, and I longed to believe he was just displaying wisdom meant for a different world. So upon reading about changeling legends many years later, I could sympathize with those villagers of times past, who told tales of grownup trolls disguised as human children.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -587,8 +601,9 @@ export default {
                         `with his tummy clenched, muffling`,
                         {
                             anchor: `baffled sobs`,
+                            todo: REVIEW,
                             card: {
-                                description: `The hardest thing about hurting my brother was knowing he had no way to understand the cause of my anger. The times when I'd turned on him and inflicted physical pain would always remain without explanation. For him, it was just another part of what life was.`,
+                                description: `The hardest part about hurting my brother was knowing he had no way to understand the cause of my anger. The times when I'd turned on him and inflicted physical pain would always remain without explanation. For him, it was just another part of what life was.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -607,9 +622,10 @@ export default {
                         `You'd learn him good, when`,
                         {
                             anchor: `smarts he could've took`,
+                            todo: REVIEW,
                             cards: [
                                 {
-                                    description: `I grew up puzzling over why my brother was born with autism and I wasn't, when our circumstances were no different. It wasn't far-fetched to suppose that every mother's womb starts out with a fixed supply of mental capacity to dole out to each child, and I'd selfishly taken my brother's share.`,
+                                    description: `I grew up puzzling over why my brother was born with autism and I wasn't, when our circumstances weren't so different. It wasn't far-fetched to presume that every mother's womb starts out with a fixed supply of mental capacity to dole out to each child, and I'd selfishly taken my brother's share.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                         [OBSERVATION]: true,
@@ -659,8 +675,9 @@ export default {
                     lyric: [
                         {
                             anchor: `Killcrop`,
+                            todo: REVIEW,
                             card: {
-                                description: `In English folklore, a killcrop is an infant suspected of being a changeling due to its voracious appetite. The etymology is straightforward— one who "kills crops"— and reflects a concern of past times, when children unable to earn their keep could lead to a peasant family's ruin.`,
+                                description: `In English folklore, a killcrop was an infant suspected of being a changeling, on account of its voracious appetite. The etymology is straightforward— one who "kills crops"— and reflects a concern of past times, when children unable to earn their keep could lead to a peasant family's ruin.`,
                                 dotKeys: {
                                     [REFERENCE]: true,
                                 },
@@ -674,9 +691,10 @@ export default {
                     lyric: [
                         {
                             anchor: `soused loafers`,
+                            todo: REVIEW,
                             cards: [
                                 {
-                                    description: `In his zeal to reach a discarded beer bottle, Willy steps into a puddle and splashes standing water onto a pair of gangsters idling nearby.`,
+                                    description: `In his zeal to reach a discarded beer bottle, Willy stomps into a puddle and splashes standing water onto a pair of gangsters idling nearby.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                     },
@@ -697,9 +715,10 @@ export default {
                     lyric: [
                         {
                             anchor: `Hit this witch`,
+                            todo: REVIEW,
                             cards: [
                                 {
-                                    description: `In some legends, beating a changeling badly enough will cause it to tire of its charade and return the stolen child. This reflects the historical reality that sickly children were often abused to death, if not killed outright. So if Willy is a changeling, then it seems predestined that he should meet a violent end.`,
+                                    description: `In some legends, a changeling that's been beaten enough will grow weary of its charade and return the stolen child. This reflects the historical reality that sickly children were often abused to death, if not killed outright. So if Willy is indeed a changeling, then it seems predestined for him to meet a violent end.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [OBSERVATION]: true,
@@ -776,9 +795,10 @@ export default {
                             `Shelled skull has freed`,
                             {
                                 anchor: `unsalvaged soul`,
+                                todo: REVIEW,
                                 cards: [
                                     {
-                                        description: `To justify the abuse of sickly children, religious doctrine in the past often claimed that they were devoid of souls.`,
+                                        description: `To justify the abuse of sickly children, religious doctrine in the past would claim they were devoid of souls.`,
                                         dotKeys: {
                                             [REFERENCE]: true,
                                         },
@@ -807,6 +827,7 @@ export default {
                         {
                             anchor: `Willy's stalkless bulb`,
                             properNoun: true,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `The impact of the wine bottle severs Willy's brain from his spine, like a`,
@@ -814,7 +835,7 @@ export default {
                                         anchor: `flower bulb`,
                                         wiki: `Ornamental_bulbous_plant`,
                                     },
-                                    `plucked from its stalk. But once planted in the earth, bulbs can grow new stems and bloom again.`,
+                                    `plucked from its stalk. But once planted in the earth, a bulb can start a new shoot and bloom again.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -839,8 +860,9 @@ export default {
                         `Oh, and August was the`,
                         {
                             anchor: `sawdust month`,
+                            todo: REVIEW,
                             card: {
-                                description: `In this "saddest" month of Willy's murder, I help my mother collect wood shavings left over from my father's carpentry. We then spread them onto our flower beds.`,
+                                description: `In this "saddest" month of Willy's murder, I help my mother collect wood shavings from my father's carpentry, which we'll then spread onto our flower beds.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true,
@@ -855,6 +877,7 @@ export default {
                         `that saw this`,
                         {
                             anchor: `mulch soften asphodel`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `We plant`,
@@ -867,7 +890,7 @@ export default {
                                         anchor: `underworld`,
                                         wiki: `Greek_underworld`,
                                     },
-                                    `in Greek mythology. By softening the soil, the mulch gives new life to our flower beds. And perhaps Willy will do the same for our neighborhood, by softening the "asphalt" beneath which his body once lay.`,
+                                    `in Greek mythology. By softening the soil, the mulch gives new life to our flower beds. And perhaps Willy will do the same for our neighborhood, by softening the "asphalt" on which his lifeless body once lay.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -883,13 +906,14 @@ export default {
                     lyric: [
                         {
                             anchor: `Baby bluebonnets`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     {
                                         anchor: `Bluebonnets`,
                                         wiki: 'Bluebonnet_(plant)',
                                     },
-                                    `are another popular flower in our garden— and a "blue bonnet" is what my mother has tucked my brother's head in, to protect him from the sun. But after Willy's murder, I have to wonder how well protected my brother is against other things.`,
+                                    `are another popular flower in our garden— and a "blue bonnet" is what my mother has tucked my brother's head in, to protect him from the sun. But after Willy's murder, I have to wonder how well protected my brother is against other things…`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -952,8 +976,9 @@ export default {
                         `But`,
                         {
                             anchor: `how marbleless`,
+                            todo: REVIEW,
                             card: {
-                                description: `Occasionally, someone would make a clumsy attempt to ease my parents' worries by claiming to envy my brother. For instance, this person might remark on how "marvelous" it must be to live without one's "marbles." I had to wonder how gladly they'd embrace the greater likelihood of being a victim of violent crime as well.`,
+                                description: `Occasionally, some friend of my parents would clumsily attempt to ease their worries by claiming to envy my brother. For instance, this person might remark on how "marvelous" it must be to live without one's "marbles." I had to wonder how gladly they'd embrace the greater likelihood of being a victim of violent crime as well.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [PUN]: true,
@@ -969,6 +994,8 @@ export default {
                         `being ever stuck in`,
                         {
                             anchor: `imp-runt age of mind`,
+                            todo: REST,
+                            problem: `"Even so" technically refers to first sentence, not second, so it sounds weird.`,
                             cards: [
                                 {
                                     description: [
@@ -1001,8 +1028,9 @@ export default {
                         `Are you sick?`,
                         {
                             anchor: `I am seven`,
+                            todo: REVIEW,
                             card: {
-                                description: `At age six, my brother learned to answer the question of how old he was. But even after turning seven, he still insisted on answering "six." Though we finally got him to accept that "seven" was the new correct answer, the cost in sweat and tears was so high that when he turned eight, none of us had the energy to relive the ordeal. He's been answering "seven" ever since. And so here, I imagine him as a grownup testily correcting a stranger who has the nerve to ask if he's "six."`,
+                                description: `At age six, my brother learned to answer the question of how old he was. Even after turning seven, though, he still insisted on answering "six." We finally got him to accept that "seven" was the new correct answer— but the cost in sweat and tears was so high that when he turned eight, none of us had the energy to relive the ordeal. He's been answering "seven" ever since. And so here, I imagine him as a grownup testily correcting a stranger who has the nerve to ask if he's "six."`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -1084,9 +1112,10 @@ export default {
                         `Son,`,
                         {
                             anchor: `seventy years`,
+                            todo: REVIEW,
                             cards: [
                                 {
-                                    description: `My mother told me not to worry, since I wasn't going to die for a long while. She then assured me that once my time is finally up— perhaps when I'm seventy— I'll have long made peace with death somehow.`,
+                                    description: `My mother told me not to worry, since I wasn't going to die for a long while. She then assured me that when my time is finally up— which, at the time, was expected to be age seventy— I would've long made peace with death.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
@@ -1116,9 +1145,10 @@ export default {
                         `In time, with`,
                         {
                             anchor: `needle done`,
+                            todo: REVIEW,
                             cards: [
                                 {
-                                    description: `My mother tells me that my life is a patchwork onto which I'll continue to sew new experiences. In turn, the insights gained from these experiences will inform and enrich my art.`,
+                                    description: `My mother tells me that my life is a patchwork onto which I'll continue to sew new experiences. In turn, the insights I'll have gained will inform and enrich my art.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                     },
@@ -1131,6 +1161,7 @@ export default {
                         `, you'll write this`,
                         {
                             anchor: `book of yours`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `I wore an eyepatch as a child to correct my`,
@@ -1138,7 +1169,7 @@ export default {
                                         anchor: `lazy eye`,
                                         wiki: `Amblyopia`,
                                     },
-                                    `, which prevented me from seeing in stereo vision. This made me terrible at sports— but excellent at drawing, since I could easily recreate on paper what I saw in real life. Impressed by my skills, my mother insisted that I was destined to be a great artist. So I always figured that one day I'd create a masterpiece— perhaps something like the`,
+                                    `, which prevented me from seeing in stereo vision. This made me terrible at sports— but excellent at drawing, since I could easily recreate on paper what I saw in real life. Impressed by my skills, my mother insisted I was destined to become a great artist. So I always figured I'd create a masterpiece someday— perhaps something like the`,
                                     {
                                         anchor: `Tintin`,
                                         wiki: `The_Adventures_of_Tintin`,
@@ -1177,19 +1208,15 @@ export default {
                                 `'s cover`,
                             ],
                             properNoun: true,
+                            todo: REVIEW,
                             card: {
                                 description: [
-                                    `My favorite word as a child was "bobtail." I was just so proud of myself the day I realized that the line "Bells on bobtail ring," from the song "`,
+                                    `My favorite word as a child was "bobtail." I was just very proud of myself the day I realized that the line "Bells on bobtail ring," from the song "`,
                                     {
                                         anchor: `Jingle Bells`,
                                         wiki: `Jingle_Bells`,
                                     },
-                                    `," isn't a jumble of nonsense like so many nursery rhymes are. In any case,`,
-                                    {
-                                        isItalic: true,
-                                        lyric: `Bobtail`,
-                                    },
-                                    `became my catchall title for the great work of art that I'd one day create.`,
+                                    `," isn't a jumble of nonsense like so many nursery rhymes are. "Bobtail" thus became my catchall title for the great work of art I'd one day create.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
