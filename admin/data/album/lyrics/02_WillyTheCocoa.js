@@ -709,10 +709,11 @@ export default {
                     lyric: [
                         {
                             anchor: `Hit this witch`,
-                            todo: REVIEW,
+                            todo: REST,
+                            problem: `Make it clear that the second sentence was caused by the first, not just reflected by it.`,
                             cards: [
                                 {
-                                    description: `In some legends, a changeling that's been beaten enough will grow weary of its charade and return the stolen child. This reflects the historical reality that sickly children were often abused to death, if not killed outright. So if Willy is indeed a changeling, then it seems predestined for him to meet a violent end.`,
+                                    description: `In some legends, a changeling that's been beaten enough will grow tired of its charade and return the stolen child. This reflects the historical reality that sickly children were often abused to death, if not killed outright. So if Willy is indeed a changeling, then it seems predestined for him to meet a violent end.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [OBSERVATION]: true,
@@ -829,7 +830,7 @@ export default {
                                         anchor: `flower bulb`,
                                         wiki: `Ornamental_bulbous_plant`,
                                     },
-                                    `plucked from its stalk. But once planted in the earth, a bulb can start a new shoot and bloom again.`,
+                                    `plucked from its stalk. Of course, a bulb can start a new shoot once planted in the earth.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -854,7 +855,6 @@ export default {
                         `Oh, and August was the`,
                         {
                             anchor: `sawdust month`,
-                            todo: REVIEW,
                             card: {
                                 description: `In this "saddest" month of Willy's murder, I help my mother collect wood shavings from my father's carpentry, which we'll then spread onto our flower beds.`,
                                 dotKeys: {
@@ -884,7 +884,7 @@ export default {
                                         anchor: `underworld`,
                                         wiki: `Greek_underworld`,
                                     },
-                                    `in Greek mythology. By softening the soil, the mulch gives new life to our flower beds. And perhaps Willy will do the same for our neighborhood, by softening the "asphalt" on which his lifeless body once lay.`,
+                                    `in Greek mythology. By softening the soil, the mulch gives new life to our flower beds. And perhaps Willy will do the same for our neighborhood, by softening the "asphalt" on which his lifeless body lay.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -907,7 +907,7 @@ export default {
                                         anchor: `Bluebonnets`,
                                         wiki: 'Bluebonnet_(plant)',
                                     },
-                                    `are another popular flower in our garden— and a "blue bonnet" is what my mother has tucked my brother's head in, to protect him from the sun. But after Willy's murder, I have to wonder how well protected my brother is against other things…`,
+                                    `are another popular flower in our garden— and a "blue bonnet" is what my mother has tucked my brother's head in, to protect him from the sun. But now, in light of Willy's murder, I question how well protected my brother is against other threats…`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -972,7 +972,7 @@ export default {
                             anchor: `how marbleless`,
                             todo: REVIEW,
                             card: {
-                                description: `Occasionally, some friend of my parents would clumsily attempt to ease their worries by claiming to envy my brother. For instance, this person might remark on how "marvelous" it must be to live without one's "marbles." I had to wonder how gladly they'd embrace the greater likelihood of being a victim of violent crime as well.`,
+                                description: `Occasionally, some friend of my parents would make a clumsy attempt to ease their worries by claiming to envy my brother. For instance, such a person might remark on how "marvelous" it must be to live without one's "marbles." I had to wonder how cheerfully they'd accept the greater likelihood of being a victim of violent crime as well.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [PUN]: true,
@@ -1155,7 +1155,6 @@ export default {
                         `, you'll write this`,
                         {
                             anchor: `book of yours`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `I wore an eyepatch as a child to correct my`,
