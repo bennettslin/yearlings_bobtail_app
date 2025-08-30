@@ -421,7 +421,7 @@ export default {
                                         anchor: `skipped a grade`,
                                         wiki: `Grade_skipping`,
                                     },
-                                    `, since this opened new vistas for her that still excluded me. I then continued to be reminded of this in middle school, as she navigated with ease the social terrain that I found so treacherous.`,
+                                    `, since this opened new vistas for her that continued to exclude me. My fears were well founded: By the time we were both in middle school, she could move with ease through the same social landscape that I found so treacherous.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
