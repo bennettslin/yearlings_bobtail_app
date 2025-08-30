@@ -470,7 +470,7 @@ export default {
                                             anchor: `cowlick`,
                                             wiki: `Cowlick`,
                                         },
-                                        `is a section of hair that sticks straight up on a person's head. Being acquainted with my family through the years, Willy understands that my brother's tantrums are the reason my mother allows his hair to reach unruly lengths.`,
+                                        `is a section of hair that sticks straight up on a person's head. Being acquainted with my family over the years, Willy understands that my brother's tantrums are the reason my mother lets his hair reach unruly lengths.`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
@@ -483,7 +483,7 @@ export default {
                                             anchor: `colic`,
                                             wiki: `Baby_colic`,
                                         },
-                                        `"— a period of excessive crying in infants. In the past, such inexplicable delays in early development helped give rise to a belief in changelings.`,
+                                        `"— a period of excessive crying in infants. In the past, such inexplicable delays in development helped give rise to a belief in changelings.`,
                                     ],
                                     dotKeys: {
                                         [PUN]: true,
@@ -497,7 +497,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: [
                         `I first learned of`,
@@ -546,7 +545,7 @@ export default {
                             todo: REVIEW,
                             cards: [
                                 {
-                                    description: `My brother enjoyed cutting shapes of alphabet letters out of scrap paper. Since this was a creative activity that kept him occupied, my parents kept a pile of old magazines freshly stocked for him.`,
+                                    description: `My brother enjoyed cutting shapes of alphabet letters out of paper. Since this was a constructive activity that kept him occupied, my parents would save their old magazines for him.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
@@ -578,7 +577,6 @@ export default {
                         `the`,
                         {
                             anchor: `bearded baby`,
-                            todo: REVIEW,
                             card: {
                                 description: `My brother's odd behavior frustrated me to no end, and I longed to believe he was just displaying wisdom meant for a different world. So upon reading about changeling legends many years later, I could sympathize with those villagers of times past, who told tales of grownup trolls disguised as human children.`,
                                 dotKeys: {
@@ -598,7 +596,7 @@ export default {
                             anchor: `baffled sobs`,
                             todo: REVIEW,
                             card: {
-                                description: `The hardest part about hurting my brother was knowing he had no way to understand the cause of my anger. The times when I'd turned on him and inflicted physical pain would always remain without explanation. For him, it was just another part of what life was.`,
+                                description: `The hardest part of having hurt my brother was knowing he had no way to understand the cause of my anger. The times when I'd turned on him and inflicted physical pain would always remain without explanation. For him, it was just another part of what life was.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -617,7 +615,8 @@ export default {
                         `You'd learn him good, when`,
                         {
                             anchor: `smarts he could've took`,
-                            todo: REVIEW,
+                            todo: REST,
+                            problem: `Third sentence is a bit long.`,
                             cards: [
                                 {
                                     description: `I grew up puzzling over why my brother was born with autism and I wasn't, when our circumstances weren't so different. It wasn't far-fetched to presume that every mother's womb starts out with a fixed supply of mental capacity to dole out to each child, and I'd selfishly taken my brother's share.`,
@@ -672,7 +671,7 @@ export default {
                             anchor: `Killcrop`,
                             todo: REVIEW,
                             card: {
-                                description: `In English folklore, a killcrop was an infant suspected of being a changeling, on account of its voracious appetite. The etymology is straightforward— one who "kills crops"— and reflects a concern of past times, when children unable to earn their keep could lead to a peasant family's ruin.`,
+                                description: `In English folklore, a killcrop was an infant suspected of being a changeling, on account of its voracious appetite. The etymology is straightforward— one who "kills crops"— and reflects a concern of times past, when children unable to earn their keep could lead to a peasant family's ruin.`,
                                 dotKeys: {
                                     [REFERENCE]: true,
                                 },
