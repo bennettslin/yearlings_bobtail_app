@@ -1044,7 +1044,6 @@ export default {
                         `you see the`,
                         {
                             anchor: `jarred sibyl`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `The`,
@@ -1065,7 +1064,7 @@ export default {
                                             wiki: `The_Waste_Land`,
                                         },
                                     },
-                                    `begins with an epigraph in which the aged Sibyl, hanging in a jar, is asked what she wants. Her reply… is that she wants to die.`,
+                                    `begins with an epigraph in which the aged Sibyl, hanging in a jar, is asked what she wants. Her reply… is that she wishes to die.`,
                                 ],
                             },
                         },
@@ -1389,7 +1388,6 @@ export default {
                         `and`,
                         {
                             anchor: `just play dumb`,
-                            todo: REVIEW,
                             card: {
                                 description: `Neither heaven nor nirvana sounded all that pleasant, yet these were the best offers available— which confused me. Shouldn't their appeal be self-evident even to the most thickheaded child?`,
                                 dotKeys: {

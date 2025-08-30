@@ -303,7 +303,7 @@ export default {
                                         anchor: `pupil`,
                                         wiki: `Pupil`,
                                     },
-                                    `of her eye. As she looked at me the way a teacher looks upon a pupil, I sensed we were no longer on the same footing— assuming we'd ever been.`,
+                                    `of her eye. As she looked at me the way a teacher looks upon a pupil, I sensed we were no longer on the same footing— had we ever been.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -421,7 +421,7 @@ export default {
                                         anchor: `skipped a grade`,
                                         wiki: `Grade_skipping`,
                                     },
-                                    `, since this opened new vistas for her that still excluded me. I then continued to be reminded of this in middle school, as she effortlessly navigated the social terrain that I found so treacherous.`,
+                                    `, since this opened new vistas for her that still excluded me. I then continued to be reminded of this in middle school, as she navigated with ease the social terrain that I found so treacherous.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -465,7 +465,6 @@ export default {
                         `caress, sun-streaked and loose, a`,
                         {
                             anchor: `wet-cheeked papoose`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Here, I recall a school bus ride home, when Sasha sat in front of me. With her hair blowing in my face, I felt like a`,
@@ -477,7 +476,6 @@ export default {
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
-                                    [OBSERVATION]: true,
                                 },
                             },
                         },

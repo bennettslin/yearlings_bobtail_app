@@ -34,10 +34,9 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: [
-                        `Willy was known as "the Cocoa," referring both to the Coke bottles he collected, and to his seeming both cuckoo and`,
+                        `Willy was known as "the Cocoa," referring both to the Coke bottles he collected, and to his seeming a bit cuckoo and`,
                         {
                             isItalic: true,
                             lyric: `loco`,
@@ -127,9 +126,8 @@ export default {
                         `in`,
                         {
                             anchor: `tarred pavement mirage`,
-                            todo: REVIEW,
                             card: {
-                                description: `In the mirages created by the summer heat, the reflections of the Valley's surrounding mountains point downward. So one might playfully suggest that their jagged peaks are like fangs biting down on the asphalt.`,
+                                description: `In the mirages created by the summer heat, the reflections of the Valley's surrounding mountains point downward. So one could playfully suggest that their jagged peaks are like fangs biting down on the asphalt.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
