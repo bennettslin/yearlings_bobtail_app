@@ -145,7 +145,6 @@ export default {
                         `wondering to himself, who would`,
                         {
                             anchor: `tie his shoes`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `In preschool, we were taught to tie our shoes by making the bunny crisscross the tree. But being left-handed, I was never clear on which hand holds the bunny; my shoelaces would always come undone as a result.`,
@@ -190,7 +189,7 @@ export default {
                                 wiki: `A_Portrait_of_the_Artist_as_a_Young_Man`,
                             },
                         },
-                        `, opens in childlike prose. Since my dream was to do for rock music what he'd done for modern literature, I did the same in this opening song.`,
+                        `, opens in childlike prose. And so, since my dream was to do for rock music what he'd done for modern literature, I kept the lyrics childishly simple in this opening song.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -263,7 +262,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: [
                         `I wanted this song to capture the flurry of activity, as well as the transience of emotion, that a child experiences in a day. So while the rhythm jumps in and out of a`,
@@ -316,7 +314,6 @@ export default {
                         {
                             anchor: `Safeway paper bag`,
                             properNoun: true,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
@@ -425,7 +422,6 @@ export default {
                         `with your`,
                         {
                             anchor: `sheriff's badge and gun`,
-                            todo: REVIEW,
                             card: {
                                 description: `Like many other Taiwanese teenagers of her generation, my mother prized all things labeled American, despite not knowing exactly what that label entailed. Back then, their only source for imports was a local bootleg industry that combed through the relics of America's past. And so my sister and I grew up listening to my mother's old country records, and sharing her interest in classic Western films.`,
                                 dotKeys: {
@@ -590,7 +586,7 @@ export default {
                             anchor: `octatonic collection`,
                             wiki: `Octatonic_scale`,
                         },
-                        `. The song now ends on G\u2011flat, the collection's fourth and final major key, to suggest the excitement of undiscovered vistas awaiting a young child.`,
+                        `. The song now ends on G\u2011flat— the collection's fourth and as-yet unheard major triad— to suggest the excitement of unseen vistas awaiting a young child.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,

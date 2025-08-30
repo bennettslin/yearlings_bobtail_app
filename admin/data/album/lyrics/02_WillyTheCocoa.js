@@ -481,7 +481,7 @@ export default {
                                             anchor: `colic`,
                                             wiki: `Baby_colic`,
                                         },
-                                        `"— a period of excessive crying in infants. In the past, such inexplicable delays in development helped give rise to a belief in changelings.`,
+                                        `"— a period of excessive crying in infants. It's easy to see, from our modern standpoint, how such inexplicable delays in development led to the belief in changelings.`,
                                     ],
                                     dotKeys: {
                                         [PUN]: true,
@@ -540,7 +540,6 @@ export default {
                         `, enraged at`,
                         {
                             anchor: `pages clawed`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `My brother enjoyed cutting shapes of alphabet letters out of paper. Since this was a constructive activity that kept him occupied, my parents would save their old magazines for him.`,
@@ -592,7 +591,6 @@ export default {
                         `with his tummy clenched, muffling`,
                         {
                             anchor: `baffled sobs`,
-                            todo: REVIEW,
                             card: {
                                 description: `The hardest part of having hurt my brother was knowing he had no way to understand the cause of my anger. The times when I'd turned on him and inflicted physical pain would always remain without explanation. For him, it was just another part of what life was.`,
                                 dotKeys: {
@@ -667,7 +665,6 @@ export default {
                     lyric: [
                         {
                             anchor: `Killcrop`,
-                            todo: REVIEW,
                             card: {
                                 description: `In English folklore, a killcrop was an infant suspected of being a changeling, on account of its voracious appetite. The etymology is straightforward— one who "kills crops"— and reflects a concern of times past, when children unable to earn their keep could lead to a peasant family's ruin.`,
                                 dotKeys: {
@@ -683,7 +680,6 @@ export default {
                     lyric: [
                         {
                             anchor: `soused loafers`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `In his zeal to reach a discarded beer bottle, Willy stomps into a puddle and splashes standing water onto a pair of gangsters idling nearby.`,
@@ -791,7 +787,7 @@ export default {
                                 todo: REVIEW,
                                 cards: [
                                     {
-                                        description: `To justify the abuse of sickly children, religious doctrine in the past would claim they were devoid of souls.`,
+                                        description: `To justify the abuse of sickly children, religious doctrine in the past would claim they were, in fact, devoid of souls.`,
                                         dotKeys: {
                                             [REFERENCE]: true,
                                         },
