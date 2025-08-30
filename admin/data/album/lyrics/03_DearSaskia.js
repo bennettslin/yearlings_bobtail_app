@@ -209,7 +209,6 @@ export default {
                         `I should`,
                         {
                             anchor: `keep your kid name`,
-                            todo: REVIEW,
                             card: {
                                 description: `Sasha decided that, once in Boston, she'd go by her given name. I asked if I should start calling her Saskia from now on as well. She said no— since it'd be nice to be reminded of which friends knew her first.`,
                                 dotKeys: {
@@ -304,7 +303,7 @@ export default {
                                         anchor: `pupil`,
                                         wiki: `Pupil`,
                                     },
-                                    `of her eye. As she looked at me the way a teacher looks upon a pupil, I sensed we were no longer on the same footing— had we ever been.`,
+                                    `of her eye. As she looked at me the way a teacher looks upon a pupil, I sensed we were no longer on the same footing— assuming we'd ever been.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -356,7 +355,6 @@ export default {
                         {
                             // NOTE: I decided to contract from "would have."
                             anchor: `I would've too`,
-                            todo: REVIEW,
                             card: {
                                 description: `Yet, had Sasha wanted me, then of course I'd have gladly converted to Judaism. It made no sense to be loyal to my own cultural identity, which I'd had no hand in choosing.`,
                                 dotKeys: {

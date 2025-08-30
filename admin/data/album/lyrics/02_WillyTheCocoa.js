@@ -28,7 +28,6 @@ export default {
     referenceDescription: `Keyboards in anacrusis`,
     playerStartTime: 177.396,
     mixStartTime: `0:01:03.00`,
-    todo: REVIEW,
     overview: `After my younger brother was diagnosed with autism, a neighbor told us about Willy the Cocoa, a mentally disabled man who'd once wandered the neighborhood collecting recyclables. Tragically, Willy was killed in a fight after some gangsters smashed his head open with a bottle. Hearing this story affected me to no end, and for years to come, I'd recall it whenever pondering my brother's likely future.`,
     lyricUnits: [
         {
@@ -38,7 +37,7 @@ export default {
                 todo: REVIEW,
                 card: {
                     description: [
-                        `Willy was known as "the Cocoa," referring both to the Coke bottles he collected, and to his seeming a bit cuckoo and`,
+                        `Willy was known as "the Cocoa," referring both to the Coke bottles he collected, and to his seeming both cuckoo and`,
                         {
                             isItalic: true,
                             lyric: `loco`,
@@ -130,7 +129,7 @@ export default {
                             anchor: `tarred pavement mirage`,
                             todo: REVIEW,
                             card: {
-                                description: `In the mirages created by the summer heat, the reflections of the Valley's surrounding mountains point downward. So one can playfully suggest that their jagged peaks are like fangs biting down on the asphalt.`,
+                                description: `In the mirages created by the summer heat, the reflections of the Valley's surrounding mountains point downward. So one might playfully suggest that their jagged peaks are like fangs biting down on the asphalt.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -203,7 +202,6 @@ export default {
                         `Swill pop poured from`,
                         {
                             anchor: `wayside bottle`,
-                            todo: REVIEW,
                             card: {
                                 description: `Willy begins his daily rounds, filling his shopping cart with bottles and cans littered along the sidewalks.`,
                                 dotKeys: {
@@ -276,7 +274,6 @@ export default {
                         `licking lips`,
                         {
                             anchor: `he ends his stroll`,
-                            todo: REVIEW,
                             card: {
                                 description: `In most legends, the changeling is a witting participant in the deceitful replacement of a human child. As such, it takes pains to hide its true form while in the company of other humans. And so, before Willy goes off to cash in his recyclables, he ends "as troll" by donning a human guise.`,
                                 dotKeys: {
@@ -351,7 +348,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: [
                         `In some legends, a changeling hints at its true identity by handling common tools in a peculiar way. I figured their manner of playing instruments would be no less peculiar, so I experimented with unconventional techniques— like pairing`,
@@ -401,7 +397,6 @@ export default {
                         `launching`,
                         {
                             anchor: `pair of seizures`,
-                            todo: REVIEW,
                             card: {
                                 description: `My brother's sudden outburst knocks the "scissors" from my mother's hand, sending them flying across the lawn.`,
                                 dotKeys: {
