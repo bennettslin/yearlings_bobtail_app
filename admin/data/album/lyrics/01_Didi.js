@@ -586,7 +586,7 @@ export default {
                             anchor: `octatonic collection`,
                             wiki: `Octatonic_scale`,
                         },
-                        `. The song now ends on G\u2011flat— the collection's fourth and as-yet unheard major triad— to suggest the excitement of unseen vistas awaiting a young child.`,
+                        `. The song now ends on G\u2011flat, the collection's fourth— and as yet unheard— major triad, to suggest the excitement of unseen vistas awaiting a young child.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,

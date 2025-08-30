@@ -126,7 +126,7 @@ export default {
                             anchor: `first semester`,
                             todo: REVIEW,
                             card: {
-                                description: `My family was spending the entire summer in Taiwan, so we wouldn't get back to the States until after Sasha had begun the new school year in Boston.`,
+                                description: `My family was spending the entire summer in Taiwan. We weren't to head back to the States until after Sasha had begun the new school year in Boston.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
