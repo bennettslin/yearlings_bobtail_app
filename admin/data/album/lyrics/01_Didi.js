@@ -148,7 +148,7 @@ export default {
                             todo: REVIEW,
                             cards: [
                                 {
-                                    description: `In preschool, we were taught to tie our shoes by making the bunny crisscross the tree. But being left-handed, I was never clear on which hand holds the bunny. My shoelaces would always come undone as a result.`,
+                                    description: `In preschool, we were taught to tie our shoes by making the bunny crisscross the tree. But being left-handed, I was never clear on which hand holds the bunny; my shoelaces would always come undone as a result.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
@@ -190,7 +190,7 @@ export default {
                                 wiki: `A_Portrait_of_the_Artist_as_a_Young_Man`,
                             },
                         },
-                        `, opens in childlike prose. Since my dream was to do for rock music what he'd done for modern literature, I did the same with this opening song.`,
+                        `, opens in childlike prose. Since my dream was to do for rock music what he'd done for modern literature, I did the same in this opening song.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -266,7 +266,7 @@ export default {
                 todo: REVIEW,
                 card: {
                     description: [
-                        `I wanted this song to capture both the flurry of activity and transience of emotion that a child experiences within a day. So while the rhythm jumps in and out of a`,
+                        `I wanted this song to capture the flurry of activity, as well as the transience of emotion, that a child experiences in a day. So while the rhythm jumps in and out of a`,
                         {
                             anchor: `half-time`,
                             wiki: `Half-time_(music)`,
@@ -320,7 +320,7 @@ export default {
                             cards: [
                                 {
                                     description: [
-                                        `The nurse placed my soiled pants in a shopping bag for me to take home. I don't actually recall whether the bag was from`,
+                                        `The nurse placed my soiled pants in a shopping bag for me to take home. Poetic license says the bag came from`,
                                         {
                                             anchor: `Safeway`,
                                             wiki: `Safeway_Inc.`,
@@ -375,7 +375,6 @@ export default {
                         `Didi, you've`,
                         {
                             anchor: `been in the bath`,
-                            todo: REVIEW,
                             card: {
                                 description: `My mother picked me up from school and drove me home. I remember taking a long while to bathe myself.`,
                                 dotKeys: {
