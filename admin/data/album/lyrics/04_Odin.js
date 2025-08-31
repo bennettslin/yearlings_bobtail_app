@@ -106,7 +106,7 @@ export default {
                                             anchor: `Sodom`,
                                             wiki: `Sodom_and_Gomorrah`,
                                         },
-                                        `. When his wife looked back, she was turned into a pillar of salt— a cautionary tale, some might say, warning the faithful not to cohabit with the fallen.`,
+                                        `. When his wife looked back, she was turned into a pillar of salt— a cautionary tale, some might say, to warn the faithful never to cohabit with the fallen.`,
                                     ],
                                     dotKeys: {
                                         [PUN]: true,
@@ -124,7 +124,7 @@ export default {
                             anchor: `hiding place of retreat`,
                             todo: REVIEW,
                             card: {
-                                description: `The "asleep" voice of the doublespeaker pair narrates a dream that melds the familiar setting of Los Angeles with the foreign sights of Taiwan. It begins with me coming out from the hiding place underneath my bed at home, having been absorbed in my drawings well into nighttime.`,
+                                description: `The "asleep" voice of this doublespeaker pair narrates a dream that melds the familiar setting of Los Angeles with the foreign sights of Taiwan. It begins with me coming out from the hiding place underneath my bed at home, having been absorbed in my drawings well into nighttime.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
@@ -497,12 +497,12 @@ export default {
                                         anchor: `shibboleth`,
                                         wiki: `Shibboleth`,
                                     },
-                                    `"— the Hebrew word for a river. Since the enemy tribe pronounced the letter`,
+                                    `"— the Hebrew word for a river. Since the enemy tribe had a different pronunciation for the letter`,
                                     {
                                         isItalic: true,
                                         lyric: `shin`,
                                     },
-                                    `differently, they'd out themselves by saying "sibboleth"— as I do here in the recording.`,
+                                    `, they'd give themselves away by saying "sibboleth"— as I do here in the recording.`,
                                 ],
                                 dotKeys: {
                                     [SONGCRAFT]: true,
@@ -1006,7 +1006,6 @@ export default {
                         `Your`,
                         {
                             anchor: `seizures of spleen`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `In`,
@@ -1588,7 +1587,6 @@ export default {
                         `while`,
                         {
                             anchor: `mermaids smile`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `In Eliot's "`,

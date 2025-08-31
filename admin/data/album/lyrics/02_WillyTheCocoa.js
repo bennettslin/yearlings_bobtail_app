@@ -476,12 +476,12 @@ export default {
                                 },
                                 {
                                     description: [
-                                        `Willy mulls over why my brother still hasn't outgrown his "`,
+                                        `Willy puzzles over why my brother still hasn't outgrown his "`,
                                         {
                                             anchor: `colic`,
                                             wiki: `Baby_colic`,
                                         },
-                                        `"— a period of excessive crying in infants. It's easy to see, from our modern standpoint, how such inexplicable delays in development led to the belief in changelings.`,
+                                        `"— a period of excessive crying in infants. Such mysterious delays in early development, of course, are what gave rise to a past belief in changelings.`,
                                     ],
                                     dotKeys: {
                                         [PUN]: true,
@@ -787,7 +787,7 @@ export default {
                                 todo: REVIEW,
                                 cards: [
                                     {
-                                        description: `To justify the abuse of sickly children, religious doctrine in the past would claim they were, in fact, devoid of souls.`,
+                                        description: `To justify the abuse of sickly children, religious doctrine in the past would claim that they were devoid of souls.`,
                                         dotKeys: {
                                             [REFERENCE]: true,
                                         },
@@ -1195,7 +1195,7 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `My favorite word as a child was "bobtail." I was just very proud of myself the day I realized that the line "Bells on bobtail ring," from the song "`,
+                                    `My favorite word as a child was "bobtail." It just felt like such a revelation, the day I realized that the line "Bells on bobtail ring," from the song "`,
                                     {
                                         anchor: `Jingle Bells`,
                                         wiki: `Jingle_Bells`,
