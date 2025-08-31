@@ -14,7 +14,7 @@ import {
     FLASHBACK_TO_WORMHOLE_PREFIX,
     FORESHADOW_OF_WORMHOLE_PREFIX,
 } from '../../../../src/constants/lyrics'
-import { REST } from '../../../containers/Annotations/constants/todos'
+import { REST, REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'M',
@@ -294,16 +294,15 @@ export default {
                         `spent her`,
                         {
                             anchor: `wishes on a friend`,
-                            todo: REST,
-                            problem: `Confirm that this is indeed how genies work in folklore.`,
+                            todo: REVIEW,
                             card: {
                                 description: [
-                                    `Toward the end of my five-year plan, the Yearlings began to play local shows. I was thrilled the day Mara showed up in the audience… but it was Joi who caught her eye. I felt like the`,
+                                    `Toward the end of my five-year plan, the Yearlings began to play local shows. I was thrilled the day Mara showed up in the audience… yet it was Joi who caught her eye. I felt like the`,
                                     {
                                         anchor: `bottled genie`,
                                         wiki: `Jinn`,
                                     },
-                                    `of Arabian folklore, who had many fortunes to bestow upon others, but only freedom from isolation to grant himself.`,
+                                    `of Arabian folklore— with endless fortunes to bestow upon others, but only freedom from isolation to grant myself.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -549,10 +548,9 @@ export default {
                         {
                             anchor: `"Made in America" signs`,
                             properNoun: true,
-                            todo: REST,
-                            problem: `Second sentence is a wee bit too long?`,
+                            todo: REVIEW,
                             card: {
-                                description: `To promote cross-cultural harmony, the pairings in these mass weddings are often international by design. So my Moonie bride might very well be a foreigner who joined the church just to ensure her children will be American by birth. In which case, I'd be a fool to think my "maiden Mara co-signs" the marriage license in good faith.`,
+                                description: `To promote cross-cultural harmony, the pairings in these mass weddings are international by design. So my Moonie bride would be a foreigner— one who might've joined the church solely to have American-born children. In which case, I'd be a sucker to think my "maiden Mara co-signs" the marriage license in good faith.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                     [PUN]: true,
