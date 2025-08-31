@@ -16,7 +16,7 @@ import {
     FORESHADOW_OF_WORMHOLE_PREFIX,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REST } from '../../../containers/Annotations/constants/todos'
+import { REST, REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Look Back in Anger',
@@ -101,8 +101,7 @@ export default {
                         `Scrambled past this hell, where`,
                         {
                             anchor: `flagboy last fell`,
-                            todo: REST,
-                            problem: `Too many words in last sentence?`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `During the Civil War, a`,
@@ -110,7 +109,7 @@ export default {
                                         anchor: `color bearer`,
                                         wiki: `Standard-bearer`,
                                     },
-                                    `carried the flag of his respective side onto the battlefield. Charging headlong into a volley of musket fire while waving a piece of cloth seemed like an apt metaphor for my high school years.`,
+                                    `carried his side's flag onto the battlefield. Well, charging headlong into a volley of musket fire— all the while waving a piece of cloth— is also how I'd sum up my high school years.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,

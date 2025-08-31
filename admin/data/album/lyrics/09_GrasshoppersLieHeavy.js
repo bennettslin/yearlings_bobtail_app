@@ -17,7 +17,7 @@ import {
     SOLO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REST } from '../../../containers/Annotations/constants/todos'
+import { REST, REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Grasshoppers Lie Heavy',
@@ -704,7 +704,7 @@ export default {
                             cards: [
                                 {
                                     description: [
-                                        `In those days, I often carried a`,
+                                        `In those days, I'd often carry a`,
                                         {
                                             anchor: `Walkman`,
                                             wiki: `Walkman`,
@@ -772,10 +772,9 @@ export default {
                         `"Hey, you know`,
                         {
                             anchor: `you're my password`,
-                            todo: REST,
-                            problem: `Tense is supposedly fine, but still sounds off to me.`,
+                            todo: REVIEW,
                             card: {
-                                description: `As I enter the passcode for my gate, Sita breaks the ice by mentioning that a personal detail about me, which she still remembers, had served as the basis for a password she recently created.`,
+                                description: `As I enter the passcode for my gate, Sita breaks the ice by mentioning a personal detail about me— one that she not only remembers, but even used recently as the basis for a new password.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
@@ -802,8 +801,7 @@ export default {
                         `She`,
                         {
                             anchor: `locks your arm`,
-                            todo: REST,
-                            problem: `Seems off somehow? Is "whereupon" too highbrow?`,
+                            todo: REVIEW,
                             card: {
                                 description: `Seeing Sita shiver from the cold, I invite her to warm up in my apartment, whereupon she gladly tucks her arm under mine. Of course, this doesn't mean what I want it to mean; if anything, I feel like an escaped convict who's just been recaptured and put in handcuffs.`,
                                 dotKeys: {
@@ -1248,8 +1246,7 @@ export default {
                         `You`,
                         {
                             anchor: `stand unsure`,
-                            todo: REST,
-                            problem: `I already talk about Sita comforting me in a later annotation, so don't need to frame it as comfort. Maybe use a different word than "forlorn" as well.`,
+                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `The night we decided to have sex, I was overcome with a wary unease that I couldn't explain.`,
@@ -1258,7 +1255,7 @@ export default {
                                     },
                                 },
                                 {
-                                    description: `As Sita lies naked while comforting me with her gaze, I stand forlornly by the bedside.`,
+                                    description: `As Sita sprawls naked on the mattress, enticing me with her gaze, I stand timidly by the bedside.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                     },
