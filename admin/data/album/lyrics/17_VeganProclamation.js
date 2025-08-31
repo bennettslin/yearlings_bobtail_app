@@ -17,7 +17,7 @@ import {
     FORESHADOW_OF_WORMHOLE_PREFIX,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REST } from '../../../containers/Annotations/constants/todos'
+import { REST, REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Vegan Proclamation',
@@ -251,10 +251,9 @@ export default {
                         `Well,`,
                         {
                             anchor: `first pets`,
-                            todo: REST,
-                            problem: `First two sentences can be written more smoothly.`,
+                            todo: REVIEW,
                             card: {
-                                description: `It astounded me that I could hurt Sita like I had, and still live with myself. In hindsight, I just never questioned the facade of sanity that she'd constructed as a means to cope. I'd allowed myself to believe that our periodic moments of intimacy, which she clung to and cherished, were all that was needed to heal any wound and wipe the slate clean.`,
+                                description: `It baffles me now that I could still live with myself while hurting Sita like I did. I just never questioned the facade of sanity that she'd constructed as a means to cope; I'd allowed myself to believe that our periodic moments of intimacy, which she clung to and cherished, were all that was needed to heal any wound and wipe the slate clean.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -351,8 +350,7 @@ export default {
                                 `. And meanwhile, the universe is a`,
                                 {
                                     anchor: `cyanided box`,
-                                    todo: REST,
-                                    problem: `Make first two sentences flow together. Maybe just explain cat without linking to Schrodinger.`,
+                                    todo: REVIEW,
                                     card: {
                                         description: [
                                             `In`,
@@ -360,17 +358,12 @@ export default {
                                                 anchor: `quantum theory`,
                                                 wiki: `Quantum_mechanics`,
                                             },
-                                            `, a particle can be said to exist in all its possible states at once. To demonstrate the problem with this interpretation,`,
-                                            {
-                                                anchor: `Erwin Schrödinger`,
-                                                wiki: `Erwin_Schrödinger`,
-                                            },
-                                            `proposed a thought experiment known as`,
+                                            `, a particle might be said to exist in all its possible states at once. A thought experiment known as`,
                                             {
                                                 anchor: `Schrödinger's cat`,
                                                 wiki: `Schrödinger's_cat`,
                                             },
-                                            `: We imagine a cat sealed inside a steel chamber containing a vial of poison, where it stands equal chances of surviving or being killed. Since we can't observe the outcome, we must regard the cat as being simultaneously dead and alive.`,
+                                            `, however, demonstrates the problem with this interpretation: We imagine a cat sealed inside a steel chamber containing a vial of poison, where it stands equal chances of surviving or being killed. Since we can't observe the outcome, we must regard the cat as being simultaneously dead and alive.`,
                                         ],
                                     },
                                 },
