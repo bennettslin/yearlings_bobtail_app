@@ -443,16 +443,15 @@ export default {
                     lyric: [
                         {
                             anchor: `Red pouches unspent`,
-                            todo: REST,
-                            problem: `Specify Chinese-influenced cultures?`,
+                            todo: REVIEW,
                             card: {
                                 description: [
-                                    `In Asian cultures, children receive money in`,
+                                    `In Chinese-influenced cultures, children receive money in`,
                                     {
                                         anchor: `red envelopes`,
                                         wiki: `Red_envelope`,
                                     },
-                                    `as a gift. My parents always insisted that we save it all for college. But desperate for answers, I blew my savings on my correspondence with RI Research.`,
+                                    `as a gift. My parents insisted that we should save it all for college. But desperate for answers, I blew my savings on my correspondence with RI Research.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
