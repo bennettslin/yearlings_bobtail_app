@@ -11,7 +11,7 @@ import {
     POSTCHORUS,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REST } from '../../../containers/Annotations/constants/todos'
+import { REST, REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Good Night, Sita',
@@ -551,10 +551,9 @@ export default {
                         `hyped up like some`,
                         {
                             anchor: `disastrous play`,
-                            todo: REST,
-                            problem: `Not sure third sentence flows from second.`,
+                            todo: REVIEW,
                             card: {
-                                description: `On our second date, Sita and I go to see her friend act in a play. Before taking our seats, we chat with him backstage. But I struggle to get a word in edgewise, which leaves me feeling insecure afterward.`,
+                                description: `On our second date, Sita and I go to see her friend act in a play. Before taking our seats, we chat with him backstage. I struggle to get a word in edgewise, however, leaving me to feel insecure afterward.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
@@ -568,14 +567,21 @@ export default {
                         `that starts with a`,
                         {
                             anchor: `lone ringing phone`,
-                            todo: REST,
-                            problem: `Add part about worst plays starting with a ringing phone.`,
-                            card: {
-                                description: `The theater goes pitch black to indicate that the play has begun. As the audience falls to a hush, a rotary telephone rings onstage.`,
-                                dotKeys: {
-                                    [NARRATIVE]: true,
+                            todo: REVIEW,
+                            cards: [
+                                {
+                                    description: `The theater goes pitch black to indicate that the play has begun. As the audience falls to a hush, a rotary telephone rings onstage.`,
+                                    dotKeys: {
+                                        [NARRATIVE]: true,
+                                    },
                                 },
-                            },
+                                {
+                                    description: `I once read that you should never write a play that starts with a phone call, since this is seen as a lazy way to give exposition.`,
+                                    dotKeys: {
+                                        [OBSERVATION]: true,
+                                    },
+                                },
+                            ],
                         },
                     ],
                 },
