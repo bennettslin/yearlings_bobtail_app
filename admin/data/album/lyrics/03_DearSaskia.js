@@ -295,7 +295,6 @@ export default {
                     lyric: [
                         {
                             anchor: `your pupil's pupal fly`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Reflecting on my feelings for Sasha, I recall our last day together, when I caught my reflection in the`,

@@ -578,7 +578,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: [
                         `The tonic triads of the three major keys heard thus far— A, C, and E\u2011flat— all belong to the same`,

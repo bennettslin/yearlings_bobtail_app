@@ -81,7 +81,6 @@ export default {
                     lyricRight: [
                         {
                             anchor: `By lot`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `Lots are drawn by chance to decide an outcome, and it was my lot not to be born a Jew.`,
@@ -106,7 +105,7 @@ export default {
                                             anchor: `Sodom`,
                                             wiki: `Sodom_and_Gomorrah`,
                                         },
-                                        `. When his wife looked back, she was turned into a pillar of salt— a cautionary tale, some might say, to warn the faithful never to cohabit with the fallen.`,
+                                        `. When his wife looked back, she was turned into a pillar of salt— a cautionary tale, some might say, warning the faithful never to cohabit with the fallen.`,
                                     ],
                                     dotKeys: {
                                         [PUN]: true,

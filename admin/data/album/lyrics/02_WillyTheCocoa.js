@@ -459,7 +459,6 @@ export default {
                         `And three years howling is the`,
                         {
                             anchor: `longest cowlick`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
@@ -1015,7 +1014,7 @@ export default {
                             anchor: `I am seven`,
                             todo: REVIEW,
                             card: {
-                                description: `At age six, my brother learned to answer the question of how old he was. Even after turning seven, though, he still insisted on answering "six." We finally got him to accept that "seven" was the new correct answer— but the cost in blood, sweat, and tears was so high that when he turned eight, none of us had the energy to relive the ordeal. He's been answering "seven" ever since. So here, I imagine him, now a grownup, being testy as he corrects a stranger who has the nerve to ask if he's "six."`,
+                                description: `At age six, my brother learned to answer the question of how old he was. Even after turning seven, though, he still insisted on answering "six." We finally got him to accept that "seven" was the new correct answer— but the cost in blood, sweat, and tears was so high that, when he turned eight, none of us had it in us to relive that whole ordeal. He's been answering "seven" ever since. So here I imagine him, now a grownup, being testy as he corrects a stranger who has the nerve to ask if he's "six."`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -1097,7 +1096,6 @@ export default {
                         `Son,`,
                         {
                             anchor: `seventy years`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `My mother told me not to worry, since I wasn't going to die for a good while. She then assured me that once my time is up— which, back then, was expected to be at age seventy— I'd have long made peace with death.`,
