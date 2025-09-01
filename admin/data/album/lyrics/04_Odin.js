@@ -250,10 +250,9 @@ export default {
                         `you`,
                         {
                             anchor: `ruminate on these riddles`,
-                            todo: REST,
-                            problem: `Does the first sentence naturally flow into the second?`,
+                            todo: REVIEW,
                             card: {
-                                description: `The "awake" voice of the doublespeaker pair echoes my thoughts as I lie on the floor mat, unable to sleep. The vastness of the universe, while terrifying, also suggests unlimited possibilities— yet somehow, being with Sasha isn't one of them.`,
+                                description: `As I lie on the floor mat, unable to sleep, the "awake" voice of the doublespeaker pair echoes my thoughts about the universe. Its vastness is terrifying, yes— but also suggests unlimited possibilities. Yet somehow… being with Sasha isn't one of them.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -295,11 +294,10 @@ export default {
                         `do`,
                         {
                             anchor: `sweet dream's ichors`,
-                            todo: REST,
-                            problem: `First sentence should be broken up, since it has too many big words.`,
+                            todo: REVIEW,
                             cards: [
                                 {
-                                    description: `As a child, I hated sleep; its nightly ordeal of swapping out reasoned thoughts for absurd dreams felt as burdensome and frightening as a blood transfusion. Still, things always seemed better in the morning because of it.`,
+                                    description: `As a child, I hated sleep, which forced me to swap out my reasoned thoughts for illogical dreams— a nightly ordeal that felt as burdensome and frightening as a whole-body blood transfusion. Still… things always seemed better in the morning because of it.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                         [OBSERVATION]: true,
@@ -781,8 +779,7 @@ export default {
                         `would the`,
                         {
                             anchor: `rondel of her eye`,
-                            todo: REST,
-                            problem: `Does "substituting my own" make sense? Do I mean my own reading, or my own intention?`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `A`,
@@ -795,7 +792,7 @@ export default {
                                         anchor: `the apple of one's eye`,
                                         wiki: `Apple_of_my_eye`,
                                     },
-                                    `" is an Old English misreading of a Biblical Hebrew idiom that more accurately translates to "the ball of one's eye." Similarly, it was only by misreading Sasha's intentions— or substituting my own— that I could hope to be the object of her affection.`,
+                                    `" is an Old English misreading of a Biblical Hebrew idiom that more accurately translates to "the ball of one's eye." Similarly, it was only by misreading Sasha's intentions— or else, by substituting my own— that I could hope to be the object of her affection.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -1170,10 +1167,11 @@ export default {
                     lyricLeft: [
                         {
                             anchor: `Buoy bobs`,
-                            todo: REST,
-                            problem: `Revisit. Right now, second sentence reads a little weird to me, particularly "also."`,
+                            todo: REVIEW,
                             card: {
-                                description: `In my dream, I see myself adrift on a buoy as it bobs in an ocean filled with sea serpents. But who can say that this "boy" isn't also bobbing through life, oblivious to dangers lurking everywhere?`,
+                                description: [
+                                    `In my dream, I see myself adrift on a buoy as it bobs in an ocean filled with sea serpents. Yet… aren't I also a "boy" who's bobbing through life, oblivious to dangers lurking everywhere?`,
+                                ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true,
