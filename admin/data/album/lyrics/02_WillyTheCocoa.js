@@ -416,16 +416,15 @@ export default {
                         `Oh ma'am, I`,
                         {
                             anchor: `see your kid with whiskers`,
-                            todo: REST,
-                            problem: `Possible to rewrite so "he" is clear, and also avoid saying "Willy" twice?`,
+                            todo: REVIEW,
                             card: {
                                 description: [
-                                    `Noting my brother's distaste for haircuts, Willy jokingly predicts that he'll go unshaven as an adult. But Willy's curious phrasing invites the possibility that my brother, in fact,`,
+                                    `Willy jokingly predicts that my brother's dislike of haircuts will lead him to go unshaven as an adult. But the curious phrasing of this remark invites another possibility— that, unbeknown to us, my brother`,
                                     {
                                         isEmphasis: true,
                                         lyric: `already`,
                                     },
-                                    `wears a beard. After all, in some legends the changeling is a full-grown troll— one who might even be centuries old.`,
+                                    `wears a beard. After all, in some legends the changeling is a full-grown troll, who might even be centuries old.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -1190,7 +1189,6 @@ export default {
                                 `'s cover`,
                             ],
                             properNoun: true,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `My favorite word as a child was "bobtail." It just felt like such a revelation, the day I realized that the line "Bells on bobtail ring," from the song "`,
