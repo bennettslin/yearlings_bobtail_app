@@ -704,11 +704,10 @@ export default {
                     lyric: [
                         {
                             anchor: `Hit this witch`,
-                            todo: REST,
-                            problem: `Make it clear that the second sentence was caused by the first, not just reflected by it.`,
+                            todo: REVIEW,
                             cards: [
                                 {
-                                    description: `In some legends, a changeling who's been beaten enough will tire of their charade and return the stolen child. This reflects the historical reality that sickly children were often abused to death, if not killed outright. So if Willy is indeed a changeling, then it seems predestined for him to meet a violent end.`,
+                                    description: `In some legends, a changeling who's been beaten enough will tire of their charade and return the stolen child. Not only does this reflect the grim reality that sickly children were often abused to death— it also justified such abuse to begin with. So if Willy is indeed a changeling, then it seems predestined that he should meet a violent end.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [OBSERVATION]: true,
@@ -980,17 +979,16 @@ export default {
                         `being ever stuck in`,
                         {
                             anchor: `imp-runt age of mind`,
-                            todo: REST,
-                            problem: `"Even so" technically refers to first sentence, not second, so it sounds weird.`,
+                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
-                                        `After my brother was diagnosed with autism, my mother went back to school to learn child development. At the dinner table, she'd explain concepts like "`,
+                                        `After my brother was diagnosed with autism, my mother started taking night classes in child development. At the dinner table, she'd explain concepts like "`,
                                         {
                                             anchor: `imprinting`,
                                             wiki: `Imprinting_(psychology)`,
                                         },
-                                        `," the phase during which a child learns emotional attachment. Even so, she always felt guilty that her studies were too little, too late to help my brother.`,
+                                        `," the phase during which a child learns emotional attachment. Still, she'd always end by lamenting that her studies were too little, too late to help my brother.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
@@ -998,7 +996,7 @@ export default {
                                     },
                                 },
                                 {
-                                    description: `Since an "imp runt" is literally the weakest member in a litter of troll infants, it's surely the one that a troll parent would try to replace with a stolen human child.`,
+                                    description: `Since an "imp runt" is literally the weakest member in a litter of troll infants, it's sure to be the one a troll parent would replace with a stolen human child.`,
                                     dotKeys: {
                                         [OBSERVATION]: true,
                                     },
