@@ -272,8 +272,9 @@ export default {
                         `licking lips`,
                         {
                             anchor: `he ends his stroll`,
+                            todo: REVIEW,
                             card: {
-                                description: `In most legends, the changeling is a witting participant in the deceitful replacement of a human child. As such, it takes pains to hide its true form while in the company of other humans. And so, before Willy goes off to cash in his recyclables, he ends "as troll" by donning a human guise.`,
+                                description: `In most legends, the changeling is a witting participant in the deceitful replacement of a human child. As such, they take pains to hide their true form while in the company of other humans. And so, before Willy goes off to cash in his recyclables, he ends "as troll" by donning a human guise.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true,
@@ -346,9 +347,10 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
                     description: [
-                        `In some legends, a changeling hints at its true identity by handling common tools in a peculiar way. I figured their manner of playing instruments would be no less peculiar, so I experimented with unconventional techniques— like pairing`,
+                        `In some legends, a changeling hints at their true identity by handling basic tools in an unusual way. I figured their manner of playing instruments would be no less peculiar, so I experimented with unconventional techniques— like pairing`,
                         {
                             anchor: `palm mutes`,
                             wiki: `Palm_mute`,
@@ -663,8 +665,9 @@ export default {
                     lyric: [
                         {
                             anchor: `Killcrop`,
+                            todo: REVIEW,
                             card: {
-                                description: `In English folklore, a killcrop was an infant suspected of being a changeling, on account of its voracious appetite. The etymology is straightforward— one who "kills crops"— and reflects a concern of times past, when children unable to earn their keep could lead to a peasant family's ruin.`,
+                                description: `In English folklore, a killcrop was an infant suspected of being a changeling, on account of their voracious appetite. The etymology is straightforward— one who "kills crops"— and reflects a concern of times past, when children unable to earn their keep could lead to a peasant family's ruin.`,
                                 dotKeys: {
                                     [REFERENCE]: true,
                                 },
@@ -705,7 +708,7 @@ export default {
                             problem: `Make it clear that the second sentence was caused by the first, not just reflected by it.`,
                             cards: [
                                 {
-                                    description: `In some legends, a changeling that's been beaten enough will grow tired of its charade and return the stolen child. This reflects the historical reality that sickly children were often abused to death, if not killed outright. So if Willy is indeed a changeling, then it seems predestined for him to meet a violent end.`,
+                                    description: `In some legends, a changeling who's been beaten enough will tire of their charade and return the stolen child. This reflects the historical reality that sickly children were often abused to death, if not killed outright. So if Willy is indeed a changeling, then it seems predestined for him to meet a violent end.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [OBSERVATION]: true,
