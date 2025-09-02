@@ -17,7 +17,7 @@ import {
     SOLO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REST, REVIEW } from '../../../containers/Annotations/constants/todos'
+import { REST } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Grasshoppers Lie Heavy',
@@ -772,7 +772,6 @@ export default {
                         `"Hey, you know`,
                         {
                             anchor: `you're my password`,
-                            todo: REVIEW,
                             card: {
                                 description: `As I enter the passcode for my gate, Sita breaks the ice by mentioning a personal detail about me— one that she not only remembers, but even used recently as the basis for a new password.`,
                                 dotKeys: {
@@ -801,7 +800,6 @@ export default {
                         `She`,
                         {
                             anchor: `locks your arm`,
-                            todo: REVIEW,
                             card: {
                                 description: `Seeing Sita shiver from the cold, I invite her to warm up in my apartment, whereupon she gladly tucks her arm under mine. Of course, this doesn't mean what I want it to mean; if anything, I feel like an escaped convict who's just been recaptured and put in handcuffs.`,
                                 dotKeys: {
@@ -1246,7 +1244,6 @@ export default {
                         `You`,
                         {
                             anchor: `stand unsure`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `The night we decided to have sex, I was overcome with a wary unease that I couldn't explain.`,

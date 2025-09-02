@@ -37,13 +37,9 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
                     description: [
-                        {
-                            anchor: `John Osborne`,
-                            wiki: `John_Osborne`,
-                        },
-                        `'s`,
                         {
                             isItalic: true,
                             lyric: {
@@ -51,7 +47,12 @@ export default {
                                 wiki: `Look_Back_in_Anger`,
                             },
                         },
-                        `, a theatrical play set in postwar England, is about a disgruntled young man of the working class who hurls rage at his long-suffering wife. It hit unnervingly close to home when I read it.`,
+                        `, a stage play by`,
+                        {
+                            anchor: `John Osborne`,
+                            wiki: `John_Osborne`,
+                        },
+                        `set in postwar England, is about a disgruntled young man of the working class who hurls rage at his long-suffering wife. It hit unnervingly close to home when I read it.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
@@ -101,7 +102,6 @@ export default {
                         `Scrambled past this hell, where`,
                         {
                             anchor: `flagboy last fell`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `During the Civil War, a`,

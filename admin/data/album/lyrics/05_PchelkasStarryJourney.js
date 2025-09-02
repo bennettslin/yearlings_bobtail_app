@@ -511,6 +511,7 @@ export default {
                         `But`,
                         {
                             anchor: `waiting for Goddard`,
+                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
@@ -534,7 +535,7 @@ export default {
                                                 wiki: `Waiting_for_Godot`,
                                             },
                                         },
-                                        `is a play by`,
+                                        `is a stage play by`,
                                         {
                                             anchor: `Samuel Beckett`,
                                             wiki: `Samuel_Beckett`,

@@ -567,7 +567,6 @@ export default {
                         `that starts with a`,
                         {
                             anchor: `lone ringing phone`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `The theater goes pitch black to indicate that the play has begun. As the audience falls to a hush, a rotary telephone rings onstage.`,
