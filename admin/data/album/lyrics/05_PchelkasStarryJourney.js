@@ -446,12 +446,12 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `In Chinese-influenced cultures, children receive money in`,
+                                    `In Chinese-influenced cultures, children are gifted money in`,
                                     {
                                         anchor: `red envelopes`,
                                         wiki: `Red_envelope`,
                                     },
-                                    `as a gift. My parents insisted that we should save it all for college. But desperate for answers, I blew my savings on my correspondence with RI Research.`,
+                                    `. My parents always insisted that we save it all for college. Desperate for answers, though, I blew my entire savings on the correspondence with RI Research.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -478,7 +478,6 @@ export default {
                         `"`,
                         {
                             anchor: `Are you a Beyonder`,
-                            todo: REVIEW,
                             card: {
                                 description: `According to RI Research, Beyonders are an ancient race of beings who were scattered across the universe. The ones who came to Earth adopted the likeness of humans— then lost all recollection of their astral origins. Even so, they're beset by a quiet discomfort that they don't truly belong.`,
                                 dotKeys: {

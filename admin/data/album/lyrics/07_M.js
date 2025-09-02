@@ -294,7 +294,6 @@ export default {
                         `spent her`,
                         {
                             anchor: `wishes on a friend`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Toward the end of my five-year plan, the Yearlings began to play local shows. I was thrilled the day Mara showed up in the audience… yet it was Joi who caught her eye. I felt like the`,
@@ -550,7 +549,7 @@ export default {
                             properNoun: true,
                             todo: REVIEW,
                             card: {
-                                description: `To promote cross-cultural harmony, the pairings in these mass weddings are international by design. So my Moonie bride would be a foreigner— one who might've joined the church solely to have American-born children. In which case, I'd be a sucker to think my "maiden Mara co-signs" the marriage license in good faith.`,
+                                description: `To promote cross-cultural harmony, the pairings in these mass weddings are international by design. So my Moonie bride would be a foreigner— one who might've joined the church solely to birth American children. In which case, I'd be a fool to think my "maiden Mara co-signs" the marriage license in good faith.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                     [PUN]: true,

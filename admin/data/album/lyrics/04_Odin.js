@@ -297,7 +297,7 @@ export default {
                             todo: REVIEW,
                             cards: [
                                 {
-                                    description: `As a child, I hated sleep, which forced me to swap out my reasoned thoughts for illogical dreams— a nightly ordeal that felt as burdensome and frightening as a whole-body blood transfusion. Still… things always seemed better in the morning because of it.`,
+                                    description: `I hated sleep as a child, since it forced me to swap out my reasoned thoughts for illogical dreams— a nightly ordeal that felt as burdensome and frightening as a whole-body blood transfusion. Still… things always seemed better in the morning because of it.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                         [OBSERVATION]: true,
@@ -481,7 +481,6 @@ export default {
                         `proves`,
                         {
                             anchor: `shibboleth`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `The`,
@@ -644,7 +643,7 @@ export default {
                                             wiki: `Moby-Dick`,
                                         },
                                     },
-                                    `is an outcast. While the former was banished to the desert, I follow the latter, and wander the figurative dunes of the ocean.`,
+                                    `is an outcast. While the former was banished to the desert, the latter roamed the figurative dunes of the ocean— as I do now.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -789,10 +788,10 @@ export default {
                                     },
                                     `is a verse form that originated in French poetry, but it can refer to any round object, like a ball. Meanwhile, "`,
                                     {
-                                        anchor: `the apple of one's eye`,
+                                        anchor: `apple of one's eye`,
                                         wiki: `Apple_of_my_eye`,
                                     },
-                                    `" is an Old English misreading of a Biblical Hebrew idiom that more accurately translates to "the ball of one's eye." Similarly, it was only by misreading Sasha's intentions— or else, by substituting my own— that I could hope to be the object of her affection.`,
+                                    `," from Old English, is a misreading of a Biblical Hebrew idiom that translates to "ball of one's eye." Similarly, it was only by misreading Sasha's intentions— or else, by substituting my own— that I could hope to be the object of her affection.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -1170,7 +1169,7 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `In my dream, I see myself adrift on a buoy as it bobs in an ocean filled with sea serpents. Yet… aren't I also a "boy" who's bobbing through life, oblivious to dangers lurking everywhere?`,
+                                    `In my dream, I see myself adrift on a buoy as it bobs in an ocean filled with sea serpents. Yet… aren't I, too, a "boy" who's bobbing through life, oblivious to dangers lurking everywhere?`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,

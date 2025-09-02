@@ -13,7 +13,6 @@ import {
     REFRAIN,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Dear Saskia',
@@ -124,7 +123,6 @@ export default {
                         `your`,
                         {
                             anchor: `first semester`,
-                            todo: REVIEW,
                             card: {
                                 description: `My family was spending the entire summer in Taiwan. We weren't to head back to the States until after Sasha had begun the new school year in Boston.`,
                                 dotKeys: {
@@ -412,7 +410,6 @@ export default {
                         `And I sniffled daily when you`,
                         {
                             anchor: `skipped a grade`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `I panicked when Sasha`,
