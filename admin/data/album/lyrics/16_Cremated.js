@@ -666,9 +666,9 @@ export default {
                                         anchor: `the replacement`,
                                         wiki: `Dubbing_(filmmaking)`,
                                     },
-                                    `of an actor's voice in film, but also to the ritual of`,
+                                    `of an actor's voice in film, as well as to the ritual of`,
                                     {
-                                        anchor: `conferring knighthood`,
+                                        anchor: `bestowing knighthood`,
                                         wiki: `Accolade`,
                                     },
                                     `. So here we find the drunken me, confused by the order being given to speak for the crimes of his sober half, clumsily patting him on the shoulder with a sharp sword instead.`,
