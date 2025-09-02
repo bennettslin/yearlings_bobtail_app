@@ -245,7 +245,6 @@ export default {
                     lyricLeft: [
                         {
                             anchor: `Immerse the molted form`,
-                            todo: REVIEW,
                             card: {
                                 description: `With the plot to end his relationship having succeeded, the "sober" voice of my doublespeaker pair comes back to resurrect the ghost of his drunken half, whom he'd meant to sacrifice all along as an unwitting accomplice.`,
                                 dotKeys: {
@@ -259,7 +258,6 @@ export default {
                         `Returned a golden cord, this`,
                         {
                             anchor: `sole belonging signed`,
-                            todo: REVIEW,
                             card: {
                                 description: `Plopped onto moonlit streets from whereabouts unknown, my "drunken" voice can only recollect his past crimes. And so he believes himself to be newly released from prison— perhaps having just retrieved from storage the bracelet now in his hand.`,
                                 dotKeys: {
@@ -354,7 +352,7 @@ export default {
                                 wiki: `Nineteen_Eighty-Four`,
                             },
                         },
-                        `, the citizens must practice doublethink in order to accept the contradictory propaganda of Newspeak. Similarly, to justify the breakup, I had to reconcile the contradictions in my head. So this song uses doublespeaker rhyme— which I named partly for its Orwellian undertone— to depict the inner conflict between my sober self and his drunken alter ego.`,
+                        `, the citizens must practice doublethink in order to accept the contradictory propaganda of Newspeak. Similarly, to justify the breakup, I had to reconcile the contradictions in my head. So this song uses doublespeaker rhyme— which I named partly for its Orwellian undertone— to depict the inner conflict between me and my drunken alter ego.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
@@ -375,7 +373,6 @@ export default {
                         `As I soak in spirits amidst`,
                         {
                             anchor: `wanted ads`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `As my drunken self wanders the Oakland streets, he stops to read flyers posted on telephone poles by those seeking bandmates— like a vigilante of the Old West scanning a town's`,
@@ -404,7 +401,6 @@ export default {
                     lyricLeft: [
                         {
                             anchor: `Guilt pardons`,
-                            todo: REVIEW,
                             card: {
                                 description: `Sober me observes his drunken half's lack of remorse and can only feel pity, knowing the trauma that must surely dwell in one who committed such a heinous act. After all, avoiding such trauma is the reason he chose not to carry out the hit himself.`,
                                 dotKeys: {
@@ -418,7 +414,6 @@ export default {
                         `still hardened against her`,
                         {
                             anchor: `fawning, misty glance`,
-                            todo: REVIEW,
                             card: {
                                 description: `With malice suddenly rumbling in his heart, my drunken self lashes out in defiance at the boulevard's twin street lights. Their glowing lamps have revived the memory of Sita's fearful gaze at the moment he committed his crime.`,
                                 dotKeys: {
@@ -1002,7 +997,6 @@ export default {
                         {
                             anchor: `Garry's sole witness`,
                             properNoun: true,
-                            todo: REVIEW,
                             card: {
                                 description: `Of course, I wish to plead my case— yet if I just accept my role as the villain, then this can all be over with sooner. And so my sober self, called up to testify for his drunken half, stays silent.`,
                                 dotKeys: {

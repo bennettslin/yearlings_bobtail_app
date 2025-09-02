@@ -350,7 +350,6 @@ export default {
                                 `. And meanwhile, the universe is a`,
                                 {
                                     anchor: `cyanided box`,
-                                    todo: REVIEW,
                                     card: {
                                         description: [
                                             `In`,

@@ -13,8 +13,6 @@ This shows which annotations use which terms. I mixed them up for variety.
 
 13R.             Drunken me
 
-14. Sober self,  Drunken alter ego
-
 15R.             Drunken self
 
 16L. Sober me,   Drunken half

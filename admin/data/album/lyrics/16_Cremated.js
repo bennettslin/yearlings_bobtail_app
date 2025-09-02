@@ -560,9 +560,8 @@ export default {
                         `to remain`,
                         {
                             anchor: `inherently perfect`,
-                            todo: REVIEW,
                             card: {
-                                description: `The purpose of having a drunken alter ego was to blame him for my selfish desires, while staying above reproach myself. I didn't tell Miriam this, of course— since the latest thing I selfishly desired was her.`,
+                                description: `The purpose of having a drunken alter ego was to blame it for all my selfish desires, while staying above reproach myself. I didn't tell Miriam this, of course— since the latest thing I selfishly desired was her.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -685,7 +684,6 @@ export default {
                         `in care,`,
                         {
                             anchor: `he's anyone`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `After all, it's not clear to drunken me that`,
