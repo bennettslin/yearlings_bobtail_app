@@ -375,9 +375,10 @@ export default {
                         `As I soak in spirits amidst`,
                         {
                             anchor: `wanted ads`,
+                            todo: REVIEW,
                             card: {
                                 description: [
-                                    `As drunken me wanders the Oakland streets, he stops to read flyers posted on telephone poles by those seeking bandmates— like a vigilante of the Old West scanning a town's`,
+                                    `As my drunken self wanders the Oakland streets, he stops to read flyers posted on telephone poles by those seeking bandmates— like a vigilante of the Old West scanning a town's`,
                                     {
                                         anchor: `wanted posters`,
                                         wiki: `Wanted_poster`,
@@ -403,8 +404,9 @@ export default {
                     lyricLeft: [
                         {
                             anchor: `Guilt pardons`,
+                            todo: REVIEW,
                             card: {
-                                description: `My sober self observes his drunken accomplice's lack of remorse and can only feel pity, knowing the trauma that must surely dwell in one who committed such a heinous act. After all, avoiding such trauma is the reason he chose not to carry out the hit himself.`,
+                                description: `Sober me observes his drunken half's lack of remorse and can only feel pity, knowing the trauma that must surely dwell in one who committed such a heinous act. After all, avoiding such trauma is the reason he chose not to carry out the hit himself.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
@@ -416,8 +418,9 @@ export default {
                         `still hardened against her`,
                         {
                             anchor: `fawning, misty glance`,
+                            todo: REVIEW,
                             card: {
-                                description: `With bitterness suddenly rumbling in his heart, drunken me lashes out in defiance at the boulevard's twin street lights. Their glowing lamps have revived the memory of Sita's fearful gaze at the moment he committed his crime.`,
+                                description: `With malice suddenly rumbling in his heart, my drunken self lashes out in defiance at the boulevard's twin street lights. Their glowing lamps have revived the memory of Sita's fearful gaze at the moment he committed his crime.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
@@ -999,8 +1002,9 @@ export default {
                         {
                             anchor: `Garry's sole witness`,
                             properNoun: true,
+                            todo: REVIEW,
                             card: {
-                                description: `Of course, I wish to plead my case— yet if I just accept my role as the villain, then this can all be over with sooner. And so the sober me, called up to testify for his drunken half, stays silent.`,
+                                description: `Of course, I wish to plead my case— yet if I just accept my role as the villain, then this can all be over with sooner. And so my sober self, called up to testify for his drunken half, stays silent.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -1026,8 +1030,9 @@ export default {
                         `Though, the`,
                         {
                             anchor: `master mind`,
+                            todo: REVIEW,
                             card: {
-                                description: `In college, my wishful thinking was that I could simply force the drunken me to write my term paper. But then once drunk, I'd resent taking orders from my sober half, and either do the work poorly or not at all— like a slave rebelling against his master. Somehow, this then became my strategy for breaking up with Sita as well.`,
+                                description: `In college, my wishful thinking was that I could simply force drunken me to write my term paper. But then, once drunk, I'd resent having to take orders from my sober half, and either do the work poorly or not at all— like a slave rebelling against his master. Somehow, this then became my strategy for breaking up with Sita as well.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -1043,6 +1048,7 @@ export default {
                         `a bid for greatness' sake, he's sold on as`,
                         {
                             anchor: `holy war`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `In the immediate`,
@@ -1050,7 +1056,7 @@ export default {
                                         anchor: `wake of 9/11`,
                                         wiki: `September_11_attacks`,
                                     },
-                                    `, it was believed that most of the hijackers hadn't been told it was a suicide mission. Likewise, drunken me was sold on all the perks of doing away with Sita, unaware that the one being sacrificed in this exchange would be him.`,
+                                    `, it was believed that most of the hijackers hadn't been told it was a suicide mission. Likewise, my drunken self was sold on all the benefits of casting Sita aside, unaware that the one being sacrificed in this exchange would be him.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
