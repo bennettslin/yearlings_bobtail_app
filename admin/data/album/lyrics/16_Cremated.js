@@ -15,7 +15,7 @@ import {
     IS_UNIT_DOT,
     FORESHADOW_OF_WORMHOLE_PREFIX,
 } from '../../../../src/constants/lyrics'
-import { REST, REVISE } from '../../../containers/Annotations/constants/todos'
+import { REST, REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Cremated',
@@ -534,9 +534,10 @@ export default {
                         `on a`,
                         {
                             anchor: `self-servicing cleric surgeon`,
+                            todo: REVIEW,
                             card: {
                                 description: [
-                                    `But while my drunken self is being forcibly converted to the faith of his sober half, this internal conflict remains unseen by others, who can only watch in bewilderment as I perform`,
+                                    `But while drunken me is being forcibly converted by his sober half's newfound zealotry, this inner conflict remains unseen by others, who can only watch in bewilderment as I perform`,
                                     {
                                         anchor: `circumcision`,
                                         wiki: `Circumcision`,
@@ -559,8 +560,9 @@ export default {
                         `to remain`,
                         {
                             anchor: `inherently perfect`,
+                            todo: REVIEW,
                             card: {
-                                description: `The purpose of having a drunken alter ego was to blame it for all my selfish desires, while staying above reproach myself. I didn't tell Miriam this, of course— since the latest thing I selfishly desired was her.`,
+                                description: `The purpose of having a drunken alter ego was to blame him for my selfish desires, while staying above reproach myself. I didn't tell Miriam this, of course— since the latest thing I selfishly desired was her.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -608,6 +610,7 @@ export default {
                         `his`,
                         {
                             anchor: `offscreen person dubs`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Of course, this wouldn't be the first time I've tossed aside a puppet after it served my purpose. Like a`,
@@ -615,7 +618,7 @@ export default {
                                         anchor: `ventriloquist`,
                                         wiki: `Ventriloquism`,
                                     },
-                                    `with a dummy on his lap, the sober me made his drunken half say all the questionable things needed to fulfill his desires, while he just sat there looking appalled.`,
+                                    `with a dummy on his lap, my sober self made his drunken half say all the questionable things needed to fulfill his desires, while he just sat there looking appalled.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -671,7 +674,7 @@ export default {
                                         anchor: `bestowing knighthood`,
                                         wiki: `Accolade`,
                                     },
-                                    `. So here we find the drunken me, confused by the order being given to speak for the crimes of his sober half, clumsily patting him on the shoulder with a sharp sword instead.`,
+                                    `. So here we find my drunken self, confused by the order being given to speak for the crimes of his sober half, clumsily patting him on the shoulder with a sharp sword instead.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -682,14 +685,15 @@ export default {
                         `in care,`,
                         {
                             anchor: `he's anyone`,
+                            todo: REVIEW,
                             card: {
                                 description: [
-                                    `After all, it's not clear to my drunken self that`,
+                                    `After all, it's not clear to drunken me that`,
                                     {
                                         isEmphasis: true,
                                         lyric: `he's`,
                                     },
-                                    `the dummy whose actions are dictated by his other half, rather than the other way around.`,
+                                    `the dummy whose actions are dictated by his sober half, rather than the other way around.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,

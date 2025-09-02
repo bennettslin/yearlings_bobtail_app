@@ -14,7 +14,7 @@ import {
     OUTRO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REST } from '../../../containers/Annotations/constants/todos'
+import { REST, REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'On a Golden Cord',
@@ -245,8 +245,9 @@ export default {
                     lyricLeft: [
                         {
                             anchor: `Immerse the molted form`,
+                            todo: REVIEW,
                             card: {
-                                description: `With the plot to end his relationship having succeeded, the sober voice of my doublespeaker pair comes back to resurrect the ghost of his drunken half, whom he'd meant to sacrifice all along as an unwitting accomplice.`,
+                                description: `With the plot to end his relationship having succeeded, the "sober" voice of my doublespeaker pair comes back to resurrect the ghost of his drunken half, whom he'd meant to sacrifice all along as an unwitting accomplice.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
@@ -258,8 +259,9 @@ export default {
                         `Returned a golden cord, this`,
                         {
                             anchor: `sole belonging signed`,
+                            todo: REVIEW,
                             card: {
-                                description: `Plopped onto moonlit streets from whereabouts unknown, my drunken self can only recollect his past crimes. And so he believes himself to be newly released from prison— perhaps having just retrieved from storage the bracelet now in his hand.`,
+                                description: `Plopped onto moonlit streets from whereabouts unknown, my "drunken" voice can only recollect his past crimes. And so he believes himself to be newly released from prison— perhaps having just retrieved from storage the bracelet now in his hand.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },
@@ -336,6 +338,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
                     description: [
                         `In`,
@@ -351,7 +354,7 @@ export default {
                                 wiki: `Nineteen_Eighty-Four`,
                             },
                         },
-                        `, the citizens must practice doublethink in order to accept the contradictory propaganda of Newspeak. Similarly, to justify the breakup, I had to reconcile the contradictions in my head. So this song uses doublespeaker rhyme— which I named partly for its Orwellian undertone— to depict the inner conflict between my sober self and my drunken alter ego.`,
+                        `, the citizens must practice doublethink in order to accept the contradictory propaganda of Newspeak. Similarly, to justify the breakup, I had to reconcile the contradictions in my head. So this song uses doublespeaker rhyme— which I named partly for its Orwellian undertone— to depict the inner conflict between my sober self and his drunken alter ego.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
