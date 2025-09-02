@@ -36,6 +36,6 @@ This shows which annotations use which terms. I mixed them up for variety.
 
 29. Sober self, Drunken half
 
-31. Sober half, Drunken self
+31. Sober me, Drunken half
 
 32. Sober half, Drunken me

@@ -663,17 +663,17 @@ export default {
                             problem: `"His" and "him" refer to different people.`,
                             card: {
                                 description: [
-                                    `Dubbing refers to`,
+                                    `Dubbing can refer to either`,
                                     {
                                         anchor: `the replacement`,
                                         wiki: `Dubbing_(filmmaking)`,
                                     },
-                                    `of an actor's voice in film, as well as to the ritual of`,
+                                    `of an actor's voice in film, or the ritual of`,
                                     {
                                         anchor: `bestowing knighthood`,
                                         wiki: `Accolade`,
                                     },
-                                    `. So here we find my drunken self, confused by the order being given to speak for the crimes of his sober half, clumsily patting him on the shoulder with a sharp sword instead.`,
+                                    `. Here, then, sober me has found a patsy to speak for his crimes— only to find his drunken half patting him on the shoulder with a sharp sword instead.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,

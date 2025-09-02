@@ -272,7 +272,6 @@ export default {
                         `licking lips`,
                         {
                             anchor: `he ends his stroll`,
-                            todo: REVIEW,
                             card: {
                                 description: `In most legends, the changeling is a witting participant in the deceitful replacement of a human child. As such, they take pains to hide their true form while in the company of other humans. And so, before Willy goes off to cash in his recyclables, he ends "as troll" by donning a human guise.`,
                                 dotKeys: {
@@ -347,7 +346,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: [
                         `In some legends, a changeling hints at their true identity by handling basic tools in an unusual way. I figured their manner of playing instruments would be no less peculiar, so I experimented with unconventional techniques— like pairing`,
@@ -418,7 +416,6 @@ export default {
                         `Oh ma'am, I`,
                         {
                             anchor: `see your kid with whiskers`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Willy jokingly predicts that my brother's dislike of haircuts will lead him to go unshaven as an adult. But the curious phrasing of this remark invites another possibility— that, unbeknown to us, my brother`,
@@ -665,7 +662,6 @@ export default {
                     lyric: [
                         {
                             anchor: `Killcrop`,
-                            todo: REVIEW,
                             card: {
                                 description: `In English folklore, a killcrop was an infant suspected of being a changeling, on account of their voracious appetite. The etymology is straightforward— one who "kills crops"— and reflects a concern of times past, when children unable to earn their keep could lead to a peasant family's ruin.`,
                                 dotKeys: {
@@ -1012,7 +1008,6 @@ export default {
                         `Are you sick?`,
                         {
                             anchor: `I am seven`,
-                            todo: REVIEW,
                             card: {
                                 description: `At age six, my brother learned to answer the question of how old he was. Even after turning seven, though, he still insisted on answering "six." We finally got him to accept that "seven" was the new correct answer— but the cost in blood, sweat, and tears was so high that, when he turned eight, none of us had it in us to relive that whole ordeal. He's been answering "seven" ever since. So here I imagine him, now a grownup, being testy as he corrects a stranger who has the nerve to ask if he's "six."`,
                                 dotKeys: {
