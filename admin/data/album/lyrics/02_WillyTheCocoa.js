@@ -783,7 +783,7 @@ export default {
                                 todo: REVIEW,
                                 cards: [
                                     {
-                                        description: `To justify the abuse of sickly children, religious doctrine in the past would claim that they were devoid of souls.`,
+                                        description: `To further justify the abuse of sickly children, the church often claimed they had no souls.`,
                                         dotKeys: {
                                             [REFERENCE]: true,
                                         },
@@ -812,7 +812,8 @@ export default {
                         {
                             anchor: `Willy's stalkless bulb`,
                             properNoun: true,
-                            todo: REVIEW,
+                            todo: REST,
+                            problem: `If I'm going to make the observation in the second sentence, I should be doing more with it.`,
                             card: {
                                 description: [
                                     `The impact of the wine bottle severs Willy's brain from his spine, like a`,
@@ -975,7 +976,8 @@ export default {
                         `being ever stuck in`,
                         {
                             anchor: `imp-runt age of mind`,
-                            todo: REVIEW,
+                            todo: REST,
+                            problem: `Make it more clear in the second sentence that this was from her studies? Make logic of third sentence flow better from both first and second?`,
                             cards: [
                                 {
                                     description: [
@@ -1123,7 +1125,8 @@ export default {
                         `In time, with`,
                         {
                             anchor: `needle done`,
-                            todo: REVIEW,
+                            todo: REST,
+                            problem: `Ultimately, I keep sitting on this because I still think it's not good enough.`,
                             cards: [
                                 {
                                     description: `My mother tells me that my life is a patchwork onto which I'll continue to sew new experiences. In turn, the insights I'll gain as a result will inform and enrich my art.`,

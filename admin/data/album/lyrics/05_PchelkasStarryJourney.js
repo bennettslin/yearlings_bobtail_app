@@ -755,7 +755,8 @@ export default {
                         `one they'll find only once we build the`,
                         {
                             anchor: `mothership`,
-                            todo: REVIEW,
+                            todo: REST,
+                            problem: `I think I hate this because it's too much an exaggeration of the actual truth. Revisit, and at some point, maybe just accept it?`,
                             card: {
                                 description: `The letters promised to update me on new developments, such as the construction of spacecraft that would allow us Beyonders to contact our extraplanetary kin.`,
                                 dotKeys: {

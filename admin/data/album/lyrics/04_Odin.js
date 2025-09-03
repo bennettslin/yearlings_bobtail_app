@@ -19,7 +19,7 @@ import {
     IS_UNIT_DOT,
     RESPONSE,
 } from '../../../../src/constants/lyrics'
-import { REST, REVIEW } from '../../../containers/Annotations/constants/todos'
+import { REST, REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Odin',
@@ -162,7 +162,8 @@ export default {
                         `This`,
                         {
                             anchor: `fridge's gallery in web's wake`,
-                            todo: REVIEW,
+                            todo: REVISE,
+                            problem: `This can definitely be phrased better.`,
                             card: {
                                 description: `Trailing from my clothes are cobwebs, which cling to some drawings of mine that were attached to the refrigerator, scattering them onto the floor.`,
                                 dotKeys: {
@@ -194,7 +195,8 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
+                todo: REST,
+                problem: `I'm sitting on this because I still think that first sentence could be better.`,
                 card: {
                     description: [
                         `For this song, I wanted to capture the disorienting cycle between days among the foreign, and nightly dreams of the familiar. And so I invented doublespeaker rhyme— a literary technique in which two columns of lyrics, written to rhyme syllable for syllable, are sung in harmony. Each voice is then isolated to an opposite speaker in the stereo mix, creating the audio version of a cinematic`,
@@ -250,7 +252,8 @@ export default {
                         `you`,
                         {
                             anchor: `ruminate on these riddles`,
-                            todo: REVIEW,
+                            todo: REST,
+                            problem: `Second and third sentences should parallel each other more to make it obvious that I'm going back and forth between hope and despair.`,
                             card: {
                                 description: `As I lie on the floor mat, unable to sleep, the "awake" voice of the doublespeaker pair echoes my thoughts about the universe. Its vastness is terrifying, yes— but also suggests unlimited possibilities. Yet somehow… being with Sasha isn't one of them.`,
                                 dotKeys: {

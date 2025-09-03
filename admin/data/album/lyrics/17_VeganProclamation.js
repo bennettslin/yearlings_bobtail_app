@@ -17,7 +17,7 @@ import {
     FORESHADOW_OF_WORMHOLE_PREFIX,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REST, REVIEW } from '../../../containers/Annotations/constants/todos'
+import { REST } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Vegan Proclamation',
@@ -251,7 +251,8 @@ export default {
                         `Well,`,
                         {
                             anchor: `first pets`,
-                            todo: REVIEW,
+                            todo: REST,
+                            problem: `First sentence still doesn't flow well enough into second.`,
                             card: {
                                 description: `It baffles me now that I could still live with myself while hurting Sita like I did. I just never questioned the facade of sanity that she'd constructed as a means to cope; I'd allowed myself to believe that our periodic moments of intimacy, which she clung to and cherished, were all that was needed to heal any wound and wipe the slate clean.`,
                                 dotKeys: {

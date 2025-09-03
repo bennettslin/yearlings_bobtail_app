@@ -15,7 +15,7 @@ import {
     IS_UNIT_DOT,
     FORESHADOW_OF_WORMHOLE_PREFIX,
 } from '../../../../src/constants/lyrics'
-import { REST, REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
+import { REST, REVISE } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Cremated',
@@ -534,7 +534,8 @@ export default {
                         `on a`,
                         {
                             anchor: `self-servicing cleric surgeon`,
-                            todo: REVIEW,
+                            todo: REST,
+                            problem: `Revisit to make sure, but mentioning zealotry throws it off, I think. Go back to just saying faith, if anything at all.`,
                             card: {
                                 description: [
                                     `But while drunken me is being forcibly converted by his sober half's newfound zealotry, this inner conflict remains unseen by others, who can only watch in bewilderment as I perform`,
@@ -609,7 +610,8 @@ export default {
                         `his`,
                         {
                             anchor: `offscreen person dubs`,
-                            todo: REVIEW,
+                            todo: REST,
+                            problem: `Make sure I'm making comparison to tossing aside a puppet. How was my drunken half tossed aside?`,
                             card: {
                                 description: [
                                     `Of course, this wouldn't be the first time I've tossed aside a puppet after it served my purpose. Like a`,

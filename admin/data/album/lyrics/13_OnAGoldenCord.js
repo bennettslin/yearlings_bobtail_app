@@ -1042,7 +1042,8 @@ export default {
                         `a bid for greatness' sake, he's sold on as`,
                         {
                             anchor: `holy war`,
-                            todo: REVIEW,
+                            todo: REST,
+                            problem: `It should be more harsh than simply casting Sita aside. It should insinuate that I'm doing away with her for good.`,
                             card: {
                                 description: [
                                     `In the immediate`,
