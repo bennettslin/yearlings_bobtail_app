@@ -14,7 +14,7 @@ import {
     OUTRO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REST } from '../../../containers/Annotations/constants/todos'
+import { REST, REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'On a Golden Cord',
@@ -1040,8 +1040,7 @@ export default {
                         `a bid for greatness' sake, he's sold on as`,
                         {
                             anchor: `holy war`,
-                            todo: REST,
-                            problem: `It should be more harsh than simply casting Sita aside. It should insinuate that I'm doing away with her for good.`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `In the immediate`,
@@ -1049,7 +1048,7 @@ export default {
                                         anchor: `wake of 9/11`,
                                         wiki: `September_11_attacks`,
                                     },
-                                    `, it was believed that most of the hijackers hadn't been told it was a suicide mission. Likewise, my drunken self was sold on all the benefits of casting Sita aside, unaware that the one being sacrificed in this exchange would be him.`,
+                                    `, it was believed that most of the hijackers hadn't been told it was a suicide mission. Likewise, my drunken self was sold on all the benefits of doing away with Sita, never once suspecting that the one getting sacrificed in this exchange… would be him.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,

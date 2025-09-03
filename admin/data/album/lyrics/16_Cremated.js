@@ -15,7 +15,7 @@ import {
     IS_UNIT_DOT,
     FORESHADOW_OF_WORMHOLE_PREFIX,
 } from '../../../../src/constants/lyrics'
-import { REST, REVISE } from '../../../containers/Annotations/constants/todos'
+import { REST, REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Cremated',
@@ -534,11 +534,10 @@ export default {
                         `on a`,
                         {
                             anchor: `self-servicing cleric surgeon`,
-                            todo: REST,
-                            problem: `Revisit to make sure, but mentioning zealotry throws it off, I think. Go back to just saying faith, if anything at all.`,
+                            todo: REVIEW,
                             card: {
                                 description: [
-                                    `But while drunken me is being forcibly converted by his sober half's newfound zealotry, this inner conflict remains unseen by others, who can only watch in bewilderment as I perform`,
+                                    `But while drunken me is being forcibly converted to his sober half's new faith, this inner conflict remains unseen by others, who must watch in bewilderment as I perform`,
                                     {
                                         anchor: `circumcision`,
                                         wiki: `Circumcision`,
@@ -610,16 +609,15 @@ export default {
                         `his`,
                         {
                             anchor: `offscreen person dubs`,
-                            todo: REST,
-                            problem: `Make sure I'm making comparison to tossing aside a puppet. How was my drunken half tossed aside?`,
+                            todo: REVIEW,
                             card: {
                                 description: [
-                                    `Of course, this wouldn't be the first time I've tossed aside a puppet after it served my purpose. Like a`,
+                                    `Of course, this wouldn't be the first time I've manipulated a puppet to serve my own ends. Like a`,
                                     {
                                         anchor: `ventriloquist`,
                                         wiki: `Ventriloquism`,
                                     },
-                                    `with a dummy on his lap, my sober self made his drunken half say all the questionable things needed to fulfill his desires, while he just sat there looking appalled.`,
+                                    `with a dummy on his lap, my sober self had his drunken half say all the questionable remarks needed to fulfill his desires, while he just sat there clucking in disapproval.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,

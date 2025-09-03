@@ -17,7 +17,7 @@ import {
     FORESHADOW_OF_WORMHOLE_PREFIX,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REST } from '../../../containers/Annotations/constants/todos'
+import { REST, REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Vegan Proclamation',
@@ -501,8 +501,7 @@ export default {
                         },
                         {
                             anchor: `strikes himself from his cloud`,
-                            todo: REST,
-                            problem: `First sentence sounds awkward?`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `The`,
@@ -513,7 +512,7 @@ export default {
                                             wiki: `Schutzstaffel`,
                                         },
                                     },
-                                    `, the paramilitary group responsible for carrying out the Holocaust, wore an insignia consisting of two thunderbolts side by side. But as for me? Wishing no longer to strike anyone with my thunder, I strike myself down instead, leaving my complacency and ego behind.`,
+                                    `, the paramilitary group responsible for carrying out the Holocaust, wore an insignia consisting of two thunderbolts side by side. But now, wishing no longer to strike at anyone with my thunder, I strike myself down instead— and leave my ego behind.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
