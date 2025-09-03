@@ -14,7 +14,7 @@ import {
     FLASHBACK_TO_WORMHOLE_PREFIX,
     FORESHADOW_OF_WORMHOLE_PREFIX,
 } from '../../../../src/constants/lyrics'
-import { REST, REVIEW } from '../../../containers/Annotations/constants/todos'
+import { REST } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'M',
@@ -547,7 +547,6 @@ export default {
                         {
                             anchor: `"Made in America" signs`,
                             properNoun: true,
-                            todo: REVIEW,
                             card: {
                                 description: `To promote cross-cultural harmony, the pairings in these mass weddings are international by design. So my Moonie bride would be a foreigner— one who might've joined the church solely to birth American children. In which case, I'd be a fool to think my "maiden Mara co-signs" the marriage license in good faith.`,
                                 dotKeys: {

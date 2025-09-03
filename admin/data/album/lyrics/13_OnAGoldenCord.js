@@ -14,7 +14,7 @@ import {
     OUTRO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REST, REVIEW } from '../../../containers/Annotations/constants/todos'
+import { REST } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'On a Golden Cord',
@@ -336,7 +336,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: [
                         `In`,
@@ -1024,7 +1023,6 @@ export default {
                         `Though, the`,
                         {
                             anchor: `master mind`,
-                            todo: REVIEW,
                             card: {
                                 description: `In college, my wishful thinking was that I could shunt the work of writing a term paper onto drunken me. But then, once drunk, I'd resent taking orders from my sober half, and either do the work poorly or not at all— like a slave rebelling against his master. Somehow… this became my strategy for breaking up with Sita as well.`,
                                 dotKeys: {

@@ -628,7 +628,7 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `Much like the Biblical`,
+                                    `Like the Biblical`,
                                     {
                                         anchor: `Ishmael`,
                                         wiki: `Ishmael`,
@@ -781,7 +781,6 @@ export default {
                         `would the`,
                         {
                             anchor: `rondel of her eye`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `A`,
@@ -1169,7 +1168,6 @@ export default {
                     lyricLeft: [
                         {
                             anchor: `Buoy bobs`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `In my dream, I see myself adrift on a buoy as it bobs in an ocean filled with sea serpents. Yet… aren't I, too, a "boy" who's bobbing through life, oblivious to dangers lurking everywhere?`,

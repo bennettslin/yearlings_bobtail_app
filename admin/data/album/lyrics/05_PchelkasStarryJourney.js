@@ -18,7 +18,7 @@ import {
     REFRAIN,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REST, REVIEW } from '../../../containers/Annotations/constants/todos'
+import { REST } from '../../../containers/Annotations/constants/todos'
 
 /**
  * NOTE: Ash Wednesday and Pchelka`s Starry Journey have been switched from the
@@ -443,7 +443,6 @@ export default {
                     lyric: [
                         {
                             anchor: `Red pouches unspent`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `In Chinese-influenced cultures, children are gifted money in`,
@@ -510,7 +509,6 @@ export default {
                         `But`,
                         {
                             anchor: `waiting for Goddard`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
