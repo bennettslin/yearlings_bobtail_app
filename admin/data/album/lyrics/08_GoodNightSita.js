@@ -553,7 +553,7 @@ export default {
                             anchor: `disastrous play`,
                             todo: REVIEW,
                             card: {
-                                description: `On our second date, Sita and I go to see her friend act in a play. Before taking our seats, we chat with him backstage. I struggle to get a word in edgewise, however, leaving me to feel insecure afterward.`,
+                                description: `On our second date, Sita and I go to see her friend act in a play. Before taking our seats, we chat with him backstage. I struggle to get a word in edgewise, though, which leaves me feeling insecure afterward.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },

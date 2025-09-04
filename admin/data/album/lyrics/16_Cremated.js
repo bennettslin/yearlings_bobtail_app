@@ -537,7 +537,7 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `But while drunken me is being forcibly converted to his sober half's new faith, this inner conflict remains unseen by others, who must watch in bewilderment as I perform`,
+                                    `But while drunken me is being forcibly converted to his sober half's new faith, this inner conflict remains unknown to bystanders, who can only watch in bewilderment as I perform`,
                                     {
                                         anchor: `circumcision`,
                                         wiki: `Circumcision`,

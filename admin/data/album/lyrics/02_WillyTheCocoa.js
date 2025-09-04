@@ -611,7 +611,7 @@ export default {
                             todo: REVIEW,
                             cards: [
                                 {
-                                    description: `I grew up puzzling over why my brother was born with autism and I wasn't, when our circumstances weren't all that different. It wasn't far-fetched to think that mental capacity comes in a fixed supply; every mother's womb starts out with just enough to dole out to each child; and I'd selfishly taken my brother's share.`,
+                                    description: `I grew up puzzling over why my brother was born with autism and I wasn't, when our circumstances weren't all that different. It wasn't far-fetched to think that mental capacity comes in a fixed supply; every mother's womb starts with just enough to dole out to each child; and— somehow— I'd selfishly taken my brother's share.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                         [OBSERVATION]: true,
@@ -702,7 +702,7 @@ export default {
                             todo: REVIEW,
                             cards: [
                                 {
-                                    description: `In some legends, a changeling who's been beaten enough will tire of their charade and return the stolen child. This reflects the grim reality that disabled children were often abused, of course— and also helped to justify it. So if Willy is indeed a changeling, then it seems predestined that he should meet a violent end.`,
+                                    description: `In some legends, a changeling who's been beaten enough will tire of their charade and return the stolen child. This reflects the grim reality that disabled children were often abused, of course— but also helped to justify it. So if Willy is indeed a changeling, then it seems predestined that he should meet a violent end.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [OBSERVATION]: true,
@@ -779,7 +779,6 @@ export default {
                             `Shelled skull has freed`,
                             {
                                 anchor: `unsalvaged soul`,
-                                todo: REVIEW,
                                 cards: [
                                     {
                                         description: `To further justify the abuse of disabled children, religious doctrine would claim they were devoid of souls.`,

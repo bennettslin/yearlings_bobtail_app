@@ -19,7 +19,7 @@ import {
     IS_UNIT_DOT,
     RESPONSE,
 } from '../../../../src/constants/lyrics'
-import { REST, REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
+import { REST, REVISE } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Odin',
@@ -121,7 +121,8 @@ export default {
                     lyricLeft: [
                         {
                             anchor: `hiding place of retreat`,
-                            todo: REVIEW,
+                            todo: REST,
+                            problem: `First sentence is too long.`,
                             card: {
                                 description: `The "asleep" voice of this doublespeaker pair narrates a dream that melds the familiar setting of Los Angeles with the foreign sights of Taiwan: It begins with me coming out from the hiding place underneath my bed at home, having been absorbed in my drawings well into nighttime.`,
                                 dotKeys: {
@@ -297,7 +298,6 @@ export default {
                         `do`,
                         {
                             anchor: `sweet dream's ichors`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `I hated sleep as a child, since it forced me to swap out my reasoned thoughts for illogical dreams— a nightly ordeal that felt as burdensome and frightening as a whole-body blood transfusion. Still… things always seemed better in the morning because of it.`,
@@ -625,7 +625,6 @@ export default {
                         `You seek the`,
                         {
                             anchor: `dunes once deemed a haven`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Like the Biblical`,

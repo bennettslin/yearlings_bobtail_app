@@ -18,7 +18,7 @@ import {
     REFRAIN,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REST, REVIEW } from '../../../containers/Annotations/constants/todos'
+import { REST } from '../../../containers/Annotations/constants/todos'
 
 /**
  * NOTE: Ash Wednesday and Pchelka`s Starry Journey have been switched from the
@@ -753,7 +753,8 @@ export default {
                         `one they'll find only once we build the`,
                         {
                             anchor: `mothership`,
-                            todo: REVIEW,
+                            todo: REST,
+                            problem: `Still don't like it.`,
                             card: {
                                 description: `The letters promised to update me on new developments, like the construction of spacecraft— which would allow us Beyonders to contact our extraplanetary kin.`,
                                 dotKeys: {
