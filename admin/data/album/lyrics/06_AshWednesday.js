@@ -13,7 +13,7 @@ import {
     IS_UNIT_DOT,
     FORESHADOW_OF_WORMHOLE_PREFIX,
 } from '../../../../src/constants/lyrics'
-import { REST } from '../../../containers/Annotations/constants/todos'
+import { REST, REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Ash Wednesday',
@@ -520,11 +520,28 @@ export default {
                         `in`,
                         {
                             anchor: `famous raincoat`,
-                            todo: REST,
-                            problem: `Mention "Pennyroyal Tea."`,
+                            todo: REVIEW,
                             card: {
                                 description: [
-                                    `Catherine was the one who introduced me to the works of Leonard Cohen. Through her impassioned reading of his song "`,
+                                    `While I was already familiar with Leonard Cohen's name— thanks to the lyric in`,
+                                    {
+                                        anchor: `Nirvana`,
+                                        wiki: `Nirvana_(band)`,
+                                    },
+                                    `'s "`,
+                                    {
+                                        anchor: `Pennyroyal Tea`,
+                                        wiki: `Pennyroyal_Tea`,
+                                    },
+                                    `," from their album`,
+                                    {
+                                        isItalic: true,
+                                        lyric: {
+                                            anchor: `In Utero`,
+                                            wiki: `In_Utero`,
+                                        },
+                                    },
+                                    `— it was Catherine who finally introduced me to his works. Through her impassioned reading of his song "`,
                                     {
                                         anchor: `Famous Blue Raincoat`,
                                         wiki: `Famous_Blue_Raincoat`,

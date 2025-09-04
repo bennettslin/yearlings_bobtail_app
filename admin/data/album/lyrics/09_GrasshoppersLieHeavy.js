@@ -943,22 +943,12 @@ export default {
                 anchor: IS_UNIT_DOT,
                 card: {
                     description: [
-                        `In the final third of "`,
-                        {
-                            anchor: `Lounge Act`,
-                            wiki: `Lounge_Act`,
-                        },
-                        `,"`,
+                        `In the final third of "Lounge Act,"`,
                         {
                             anchor: `Kurt Cobain`,
                             wiki: `Kurt_Cobain`,
                         },
-                        `sings the same melody an octave higher, kicking it into high gear. Since this is the peak of`,
-                        {
-                            anchor: `Nirvana`,
-                            wiki: `Nirvana_(band)`,
-                        },
-                        `'s`,
+                        `sings the same melody an octave higher, kicking it into high gear. Since this is the peak of Nirvana's`,
                         {
                             isItalic: true,
                             lyric: {

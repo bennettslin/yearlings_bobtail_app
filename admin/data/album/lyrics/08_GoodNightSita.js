@@ -697,19 +697,20 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
                     description: [
-                        `To continue with the '70s feel of this song, I mimicked the complex interplay between the two lead guitarists from`,
+                        `To continue with the '70s feel of this song, I mimicked the complex interplay between`,
                         {
                             anchor: `Television`,
                             wiki: `Television_(band)`,
                         },
-                        `. "Friction," off their debut album`,
+                        `'s two lead guitarists. The song "Friction," off their album`,
                         {
                             anchor: `Marquee Moon`,
                             wiki: `Marquee_Moon`,
                         },
-                        `, inspired the tumbling triplets heard here.`,
+                        `, is what inspired the tumbling triplets heard here.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
