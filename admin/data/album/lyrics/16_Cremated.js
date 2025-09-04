@@ -15,7 +15,7 @@ import {
     IS_UNIT_DOT,
     FORESHADOW_OF_WORMHOLE_PREFIX,
 } from '../../../../src/constants/lyrics'
-import { REST, REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
+import { REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Cremated',
@@ -318,10 +318,16 @@ export default {
                     lyricLeft: [
                         {
                             anchor: `pinkish slip`,
-                            todo: REST,
-                            problem: `Maybe throw a "laid" pun in here?`,
+                            todo: REVIEW,
                             card: {
-                                description: `Miriam is wearing a silky pink undergarment under her skirt. Of course, a pink slip is also a notice given to an employee when they're getting laid off…`,
+                                description: [
+                                    `To enhance the thrill of getting laid, Miriam is wearing a silky pink undergarment under her skirt. Of course, a pink slip is also a notice to an employee that they're getting laid`,
+                                    {
+                                        isEmphasis: true,
+                                        lyric: `off`,
+                                    },
+                                    `…`,
+                                ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true,
@@ -537,7 +543,7 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `But while drunken me is being forcibly converted to his sober half's new faith, this inner conflict remains unknown to bystanders, who can only watch in bewilderment as I perform`,
+                                    `But while drunken me is being forcibly converted to his sober half's new faith, this inner conflict remains unknown to others, who can only gaze in bewilderment as I perform`,
                                     {
                                         anchor: `circumcision`,
                                         wiki: `Circumcision`,
