@@ -14,7 +14,7 @@ import {
     OUTRO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REST } from '../../../containers/Annotations/constants/todos'
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'On a Golden Cord',
@@ -213,21 +213,20 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REST,
-                problem: `First sentence goes for too long without punctuation.`,
+                todo: REVIEW,
                 card: {
                     description: [
-                        `I figured out an`,
-                        {
-                            anchor: `alternative tuning`,
-                            wiki: `Guitar_tunings`,
-                        },
-                        `on the lead acoustic guitar that would allow every note of its melody to be plucked as a`,
+                        `For this song, I wanted every note on the lead acoustic guitar to be plucked as a`,
                         {
                             anchor: `natural harmonic`,
-                            wiki: `Guitar_harmonics`,
+                            wiki: `String_harmonic`,
                         },
-                        `. However, I didn't account for the need to quickly move my fingers from one end of the fretboard to the other, so I had to record each part in multiple short takes.`,
+                        `, so I worked out an`,
+                        {
+                            anchor: `alternate tuning`,
+                            wiki: `Guitar_tunings`,
+                        },
+                        `that would allow for all the notes in the part I'd scored. However, since I couldn't move my hand up and down the fretboard in time, I had to record the part in multiple short takes.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,

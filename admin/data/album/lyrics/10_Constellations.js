@@ -17,7 +17,7 @@ import {
     OUTRO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REST } from '../../../containers/Annotations/constants/todos'
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Constellations!',
@@ -383,11 +383,10 @@ export default {
                         `, this`,
                         {
                             anchor: `boundless Kalevalley ends`,
-                            todo: REST,
-                            problem: `Maybe phrase it in a different way than "I'd count." It sounds weird to me right now.`,
+                            todo: REVIEW,
                             cards: [
                                 {
-                                    description: `The San Fernando Valley is the quintessential "Cali valley." In high school, I'd count the days until I could leave this sprawling wasteland. But tonight, escape is instantaneous with the power of Robitussin.`,
+                                    description: `The San Fernando Valley is the quintessential "Cali valley." In high school, I yearned to leave this sprawling hellscape. But tonight, escape is instantaneous… with the power of Robitussin.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [PUN]: true,

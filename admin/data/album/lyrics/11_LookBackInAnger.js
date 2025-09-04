@@ -16,7 +16,7 @@ import {
     FORESHADOW_OF_WORMHOLE_PREFIX,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REST } from '../../../containers/Annotations/constants/todos'
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Look Back in Anger',
@@ -29,9 +29,8 @@ export default {
     playerStartTime: 1932.102,
     // This is a magic number adjusted by ear. In the mix, it's actually 41.66.
     mixSamplingFrequency: 41.64,
-    todo: REST,
-    problem: `Last sentence has two "which"s, two "been"s. Not so bad, but also not ideal.`,
-    overview: `With the band becoming a fixture in the local scene, I began to command more attention than I'd ever known, particularly from women. And yet, my misery didn't fade; it just simmered into a quiet resentment. I also began to regret my relationship with Sita, which now felt like a decision I'd been coerced into making, under deprived conditions from which I'd since been set free.`,
+    todo: REVIEW,
+    overview: `With the band becoming a fixture in the local scene, I began to command more attention than I'd ever known, particularly from women. And yet, my misery didn't fade; it just simmered into resentment. The relationship with Sita also started feeling like a decision I'd made while subject to coercion, under deprived conditions from which I'd now been set free.`,
     lyricUnits: [
         {
             unitMap: {},
