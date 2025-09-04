@@ -123,7 +123,7 @@ export default {
                             anchor: `hiding place of retreat`,
                             todo: REVIEW,
                             card: {
-                                description: `The "asleep" voice of this doublespeaker pair narrates a dream that melds the familiar setting of Los Angeles with the foreign sights of Taiwan. It begins with me coming out from the hiding place underneath my bed at home, having been absorbed in my drawings well into nighttime.`,
+                                description: `The "asleep" voice of this doublespeaker pair narrates a dream that melds the familiar setting of Los Angeles with the foreign sights of Taiwan: It begins with me coming out from the hiding place underneath my bed at home, having been absorbed in my drawings well into nighttime.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },

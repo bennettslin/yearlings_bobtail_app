@@ -17,7 +17,7 @@ import {
     FLASHBACK_TO_WORMHOLE_PREFIX,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REST } from '../../../containers/Annotations/constants/todos'
+import { REST, REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: '弟弟 (Didi)',
@@ -38,6 +38,7 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
                     description: [
                         `My parents come from`,
@@ -50,7 +51,7 @@ export default {
                             anchor: `Nationalists`,
                             wiki: `Kuomintang`,
                         },
-                        `took over after World War II, they made Mandarin Chinese the primary language. So the Taiwanese that my family spoke at home included a few Chinese words, such as`,
+                        `took over after World War II, they made Mandarin Chinese the official language. So the Taiwanese that my family spoke at home included a few Chinese words, such as`,
                         {
                             isItalic: true,
                             lyric: `didi`,
@@ -212,7 +213,7 @@ export default {
                             todo: REST,
                             problem: `I think there's a better way to phrase the first sentence.`,
                             card: {
-                                description: `My sister was fiercely protective of me, and I'd often tag along with her. Still, there were times when she and her friends would insist on doing girl stuff by themselves, which always left me in a panic.`,
+                                description: `In those days, I'd often tag along with my sister, who was fiercely protective of me. Still, there were times when she and her friends would insist on doing girl stuff by themselves, which always left me in a panic.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
