@@ -14,7 +14,7 @@ import {
     OUTRO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REST } from '../../../containers/Annotations/constants/todos'
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'On a Golden Cord',
@@ -213,21 +213,20 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REST,
-                problem: `"Allow for all the notes" still needs to be clarified.`,
+                todo: REVIEW,
                 card: {
                     description: [
-                        `For this song, I wanted every note on the lead acoustic guitar to be plucked as a`,
-                        {
-                            anchor: `natural harmonic`,
-                            wiki: `String_harmonic`,
-                        },
-                        `, so I worked out an`,
+                        `After scoring this part for the lead acoustic guitar, I came up with an`,
                         {
                             anchor: `alternate tuning`,
                             wiki: `Guitar_tunings`,
                         },
-                        `that would allow for all the notes in the part I'd scored. However, since I couldn't move my hand up and down the fretboard in time, I had to record the part in multiple short takes.`,
+                        `that would allow every note to be plucked as a`,
+                        {
+                            anchor: `natural harmonic`,
+                            wiki: `String_harmonic`,
+                        },
+                        `. I didn't account for being able to move my fingers up and down the fretboard quickly enough, however, so I still ended up recording it in multiple short takes.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
