@@ -11,7 +11,7 @@ import {
     POSTCHORUS,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REVIEW } from '../../../containers/Annotations/constants/todos'
+import { REST } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Good Night, Sita',
@@ -521,7 +521,8 @@ export default {
                     lyric: [
                         {
                             anchor: `pidgin palaver`,
-                            todo: REVIEW,
+                            todo: REST,
+                            problem: `For meaning to be clear, say they needed to pepper their exchanges.`,
                             card: {
                                 description: [
                                     `Stopping to rest in a gallery devoted to Native American history, we learn about`,
@@ -550,7 +551,6 @@ export default {
                         `hyped up like some`,
                         {
                             anchor: `disastrous play`,
-                            todo: REVIEW,
                             card: {
                                 description: `On our second date, Sita and I go to see her friend act in a play. Before taking our seats, we chat with him backstage. I struggle to get a word in edgewise, though, which leaves me feeling insecure afterward.`,
                                 dotKeys: {
@@ -696,7 +696,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: [
                         `To continue with the '70s feel of this song, I mimicked the complex interplay between`,

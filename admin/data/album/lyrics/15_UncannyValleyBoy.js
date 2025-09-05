@@ -20,7 +20,7 @@ import {
     BACKING,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REST, REVIEW } from '../../../containers/Annotations/constants/todos'
+import { REST } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Uncanny Valley Boy',
@@ -747,7 +747,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: [
                         `I wanted to mimic the`,

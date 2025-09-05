@@ -14,7 +14,7 @@ import {
     OUTRO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REVIEW } from '../../../containers/Annotations/constants/todos'
+import { REST } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'On a Golden Cord',
@@ -213,7 +213,8 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
+                todo: REST,
+                problem: `"Allow for all the notes" still needs to be clarified.`,
                 card: {
                     description: [
                         `For this song, I wanted every note on the lead acoustic guitar to be plucked as a`,

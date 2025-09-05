@@ -523,7 +523,7 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `While I was already familiar with Leonard Cohen's name— thanks to the lyric in`,
+                                    `While I was familiar with Leonard Cohen's name— thanks to the lyric in`,
                                     {
                                         anchor: `Nirvana`,
                                         wiki: `Nirvana_(band)`,

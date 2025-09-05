@@ -17,7 +17,6 @@ import {
     OUTRO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Constellations!',
@@ -383,7 +382,6 @@ export default {
                         `, this`,
                         {
                             anchor: `boundless Kalevalley ends`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `The San Fernando Valley is the quintessential "Cali valley." In high school, I yearned to leave this sprawling hellscape. But tonight, escape is instantaneous… with the power of Robitussin.`,

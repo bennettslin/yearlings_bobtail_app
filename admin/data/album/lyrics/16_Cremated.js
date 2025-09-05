@@ -321,7 +321,7 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `To enhance the thrill of getting laid, Miriam is wearing a silky pink undergarment under her skirt. Of course, a pink slip is also a notice to an employee that they're getting laid`,
+                                    `To enhance the thrill for me of getting laid, Miriam is wearing a silky pink undergarment under her skirt. Of course, a pink slip is also a notice to an employee that they're getting laid`,
                                     {
                                         isEmphasis: true,
                                         lyric: `off`,
@@ -540,7 +540,6 @@ export default {
                         `on a`,
                         {
                             anchor: `self-servicing cleric surgeon`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `But while drunken me is being forcibly converted to his sober half's new faith, this inner conflict remains unknown to others, who can only gaze in bewilderment as I perform`,
@@ -623,7 +622,7 @@ export default {
                                         anchor: `ventriloquist`,
                                         wiki: `Ventriloquism`,
                                     },
-                                    `with a dummy on his lap, my sober self had his drunken half say all the questionable remarks needed to fulfill his desires, while he just sat there clucking in disapproval.`,
+                                    `with a dummy on his lap, my sober self had his drunken half say all the questionable things needed to fulfill his desires, while he just sat there clucking in disapproval.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,

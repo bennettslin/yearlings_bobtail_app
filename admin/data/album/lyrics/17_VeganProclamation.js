@@ -17,7 +17,7 @@ import {
     FORESHADOW_OF_WORMHOLE_PREFIX,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REST, REVIEW } from '../../../containers/Annotations/constants/todos'
+import { REST } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Vegan Proclamation',
@@ -501,7 +501,6 @@ export default {
                         },
                         {
                             anchor: `strikes himself from his cloud`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `The`,
