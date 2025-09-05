@@ -17,7 +17,7 @@ import {
     FLASHBACK_TO_WORMHOLE_PREFIX,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REST } from '../../../containers/Annotations/constants/todos'
+import { REST, REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: '弟弟 (Didi)',
@@ -211,10 +211,9 @@ export default {
                         `Didi, you've been following, I`,
                         {
                             anchor: `didn't want you here`,
-                            todo: REST,
-                            problem: `I think there's a better way to phrase the first sentence.`,
+                            todo: REVIEW,
                             card: {
-                                description: `In those days, I'd often tag along with my sister, who was fiercely protective of me. Still, there were times when she and her friends would insist on doing girl stuff by themselves, which always left me in a panic.`,
+                                description: `Growing up, I'd often tag along with my sister, who was quite protective of me. Still, there were times when she and her friends preferred to do girl stuff by themselves, which always left me in a panic.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
