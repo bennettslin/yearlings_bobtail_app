@@ -15,7 +15,7 @@ import {
     IS_UNIT_DOT,
     FORESHADOW_OF_WORMHOLE_PREFIX,
 } from '../../../../src/constants/lyrics'
-import { REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Cremated',
@@ -664,8 +664,7 @@ export default {
                     lyricRight: [
                         {
                             anchor: `twitching sword`,
-                            todo: REVISE,
-                            problem: `"His" and "him" refer to different people.`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Dubbing can refer to either`,
@@ -678,7 +677,7 @@ export default {
                                         anchor: `bestowing knighthood`,
                                         wiki: `Accolade`,
                                     },
-                                    `. Here, then, sober me thinks he's found a patsy to speak for his crimes— only to find his drunken half patting him on the shoulder with a sharp sword instead.`,
+                                    `. Here, then, in wanting another to speak for his crimes, sober me calls up his drunken half— only to find himself now being patted on the shoulder with a sharp sword.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
