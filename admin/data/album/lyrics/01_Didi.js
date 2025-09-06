@@ -179,6 +179,7 @@ export default {
                 todo: REVIEW,
                 card: {
                     description: [
+                        `Since`,
                         {
                             anchor: `James Joyce`,
                             wiki: `James_Joyce`,
@@ -191,7 +192,7 @@ export default {
                                 wiki: `A_Portrait_of_the_Artist_as_a_Young_Man`,
                             },
                         },
-                        `, opens in childlike prose. And so, since my dream was to do for rock music what he'd done for modern literature, I followed his lead by keeping the lyrics childishly simple in this opening song.`,
+                        `, opens in childlike prose, I followed his lead by keeping the lyrics childishly simple in this opening song.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,

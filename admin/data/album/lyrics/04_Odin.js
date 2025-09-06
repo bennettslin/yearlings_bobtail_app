@@ -19,7 +19,7 @@ import {
     IS_UNIT_DOT,
     RESPONSE,
 } from '../../../../src/constants/lyrics'
-import { REST, REVISE } from '../../../containers/Annotations/constants/todos'
+import { REST, REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Odin',
@@ -163,10 +163,9 @@ export default {
                         `This`,
                         {
                             anchor: `fridge's gallery in web's wake`,
-                            todo: REVISE,
-                            problem: `This can definitely be phrased better.`,
+                            todo: REVIEW,
                             card: {
-                                description: `Trailing from my clothes are cobwebs, which cling to some drawings of mine that were attached to the refrigerator, scattering them onto the floor.`,
+                                description: `Attached to the refrigerator are some recent drawings of mine. As I pass by, they cling to the cobwebs trailing from my clothes, scattering onto the floor.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                 },

@@ -15,7 +15,7 @@ import {
     OUTRO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REST, REVIEW } from '../../../containers/Annotations/constants/todos'
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'क्यों? (Kyon?)',

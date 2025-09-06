@@ -678,7 +678,7 @@ export default {
                                         anchor: `bestowing knighthood`,
                                         wiki: `Accolade`,
                                     },
-                                    `. Here, then, sober me has found a patsy to speak for his crimes— only to find his drunken half patting him on the shoulder with a sharp sword instead.`,
+                                    `. Here, then, sober me thinks he's found a patsy to speak for his crimes— only to find his drunken half patting him on the shoulder with a sharp sword instead.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
