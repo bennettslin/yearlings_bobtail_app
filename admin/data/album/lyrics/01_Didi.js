@@ -17,7 +17,7 @@ import {
     FLASHBACK_TO_WORMHOLE_PREFIX,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REST } from '../../../containers/Annotations/constants/todos'
+import { REST, REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: '弟弟 (Didi)',
@@ -176,8 +176,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REST,
-                problem: `Make logic flow from first to second sentence.`,
+                todo: REVIEW,
                 card: {
                     description: [
                         {
@@ -192,7 +191,7 @@ export default {
                                 wiki: `A_Portrait_of_the_Artist_as_a_Young_Man`,
                             },
                         },
-                        `, opens in childlike prose. And so, since my dream was to do for rock music what he'd done for modern literature, I kept the lyrics childishly simple in this opening song.`,
+                        `, opens in childlike prose. And so, since my dream was to do for rock music what he'd done for modern literature, I followed his lead by keeping the lyrics childishly simple in this opening song.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,

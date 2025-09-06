@@ -974,16 +974,16 @@ export default {
                         {
                             anchor: `imp-runt age of mind`,
                             todo: REST,
-                            problem: `Make it more clear in the second sentence that this was from her studies? Make logic of third sentence flow better from both first and second?`,
+                            problem: `Make it clear that my mother studied for the sake of autism. Make it clear that autism was hypothesized as a failure to imprint, but is now considered outdated. `,
                             cards: [
                                 {
                                     description: [
-                                        `After my brother was diagnosed with autism, my mother started taking night classes in child development. At the dinner table, she'd explain concepts like "`,
+                                        `After my brother was diagnosed with autism, my mother started taking night classes in child development. At the dinner table, she'd explain concepts she just learned, like "`,
                                         {
                                             anchor: `imprinting`,
                                             wiki: `Imprinting_(psychology)`,
                                         },
-                                        `," the phase during which a child learns emotional attachment. Still, she'd always end by lamenting that her studies were too little, too late to help my brother.`,
+                                        `"— the phase in which a child builds emotional attachment. Still, she'd always end by lamenting that her studies were too little, too late to help my brother.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
