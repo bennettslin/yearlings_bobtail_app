@@ -14,7 +14,7 @@ import {
     FLASHBACK_TO_WORMHOLE_PREFIX,
     FORESHADOW_OF_WORMHOLE_PREFIX,
 } from '../../../../src/constants/lyrics'
-import { REST } from '../../../containers/Annotations/constants/todos'
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'M',
@@ -905,8 +905,7 @@ export default {
                         `it's up to me to`,
                         {
                             anchor: `be alert`,
-                            todo: REST,
-                            problem: `Still sounds weird to say "theories on," I think.`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `It wasn't a mystery, then, how things ended up as they did; it's no mystery why`,
@@ -919,7 +918,7 @@ export default {
                                         isEmphasis: true,
                                         lyric: `weren't`,
                                     },
-                                    `out of reach; I just had to revise my theories on what they wanted— and then build myself up to be exactly that.`,
+                                    `out of reach; I just needed to keep reworking my theories about what they wanted— and then build myself up to be exactly that.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,

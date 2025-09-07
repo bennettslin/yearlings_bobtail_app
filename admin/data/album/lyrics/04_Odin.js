@@ -199,7 +199,7 @@ export default {
                 problem: `I'm sitting on this because I still think that first sentence could be better.`,
                 card: {
                     description: [
-                        `Being in Taiwan felt like an endless cycle between days spent among the foreign, and nightly dreams of the familiar. For this song, I wanted to capture that feeling of perpetual disorientation, and so I invented doublespeaker rhyme— a literary technique in which two columns of lyrics, written to rhyme syllable for syllable, are sung in harmony. Each voice is then isolated to an opposite speaker in the stereo mix, creating the audio version of a cinematic`,
+                        `Being in Taiwan was an endless cycle between days spent among the foreign, and nightly dreams of the familiar. For this song, I wanted to capture that feeling of perpetual disorientation, and so I invented doublespeaker rhyme— a literary technique in which two columns of lyrics, written to rhyme syllable for syllable, are sung in harmony. Each voice is then isolated to an opposite speaker in the stereo mix, creating the audio version of a cinematic`,
                         {
                             anchor: `split screen`,
                             wiki: `Split_screen_(video_production)`,
