@@ -809,8 +809,7 @@ export default {
                         {
                             anchor: `Willy's stalkless bulb`,
                             properNoun: true,
-                            todo: REST,
-                            problem: `If I'm going to make the observation in the second sentence, I should be doing more with it.`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `The impact of the wine bottle severs Willy's brain from his spine, like a`,
@@ -818,7 +817,7 @@ export default {
                                         anchor: `flower bulb`,
                                         wiki: `Ornamental_bulbous_plant`,
                                     },
-                                    `plucked from its stalk. Of course, a bulb can start a new shoot once replanted in the earth.`,
+                                    `separated from its stalk. And so… perhaps there's hope? After all, a bulb will blossom again once replanted in the earth.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,

@@ -19,7 +19,7 @@ import {
     IS_UNIT_DOT,
     RESPONSE,
 } from '../../../../src/constants/lyrics'
-import { REST, REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
+import { REST, REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Odin',
@@ -195,11 +195,10 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVISE,
-                problem: `I'm sitting on this because I still think that first sentence could be better.`,
+                todo: REVIEW,
                 card: {
                     description: [
-                        `Being in Taiwan was an endless cycle between days spent among the foreign, and nightly dreams of the familiar. For this song, I wanted to capture that feeling of perpetual disorientation, and so I invented doublespeaker rhyme— a literary technique in which two columns of lyrics, written to rhyme syllable for syllable, are sung in harmony. Each voice is then isolated to an opposite speaker in the stereo mix, creating the audio version of a cinematic`,
+                        `Being in Taiwan was an endless cycle between days spent among the foreign, and nightly dreams of the familiar. To capture the disorienting feel of this dichotomy, I invented doublespeaker rhyme— a literary technique in which two columns of lyrics, written to rhyme syllable for syllable, are sung in harmony. Each voice is then confined to one speaker in the stereo mix, creating the audio version of a cinematic`,
                         {
                             anchor: `split screen`,
                             wiki: `Split_screen_(video_production)`,
@@ -229,8 +228,7 @@ export default {
                         `you drew with`,
                         {
                             anchor: `crayons least whittled`,
-                            todo: REST,
-                            problem: `Can't pinpoint any specific problems, but it sounds off to me. Revisit in the future.`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `When we landed in Taiwan, my aunt presented me with a box of`,
@@ -238,7 +236,7 @@ export default {
                                         anchor: `pastels`,
                                         wiki: `Pastel`,
                                     },
-                                    `. They crumbled more easily than crayons and thus ran out quickly, so eventually I had to make do with the least used colors. I thought this was a fitting metaphor for my state of discomfort there, since I had to rely on my least used skills, like speaking Taiwanese.`,
+                                    `. They crumbled more easily than crayons, and thus ran out more quickly; eventually I had to make do with the least used colors. I thought this was a fitting metaphor for my state of discomfort there, since I had to rely on all my least used skills, like speaking Taiwanese.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
