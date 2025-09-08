@@ -13,7 +13,6 @@ import {
     IS_UNIT_DOT,
     FORESHADOW_OF_WORMHOLE_PREFIX,
 } from '../../../../src/constants/lyrics'
-import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Ash Wednesday',
@@ -520,7 +519,6 @@ export default {
                         `in`,
                         {
                             anchor: `famous raincoat`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `While I was familiar with Leonard Cohen's name— thanks to the lyric in`,

@@ -608,7 +608,6 @@ export default {
                         `You'd learn him good, when`,
                         {
                             anchor: `smarts he could've took`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `I grew up puzzling over why my brother was born with autism and I wasn't, when our circumstances weren't so different. It wasn't far-fetched to presume that mental capacity comes in a fixed supply; every mother's womb starts with just enough to dole out to each child; and somehow, I'd selfishly taken my brother's share.`,

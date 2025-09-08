@@ -614,7 +614,6 @@ export default {
                         `his`,
                         {
                             anchor: `offscreen person dubs`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Of course, this wouldn't be the first time I've manipulated a puppet to serve my own ends. Like a`,

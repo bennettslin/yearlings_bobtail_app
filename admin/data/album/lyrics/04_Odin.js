@@ -163,7 +163,6 @@ export default {
                         `This`,
                         {
                             anchor: `fridge's gallery in web's wake`,
-                            todo: REVIEW,
                             card: {
                                 description: `Attached to the refrigerator are some recent drawings of mine. As I pass by, they cling to the cobwebs trailing from my clothes, scattering onto the floor.`,
                                 dotKeys: {
