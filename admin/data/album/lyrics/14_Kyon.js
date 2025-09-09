@@ -15,7 +15,6 @@ import {
     OUTRO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'क्यों? (Kyon?)',
@@ -691,7 +690,6 @@ export default {
                         `? Come for me? At`,
                         {
                             anchor: `thirty-three`,
-                            todo: REVIEW,
                             card: {
                                 description: `I often joked about killing myself at thirty-three— the age at which Jesus was crucified— since this is clearly all the time you need to change the world. And who wants to get any older than that? So when Sita asked me to specify at what age I'd come back for her— in accordance with our little pact— I answered, "Thirty-three." The subtext was understood.`,
                                 dotKeys: {

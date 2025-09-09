@@ -321,7 +321,7 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `To enhance the thrill for me of getting laid, Miriam chose to wear a pink slip under her skirt. Of course, a pink slip is also a notice to an employee that they're getting laid`,
+                                    `To enhance the thrill for me of getting laid, Miriam lifts up her dress to reveal a silky undergarment. But a pink slip is also a notice to an employee that they're getting laid`,
                                     {
                                         isEmphasis: true,
                                         lyric: `off`,
