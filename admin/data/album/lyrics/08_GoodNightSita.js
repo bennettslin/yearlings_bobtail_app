@@ -524,12 +524,12 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `Stopping to rest in a gallery devoted to Native American history, we learn about`,
+                                    `In a gallery dedicated to Native American history, we stop to learn about`,
                                     {
                                         anchor: `pidgins`,
                                         wiki: `Pidgin`,
                                     },
-                                    `, or impromptu languages that arose between colonists and natives— who needed to pepper their exchanges with words of goodwill, to offset any misunderstandings. Coincidentally, this also describes how Sita and I have been communicating on this date.`,
+                                    `, or impromptu languages that arise between colonists and natives— who need to pepper their exchanges with words of goodwill, as a way to offset any misunderstandings. Coincidentally, this also describes how Sita and I have been communicating on our date.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,

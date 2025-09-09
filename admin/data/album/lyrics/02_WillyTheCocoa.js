@@ -816,7 +816,7 @@ export default {
                                         anchor: `flower bulb`,
                                         wiki: `Ornamental_bulbous_plant`,
                                     },
-                                    `separated from its stalk. And so… perhaps there's hope? After all, a bulb will blossom again once replanted in the earth.`,
+                                    `detached from its stalk. Perhaps, then, there's hope? After all, a bulb can grow a new shoot once replanted in the earth.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,

@@ -918,7 +918,7 @@ export default {
                                         isEmphasis: true,
                                         lyric: `weren't`,
                                     },
-                                    `out of reach; I just needed to keep reworking my theories about what they wanted— and then build myself up to be exactly that.`,
+                                    `out of reach. My theories regarding what they wanted just needed some revision— and then I could build myself up to be exactly that.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,

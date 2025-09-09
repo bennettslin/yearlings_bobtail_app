@@ -226,7 +226,7 @@ export default {
                             anchor: `natural harmonic`,
                             wiki: `String_harmonic`,
                         },
-                        `. I didn't account for being able to move my fingers up and down the fretboard quickly enough, however, so I still ended up recording it in multiple short takes.`,
+                        `. What I didn't account for, though, was being able to move my hand up and down the neck quickly enough. I ended up having to record it in multiple short takes.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
