@@ -194,7 +194,8 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
+                todo: REST,
+                problem: `Two "then"s.`,
                 card: {
                     description: [
                         `Being in Taiwan was an endless cycle between days spent among the foreign, and nightly dreams of the familiar. To capture this dichotomy in all its disorienting effects, then, I invented doublespeaker rhyme— a literary technique in which two columns of lyrics, written to rhyme syllable for syllable, are sung in harmony. Each voice is then confined to a single speaker in the stereo mix, creating the audio version of a cinematic`,

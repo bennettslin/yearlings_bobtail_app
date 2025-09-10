@@ -15,7 +15,7 @@ import {
     IS_UNIT_DOT,
     FORESHADOW_OF_WORMHOLE_PREFIX,
 } from '../../../../src/constants/lyrics'
-import { REVIEW } from '../../../containers/Annotations/constants/todos'
+import { REST, REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Cremated',
@@ -663,7 +663,8 @@ export default {
                     lyricRight: [
                         {
                             anchor: `twitching sword`,
-                            todo: REVIEW,
+                            todo: REST,
+                            problem: `Recent changes are a definite improvement, but it still has a ways to go to sound right.`,
                             card: {
                                 description: [
                                     `Dubbing can refer to either`,

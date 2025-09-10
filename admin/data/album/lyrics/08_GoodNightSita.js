@@ -11,7 +11,7 @@ import {
     POSTCHORUS,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REVIEW } from '../../../containers/Annotations/constants/todos'
+import { REST, REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Good Night, Sita',
@@ -521,7 +521,8 @@ export default {
                     lyric: [
                         {
                             anchor: `pidgin palaver`,
-                            todo: REVIEW,
+                            todo: REST,
+                            problem: `Split first sentence into two. Make clear that their first priority was to have shared words of goodwill.`,
                             card: {
                                 description: [
                                     `In a gallery dedicated to Native American history, we stop to learn about`,
@@ -529,7 +530,7 @@ export default {
                                         anchor: `pidgins`,
                                         wiki: `Pidgin`,
                                     },
-                                    `, or impromptu languages that arise between colonists and natives— who need to pepper their exchanges with words of goodwill, as a way to offset any misunderstandings. Coincidentally, this also describes how Sita and I have been communicating on our date.`,
+                                    `, or impromptu languages that arose between natives and settlers— whose exchanges would be peppered with words of goodwill, as a way to offset any misunderstandings. Coincidentally, this also describes how Sita and I have been communicating on our date.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,

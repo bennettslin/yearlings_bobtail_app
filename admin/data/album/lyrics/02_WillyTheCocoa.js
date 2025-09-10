@@ -808,7 +808,8 @@ export default {
                         {
                             anchor: `Willy's stalkless bulb`,
                             properNoun: true,
-                            todo: REVIEW,
+                            todo: REST,
+                            problem: `Make it clear that this is a child's expression of hope, not ours.`,
                             card: {
                                 description: [
                                     `The impact of the wine bottle severs Willy's brain from his spine, like a`,
