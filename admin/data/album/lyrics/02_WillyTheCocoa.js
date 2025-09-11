@@ -17,7 +17,7 @@ import {
     FLASHBACK_TO_WORMHOLE_PREFIX,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REST } from '../../../containers/Annotations/constants/todos'
+import { REST, REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Willy the Cocoa',
@@ -808,8 +808,7 @@ export default {
                         {
                             anchor: `Willy's stalkless bulb`,
                             properNoun: true,
-                            todo: REST,
-                            problem: `Make it clear that this is a child's expression of hope, not ours.`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `The impact of the wine bottle severs Willy's brain from his spine, like a`,
@@ -817,7 +816,7 @@ export default {
                                         anchor: `flower bulb`,
                                         wiki: `Ornamental_bulbous_plant`,
                                     },
-                                    `detached from its stalk. Perhaps, then, there's hope? After all, a bulb can grow a new shoot once replanted in the earth.`,
+                                    `detached from its stalk. But bulbs will blossom anew once replanted in the earth. So… why can't we?`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,

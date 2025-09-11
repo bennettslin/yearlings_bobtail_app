@@ -197,7 +197,7 @@ export default {
                 todo: REVIEW,
                 card: {
                     description: [
-                        `Being in Taiwan was an endless cycle between days spent among the foreign, and nightly dreams of the familiar. To capture this dichotomy, I invented doublespeaker rhyme— a literary technique in which two columns of lyrics, written to rhyme syllable for syllable, are sung in harmony. Each voice is then isolated to its own speaker in the stereo mix, creating the audio version of a cinematic`,
+                        `Being in Taiwan was a blurry cycle between days among the foreign, and nights spent dreaming of the familiar. To capture this dichotomy, I invented doublespeaker rhyme— a literary technique in which two columns of lyrics, made to rhyme syllable for syllable, are sung in harmony. Each voice is then isolated to its own speaker in the stereo mix, creating the audio version of a cinematic`,
                         {
                             anchor: `split screen`,
                             wiki: `Split_screen_(video_production)`,

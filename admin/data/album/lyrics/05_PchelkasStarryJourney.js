@@ -18,7 +18,7 @@ import {
     REFRAIN,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REST } from '../../../containers/Annotations/constants/todos'
+import { REST, REVIEW } from '../../../containers/Annotations/constants/todos'
 
 /**
  * NOTE: Ash Wednesday and Pchelka`s Starry Journey have been switched from the
@@ -1280,23 +1280,22 @@ export default {
                         `Mushka,`,
                         {
                             anchor: `per their bargain`,
+                            todo: REVIEW,
                             card: {
-                                description: `Though I faked autism for only a year or so, the social repercussions lasted much longer— since I was now and forever the kid who did that really weird thing once. It's not that I lacked the will to repair my standing; but I was just as confused as anyone else about what had gotten into me, and there were no manuals to tell me where to go from there.`,
+                                description: `Regardless, I was growing disillusioned with RI Research by this point, as the letters inexplicably began to take on Christian overtones. It's not that I held Christianity to be downright false; this just didn't comport with the earlier talk of stellar beings, which made me realize their entire doctrine was being written on the fly.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
-                                    [OBSERVATION]: true,
                                 },
                             },
                         },
                         `, I`,
                         {
                             anchor: `can't ever return`,
-                            todo: REST,
-                            problem: `Explain more clearly that the Christianity inexplicably came out of nowhere, and it started to become obvious that it was just some guy out of ideas.`,
                             card: {
-                                description: `Regardless, I'd grown disillusioned with RI Research by this point, as the letters had become overtly Christian in tone. It's not that I held Christianity to be conclusively false; it was just incongruous with all the previous talk of stellar origins.`,
+                                description: `Though I faked autism for only a year or so, the social repercussions lasted much longer— since I was now and forever the kid who did that really weird thing once. It's not that I lacked the will to repair my standing; but I was just as confused as anyone else about what had gotten into me, and there were no manuals to tell me where to go from there.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
+                                    [OBSERVATION]: true,
                                 },
                             },
                         },
