@@ -15,7 +15,7 @@ import {
     IS_UNIT_DOT,
     FORESHADOW_OF_WORMHOLE_PREFIX,
 } from '../../../../src/constants/lyrics'
-import { REST, REVIEW } from '../../../containers/Annotations/constants/todos'
+import { REST } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Cremated',
@@ -318,7 +318,6 @@ export default {
                     lyricLeft: [
                         {
                             anchor: `pinkish slip`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `To enhance the thrill for me of getting laid, Miriam lifts up her dress to reveal a silky undergarment. But a pink slip is also a notice to an employee that they're getting laid`,
