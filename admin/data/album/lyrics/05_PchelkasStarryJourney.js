@@ -477,7 +477,6 @@ export default {
                         `"`,
                         {
                             anchor: `Are you a Beyonder`,
-                            todo: REVIEW,
                             card: {
                                 description: `According to RI Research, Beyonders are an ancient race of beings who were scattered across the universe. The ones who came to Earth adopted the likeness of humans— then lost all recollection of their stellar origins. Even so, they're beset by a quiet discomfort that they don't truly belong.`,
                                 dotKeys: {
@@ -679,7 +678,6 @@ export default {
                         `Beyonders bleed the most, their`,
                         {
                             anchor: `roots unknown to them`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Though I had no way to know this as a child, RI Research likely drew their material from the notion of`,
@@ -1284,7 +1282,7 @@ export default {
                             anchor: `per their bargain`,
                             todo: REVIEW,
                             card: {
-                                description: `Regardless, I was growing disillusioned with RI Research by this point, as the letters had begun to take on Christian overtones— which didn't comport with all that earlier talk of stellar beings. It made me realize their entire doctrine was being written on the fly.`,
+                                description: `Regardless, I was growing disillusioned with RI Research by this point, as the letters had begun to take on Christian overtones— which didn't comport with all the earlier talk of stellar beings. It made me realize their entire doctrine was being written on the fly.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
