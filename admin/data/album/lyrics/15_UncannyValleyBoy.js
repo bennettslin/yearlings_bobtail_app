@@ -20,7 +20,7 @@ import {
     BACKING,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REST } from '../../../containers/Annotations/constants/todos'
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Uncanny Valley Boy',
@@ -561,8 +561,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REST,
-                problem: `First two sentences could flow a little better.`,
+                todo: REVIEW,
                 card: {
                     /**
                      * NOTE: Counter-melody is mentioned earlier in Ash
@@ -574,7 +573,7 @@ export default {
                             anchor: `counter-melody`,
                             wiki: `Counter-melody`,
                         },
-                        `heard here was originally the lead melody of the chorus. I left its lyrics as they were; despite this song no longer being about the nightmare, I liked the surrealism. I then took the original counter-melody, which I'd meant to play on guitar, and gave it to the lead vocals.`,
+                        `heard here was originally meant to be the lead melody of the chorus. I left its lyrics intact; despite this song no longer being about the nightmare, their surrealism still tickled me. I then took the original counter-melody, which I'd intended to play on guitar, and gave it to the lead vocals.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,

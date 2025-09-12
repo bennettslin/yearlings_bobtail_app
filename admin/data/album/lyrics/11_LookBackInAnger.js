@@ -16,7 +16,7 @@ import {
     FORESHADOW_OF_WORMHOLE_PREFIX,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REST } from '../../../containers/Annotations/constants/todos'
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Look Back in Anger',
@@ -29,9 +29,8 @@ export default {
     playerStartTime: 1932.102,
     // This is a magic number adjusted by ear. In the mix, it's actually 41.66.
     mixSamplingFrequency: 41.64,
-    todo: REST,
-    problem: `"More and more" just doesn't sound right.`,
-    overview: `With the band becoming a fixture in the local scene, I began to command more attention than I'd ever known, particularly from cute women. Yet my misery didn't fade; it just simmered into resentment. The relationship with Sita was also feeling more and more like a decision I'd made while subject to coercion, under deprived conditions from which I'd now been set free.`,
+    todo: REVIEW,
+    overview: `With the band becoming a fixture in the local scene, I began to command more attention than I'd ever known, particularly from cute women. Yet my misery didn't fade; it just simmered into resentment. The relationship with Sita was also starting to feel like a past decision I'd made under duress— a circumstance from which I'd now been set free.`,
     lyricUnits: [
         {
             unitMap: {},
