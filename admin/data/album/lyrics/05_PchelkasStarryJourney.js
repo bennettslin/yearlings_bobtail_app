@@ -477,8 +477,9 @@ export default {
                         `"`,
                         {
                             anchor: `Are you a Beyonder`,
+                            todo: REVIEW,
                             card: {
-                                description: `According to RI Research, Beyonders are an ancient race of beings who were scattered across the universe. The ones who came to Earth adopted the likeness of humans— then lost all recollection of their astral origins. Even so, they're beset by a quiet discomfort that they don't truly belong.`,
+                                description: `According to RI Research, Beyonders are an ancient race of beings who were scattered across the universe. The ones who came to Earth adopted the likeness of humans— then lost all recollection of their stellar origins. Even so, they're beset by a quiet discomfort that they don't truly belong.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -678,6 +679,7 @@ export default {
                         `Beyonders bleed the most, their`,
                         {
                             anchor: `roots unknown to them`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Though I had no way to know this as a child, RI Research likely drew their material from the notion of`,
@@ -685,7 +687,7 @@ export default {
                                         anchor: `star people`,
                                         wiki: `Star_people_(New_Age_belief)`,
                                     },
-                                    `, a New Age belief from the '70s. Like Beyonders, star people lost all memory of their stellar origins once they arrived on Earth.`,
+                                    `, a New Age belief from the '70s. Like Beyonders, star people lost all memory of their astral origins once they arrived on Earth.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -1282,7 +1284,7 @@ export default {
                             anchor: `per their bargain`,
                             todo: REVIEW,
                             card: {
-                                description: `Regardless, I was growing disillusioned with RI Research by this point, as the letters inexplicably began to take on Christian overtones. It's not that I held Christianity to be downright false; this just didn't comport with the earlier talk of stellar beings, which made me realize their entire doctrine was being written on the fly.`,
+                                description: `Regardless, I was growing disillusioned with RI Research by this point, as the letters had begun to take on Christian overtones— which didn't comport with all that earlier talk of stellar beings. It made me realize their entire doctrine was being written on the fly.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
