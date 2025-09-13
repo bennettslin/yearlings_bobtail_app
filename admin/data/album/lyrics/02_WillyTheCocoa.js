@@ -816,7 +816,7 @@ export default {
                                         anchor: `flower bulb`,
                                         wiki: `Ornamental_bulbous_plant`,
                                     },
-                                    `detached from its stalk. But bulbs will blossom anew once replanted in the earth. Why, then, can't we?`,
+                                    `detached from its stalk. But bulbs will blossom anew once replanted in the earth. So… why, then, can't we?`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,

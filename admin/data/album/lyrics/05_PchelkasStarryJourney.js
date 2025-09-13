@@ -18,7 +18,7 @@ import {
     REFRAIN,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REST, REVIEW } from '../../../containers/Annotations/constants/todos'
+import { REST } from '../../../containers/Annotations/constants/todos'
 
 /**
  * NOTE: Ash Wednesday and Pchelka`s Starry Journey have been switched from the
@@ -1280,7 +1280,6 @@ export default {
                         `Mushka,`,
                         {
                             anchor: `per their bargain`,
-                            todo: REVIEW,
                             card: {
                                 description: `Regardless, I was growing disillusioned with RI Research by this point, as the letters had begun to take on Christian overtones— which didn't comport with all the earlier talk of stellar beings. It made me realize their entire doctrine was being written on the fly.`,
                                 dotKeys: {
