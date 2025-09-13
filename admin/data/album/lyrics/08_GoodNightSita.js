@@ -530,7 +530,7 @@ export default {
                                         anchor: `pidgins`,
                                         wiki: `Pidgin`,
                                     },
-                                    `, or impromptu languages that arose between natives and settlers— whose exchanges would be peppered with words of goodwill, as a way to offset any misunderstandings. Coincidentally, this also describes how Sita and I have been communicating on our date.`,
+                                    `— impromptu languages that arose between natives and settlers, who needed to pepper their exchanges with words of goodwill, as a way to offset any misunderstandings. Coincidentally, this also describes how Sita and I have been communicating on our date.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
