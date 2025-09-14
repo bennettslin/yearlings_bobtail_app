@@ -17,7 +17,7 @@ import {
     FLASHBACK_TO_WORMHOLE_PREFIX,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REST } from '../../../containers/Annotations/constants/todos'
+import { REST, REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: '弟弟 (Didi)',
@@ -38,8 +38,7 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REST,
-                problem: `Say more about history of Taiwan? Talk about Japanese colony?`,
+                todo: REVIEW,
                 card: {
                     description: [
                         `My parents come from`,
@@ -47,12 +46,12 @@ export default {
                             anchor: `Taiwan`,
                             wiki: `Taiwan`,
                         },
-                        `, an island off the coast of China. When the`,
+                        `, an island off the coast of China that was once a Japanese colony. After World War II, the`,
                         {
-                            anchor: `Nationalists`,
+                            anchor: `Chinese Nationalists`,
                             wiki: `Kuomintang`,
                         },
-                        `took over after World War II, they made Mandarin Chinese the official language. So the Taiwanese that my family spoke at home included a few Chinese words, such as`,
+                        `took over and made theirs the official language. The Taiwanese that my family spoke at home thus included a few Chinese words— such as`,
                         {
                             isItalic: true,
                             lyric: `didi`,

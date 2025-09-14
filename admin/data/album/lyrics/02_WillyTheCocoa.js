@@ -1120,8 +1120,7 @@ export default {
                         `In time, with`,
                         {
                             anchor: `needle done`,
-                            todo: REST,
-                            problem: `Ultimately, I keep sitting on this because I still think it's not good enough.`,
+                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `My mother tells me that my life is a patchwork onto which I'll continue to sew new experiences. In turn, the insights I'll gain as a result will inform and enrich my art.`,
