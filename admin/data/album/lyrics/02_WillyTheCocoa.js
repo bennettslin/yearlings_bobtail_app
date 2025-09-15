@@ -811,12 +811,12 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `The impact of the wine bottle severs Willy's brain from his spine, like a`,
+                                    `The impact of the wine bottle severs Willy's brain from his spine, the way a`,
                                     {
                                         anchor: `flower bulb`,
                                         wiki: `Ornamental_bulbous_plant`,
                                     },
-                                    `detached from its stalk. But bulbs will blossom anew once replanted in the earth. So… why, then, can't we?`,
+                                    `is plucked from its stalk. But bulbs will blossom anew once replanted in the earth. So… why, then, can't we?`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -1120,7 +1120,6 @@ export default {
                         `In time, with`,
                         {
                             anchor: `needle done`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `My mother tells me that my life is a patchwork onto which I'll continue to sew new experiences. In turn, the insights I'll gain as a result will inform and enrich my art.`,

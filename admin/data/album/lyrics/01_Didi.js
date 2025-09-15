@@ -51,7 +51,7 @@ export default {
                             anchor: `Chinese Nationalists`,
                             wiki: `Kuomintang`,
                         },
-                        `took over and made theirs the official language. The Taiwanese that my family spoke at home thus included a few Chinese words— such as`,
+                        `took over and made theirs the official language. So the Taiwanese that my family spoke at home included a few Chinese words— like`,
                         {
                             isItalic: true,
                             lyric: `didi`,

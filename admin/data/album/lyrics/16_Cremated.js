@@ -15,7 +15,6 @@ import {
     IS_UNIT_DOT,
     FORESHADOW_OF_WORMHOLE_PREFIX,
 } from '../../../../src/constants/lyrics'
-import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Cremated',
@@ -662,7 +661,6 @@ export default {
                     lyricRight: [
                         {
                             anchor: `twitching sword`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Dubbing can refer to either`,

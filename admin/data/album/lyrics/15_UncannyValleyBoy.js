@@ -573,7 +573,7 @@ export default {
                             anchor: `counter-melody`,
                             wiki: `Counter-melody`,
                         },
-                        `heard here was originally the lead melody of the chorus. I left its lyrics as they were, despite this song no longer being about my nightmare; I enjoyed their surrealism. The original counter-melody, which I'd meant to play on guitar, was then given to the lead vocals.`,
+                        `heard here was originally meant to be the lead melody of the chorus. I kept its lyrics about the nightmare as they were; they add a welcome layer of surrealism, I'd say. The original counter-melody, which I'd written for guitar, was then given over to the lead vocals.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,

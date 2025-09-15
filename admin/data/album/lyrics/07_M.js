@@ -14,7 +14,6 @@ import {
     FLASHBACK_TO_WORMHOLE_PREFIX,
     FORESHADOW_OF_WORMHOLE_PREFIX,
 } from '../../../../src/constants/lyrics'
-import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'M',
@@ -905,7 +904,6 @@ export default {
                         `it's up to me to`,
                         {
                             anchor: `be alert`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `It wasn't a mystery, then, how things ended up as they did; it's no mystery why`,
