@@ -700,16 +700,16 @@ export default {
                         {
                             anchor: `window of your Walkman`,
                             todo: REST,
-                            problem: `Talk about recording CDs onto cassette tapes.`,
+                            problem: `Just make the last sentence good, then call it a day.`,
                             cards: [
                                 {
                                     description: [
-                                        `In those days, I'd often carry a`,
+                                        `The cafeteria was situated on the far side of campus from where I lived. On a typical day, I'd walk there before dawn for the breakfast shift, then walk home late in the evening after the dinner shift. Since I rarely ran into anyone, I'd typically listen to my`,
                                         {
                                             anchor: `Walkman`,
                                             wiki: `Walkman`,
                                         },
-                                        `wherever I went.`,
+                                        `.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
