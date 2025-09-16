@@ -816,7 +816,7 @@ export default {
                                         anchor: `flower bulb`,
                                         wiki: `Ornamental_bulbous_plant`,
                                     },
-                                    `is plucked from its stalk. But bulbs will blossom anew once replanted in the earth. So… why, then, can't we?`,
+                                    `is plucked from its stalk. But a bulb will blossom anew once replanted in the earth. Why, then, can't we?`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -975,17 +975,17 @@ export default {
                             cards: [
                                 {
                                     description: [
-                                        `Desperate to understand my brother, my mother kept up with all the latest claims— like`,
+                                        `Desperate to help my brother, my mother would look into all the latest claims— like`,
                                         {
                                             anchor: `facilitated communication`,
                                             wiki: `Facilitated_communication`,
                                         },
-                                        `, for one, or the notion that autism is caused by a failure to "`,
+                                        `, for one; or that autism is caused by a failure to "`,
                                         {
                                             anchor: `imprint`,
                                             wiki: `Imprinting_(psychology)`,
                                         },
-                                        `," for another. To her credit, she'd always trust the scientists who inevitably debunked these claims.`,
+                                        `," for another. To her credit, she'd always trust the science once it debunked these claims— which it invariably would.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
