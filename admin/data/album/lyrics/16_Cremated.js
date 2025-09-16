@@ -15,7 +15,6 @@ import {
     IS_UNIT_DOT,
     FORESHADOW_OF_WORMHOLE_PREFIX,
 } from '../../../../src/constants/lyrics'
-import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Cremated',
@@ -416,7 +415,6 @@ export default {
                         `not`,
                         {
                             anchor: `at each other's throats`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Some comedy duos, like`,

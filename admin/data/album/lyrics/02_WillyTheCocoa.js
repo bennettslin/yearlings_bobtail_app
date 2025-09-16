@@ -811,12 +811,12 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `The impact of the wine bottle severs Willy's brain from his spine, the way a`,
+                                    `The impact of the wine bottle severs Willy's brain from his spine, like a`,
                                     {
                                         anchor: `flower bulb`,
                                         wiki: `Ornamental_bulbous_plant`,
                                     },
-                                    `is plucked from its stalk. But a bulb will blossom anew once replanted in the earth. Why, then… can't we?`,
+                                    `plucked from its stalk. But a bulb will blossom anew once replanted in the earth. Why, then, can't we?`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -993,7 +993,7 @@ export default {
                                     },
                                 },
                                 {
-                                    description: `Since an "imp runt" is literally the weakest member in a litter of troll infants, it's sure to be the one a troll parent would replace with a stolen human child.`,
+                                    description: `Since an "imp runt" is literally the weakest troll infant in its litter, it's surely the one a troll parent would replace with a stolen human child.`,
                                     dotKeys: {
                                         [OBSERVATION]: true,
                                     },

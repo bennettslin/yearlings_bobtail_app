@@ -19,7 +19,7 @@ import {
     IS_UNIT_DOT,
     RESPONSE,
 } from '../../../../src/constants/lyrics'
-import { REST, REVIEW } from '../../../containers/Annotations/constants/todos'
+import { REST } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Odin',
@@ -121,7 +121,6 @@ export default {
                     lyricLeft: [
                         {
                             anchor: `hiding place of retreat`,
-                            todo: REVIEW,
                             card: {
                                 description: `The "asleep" voice of this doublespeaker pair narrates a dream that takes the familiar setting of Los Angeles, and melds it with the foreign sights of Taiwan: It begins with me coming out from the hiding place underneath my bed at home, having been absorbed in my drawings well into nighttime.`,
                                 dotKeys: {

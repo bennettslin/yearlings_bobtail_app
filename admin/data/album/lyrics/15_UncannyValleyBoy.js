@@ -568,12 +568,12 @@ export default {
                      * Wednesday and Garryowen.
                      */
                     description: [
-                        `The`,
+                        `Despite this song no longer being about my nightmare, I still liked the lyrics I'd already written for the  lead melody of the chorus. So I relegated them to a`,
                         {
                             anchor: `counter-melody`,
                             wiki: `Counter-melody`,
                         },
-                        `heard here was originally meant to be the lead melody of the chorus. I kept its lyrics about the nightmare as they were; they add a welcome layer of surrealism, I'd say. The original counter-melody, which I'd written for guitar, was then given over to the lead vocals.`,
+                        `, as heard here, where they add a welcome layer of surrealism. The original counter-melody, which I'd intended to play on guitar, then became the new lead melody.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,

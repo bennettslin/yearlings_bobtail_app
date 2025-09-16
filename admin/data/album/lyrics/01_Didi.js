@@ -41,7 +41,7 @@ export default {
                 todo: REVIEW,
                 card: {
                     description: [
-                        `My parents come from`,
+                        `My parents came from`,
                         {
                             anchor: `Taiwan`,
                             wiki: `Taiwan`,

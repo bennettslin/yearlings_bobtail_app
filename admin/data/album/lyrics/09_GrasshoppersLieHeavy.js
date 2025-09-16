@@ -715,7 +715,7 @@ export default {
                                     },
                                 },
                                 {
-                                    description: `Imagining the jogger to take a pratfall, I make a show of being absorbed in my music, like a child ducking beneath a window after pulling a prank.`,
+                                    description: `Imagining the jogger to take a pratfall, I make a show of being absorbed in my music, like a child ducking beneath a window after having pulled a prank.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                     },
