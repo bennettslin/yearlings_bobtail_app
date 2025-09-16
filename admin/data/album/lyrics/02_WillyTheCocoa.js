@@ -816,7 +816,7 @@ export default {
                                         anchor: `flower bulb`,
                                         wiki: `Ornamental_bulbous_plant`,
                                     },
-                                    `is plucked from its stalk. But a bulb will blossom anew once replanted in the earth. Why, then, can't we?`,
+                                    `is plucked from its stalk. But a bulb will blossom anew once replanted in the earth. Why, then… can't we?`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -975,17 +975,17 @@ export default {
                             cards: [
                                 {
                                     description: [
-                                        `Desperate to help my brother, my mother would look into all the latest claims— like`,
+                                        `Desperate to help my brother, my mother would look into all the latest claims— such as`,
                                         {
                                             anchor: `facilitated communication`,
                                             wiki: `Facilitated_communication`,
                                         },
-                                        `, for one; or that autism is caused by a failure to "`,
+                                        `, for one; or, for another, that autism is caused by a failure to "`,
                                         {
                                             anchor: `imprint`,
                                             wiki: `Imprinting_(psychology)`,
                                         },
-                                        `," for another. To her credit, she'd always trust the science once it debunked these claims— which it invariably would.`,
+                                        `." To her credit, she always trusted the science once it debunked these claims… which it invariably did.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
