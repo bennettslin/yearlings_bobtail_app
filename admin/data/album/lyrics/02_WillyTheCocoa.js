@@ -17,7 +17,7 @@ import {
     FLASHBACK_TO_WORMHOLE_PREFIX,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REST, REVIEW } from '../../../containers/Annotations/constants/todos'
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Willy the Cocoa',
@@ -971,17 +971,21 @@ export default {
                         `being ever stuck in`,
                         {
                             anchor: `imp-runt age of mind`,
-                            todo: REST,
-                            problem: `Make it clear that my mother studied for the sake of autism. Make it clear that autism was hypothesized as a failure to imprint, but is now considered outdated. `,
+                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
-                                        `After my brother was diagnosed with autism, my mother started taking night classes in child development. At the dinner table, she'd explain concepts she just learned, like "`,
+                                        `Desperate to understand my brother, my mother kept up with all the latest claims— like`,
                                         {
-                                            anchor: `imprinting`,
+                                            anchor: `facilitated communication`,
+                                            wiki: `Facilitated_communication`,
+                                        },
+                                        `, for one, or the notion that autism is caused by a failure to "`,
+                                        {
+                                            anchor: `imprint`,
                                             wiki: `Imprinting_(psychology)`,
                                         },
-                                        `"— the phase in which a child builds emotional attachment. Still, she'd always end by lamenting that her studies were too little, too late to help my brother.`,
+                                        `," for another. To her credit, she'd always trust the scientists who inevitably debunked these claims.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
