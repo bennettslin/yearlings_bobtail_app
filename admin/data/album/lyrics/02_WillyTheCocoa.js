@@ -808,7 +808,6 @@ export default {
                         {
                             anchor: `Willy's stalkless bulb`,
                             properNoun: true,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `The impact of the wine bottle severs Willy's brain from his spine, like a`,
@@ -993,7 +992,7 @@ export default {
                                     },
                                 },
                                 {
-                                    description: `Since an "imp runt" is literally the weakest troll infant in its litter, it's surely the one a troll parent would replace with a stolen human child.`,
+                                    description: `Since an "imp runt" is literally the weakest troll infant of its litter, it's surely the one a troll parent would replace with a stolen human child.`,
                                     dotKeys: {
                                         [OBSERVATION]: true,
                                     },

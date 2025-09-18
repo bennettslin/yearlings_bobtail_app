@@ -573,7 +573,7 @@ export default {
                             anchor: `counter-melody`,
                             wiki: `Counter-melody`,
                         },
-                        `, as heard here, where they add a welcome layer of surrealism. The original counter-melody, which I'd intended to play on guitar, then became the new lead melody.`,
+                        `, as heard here, where they add a welcome layer of surrealism, I'd say. The original counter-melody, which I'd intended to play on guitar, then became the new lead melody.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
