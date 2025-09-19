@@ -18,7 +18,7 @@ import {
     REFRAIN,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REST } from '../../../containers/Annotations/constants/todos'
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 /**
  * NOTE: Ash Wednesday and Pchelka`s Starry Journey have been switched from the
@@ -753,10 +753,9 @@ export default {
                         `one they'll find only once we build the`,
                         {
                             anchor: `mothership`,
-                            todo: REST,
-                            problem: `Still don't like it.`,
+                            todo: REVIEW,
                             card: {
-                                description: `The letters promised to update me on new developments, like the construction of spacecraft— which would allow us Beyonders to contact our extraplanetary kin.`,
+                                description: `The letters promised to inform me of new developments— like the construction of spacecraft, which would allow us Beyonders to contact our extraplanetary kin.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
@@ -775,8 +774,9 @@ export default {
                         `But till then, here's`,
                         {
                             anchor: `how you're to live`,
+                            todo: REVIEW,
                             card: {
-                                description: `The letters cautioned me to separate myself from society. Realizing that my brother had been doing this all along, I studied his unresponsive manner to fashion my own.`,
+                                description: `The letters also cautioned me to keep my distance from society. Realizing that my brother had been doing this all along, I adopted his unresponsive manner as my own.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
