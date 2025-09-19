@@ -979,7 +979,7 @@ export default {
                                             anchor: `facilitated communication`,
                                             wiki: `Facilitated_communication`,
                                         },
-                                        `, for one; or, for another, that autism is caused by a failure to "`,
+                                        `, for one; or for another, that autism is caused by a failure to "`,
                                         {
                                             anchor: `imprint`,
                                             wiki: `Imprinting_(psychology)`,
