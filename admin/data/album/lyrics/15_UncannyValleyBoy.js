@@ -20,7 +20,7 @@ import {
     BACKING,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REVIEW } from '../../../containers/Annotations/constants/todos'
+import { REVISE } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Uncanny Valley Boy',
@@ -561,19 +561,20 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
+                todo: REVISE,
+                problem: `Left half-finished.`,
                 card: {
                     /**
                      * NOTE: Counter-melody is mentioned earlier in Ash
                      * Wednesday and Garryowen.
                      */
                     description: [
-                        `Despite this song no longer being about my nightmare, I still liked the lyrics I'd already written for the  lead melody of the chorus. So I relegated them to a`,
+                        `Despite this song no longer being about my nightmare, I'd already written the lyrics for the chorus— and I still rather liked them. So I relegated them to a`,
                         {
                             anchor: `counter-melody`,
                             wiki: `Counter-melody`,
                         },
-                        `, as heard here, where they add a welcome layer of surrealism, I'd say. The original counter-melody, which I'd intended to play on guitar, then became the new lead melody.`,
+                        `, as heard here, where they add a welcome layer of surrealism. I then wrote a new lead melody to weave around it.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
