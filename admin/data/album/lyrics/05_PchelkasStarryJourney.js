@@ -18,7 +18,6 @@ import {
     REFRAIN,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 /**
  * NOTE: Ash Wednesday and Pchelka`s Starry Journey have been switched from the
@@ -753,7 +752,6 @@ export default {
                         `one they'll find only once we build the`,
                         {
                             anchor: `mothership`,
-                            todo: REVIEW,
                             card: {
                                 description: `The letters promised to inform me of new developments— like the construction of spacecraft, which would allow us Beyonders to contact our extraplanetary kin.`,
                                 dotKeys: {
@@ -774,7 +772,6 @@ export default {
                         `But till then, here's`,
                         {
                             anchor: `how you're to live`,
-                            todo: REVIEW,
                             card: {
                                 description: `The letters also cautioned me to keep my distance from society. Realizing that my brother had been doing this all along, I adopted his unresponsive manner as my own.`,
                                 dotKeys: {
