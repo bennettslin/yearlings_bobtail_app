@@ -573,7 +573,7 @@ export default {
                             anchor: `counter-melody`,
                             wiki: `Counter-melody`,
                         },
-                        `heard here, where they add a welcome layer of surrealism.`,
+                        `heard here, where they add a touch of surrealism.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
