@@ -14,6 +14,7 @@ import {
     OUTRO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'On a Golden Cord',
@@ -681,14 +682,15 @@ export default {
                         lyric: [
                             {
                                 anchor: `Mush`,
+                                todo: REVIEW,
                                 card: {
                                     description: [
-                                        `Marching onward without sleep, I try to recall the last time I'd known untroubled bliss. And so the music here evokes the first song I loved as a child: Johnny Horton's "`,
+                                        `Marching forth without sleep, I try to recall the last time I'd known untroubled bliss. And so the music here evokes the first song I loved as a child: Horton's "`,
                                         {
                                             anchor: `North to Alaska`,
                                             wiki: `North_to_Alaska_(song)`,
                                         },
-                                        `," in which backup singers call out to their sled dogs, and wooden bowls imitate the clip-clopping of a horse's gait.`,
+                                        `," in which backup singers call out to their sled dogs, while wooden bowls imitate the clip-clopping of a horse's gait.`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
