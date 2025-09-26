@@ -17,7 +17,7 @@ import {
     FLASHBACK_TO_WORMHOLE_PREFIX,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REST } from '../../../containers/Annotations/constants/todos'
+import { REST, REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: '弟弟 (Didi)',
@@ -38,6 +38,7 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
                     description: [
                         `My parents came from`,
@@ -45,12 +46,17 @@ export default {
                             anchor: `Taiwan`,
                             wiki: `Taiwan`,
                         },
-                        `, an island off the coast of China that was once a Japanese colony. After World War II, the`,
+                        `, an island off the coast of China that was formerly a`,
                         {
-                            anchor: `Chinese Nationalists`,
-                            wiki: `Kuomintang`,
+                            anchor: `Japanese colony`,
+                            wiki: `Taiwan_under_Japanese_rule`,
                         },
-                        `took over and made theirs the official language. So the Taiwanese that my family spoke at home included a few Chinese words— like`,
+                        `. Upon being defeated in World War II, Japan ceded control to China's Nationalist government. Then, after their own defeat in the Chinese Civil War, the Nationalists`,
+                        {
+                            anchor: `fell back to Taiwan`,
+                            wiki: `Retreat_of_the_government_of_the_Republic_of_China_to_Taiwan`,
+                        },
+                        `, took over, and made theirs the official language. So the Taiwanese that my family spoke at home included a few Chinese words— like`,
                         {
                             isItalic: true,
                             lyric: `didi`,

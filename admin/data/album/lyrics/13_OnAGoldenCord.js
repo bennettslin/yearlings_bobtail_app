@@ -14,7 +14,6 @@ import {
     OUTRO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'On a Golden Cord',
@@ -682,7 +681,6 @@ export default {
                         lyric: [
                             {
                                 anchor: `Mush`,
-                                todo: REVIEW,
                                 card: {
                                     description: [
                                         `Marching forth without sleep, I try to recall the last time I'd known untroubled bliss. And so the music here evokes the first song I loved as a child: Horton's "`,
