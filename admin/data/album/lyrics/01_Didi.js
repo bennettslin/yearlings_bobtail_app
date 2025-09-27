@@ -51,7 +51,7 @@ export default {
                             anchor: `Japanese colony`,
                             wiki: `Taiwan_under_Japanese_rule`,
                         },
-                        `. Upon being defeated in World War II, Japan ceded control to China's Nationalist government. Then, after their own defeat to Communist forces, the Nationalists`,
+                        `. Upon being defeated in World War II, Japan ceded control to China's Nationalist government. Then, after their own defeat by Communist forces, the Nationalists`,
                         {
                             anchor: `retreated to Taiwan`,
                             wiki: `Retreat_of_the_government_of_the_Republic_of_China_to_Taiwan`,
