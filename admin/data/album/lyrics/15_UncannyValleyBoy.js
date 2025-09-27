@@ -568,12 +568,12 @@ export default {
                      * Wednesday and Garryowen.
                      */
                     description: [
-                        `Despite this song no longer being about my nightmare, I'd already written the lyrics for the chorus— and I still rather enjoyed them. So I relegated them to the`,
+                        `Despite this song no longer being about that nightmare, I'd already written the lyrics for the chorus— and they still struck a chord. So I relegated them to the`,
                         {
                             anchor: `counter-melody`,
                             wiki: `Counter-melody`,
                         },
-                        `heard here, where they add a touch of surrealism.`,
+                        `heard here, where they add a nice touch of surrealism.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
