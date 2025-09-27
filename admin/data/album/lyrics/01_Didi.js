@@ -17,7 +17,7 @@ import {
     FLASHBACK_TO_WORMHOLE_PREFIX,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REST } from '../../../containers/Annotations/constants/todos'
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: '弟弟 (Didi)',
@@ -453,10 +453,9 @@ export default {
                         `taped to all the`,
                         {
                             anchor: `girls' mirrors`,
-                            todo: REST,
-                            problem: `Sentence was too long, but now comma feels off.`,
+                            todo: REVIEW,
                             card: {
-                                description: `My sister would cut out pictures of superstars from her fan magazines, and tape them to the bathroom mirror.`,
+                                description: `On our weekly trips to the supermarket, my parents would sometimes allow my sister to buy a fan magazine from the rack near the entrance. After reading through it, she'd then cut out pictures of her favorite celebrities and tape them to her dresser mirror.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
