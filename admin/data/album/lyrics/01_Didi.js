@@ -51,9 +51,9 @@ export default {
                             anchor: `Japanese colony`,
                             wiki: `Taiwan_under_Japanese_rule`,
                         },
-                        `. Upon being defeated in World War II, Japan ceded control to China's Nationalist government. Then, after their own defeat in the Chinese Civil War, the Nationalists`,
+                        `. Upon being defeated in World War II, Japan ceded control to China's Nationalist government. Then, after their own defeat to Communist forces, the Nationalists`,
                         {
-                            anchor: `fell back to Taiwan`,
+                            anchor: `retreated to Taiwan`,
                             wiki: `Retreat_of_the_government_of_the_Republic_of_China_to_Taiwan`,
                         },
                         `, took over, and made theirs the official language. So the Taiwanese that my family spoke at home included a few Chinese words— like`,
