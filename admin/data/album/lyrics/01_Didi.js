@@ -455,7 +455,7 @@ export default {
                             anchor: `girls' mirrors`,
                             todo: REVIEW,
                             card: {
-                                description: `On our weekly trips to the supermarket, my parents would sometimes allow my sister to buy a fan magazine from the rack near the entrance. After reading through it, she'd then cut out pictures of her favorite celebrities and tape them to her dresser mirror.`,
+                                description: `On our weekly trips to the supermarket, my parents would allow my sister to buy a fan magazine from the rack near the exit. After reading it, she'd then cut out pictures of her favorite celebrities and tape them to her dresser mirror.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },
