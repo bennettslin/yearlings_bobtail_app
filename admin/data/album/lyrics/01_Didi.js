@@ -17,7 +17,6 @@ import {
     FLASHBACK_TO_WORMHOLE_PREFIX,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: '弟弟 (Didi)',
@@ -453,7 +452,6 @@ export default {
                         `taped to all the`,
                         {
                             anchor: `girls' mirrors`,
-                            todo: REVIEW,
                             card: {
                                 description: `On our weekly trips to the supermarket, my parents would allow my sister to buy a fan magazine from the rack near the exit. After reading it, she'd then cut out pictures of her favorite celebrities and tape them to her dresser mirror.`,
                                 dotKeys: {
