@@ -529,7 +529,7 @@ export default {
                                         anchor: `pidgins`,
                                         wiki: `Pidgin`,
                                     },
-                                    `— or, impromptu languages that arose between natives and settlers, who'd fill their exchanges with words of goodwill to avoid any misunderstandings. Which, funny enough, is what Sita and I have been doing throughout this date.`,
+                                    `— or, impromptu languages that arose between natives and settlers, who'd fill their exchanges with words of goodwill to avoid any misunderstandings. And funny enough, this is also what Sita and I have been doing all through our date.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
