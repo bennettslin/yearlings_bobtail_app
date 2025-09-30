@@ -17,6 +17,7 @@ import {
     FLASHBACK_TO_WORMHOLE_PREFIX,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Willy the Cocoa',
@@ -1031,6 +1032,33 @@ export default {
                     lyric: `ever conscious of days past forever wrong?`,
                 },
             ],
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                todo: REVIEW,
+                card: {
+                    description: [
+                        `The first time I heard`,
+                        {
+                            anchor: `Nirvana`,
+                            wiki: `Nirvana_(band)`,
+                        },
+                        `as a child, their songwriting blew me away; I didn't think such a fast`,
+                        {
+                            anchor: `harmonic rhythm`,
+                            wiki: `Harmonic_rhythm`,
+                        },
+                        `could even sound good at all. Finally, I grasped what I was hearing: Their power chords function less as progressions, and more like the fixed melody in`,
+                        {
+                            anchor: `counterpoint`,
+                            wiki: `Counterpoint`,
+                        },
+                        `. Now, as a piano student, I'd played counterpoint before, but I knew none of the theory behind it. Still, since it's sorely lacking in rock music, I realized it could be my trademark— and so I set out to master it on my own.`,
+                    ],
+                    dotKeys: {
+                        [SONGCRAFT]: true,
+                    },
+                },
+            },
         },
         {
             unitMap: {

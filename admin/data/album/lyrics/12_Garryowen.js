@@ -16,7 +16,7 @@ import {
     OUTRO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REST } from '../../../containers/Annotations/constants/todos'
+import { REST, REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Garryowen',
@@ -438,19 +438,19 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
                     /**
-                     * NOTE: Counterpoint is mentioned earlier in Ash Wednesday.
-                     * Counter-melody is mentioned earlier in Ash Wednesday,
-                     * and is a wiki later in Uncanny Valley.
+                     * NOTE: Counter-melody is mentioned earlier in Ash
+                     * Wednesday.
                      */
                     description: [
-                        `In traditional`,
+                        `In traditional counterpoint, melodies are laid one atop another, and any chord progression is just a byproduct of the harmonies they form in sequence. But since this is a standard rock song with a fixed progression, I took the reverse approach of assigning each note in a chord to a different part, and then shaping each part's sequence of such notes into an unassuming`,
                         {
-                            anchor: `counterpoint`,
-                            wiki: `Counterpoint`,
+                            anchor: `counter-melody`,
+                            wiki: `Counter-melody`,
                         },
-                        `, melodies are laid one atop another, and any chord progression is just a byproduct of the harmonies they form in sequence. But since this is a standard rock song with a fixed progression, I took the reverse approach of assigning each note in a chord to a different part, and then shaping each part's sequence of such notes into an unassuming counter-melody.`,
+                        `.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,

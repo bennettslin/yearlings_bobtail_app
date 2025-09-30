@@ -511,14 +511,10 @@ export default {
                         `in`,
                         {
                             anchor: `famous raincoat`,
+                            todo: REVIEW,
                             card: {
                                 description: [
-                                    `While I was familiar with Leonard Cohen's name— thanks to the lyric in`,
-                                    {
-                                        anchor: `Nirvana`,
-                                        wiki: `Nirvana_(band)`,
-                                    },
-                                    `'s "`,
+                                    `While I was familiar with Leonard Cohen's name— thanks to the lyric in Nirvana's "`,
                                     {
                                         anchor: `Pennyroyal Tea`,
                                         wiki: `Pennyroyal_Tea`,
@@ -875,7 +871,6 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 card: {
-                    // NOTE: Counterpoint is a wiki later in Garryowen.
                     description: [
                         `I hadn't formally studied composition up to this point, so when I scored this three-part counterpoint in the vocal`,
                         {
