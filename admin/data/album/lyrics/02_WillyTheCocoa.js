@@ -967,9 +967,10 @@ export default {
                 {
                     mixTime: `2:27:22.50`,
                     lyric: [
-                        `being ever stuck in`,
+                        `being ever`,
                         {
-                            anchor: `imp-runt age of mind`,
+                            anchor: `stuck in imp-runt`,
+                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
@@ -997,6 +998,20 @@ export default {
                                     },
                                 },
                             ],
+                        },
+                        {
+                            anchor: `age of mind`,
+                            todo: REVIEW,
+                            card: {
+                                description: [
+                                    `The notion that autism is typified by an underdeveloped`,
+                                    {
+                                        anchor: `theory of mind`,
+                                        wiki: `Theory_of_mind`,
+                                    },
+                                    `, on the other hand, still holds true within some scientific circles.`,
+                                ],
+                            },
                         },
                         `!`,
                     ],
