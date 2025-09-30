@@ -1052,7 +1052,7 @@ export default {
                             anchor: `counterpoint`,
                             wiki: `Counterpoint`,
                         },
-                        `. Now, as a piano student of ten years, I'd played some counterpoint before— I just didn't know the theory behind it. Still, since it's rare in rock music, I realized I could come up with my own approach, and make this my trademark.`,
+                        `. Now, as a piano student of ten years, I'd played some counterpoint before; I just didn't know any theory behind it. But since it's rarely done in rock music, I realized I could figure out my own approach, and have this be my trademark.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,

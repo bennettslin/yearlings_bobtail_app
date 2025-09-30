@@ -16,7 +16,7 @@ import {
     OUTRO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REST } from '../../../containers/Annotations/constants/todos'
+import { REST, REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Garryowen',
@@ -154,6 +154,7 @@ export default {
                         `if you would`,
                         {
                             anchor: `opt for bed not street`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `I was tired of working extra shifts just to pay rent. So after my lease ended, I'd spend half my nights with Sita, and the other half crashing in the`,
@@ -161,7 +162,7 @@ export default {
                                         anchor: `punk house`,
                                         wiki: `Punk_house`,
                                     },
-                                    `basement. This gave me the regular comfort of Sita's bed, while ensuring that she never had the upper hand over me.`,
+                                    `basement. This gave me the regular comfort of Sita's bed, while ensuring she never had the upper hand over me.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
