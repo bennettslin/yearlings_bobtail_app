@@ -11,7 +11,6 @@ import {
     POSTCHORUS,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Good Night, Sita',
@@ -521,7 +520,6 @@ export default {
                     lyric: [
                         {
                             anchor: `pidgin palaver`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `In a gallery devoted to Native American history, we stop to learn about`,

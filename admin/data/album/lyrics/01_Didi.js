@@ -38,7 +38,6 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: [
                         `My parents came from`,
@@ -410,7 +409,7 @@ export default {
                             anchor: `Carpenters`,
                             wiki: `The_Carpenters`,
                         },
-                        `record that Richard, the brother of the duo, excelled at orchestration. To arrange the parts for my album, then, I'd listen to them nonstop, hoping his wisdom would rub off on me. While it's hard to say if this worked, I did notice that their song "`,
+                        `record that Richard, the brother of the duo, excelled at orchestration. To arrange the parts for my album, then, I'd listen to them nonstop, hoping his wisdom might rub off on me. While it's hard to say if this worked, I did notice that their song "`,
                         {
                             anchor: `Sing`,
                             wiki: `Sing_(Sesame_Street_song)`,
