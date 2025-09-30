@@ -20,7 +20,6 @@ import {
     BACKING,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Uncanny Valley Boy',
@@ -561,7 +560,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: [
                         `Despite this song no longer being about that nightmare, I'd already written the lyrics for the chorus— and they still resonated a bit. So I relegated them to a counter-melody, as heard here, where they add a nice touch of surrealism.`,
