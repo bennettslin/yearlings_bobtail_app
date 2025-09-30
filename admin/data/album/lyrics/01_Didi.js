@@ -410,12 +410,12 @@ export default {
                             anchor: `Carpenters`,
                             wiki: `The_Carpenters`,
                         },
-                        `record that Richard, the brother of the duo, excelled at orchestration. To score the parts for my album, then, I listened to them nonstop, hoping his wisdom would rub off on me. While it's hard to say if this worked, I did notice that their song "`,
+                        `record that Richard, the brother of the duo, excelled at orchestration. To arrange the parts for my album, then, I'd listen to them nonstop, hoping his wisdom would rub off on me. While it's hard to say if this worked, I did notice that their song "`,
                         {
                             anchor: `Sing`,
                             wiki: `Sing_(Sesame_Street_song)`,
                         },
-                        `" abruptly drops by a minor third halfway through— like "Wouldn't It Be Nice" does. So I figured I couldn't go wrong by doing the same here.`,
+                        `" abruptly drops by a minor third halfway through— just like "Wouldn't It Be Nice" does. I liked the effect in both cases, so I went with it here.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
