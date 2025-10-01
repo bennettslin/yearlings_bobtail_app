@@ -1008,7 +1008,7 @@ export default {
                                         anchor: `theory of mind`,
                                         wiki: `Theory_of_mind`,
                                     },
-                                    `, on the other hand, still holds true within some scientific circles.`,
+                                    `, on the other hand, still holds true in some scientific circles.`,
                                 ],
                             },
                         },
@@ -1048,7 +1048,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: [
                         `The first time I heard`,

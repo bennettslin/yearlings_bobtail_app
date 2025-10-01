@@ -414,7 +414,7 @@ export default {
                             anchor: `Sing`,
                             wiki: `Sing_(Sesame_Street_song)`,
                         },
-                        `" abruptly drops by a minor third halfway through— much like "Wouldn't It Be Nice" does. I liked the effect in both cases, so I went with it here.`,
+                        `" abruptly drops by a minor third halfway through— much like "Wouldn't It Be Nice" does. The effect works well in both cases, so I went with it here.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,

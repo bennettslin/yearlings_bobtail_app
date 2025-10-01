@@ -385,7 +385,7 @@ export default {
                             anchor: `"Joyce" oblivious`,
                             todo: REVIEW,
                             card: {
-                                description: `Of course, not knowing I couldn't be the next Joyce is why I dared to try. And thus I began to dream of doing for rock music what Joyce had done for modern literature.`,
+                                description: `Of course, not knowing I couldn't be the next Joyce is why I dared to try. Slowly, then, I began to dream of doing for rock music what Joyce had done for modern literature.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
