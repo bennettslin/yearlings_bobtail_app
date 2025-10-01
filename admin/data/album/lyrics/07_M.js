@@ -14,6 +14,7 @@ import {
     FLASHBACK_TO_WORMHOLE_PREFIX,
     FORESHADOW_OF_WORMHOLE_PREFIX,
 } from '../../../../src/constants/lyrics'
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'M',
@@ -259,8 +260,9 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
-                    description: `I abandoned my plan to pack this song with M words after deciding that it wouldn't sound too good. But I'd already written this stanza by that point, and since it said exactly what I wanted to say, I kept it.`,
+                    description: `I abandoned my plan to pack this song with M words after deciding it wouldn't sound too good. I'd already written this stanza by that point, though, and since it said exactly what I wanted to say, I kept it.`,
                     dotKeys: {
                         [SONGCRAFT]: true,
                     },

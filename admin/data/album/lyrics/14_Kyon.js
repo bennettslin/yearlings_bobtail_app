@@ -15,6 +15,7 @@ import {
     OUTRO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'क्यों? (Kyon?)',
@@ -282,9 +283,10 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
                     description: [
-                        `Every time we got back together, Sita would reassert our status as a couple by insisting that I bring her along to see my friends— the very same ones who'd emboldened me to leave her. And so the circus`,
+                        `Every time we got back together, Sita would reassert our status as a couple by insisting I bring her along to see my friends— the very same ones who'd emboldened me to leave her. And so the circus`,
                         {
                             anchor: `calliope`,
                             wiki: `Calliope_(music)`,

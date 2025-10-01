@@ -17,6 +17,7 @@ import {
     FORESHADOW_OF_WORMHOLE_PREFIX,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Vegan Proclamation',
@@ -382,8 +383,9 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
-                    description: `Sasha recited these lines for me over the phone. We tried several takes because she found it hard to portray them as snippets of actual conversation. I had to admit that I didn't write them with that concern in mind.`,
+                    description: `Sasha recited these lines for me over the phone. We tried several takes because she found it hard to portray them as snippets of actual conversation. I had to admit that they weren't written with this concern in mind.`,
                     dotKeys: {
                         [BACKSTORY]: true,
                         [SONGCRAFT]: true,
@@ -814,9 +816,10 @@ export default {
                         [
                             {
                                 anchor: `gurgling, curls up`,
+                                todo: REVIEW,
                                 cards: [
                                     {
-                                        description: `With ignorance being as old as time itself, I'm comforted to know that we've always fixed our mistakes; at the same time, it's dispiriting to remember that those to come have yet to make theirs. The universe never truly learns, and I'm partly to blame… I had a similar thought as a child, when I wondered whether I was the reason my brother never got better. It made me realize that all I could do was love him, and then do better for him.`,
+                                        description: `With ignorance being as old as time itself, I'm comforted to know we've always corrected our mistakes; at the same time, it's dispiriting to remember that those to come have yet to make theirs. The universe never truly learns, and I'm partly to blame… I had a similar thought as a child, when I wondered whether I was the reason my brother never got better. It made me realize that all I could do was love him, and then do better for him.`,
                                         dotKeys: {
                                             [NARRATIVE]: true,
                                             [OBSERVATION]: true,
