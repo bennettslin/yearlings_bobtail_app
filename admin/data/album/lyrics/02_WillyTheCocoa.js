@@ -967,10 +967,9 @@ export default {
                 {
                     mixTime: `2:27:22.50`,
                     lyric: [
-                        `being ever`,
+                        `being ever stuck in`,
                         {
-                            anchor: `stuck in imp-runt`,
-                            todo: REVIEW,
+                            anchor: `imp-runt age`,
                             cards: [
                                 {
                                     description: [
@@ -1000,7 +999,7 @@ export default {
                             ],
                         },
                         {
-                            anchor: `age of mind`,
+                            anchor: `of mind`,
                             todo: REVIEW,
                             card: {
                                 description: [
