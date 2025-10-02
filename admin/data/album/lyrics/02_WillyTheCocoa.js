@@ -17,7 +17,6 @@ import {
     FLASHBACK_TO_WORMHOLE_PREFIX,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Willy the Cocoa',
@@ -1000,7 +999,6 @@ export default {
                         },
                         {
                             anchor: `of mind`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `The notion that autism is typified by an underdeveloped`,

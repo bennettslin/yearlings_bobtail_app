@@ -18,7 +18,6 @@ import {
     REFRAIN,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 /**
  * NOTE: Ash Wednesday and Pchelka`s Starry Journey have been switched from the
@@ -1305,7 +1304,6 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: `Today, my brother lives in his own place with the help of a supported-living agency called Avenues. When asked how old he is, he still answers "seven."`,
                     dotKeys: {

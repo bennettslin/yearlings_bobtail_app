@@ -13,7 +13,6 @@ import {
     IS_UNIT_DOT,
     FORESHADOW_OF_WORMHOLE_PREFIX,
 } from '../../../../src/constants/lyrics'
-import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Ash Wednesday',
@@ -383,7 +382,6 @@ export default {
                         `with`,
                         {
                             anchor: `"Joyce" oblivious`,
-                            todo: REVIEW,
                             card: {
                                 description: `Of course, not knowing I couldn't be the next Joyce is why I dared to try. Slowly, then, I began to dream of doing for rock music what Joyce had done for modern literature.`,
                                 dotKeys: {
