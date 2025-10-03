@@ -17,7 +17,6 @@ import {
     SOLO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Grasshoppers Lie Heavy',
@@ -323,7 +322,6 @@ export default {
                         `At`,
                         {
                             anchor: `first she hedged`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
@@ -349,7 +347,6 @@ export default {
                         `, but then`,
                         {
                             anchor: `laying qualms to rest`,
-                            todo: REVIEW,
                             card: {
                                 wormhole: `laid_tourettes`,
                             },
