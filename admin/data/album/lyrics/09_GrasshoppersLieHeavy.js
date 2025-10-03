@@ -17,6 +17,7 @@ import {
     SOLO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Grasshoppers Lie Heavy',
@@ -319,9 +320,10 @@ export default {
                 {
                     mixTime: `0:39:18.00`,
                     lyric: [
-                        `At first she hedged, but then`,
+                        `At`,
                         {
-                            anchor: `laying qualms to rest`,
+                            anchor: `first she hedged`,
+                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
@@ -342,10 +344,15 @@ export default {
                                         [NARRATIVE]: true,
                                     },
                                 },
-                                {
-                                    wormhole: `laid_tourettes`,
-                                },
                             ],
+                        },
+                        `, but then`,
+                        {
+                            anchor: `laying qualms to rest`,
+                            todo: REVIEW,
+                            card: {
+                                wormhole: `laid_tourettes`,
+                            },
                         },
                         `:`,
                     ],

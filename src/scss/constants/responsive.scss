@@ -2,19 +2,18 @@ $WIDTH_LAPTOP: 1400px;
 
 /**
  * This is the maximum lyric column width in monitor, as determined by the
- * width of On a Golden Cord in double columns. MenuTopRow and nav widths can be as
- * narrow as 656px. (1401 - 745.)
+ * width of On a Golden Cord in double columns. MenuTopRow and nav widths can
+ * be as narrow as 656px. (1401 - 745.)
  */
 $WIDTH_GOLDEN_CORD: 745px;
 /**
  * This is the maximum lyric column width in laptop, as determined by the
- * width of Uncanny Valley and Vegan Proclamation. MenuTopRow and nav widths can be
- * as narrow as 531px. (1101 - 570.)
+ * width of Uncanny Valley and Vegan Proclamation. MenuTopRow and nav widths
+ * can be as narrow as 531px. (1101 - 570.)
  */
 $WIDTH_UNCANNY_VALLEY: 570px;
 
 /**
- * The tallest carousel annotation is now Beethoven. The computed height of the
- * annotation itself is 388px.
+ * The tallest carousel annotation is now "Schwa stickers."
  */
-$height__chivalry: 475px;
+$height__schwa__stickers: 475px;

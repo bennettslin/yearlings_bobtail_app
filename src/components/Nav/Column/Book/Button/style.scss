@@ -58,7 +58,7 @@
 
 [class*=ButtonTitle__nav] {
     left: auto;
-    top: $height__chivalry;
+    top: $height__schwa__stickers;
     opacity: 0;
 
     .DW__userAgentDesktop
@@ -70,7 +70,7 @@
 
     .DW__mobileWidth
     & {
-        top: -$height__chivalry;
+        top: -$height__schwa__stickers;
     }
 
     .ShW__navExpanded

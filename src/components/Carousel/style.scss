@@ -7,7 +7,7 @@
  * Make this the full height of the carousel itself, to ensure that nothing is
  * clickable when carousel is hidden.
  */
-$height__carouselHidden: $height__chivalry;
+$height__carouselHidden: $height__schwa__stickers;
 
 .Carousel {
     display: none;
@@ -23,7 +23,7 @@ $height__carouselHidden: $height__chivalry;
     .DW__desktopWidth
     & {
         bottom: -$height__carouselHidden;
-        height: $height__chivalry;
+        height: $height__schwa__stickers;
         padding-bottom: $MARGIN_THIN;
     }
 
