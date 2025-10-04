@@ -20,7 +20,7 @@ const MailingList = ({ didMount }) => (
                 {...{
                     externalLink: MAILING_LIST_WEBSITE,
                     text: 'Join our mailing list',
-                    analyticsLabel: 'mailingList',
+                    analyticsLabel: 'YearlingsBobtailSubstack',
                 }}
             />
         </span>
