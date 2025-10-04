@@ -1,110 +1,32 @@
-import React, { useState } from 'react'
-import PropTypes from 'prop-types'
+import React from 'react'
 import cx from 'classnames'
-import * as EmailValidator from 'email-validator'
+import PropTypes from 'prop-types'
 import getDidMountHoc from '../../../hocs/DidMountHoc'
-import {
-    EMAIL_ACTION,
-    EMAIL_NAME,
-    EMAIL_DUMMY_NAME,
-    EMAIL_ID,
-} from '../../../constants/website'
-import './style'
+import Anchor from '../../Anchor'
+import { MAILING_LIST_WEBSITE } from '../../../constants/website'
 
-const MailingList = ({ didMount }) => {
-    const
-        [isValidEmail, setIsValidEmail] = useState(false),
-        [emailValue, setEmailValue] = useState('')
-
-    const onFocus = () => {
-        logEvent(
-            'MailingList',
-            'email',
-        )
-    }
-
-    const onClick = () => {
-        logEvent(
-            'MailingList',
-            'submit',
-        )
-    }
-
-    const onChange = ({ target: { value } }) => {
-        const emailValue = value.replace(' ', '')
-
-        setIsValidEmail(EmailValidator.validate(emailValue))
-        setEmailValue(emailValue)
-    }
-
-    return didMount && (
-        <form
-            noValidate
+const MailingList = ({ didMount }) => (
+    <>
+        <span
             {...{
-                className: cx(
-                    'MailingList',
-                ),
-                action: EMAIL_ACTION,
-                method: 'post',
-                target: '_blank',
+                ...didMount && {
+                    className: cx(
+                        'MailingList',
+                    ),
+                },
             }}
         >
-            <input
-                required
+            <Anchor
                 {...{
-                    className: cx(
-                        'MailingList__emailField',
-                        'MailingList__input',
-                        'font__text',
-                        'foN',
-                    ),
-                    id: EMAIL_ID,
-                    name: EMAIL_NAME,
-                    type: 'text',
-                    value: emailValue,
-                    placeholder: 'Email address',
-                    autoComplete: 'off',
-                    maxLength: 254,
-                    onFocus,
-                    onChange,
+                    externalLink: MAILING_LIST_WEBSITE,
+                    text: 'Join our mailing list',
+                    analyticsLabel: 'mailingList',
                 }}
             />
-            {/* Honeypot field to prevent bot signups. */}
-            <div
-                {...{
-                    style: {
-                        position: 'absolute',
-                        left: '-5000px',
-                    },
-                    'aria-hidden': true,
-                }}
-            >
-                <input
-                    {...{
-                        name: EMAIL_DUMMY_NAME,
-                        type: 'text',
-                        defaultValue: '',
-                        tabIndex: -1,
-                    }}
-                />
-            </div>
-            <input
-                {...{
-                    className: cx(
-                        'MailingList__submitButton',
-                        'MailingList__input',
-                        'font__text',
-                        'foN',
-                    ),
-                    type: 'submit',
-                    value: 'Sign up!',
-                    disabled: !isValidEmail,
-                    onClick,
-                }}
-            />
-        </form>
-    )
-}
+        </span>
+        {`!`}
+    </>
+)
 
 MailingList.propTypes = {
     didMount: PropTypes.bool.isRequired,

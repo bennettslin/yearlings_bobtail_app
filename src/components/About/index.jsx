@@ -18,7 +18,7 @@ const About = () => (
         <AboutChild>
             <AboutTitle />
         </AboutChild>
-        <AboutChild {...{ header: 'Mailing list' }}>
+        <AboutChild {...{ header: 'Sign up' }}>
             <MailingList />
         </AboutChild>
         <AboutChild {...{ header: 'Contact us' }}>
