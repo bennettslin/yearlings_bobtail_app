@@ -15,7 +15,6 @@ import { useDispatch, useSelector } from 'react-redux'
 import { updateQueuedFocus } from '../../redux/focus/action'
 import RootTouchDispatcher from '../../dispatchers/RootTouch'
 import KeyManager from '../../managers/Key'
-import { isEmailFocused } from '../../utils/email'
 import {
     mapQueuedFocus,
     mapShouldNavigateLyric,
@@ -40,10 +39,6 @@ const RootContainer = () => {
     const getResizeContainerElement = () => rootContainerElement.current
 
     const _focusElementForAccess = () => {
-        if (isEmailFocused()) {
-            return false
-        }
-
         let currentElement = rootContainerElement?.current,
             logString = 'root'
 

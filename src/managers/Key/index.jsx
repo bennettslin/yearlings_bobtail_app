@@ -6,7 +6,6 @@ import { updateIsAutoScroll } from '../../redux/toggle/action'
 import NavigationManager from './Navigation'
 import LetterManager from './Letter'
 import { mapIsAccessOn } from '../../redux/access/selector'
-import { isEmailFocused } from '../../utils/email'
 import {
     getKeyName,
     getIsNavKeyOrEnter,
@@ -71,10 +70,6 @@ const KeyManager = forwardRef((props, ref) => {
     }
 
     const handleKeyDown = e => {
-        if (isEmailFocused()) {
-            return false
-        }
-
         const keyName = getKeyName(e)
 
         // Do not allow the event to propagate if it's one of these.
@@ -117,10 +112,6 @@ const KeyManager = forwardRef((props, ref) => {
     }
 
     const handleKeyUp = e => {
-        if (isEmailFocused()) {
-            return false
-        }
-
         const keyName = getKeyName(e)
 
         // Do not allow the event to propagate if it's one of these.
