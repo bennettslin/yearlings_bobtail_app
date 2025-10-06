@@ -16,7 +16,7 @@ import {
     OUTRO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REST } from '../../../containers/Annotations/constants/todos'
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Garryowen',
@@ -469,10 +469,9 @@ export default {
                         `As`,
                         {
                             anchor: `claws you built from scratches`,
-                            todo: REST,
-                            problem: `This isn't actually what the lyric means. Rather, I got scratched, and so I built up defenses.`,
+                            todo: REVIEW,
                             card: {
-                                description: `In the same way that cats scratch to sharpen their claws, I needed to stay sharp to keep from getting scratched and clawed by the bullies.`,
+                                description: `Much like cats scratch to sharpen their claws, I needed to stay sharp to keep from getting scratched and clawed by the bullies.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                     [PUN]: true,
