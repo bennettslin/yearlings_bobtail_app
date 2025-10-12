@@ -248,7 +248,7 @@ export default {
                             todo: REST,
                             problem: `Second and third sentences should parallel each other more to make it obvious that I'm going back and forth between hope and despair.`,
                             card: {
-                                description: `As I lie on the floor mat, unable to sleep, the "awake" voice of the doublespeaker pair echoes my thoughts: While the vastness of the universe terrifying, doesn't it also suggest unlimited possibilities? But then… why isn't being with Sasha one of them?`,
+                                description: `As I lie on the floor mat, unable to sleep, the "awake" voice of the doublespeaker pair echoes my thoughts: While the vastness of the universe terrifying, doesn't it also suggest unlimited possibilities? But if so, then why isn't being with Sasha one of them?`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
