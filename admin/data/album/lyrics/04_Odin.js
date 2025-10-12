@@ -247,7 +247,7 @@ export default {
                             anchor: `ruminate on these riddles`,
                             todo: REVIEW,
                             card: {
-                                description: `As I lie on the floor mat, unable to sleep, the "awake" voice of the doublespeaker pair echoes my thoughts: While the vastness of the universe is terrifying, yes… doesn't it also suggest unlimited possibilities? But then, if so… why isn't being with Sasha one of them?`,
+                                description: `As I lie on the floor mat unable to sleep, the "awake" voice echoes my thoughts as they vacillate between hope and despair: While the vastness of the universe is terrifying, sure… doesn't this also suggest unlimited possibilities? But then, if so… why isn't being with Sasha one of them?`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
