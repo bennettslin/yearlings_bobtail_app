@@ -16,7 +16,6 @@ import {
     OUTRO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Garryowen',
@@ -469,7 +468,6 @@ export default {
                         `As`,
                         {
                             anchor: `claws you built from scratches`,
-                            todo: REVIEW,
                             card: {
                                 description: `Much like cats scratch to sharpen their claws, I needed to stay sharp to keep from getting scratched and clawed by the bullies.`,
                                 dotKeys: {
