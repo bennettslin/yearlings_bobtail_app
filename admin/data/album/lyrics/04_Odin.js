@@ -19,7 +19,6 @@ import {
     IS_UNIT_DOT,
     RESPONSE,
 } from '../../../../src/constants/lyrics'
-import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Odin',
@@ -245,7 +244,6 @@ export default {
                         `you`,
                         {
                             anchor: `ruminate on these riddles`,
-                            todo: REVIEW,
                             card: {
                                 description: `As I lie awake on the floor mat, wavering between hope and despair, the "awake" voice echoes my thoughts: While the universe is terrifying in its vastness, yes… doesn't this also suggest unlimited possibilities? But then, if so… why isn't being with Sasha one of them?`,
                                 dotKeys: {
