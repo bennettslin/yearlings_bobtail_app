@@ -25,7 +25,7 @@ export default {
     playerStartTime: 967.569,
     mixStartTime: `0:01:03.51`,
     todo: REVIEW,
-    overview: `My first girlfriend in college was Catherine, a nice Catholic girl and high school valedictorian. We were very different people, partly due to my lack of reading habit, and eventually she broke up with me— the night before Ash Wednesday. So the next morning I ashed my own forehead and tried to bump into her, hoping if she could picture me as a good Catholic boy, then I might get another chance. It didn't work… but I did grow into an avid reader, and I have Catherine to thank for that.`,
+    overview: `My first girlfriend in college was Catherine, a nice Catholic girl and high school valedictorian. We were very different people, partly due to my lack of reading habit, and eventually she broke up with me— the night before Ash Wednesday. So the next morning I ashed my own forehead and tried to bump into her, hoping that if she could picture me as a good Catholic boy, then I might get another chance. It didn't work… but I did grow into an avid reader, and I have Catherine to thank for that.`,
     lyricUnits: [
         {
             unitMap: {},
