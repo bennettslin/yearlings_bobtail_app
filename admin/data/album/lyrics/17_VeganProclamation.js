@@ -652,7 +652,8 @@ export default {
                                 },
                             },
                         },
-                        `and now you're sad, too?`,
+                        // NOTE: Comma was previously between "sad" and "too."
+                        `, and now you're sad too?`,
                     ],
                 },
                 {
