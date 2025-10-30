@@ -11,7 +11,6 @@ import {
     POSTCHORUS,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Good Night, Sita',
@@ -681,7 +680,6 @@ export default {
                         `so we'll`,
                         {
                             anchor: `breeze through our parts`,
-                            todo: REVIEW,
                             card: {
                                 description: `Anytime I said something witty that got a good response, I'd save it for future prospects— in case things didn't work out with the present one. This got me to relax over time, since the less I needed to prepare for each date, the less there was at stake; like an actor of the stage, I could just recite the same lines night after night.`,
                                 dotKeys: {
