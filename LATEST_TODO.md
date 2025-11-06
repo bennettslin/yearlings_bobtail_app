@@ -3,7 +3,8 @@
     * Icon for single annotation
     * Update icon for carousel nav
     * Update icon for success copied
-    * bindis?
+    * Bindis?
+    * Webelos uniform on enraged Bennett?
     * Schwa sticker
 
 ### Good fixes
