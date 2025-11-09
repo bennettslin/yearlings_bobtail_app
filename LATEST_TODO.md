@@ -3,9 +3,11 @@
     * Icon for single annotation
     * Update icon for carousel nav
     * Update icon for success copied
-    * Bindis?
     * Webelos uniform on enraged Bennett?
-    * Schwa sticker
+    * Schwa stickers?
+    * Bindis?
+    * Past, present, and future backgrounds?
+    * Clouds and sky details?
 
 ### Good fixes
 * Direction arrows on selected annotation itself in carousel, just like in popup
