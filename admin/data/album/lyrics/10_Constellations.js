@@ -17,7 +17,6 @@ import {
     OUTRO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Constellations!',
@@ -1904,7 +1903,6 @@ export default {
                         {
                             anchor: `Rumspring`,
                             properNoun: true,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `The`,
@@ -1912,7 +1910,7 @@ export default {
                                         anchor: `Amish`,
                                         wiki: `Amish`,
                                     },
-                                    `permit their teenagers to explore the secular world of the non-Amish— or, the "English," as they call us— in a rite of passage known as "`,
+                                    `permit their teenagers to explore the secular world of the non-Amish— or, as they call us, the "English"— in a rite of passage known as "`,
                                     {
                                         anchor: `Rumspringa`,
                                         wiki: `Rumspringa`,
