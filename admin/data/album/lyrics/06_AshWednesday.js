@@ -301,14 +301,7 @@ export default {
                             todo: REVIEW,
                             cards: [
                                 {
-                                    description: [
-                                        `Up until then, I'd thought of songwriting as just a matter of putting melodies and chords together. But Catherine valued music for its lyrics, and since mine in those days were mostly nonsensical— taking after the alternative bands I liked, such as`,
-                                        {
-                                            anchor: `Stone Temple Pilots`,
-                                            wiki: `Stone_Temple_Pilots`,
-                                        },
-                                        `— she wasn't impressed by any of my songs that I played for her.`,
-                                    ],
+                                    description: `Up until then, I'd thought of songwriting as just a matter of putting melodies and chords together. But Catherine valued music for its lyrics— and since mine in those days were mostly nonsensical, she wasn't impressed by any of my songs that I played for her.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
