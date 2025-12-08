@@ -8,6 +8,7 @@
     * Bindis?
     * Past, present, and future backgrounds?
     * Clouds and sky details?
+        * Rain in Ash Wednesday?
 
 ### Good fixes
 * Direction arrows on selected annotation itself in carousel, just like in popup
