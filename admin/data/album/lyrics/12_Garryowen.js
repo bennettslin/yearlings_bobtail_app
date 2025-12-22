@@ -16,7 +16,6 @@ import {
     OUTRO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Garryowen',
@@ -399,9 +398,8 @@ export default {
                     lyric: [
                         {
                             anchor: `Slammed in the well`,
-                            todo: REVIEW,
                             card: {
-                                description: `Still, vomiting into a toilet— while catching your reflection in the water staring back at you in misery— only works as a wake-up call the first time. After that, it's a cliché.`,
+                                description: `Still, vomiting into a toilet— while catching your reflection in the water staring back at you in misery— only works as a wake-up call the first time. After that, it's a cliche.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
