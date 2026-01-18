@@ -399,7 +399,7 @@ export default {
                         {
                             anchor: `Slammed in the well`,
                             card: {
-                                description: `Still, vomiting into a toilet— while catching your reflection in the water staring back at you in misery— only works as a wake-up call the first time. After that, it's a cliche.`,
+                                description: `Still, vomiting into a toilet— while catching your reflection in the water staring back at you in misery— only works as a wake-up call the first time. After that, it's a cliché.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
