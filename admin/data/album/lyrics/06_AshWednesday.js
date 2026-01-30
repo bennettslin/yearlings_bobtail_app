@@ -13,6 +13,7 @@ import {
     IS_UNIT_DOT,
     FORESHADOW_OF_WORMHOLE_PREFIX,
 } from '../../../../src/constants/lyrics'
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Ash Wednesday',
@@ -509,9 +510,10 @@ export default {
                         `in`,
                         {
                             anchor: `famous raincoat`,
+                            todo: REVIEW,
                             card: {
                                 description: [
-                                    `While I was familiar with Leonard Cohen's name— thanks to the lyric in Nirvana's "`,
+                                    `While I was already familiar with Leonard Cohen's name— thanks to the lyric in Nirvana's "`,
                                     {
                                         anchor: `Pennyroyal Tea`,
                                         wiki: `Pennyroyal_Tea`,
@@ -524,7 +526,7 @@ export default {
                                             wiki: `In_Utero`,
                                         },
                                     },
-                                    `— it was Catherine who finally introduced me to his works. Through her impassioned reading of his song "`,
+                                    `— it was Catherine who introduced me to his works. Through her impassioned reading of his song "`,
                                     {
                                         anchor: `Famous Blue Raincoat`,
                                         wiki: `Famous_Blue_Raincoat`,
