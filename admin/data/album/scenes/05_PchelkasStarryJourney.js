@@ -80,7 +80,7 @@ import {
     EARTH__ROCKET,
     EARTH__STATION,
     POSTER_BLOOM_COUNTY,
-    VAN_NUYS_PAINTING,
+    // VAN_NUYS_PAINTING,
 } from '../../../../src/constants/scene/things/cardboards'
 import {
     BUSH_DOUBLE__LOCKERS,
@@ -439,9 +439,9 @@ export default [
                 [SKETCHBOOK__ESCAPE_POD]: true,
                 [SKETCH_ESCAPE_POD]: true,
             },
-            [CARDBOARD]: {
-                [VAN_NUYS_PAINTING]: true,
-            },
+            // [CARDBOARD]: {
+            //     [VAN_NUYS_PAINTING]: true,
+            // },
             [CUTOUT]: {
                 [TRASH_CAN__QUAD]: true,
                 [BUSH_SINGLE__QUAD]: true,

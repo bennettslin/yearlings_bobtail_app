@@ -1,13 +1,13 @@
 import {
     BUBBLE,
-    CARDBOARD,
+    // CARDBOARD,
     CUTOUT,
 } from '../../../../../src/constants/scene/things'
 import {
     SKETCH_ESCAPE_POD,
     SKETCHBOOK__ESCAPE_POD,
 } from '../../../../../src/constants/scene/things/bubbles'
-import { VAN_NUYS_PAINTING } from '../../../../../src/constants/scene/things/cardboards'
+// import { VAN_NUYS_PAINTING } from '../../../../../src/constants/scene/things/cardboards'
 import {
     TRASH_CAN__QUAD,
     BUSH_SINGLE__QUAD,
@@ -29,13 +29,13 @@ export default {
             zOffset: 3.5,
         },
     },
-    [CARDBOARD]: {
-        [VAN_NUYS_PAINTING]: {
-            yIndex: 3,
-            xPosition: 7.5,
-            zOffset: 3,
-        },
-    },
+    // [CARDBOARD]: {
+    //     [VAN_NUYS_PAINTING]: {
+    //         yIndex: 3,
+    //         xPosition: 7.5,
+    //         zOffset: 3,
+    //     },
+    // },
     [CUTOUT]: {
         [TRASH_CAN__QUAD]: {
             yIndex: 4,

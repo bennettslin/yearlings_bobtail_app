@@ -151,29 +151,29 @@ export default {
                 {
                     mixTime: `0:18:10.59`,
                     lyric: [
-                        `as the`,
-                        {
-                            anchor: `Van Nuys belles`,
-                            properNoun: true,
-                            cards: [
-                                {
-                                    description: [
-                                        `I attended high school in`,
-                                        {
-                                            anchor: `Van Nuys`,
-                                            wiki: `Van_Nuys`,
-                                        },
-                                        `, a neighborhood in the middle of the San Fernando Valley.`,
-                                    ],
-                                    dotKeys: {
-                                        [BACKSTORY]: true,
-                                    },
-                                },
-                                {
-                                    wormhole: `belle`,
-                                },
-                            ],
-                        },
+                        `as the Van Nuys belles`,
+                        // {
+                        //     anchor: `Van Nuys belles`,
+                        //     properNoun: true,
+                        //     cards: [
+                        //         {
+                        //             description: [
+                        //                 `I attended high school in`,
+                        //                 {
+                        //                     anchor: `Van Nuys`,
+                        //                     wiki: `Van_Nuys`,
+                        //                 },
+                        //                 `, a neighborhood in the middle of the San Fernando Valley.`,
+                        //             ],
+                        //             dotKeys: {
+                        //                 [BACKSTORY]: true,
+                        //             },
+                        //         },
+                        //         {
+                        //             wormhole: `belle`,
+                        //         },
+                        //     ],
+                        // },
                         {
                             anchor: `lunched soundless`,
                             card: {

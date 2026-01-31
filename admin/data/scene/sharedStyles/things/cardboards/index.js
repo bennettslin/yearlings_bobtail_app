@@ -45,7 +45,7 @@ import {
     SNOWGLOBE_SMALL_FUTURE,
     SNOWGLOBE_SMALL_PAST,
     SNOWGLOBE_SMALL_PRESENT,
-    VAN_NUYS_PAINTING,
+    // VAN_NUYS_PAINTING,
 } from '../../../../../../src/constants/scene/things/cardboards'
 import {
     BENNETT,
@@ -172,6 +172,6 @@ export default {
     [SNOWGLOBE_SMALL_FUTURE]: FUTURE__SHARED,
     [SNOWGLOBE_SMALL_PAST]: PAST__SHARED,
     [SNOWGLOBE_SMALL_PRESENT]: PRESENT__SHARED,
-    [VAN_NUYS_PAINTING]: null,
+    // [VAN_NUYS_PAINTING]: null,
 }
 

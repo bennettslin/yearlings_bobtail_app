@@ -42,7 +42,7 @@ import snowglobeCowgirl from '../../../../assets/svgs/cardboards/snowglobeCowgir
 import snowglobeEnragedSobbing from '../../../../assets/svgs/cardboards/snowglobeEnragedSobbing'
 import snowglobeLeavingCrumbled from '../../../../assets/svgs/cardboards/snowglobeLeavingCrumbled'
 import snowglobeSmall from '../../../../assets/svgs/cardboards/snowglobeSmall'
-import vanNuysPainting from '../../../../assets/svgs/cardboards/vanNuysPainting'
+// import vanNuysPainting from '../../../../assets/svgs/cardboards/vanNuysPainting'
 
 import {
     ALBUM_JOHNNY_HORTON,
@@ -97,7 +97,7 @@ import {
     SNOWGLOBE_SMALL_FUTURE,
     SNOWGLOBE_SMALL_PAST,
     SNOWGLOBE_SMALL_PRESENT,
-    VAN_NUYS_PAINTING,
+    // VAN_NUYS_PAINTING,
 } from '../../../../constants/scene/things/cardboards'
 
 export default {
@@ -153,6 +153,6 @@ export default {
     [SNOWGLOBE_SMALL_FUTURE]: snowglobeSmall,
     [SNOWGLOBE_SMALL_PAST]: snowglobeSmall,
     [SNOWGLOBE_SMALL_PRESENT]: snowglobeSmall,
-    [VAN_NUYS_PAINTING]: vanNuysPainting,
+    // [VAN_NUYS_PAINTING]: vanNuysPainting,
 }
 
