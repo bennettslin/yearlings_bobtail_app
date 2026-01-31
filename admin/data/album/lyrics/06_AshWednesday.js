@@ -513,7 +513,7 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `While I was already familiar with Leonard Cohen's name— thanks to the lyric in Nirvana's "`,
+                                    `While I was familiar with Leonard Cohen's name— thanks to the line in Nirvana's "`,
                                     {
                                         anchor: `Pennyroyal Tea`,
                                         wiki: `Pennyroyal_Tea`,
@@ -526,12 +526,12 @@ export default {
                                             wiki: `In_Utero`,
                                         },
                                     },
-                                    `— it was Catherine who introduced me to his works. Through her impassioned reading of his song "`,
+                                    `— I knew nothing about his songs until Catherine introduced me. It was through her impassioned reading of "`,
                                     {
                                         anchor: `Famous Blue Raincoat`,
                                         wiki: `Famous_Blue_Raincoat`,
                                     },
-                                    `," I finally grasped the heights that great lyrics can reach.`,
+                                    `" that I finally grasped the heights a great lyric can reach.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
