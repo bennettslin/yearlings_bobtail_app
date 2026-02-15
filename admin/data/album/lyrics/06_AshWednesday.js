@@ -298,14 +298,25 @@ export default {
                         `I purge, with a`,
                         {
                             anchor: `dirge she'd deride`,
-                            cards: [
-                                {
-                                    description: `Up until then, I'd thought of songwriting as just a matter of putting melodies and chords together. But Catherine valued music for its lyrics— and since mine in those days were mostly nonsensical, she wasn't impressed by any of my songs that I played for her.`,
-                                    dotKeys: {
-                                        [BACKSTORY]: true,
+                            todo: REVIEW,
+                            card: {
+                                description: [
+                                    `Up until then, I'd thought of songwriting as just a matter of composing the best melodies and chords— in the vein of alternative bands like`,
+                                    {
+                                        anchor: `Stone Temple Pilots`,
+                                        wiki: `Stone_Temple_Pilots`,
                                     },
+                                    `— with lyrics treated as an afterthought. But Catherine prized songs for their lyrics`,
+                                    {
+                                        isEmphasis: true,
+                                        lyric: `alone`,
+                                    },
+                                    `… and thus she wasn't impressed by any of mine that I played for her.`,
+                                ],
+                                dotKeys: {
+                                    [BACKSTORY]: true,
                                 },
-                            ],
+                            },
                         },
                         `,`,
                     ],
