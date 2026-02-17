@@ -13,7 +13,6 @@ import {
     IS_UNIT_DOT,
     FORESHADOW_OF_WORMHOLE_PREFIX,
 } from '../../../../src/constants/lyrics'
-import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Ash Wednesday',
@@ -298,7 +297,6 @@ export default {
                         `I purge, with a`,
                         {
                             anchor: `dirge she'd deride`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Up until then, I'd thought of songwriting as just a matter of composing the best melodies and chords, with lyrics treated mostly as an afterthought— in the manner of '90s alternative bands like`,
@@ -521,7 +519,6 @@ export default {
                         `in`,
                         {
                             anchor: `famous raincoat`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `While I knew of Leonard Cohen's name— thanks to a line in Nirvana's "`,
