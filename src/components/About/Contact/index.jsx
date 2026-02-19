@@ -3,13 +3,13 @@ import cx from 'classnames'
 import Texts from '../../Texts'
 import PromoLink from '../../PromoLink'
 import { CONTACT_TEXT } from '../../../constants/contact'
-import './style'
 
 const AboutContact = () => (
     <div
         {...{
             className: cx(
                 `AboutContact`,
+                `AboutGrandchild`,
             ),
         }}
     >
