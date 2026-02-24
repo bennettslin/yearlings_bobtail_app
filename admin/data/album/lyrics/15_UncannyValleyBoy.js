@@ -424,7 +424,7 @@ export default {
                             anchor: `Village Green Preservation Society`,
                             wiki: `The_Kinks_Are_the_Village_Green_Preservation_Society`,
                         },
-                        `served as my template for this album, which meant each song had to feature radio-friendly hooks; represent a distinct genre or style; and clock in at three minutes or so. While there's no one-to-one mapping per se, this song is obviously the "`,
+                        `served as a template for making this album, which meant each song had to feature radio-friendly hooks; represent a distinct style; and clock in at around three minutes. While there's no one-to-one mapping per se, this song is obviously the "`,
                         {
                             anchor: `Wicked Annabella`,
                             wiki: `Wicked_Annabella`,
