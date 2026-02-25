@@ -20,7 +20,6 @@ import {
     BACKING,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Uncanny Valley Boy',
@@ -411,7 +410,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: [
                         `The`,
