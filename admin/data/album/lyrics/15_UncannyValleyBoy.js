@@ -46,7 +46,7 @@ export default {
                                 anchor: `uncanny valley`,
                                 wiki: `Uncanny_valley`,
                             },
-                            `is a notion that as human replicas take on more lifelike characteristics, we grow further repulsed, insofar as they still remain less than perfectly convincing. And as I grew older while remaining less than convincing as a grownup, it was reasonable to ask if this "Valley boy" now drew the same revulsion.`,
+                            `is the notion that, as human replicas take on more lifelike characteristics, we only grow further repulsed, insofar as they still aren't perfectly convincing. And as I grew older while remaining less than perfectly convincing as a grownup, it was reasonable to ask if this "Valley boy" now drew the same revulsion.`,
                         ],
                         dotKeys: {
                             [OBSERVATION]: true,
