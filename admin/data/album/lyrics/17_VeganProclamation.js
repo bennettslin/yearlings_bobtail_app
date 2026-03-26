@@ -648,7 +648,7 @@ export default {
                             anchor: `leads have left`,
                             todo: REVIEW,
                             card: {
-                                description: `For years, my habit was to stay with Sita right up till I had another option to pursue. Each time, she'd languish for a few months before finding the strength to contact me; then, upon hearing that things didn't work out with the other woman, she'd persuade me to come back. But now our situations were reversed: I had no more options coming down the pike, while Sita had fallen in love with someone else.`,
+                                description: `For years, my habit was to stay with Sita right up till I had another option to pursue. Each time, she'd languish for a few months before mustering the courage to contact me; then, upon hearing that things hadn't worked out with the other woman, she'd cajole me back. But now our situations were reversed: I had no further options coming down the pike, while she'd fallen in love with someone else.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                 },

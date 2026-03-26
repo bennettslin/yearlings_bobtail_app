@@ -380,7 +380,7 @@ export default {
                             anchor: `gap-toothed coma`,
                             todo: REVIEW,
                             card: {
-                                description: `With mouth partially open, my brother wears a blank expression, right up till he feels the sensation of my mother's gap-toothed "comb" on his scalp.`,
+                                description: `My brother stares vacantly with his mouth hung open— right up till my mother's gap-toothed "comb" begins to gnaw on his scalp.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true,

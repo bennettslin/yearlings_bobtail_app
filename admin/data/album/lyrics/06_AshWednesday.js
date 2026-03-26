@@ -301,7 +301,7 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `Up till then, I'd thought of songwriting as just a matter of composing the best melodies and chords, with lyrics treated mostly as an afterthought— in the manner of '90s alternative bands like`,
+                                    `Up till then, I'd thought of songwriting as solely a matter of composing the best melodies and chords, with lyrics treated mostly as an afterthought— in the manner of '90s alternative bands like`,
                                     {
                                         anchor: `Stone Temple Pilots`,
                                         wiki: `Stone_Temple_Pilots`,
@@ -311,7 +311,7 @@ export default {
                                         isEmphasis: true,
                                         lyric: `alone`,
                                     },
-                                    `… and thus she wasn't impressed by any of mine that I played for her.`,
+                                    `… and thus was never impressed by any of mine that I played for her.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
