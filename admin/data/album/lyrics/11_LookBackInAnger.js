@@ -16,6 +16,7 @@ import {
     FORESHADOW_OF_WORMHOLE_PREFIX,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Look Back in Anger',
@@ -313,6 +314,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
                     description: [
                         `When I asked Owen to recommend some good lyricists, he directed me to`,
@@ -320,7 +322,7 @@ export default {
                             anchor: `Nas`,
                             wiki: `Nas`,
                         },
-                        `. Up until then, I'd paid little attention to hip hop, thinking its approach to songwriting was too far removed from mine to offer much wisdom. I've since corrected this oversight, but back when
+                        `. Up till then, I'd paid little attention to hip hop, thinking its approach to songwriting was too far removed from my own to offer much wisdom. I've since corrected this oversight, but back when
                         `,
                         {
                             isItalic: true,
