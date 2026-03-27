@@ -17,7 +17,6 @@ import {
     FORESHADOW_OF_WORMHOLE_PREFIX,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Vegan Proclamation',
@@ -646,7 +645,6 @@ export default {
                         `"So all your`,
                         {
                             anchor: `leads have left`,
-                            todo: REVIEW,
                             card: {
                                 description: `For years, my habit was to stay with Sita right up till I had another option to pursue. Each time, she'd languish for a few months before mustering the courage to contact me; then, upon hearing that things hadn't worked out with the other woman, she'd cajole me back. But now our situations were reversed: I had no further options coming down the pike, while she'd fallen in love with someone else.`,
                                 dotKeys: {
