@@ -18,6 +18,7 @@ import {
     REFRAIN,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 /**
  * NOTE: Ash Wednesday and Pchelka`s Starry Journey have been switched from the
@@ -1038,6 +1039,7 @@ export default {
             mainVerses: [
                 {
                     mixTime: `2:46:24.45`,
+                    todo: REVIEW,
                     lyric: [
                         {
                             anchor: `Mushing onward`,
@@ -1050,7 +1052,7 @@ export default {
                                 },
                                 {
                                     description: [
-                                        `Upon their arrival in the New World, the French learned the practice of dog sledding from the natives. They would command their dog teams to move by shouting "`,
+                                        `Upon their arrival in the New World, the French learned the practice of dog sledding from the natives. They'd command their dog teams to move by shouting "`,
                                         {
                                             isItalic: true,
                                             lyric: `marche`,

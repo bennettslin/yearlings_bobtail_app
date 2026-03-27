@@ -17,6 +17,7 @@ import {
     OUTRO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Constellations!',
@@ -1089,6 +1090,7 @@ export default {
                         },
                         {
                             anchor: `the dusc-horse yet`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `"Are Malay tapirs the dusk horse yet?" Native to the Malay peninsula, the`,
@@ -1104,7 +1106,7 @@ export default {
                                             wiki: `Eohippus`,
                                         },
                                     },
-                                    `, or "dawn horse." As our little group discovers exotic new species in the lands we conquer, we search for this mythical "dusk horse" that will tell us we've reached the end of history.`,
+                                    `, or "dawn horse." As our little group discovers exotic new species in the lands we conquer, we search for this mythical "dusk horse" that'd mark the end of history.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,

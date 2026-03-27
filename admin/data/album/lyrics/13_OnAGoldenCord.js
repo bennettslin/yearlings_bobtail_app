@@ -14,6 +14,7 @@ import {
     OUTRO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'On a Golden Cord',
@@ -212,6 +213,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
                     description: [
                         `After scoring this part for the lead acoustic guitar, I came up with an`,
@@ -219,7 +221,7 @@ export default {
                             anchor: `alternate tuning`,
                             wiki: `Guitar_tunings`,
                         },
-                        `that would allow every note to be sounded as a`,
+                        `that'd allow every note to be sounded as a`,
                         {
                             anchor: `natural harmonic`,
                             wiki: `String_harmonic`,
