@@ -221,12 +221,12 @@ export default {
                             anchor: `alternate tuning`,
                             wiki: `Guitar_tunings`,
                         },
-                        `that'd allow every note to be sounded as a`,
+                        `that allowed every note to be sounded as a`,
                         {
                             anchor: `natural harmonic`,
                             wiki: `String_harmonic`,
                         },
-                        `. However, I didn't account for being able to move my fingers up and down the fretboard quickly enough, so I still had to record it in multiple takes.`,
+                        `. But I wasn't able to move my fingers up and down the fretboard quickly enough, so I still had to record it in multiple takes.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
