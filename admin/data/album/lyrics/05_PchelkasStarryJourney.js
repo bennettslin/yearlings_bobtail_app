@@ -1039,10 +1039,10 @@ export default {
             mainVerses: [
                 {
                     mixTime: `2:46:24.45`,
-                    todo: REVIEW,
                     lyric: [
                         {
                             anchor: `Mushing onward`,
+                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `Here, I imagine Pchelka and Mushka as sled dogs in the Russian tundra.`,
