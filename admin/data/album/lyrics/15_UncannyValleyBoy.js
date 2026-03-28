@@ -1600,7 +1600,7 @@ export default {
                     },
                     {
                         description: [
-                            `After Ana and Joi left the band, it just didn't feel right to keep referring to myself as the Yearlings. And with the Web gaining in usage, I wanted a new name that'd always be first in search results. So I decided to combine two random words… but all I could think of was "Bobtail Yearlings"… which, for symmetry's sake, would make the album "Yearling's Bobtail." Then I realized that while one`,
+                            `After Ana and Joi left the band, it didn't feel right to keep referring to myself as the Yearlings. On top of that, with the Web gaining in usage, I wanted a new name that'd always be first in search results. So I decided to combine two random words… but all I could think of was "Bobtail Yearlings"… which, for symmetry's sake, would make the album "Yearling's Bobtail." Then I realized that while one`,
                             {
                                 anchor: `acronym`,
                                 wiki: `Acronym`,

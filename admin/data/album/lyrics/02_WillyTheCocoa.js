@@ -17,7 +17,6 @@ import {
     FLASHBACK_TO_WORMHOLE_PREFIX,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Willy the Cocoa',
@@ -378,7 +377,6 @@ export default {
                         `As`,
                         {
                             anchor: `gap-toothed coma`,
-                            todo: REVIEW,
                             card: {
                                 description: `My brother stares blankly with his mouth hung open— at least right up till my mother's gap-toothed "comb" starts gnawing on his scalp.`,
                                 dotKeys: {

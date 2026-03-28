@@ -1106,7 +1106,7 @@ export default {
                                             wiki: `Eohippus`,
                                         },
                                     },
-                                    `, or "dawn horse." As our little group discovers exotic new species in the lands we conquer, we search for this mythical "dusk horse" that'd mark the end of history.`,
+                                    `, or "dawn horse." As our little group discovers exotic new species in the lands we conquer, we search for this mythical "dusk horse" that marks the end of history.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -1942,7 +1942,7 @@ export default {
                                         anchor: `Deseret`,
                                         wiki: `Deseret_alphabet`,
                                     },
-                                    `" is an alphabet developed by the early Mormons. As it'd once filled their mouths, a "desert" now fills ours.`,
+                                    `" is an alphabet developed by the early Mormons. As it'd filled their mouths once, a "desert" now fills ours.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,

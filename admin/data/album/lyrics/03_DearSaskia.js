@@ -13,7 +13,6 @@ import {
     REFRAIN,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Dear Saskia',
@@ -312,7 +311,6 @@ export default {
                         `, a`,
                         {
                             anchor: `pet petrified`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Petrified by the thought of losing Sasha, I felt like a`,

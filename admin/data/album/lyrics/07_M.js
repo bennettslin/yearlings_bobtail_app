@@ -14,7 +14,6 @@ import {
     FLASHBACK_TO_WORMHOLE_PREFIX,
     FORESHADOW_OF_WORMHOLE_PREFIX,
 } from '../../../../src/constants/lyrics'
-import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'M',
@@ -564,7 +563,6 @@ export default {
                         `In a`,
                         {
                             anchor: `time capsule`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `With none of my friends able to relate to my predicament, I envisioned my next five-year plan as a`,
