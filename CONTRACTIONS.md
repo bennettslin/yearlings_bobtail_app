@@ -1,8 +1,8 @@
 # Contractions
 * it'll
-* it'd
+* it'd (for "it would" or "it had")
 * that'll
-* that'd (for "that would")
+* that'd (for "that would" or "that had")
 * what'll
 * what'd (for "what did")
 * it's

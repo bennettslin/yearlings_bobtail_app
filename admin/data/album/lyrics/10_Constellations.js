@@ -1934,6 +1934,7 @@ export default {
                         {
                             // NOTE: I made this lowercase.
                             anchor: `In mouth deseret`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `"`,
@@ -1941,7 +1942,7 @@ export default {
                                         anchor: `Deseret`,
                                         wiki: `Deseret_alphabet`,
                                     },
-                                    `" is an alphabet developed by the early Mormons. As it had once filled their mouths, a "desert" now fills ours.`,
+                                    `" is an alphabet developed by the early Mormons. As it'd once filled their mouths, a "desert" now fills ours.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,

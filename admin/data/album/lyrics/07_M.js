@@ -572,7 +572,7 @@ export default {
                                         anchor: `time capsule`,
                                         wiki: `Time_capsule`,
                                     },
-                                    `of sorts— one that'd let me voice my frustrations to a sympathetic future audience.`,
+                                    `of sorts— one that might let me voice my frustrations to a sympathetic future audience.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
