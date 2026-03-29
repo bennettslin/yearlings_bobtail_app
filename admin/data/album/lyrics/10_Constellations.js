@@ -1934,7 +1934,6 @@ export default {
                         {
                             // NOTE: I made this lowercase.
                             anchor: `In mouth deseret`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `"`,

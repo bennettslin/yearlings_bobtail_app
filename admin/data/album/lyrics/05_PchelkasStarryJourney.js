@@ -1289,7 +1289,6 @@ export default {
                         `, I`,
                         {
                             anchor: `can't ever return`,
-                            todo: REVIEW,
                             card: {
                                 description: `Though I faked autism for only a year or so, the social repercussions lasted much longer— since I was now and forever the kid who did that really weird thing once. It's not that I lacked the will to repair my standing; but I was just as confused as anyone else about what'd gotten into me, and there were no guide books telling me where to go from there.`,
                                 dotKeys: {
