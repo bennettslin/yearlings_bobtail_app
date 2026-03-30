@@ -17,6 +17,7 @@ import {
     FLASHBACK_TO_WORMHOLE_PREFIX,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Willy the Cocoa',
@@ -969,6 +970,7 @@ export default {
                         `being ever stuck in`,
                         {
                             anchor: `imp-runt age`,
+                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
@@ -982,7 +984,7 @@ export default {
                                             anchor: `imprint`,
                                             wiki: `Imprinting_(psychology)`,
                                         },
-                                        `." To her credit, she always trusted the science once it debunked these claims… which it invariably did.`,
+                                        `." To her credit, she'd always trust the science once it debunked them… which it invariably did.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
