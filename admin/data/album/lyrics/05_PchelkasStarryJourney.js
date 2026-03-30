@@ -1052,7 +1052,7 @@ export default {
                                 },
                                 {
                                     description: [
-                                        `Upon their arrival in the New World, the French learned the practice of dog sledding from the natives. They'd command their dog teams to move by shouting "`,
+                                        `Upon their arrival in the New World, the French learned the practice of dog sledding from its natives. To command their dog teams to move, they'd shout "`,
                                         {
                                             isItalic: true,
                                             lyric: `marche`,

@@ -1106,7 +1106,7 @@ export default {
                                             wiki: `Eohippus`,
                                         },
                                     },
-                                    `, or "dawn horse." As our little group discovers exotic new species in the lands we conquer, we search for this mythical "dusk horse" that marks the end of history.`,
+                                    `, or "dawn horse." As our little group discovers exotic new species in the lands we've conquered, we search for this mythical "dusk horse" that'll mark the end of history.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,

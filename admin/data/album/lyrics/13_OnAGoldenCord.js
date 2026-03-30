@@ -226,7 +226,7 @@ export default {
                             anchor: `natural harmonic`,
                             wiki: `String_harmonic`,
                         },
-                        `. However, these harmonics ranged from the fifth to the twelfth fret, and I just couldn't move my hand up and down the neck quickly enough. As a result, I still had to record it in multiple takes.`,
+                        `. However, these harmonics ranged from the fifth to the twelfth fret, and I just couldn't move my hand up and down the neck quickly enough. As a result, I still had to record the part in multiple takes.`,
                     ],
                     dotKeys: {
                         [SONGCRAFT]: true,
