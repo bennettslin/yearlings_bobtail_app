@@ -17,7 +17,6 @@ import {
     OUTRO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Constellations!',
@@ -1090,7 +1089,6 @@ export default {
                         },
                         {
                             anchor: `the dusc-horse yet`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `"Are Malay tapirs the dusk horse yet?" Native to the Malay peninsula, the`,

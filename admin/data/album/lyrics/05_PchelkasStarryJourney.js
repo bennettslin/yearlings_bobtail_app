@@ -18,7 +18,6 @@ import {
     REFRAIN,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 /**
  * NOTE: Ash Wednesday and Pchelka`s Starry Journey have been switched from the
@@ -1042,7 +1041,6 @@ export default {
                     lyric: [
                         {
                             anchor: `Mushing onward`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `Here, I imagine Pchelka and Mushka as sled dogs in the Russian tundra.`,
