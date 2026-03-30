@@ -221,7 +221,7 @@ export default {
                             anchor: `alternate tuning`,
                             wiki: `Guitar_tunings`,
                         },
-                        `that allowed every note to be sounded as a`,
+                        `that'd allow every note to be sounded as a`,
                         {
                             anchor: `natural harmonic`,
                             wiki: `String_harmonic`,
