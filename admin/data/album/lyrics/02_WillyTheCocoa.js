@@ -313,7 +313,7 @@ export default {
                     mixTime: `0:42:11.25`,
                     lyric: [
                         // NOTE: Any re-recording should say "Mama."
-                        `Saluting Mummy doing some`,
+                        `Saluting Mommy doing some`,
                         {
                             anchor: `haircutting to the sun`,
                             card: {
@@ -1090,7 +1090,7 @@ export default {
                             },
                         },
                         // NOTE: Any re-recording should say "Mama."
-                        `, Mummy laughs,`,
+                        `, Mommy laughs,`,
                     ],
                 },
                 {
