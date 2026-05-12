@@ -312,7 +312,11 @@ export default {
                 {
                     mixTime: `0:42:11.25`,
                     lyric: [
-                        // NOTE: Any re-recording should say "Mama."
+                        // TODO: Review.
+                        /**
+                         * NOTE: Changed from "Mummy." Any re-recording should
+                         * say "Mama."
+                         */
                         `Saluting Mommy doing some`,
                         {
                             anchor: `haircutting to the sun`,
@@ -1089,7 +1093,11 @@ export default {
                                 },
                             },
                         },
-                        // NOTE: Any re-recording should say "Mama."
+                        // TODO: Review.
+                        /**
+                         * NOTE: Changed from "Mummy." Any re-recording should
+                         * say "Mama."
+                         */
                         `, Mommy laughs,`,
                     ],
                 },
