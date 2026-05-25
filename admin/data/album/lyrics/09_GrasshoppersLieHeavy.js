@@ -17,6 +17,7 @@ import {
     SOLO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Grasshoppers Lie Heavy',
@@ -702,10 +703,11 @@ export default {
                         `Below the`,
                         {
                             anchor: `window of your Walkman`,
+                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
-                                        `The cafeteria was located on the far side of campus from where I lived. On a typical day, I'd walk there before dawn for the breakfast shift, then walk home late in the evening after the dinner shift. Since I rarely ran into anyone, it was the perfect time to listen to my`,
+                                        `The cafeteria was located on the far side of campus from where I lived. I'd typically walk there before dawn for the breakfast shift, attend classes during the day, then walk home late in the evening after the dinner shift. Since I rarely ran into anyone both to and from work, it was the perfect time to listen to my`,
                                         {
                                             anchor: `Walkman`,
                                             wiki: `Walkman`,
@@ -1384,8 +1386,9 @@ export default {
                         `Let`,
                         {
                             anchor: `pure lose to pure`,
+                            todo: REVIEW,
                             card: {
-                                description: `Sita and I were both virgins, which made it easier for me to lower my defenses. I had to remind myself that neither of us knew what we were doing.`,
+                                description: `Sita and I were both virgins, which made it easier to lower my defenses. I just had to remind myself that neither of us knew what we were doing.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
