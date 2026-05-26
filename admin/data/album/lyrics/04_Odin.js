@@ -19,6 +19,7 @@ import {
     IS_UNIT_DOT,
     RESPONSE,
 } from '../../../../src/constants/lyrics'
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Odin',
@@ -452,9 +453,10 @@ export default {
                         },
                         {
                             anchor: `oriental`,
+                            todo: REVIEW,
                             card: {
                                 description: [
-                                    `When I was growing up in the '80s, no one thought twice to say "Oriental"; it's even printed on my birth certificate. The word was made offensive at around the same time that "queer" was being reclaimed by the gay community. The latter tactic always made more sense to me: Isn't it better for there to be`,
+                                    `When I was growing up in the '80s, no one thought twice to say "Oriental"; it's even printed on my birth certificate. The word was made offensive at around the same time that "queer" was being reclaimed by the gay community. The latter tactic always made more sense to me: Isn't it better to have`,
                                     {
                                         isEmphasis: true,
                                         lyric: `fewer`,
