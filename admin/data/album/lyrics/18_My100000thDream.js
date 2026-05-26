@@ -14,6 +14,7 @@ import {
     FORESHADOW_OF_WORMHOLE_PREFIX,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'My 100,000th Dream',
@@ -461,9 +462,10 @@ export default {
                         `She'll always`,
                         {
                             anchor: `come to take me`,
+                            todo: REVIEW,
                             cards: [
                                 {
-                                    description: `I now understand that Sita is my most cherished memory. And thus, when my time came, she was always going to be the one chosen by my unconscious mind to escort me.`,
+                                    description: `I now understand that Sita is my most cherished memory. As such, she was always going to be the one chosen by my unconscious mind to escort me, once my time was up.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [OBSERVATION]: true,
