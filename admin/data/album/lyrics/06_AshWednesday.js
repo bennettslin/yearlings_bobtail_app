@@ -13,6 +13,7 @@ import {
     IS_UNIT_DOT,
     FORESHADOW_OF_WORMHOLE_PREFIX,
 } from '../../../../src/constants/lyrics'
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Ash Wednesday',
@@ -56,6 +57,7 @@ export default {
                         {
                             anchor: `O Catherine! My Catherine!`,
                             properNoun: true,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     {
@@ -67,7 +69,7 @@ export default {
                                         anchor: `O Captain! My Captain!`,
                                         wiki: `O_Captain!_My_Captain!`,
                                     },
-                                    `" upon hearing of Abraham Lincoln's assassination. I'm not sure why I chose this reference. I might've spent a long while after the breakup whimpering, "Oh Catherine…"`,
+                                    `" upon hearing of Abraham Lincoln's assassination. I'm not sure why I chose this reference. I might've spent a long while after the breakup whimpering, "Oh, Catherine…"`,
                                 ],
                                 dotKeys: {
                                     [PUN]: true,
