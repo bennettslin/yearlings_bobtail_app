@@ -1386,7 +1386,6 @@ export default {
                         `Let`,
                         {
                             anchor: `pure lose to pure`,
-                            todo: REVIEW,
                             card: {
                                 description: `Sita and I were both virgins, which made it easier to lower my defenses. I just had to remind myself that neither of us knew what we were doing.`,
                                 dotKeys: {

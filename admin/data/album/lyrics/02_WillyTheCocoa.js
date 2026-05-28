@@ -315,7 +315,7 @@ export default {
                         // TODO: Review.
                         /**
                          * NOTE: Changed from "Mummy." Any re-recording should
-                         * say "Mama."
+                         * say "Mommy."
                          */
                         `Saluting Mommy doing some`,
                         {
@@ -1096,7 +1096,7 @@ export default {
                         // TODO: Review.
                         /**
                          * NOTE: Changed from "Mummy." Any re-recording should
-                         * say "Mama."
+                         * say "Mommy."
                          */
                         `, Mommy laughs,`,
                     ],
