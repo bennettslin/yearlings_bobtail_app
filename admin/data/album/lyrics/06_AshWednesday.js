@@ -13,7 +13,6 @@ import {
     IS_UNIT_DOT,
     FORESHADOW_OF_WORMHOLE_PREFIX,
 } from '../../../../src/constants/lyrics'
-import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Ash Wednesday',
@@ -57,7 +56,6 @@ export default {
                         {
                             anchor: `O Catherine! My Catherine!`,
                             properNoun: true,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     {
