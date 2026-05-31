@@ -707,7 +707,7 @@ export default {
                             cards: [
                                 {
                                     description: [
-                                        `The cafeteria was located on the far side of campus from where I lived. I'd walk there before dawn for the breakfast shift, attend classes during the day, then walk back late in the evening after the dinner shift. Since I rarely ran into anyone at those hours, it was the perfect time to put on my`,
+                                        `The cafeteria was located on the far side of campus from where I lived. I'd typically walk there before dawn for my breakfast shift, then walk back late in the evening after my dinner shift. Since I rarely ran into anyone at those hours, it was the perfect time to put on my`,
                                         {
                                             anchor: `Walkman`,
                                             wiki: `Walkman`,
