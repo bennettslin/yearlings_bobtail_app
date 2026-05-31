@@ -465,7 +465,7 @@ export default {
                             todo: REVIEW,
                             cards: [
                                 {
-                                    description: `I now understand that Sita is my most cherished memory. And as such, she was always the one my unconscious mind would choose to escort me, once my time was up.`,
+                                    description: `I now understand that Sita is my most cherished memory. And as such, she was always going to be the one chosen by my unconscious mind to escort me, once my time was finally up.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [OBSERVATION]: true,

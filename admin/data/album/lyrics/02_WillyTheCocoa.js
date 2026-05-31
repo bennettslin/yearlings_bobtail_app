@@ -312,7 +312,6 @@ export default {
                 {
                     mixTime: `0:42:11.25`,
                     lyric: [
-                        // TODO: Review.
                         /**
                          * NOTE: Changed from "Mummy." Any re-recording should
                          * say "Mommy."
@@ -1093,7 +1092,6 @@ export default {
                                 },
                             },
                         },
-                        // TODO: Review.
                         /**
                          * NOTE: Changed from "Mummy." Any re-recording should
                          * say "Mommy."
