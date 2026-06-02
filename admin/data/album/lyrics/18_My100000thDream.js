@@ -14,7 +14,6 @@ import {
     FORESHADOW_OF_WORMHOLE_PREFIX,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'My 100,000th Dream',
@@ -462,7 +461,6 @@ export default {
                         `She'll always`,
                         {
                             anchor: `come to take me`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `I now understand that Sita is my dearest memory. And as such, she was always the one my unconscious mind would choose to escort me, once my time was up.`,
