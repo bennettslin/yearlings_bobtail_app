@@ -379,7 +379,7 @@ export default {
                     ],
                     lyricRight: [
                         {
-                            // TODO: Metamorphosis wormhole?
+                            // CONSIDER: Metamorphosis wormhole?
                             anchor: `trading breath's bliss`,
                             card: {
                                 description: [
@@ -594,7 +594,7 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 card: {
-                    // TODO: Or bottled butterfly and jarred sibyl.
+                    // CONSIDER: Or bottled butterfly and jarred sibyl?
                     description: `Though the two doublespeaker voices seem to operate independently, they plant subtle ideas along each other's paths— just as our conscious thoughts affect our dreams, and vice versa. In this stanza, for example, the mention of a staircase by the "asleep" voice precedes the plummeting spoken of by the "awake" voice.`,
                     dotKeys: {
                         [OBSERVATION]: true,

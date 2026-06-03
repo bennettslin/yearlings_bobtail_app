@@ -712,7 +712,7 @@ export default {
             mainVerses: [
                 {
                     /**
-                     * TODO: link to urchin in Odin?
+                     * CONSIDER: Link to urchin in Odin?
                      */
                     mixTime: `2:26:02.05`,
                     lyric: [
