@@ -12,9 +12,9 @@ const AboutCredits = () => (
         }}
     >
         <div>
-            {'Album composed, written, and performed by Bennett Lin.'}
+            {'Album written, composed, and performed by Bennett Lin.'}
             <br />
-            {'Webcomic coded, illustrated, and annotated by Bennett Lin.'}
+            {'Webcomic annotated, illustrated, and coded by Bennett Lin.'}
         </div>
         {'Oakland, Portland, New York, Seattle, Los Angeles / 2001–2026'}
     </div>
