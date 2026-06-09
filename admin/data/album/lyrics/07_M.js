@@ -14,7 +14,6 @@ import {
     FLASHBACK_TO_WORMHOLE_PREFIX,
     FORESHADOW_OF_WORMHOLE_PREFIX,
 } from '../../../../src/constants/lyrics'
-import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'M',
@@ -591,7 +590,6 @@ export default {
                     lyric: [
                         {
                             anchor: `lies that marionette`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
