@@ -14,6 +14,7 @@ import {
     FLASHBACK_TO_WORMHOLE_PREFIX,
     FORESHADOW_OF_WORMHOLE_PREFIX,
 } from '../../../../src/constants/lyrics'
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'M',
@@ -590,10 +591,11 @@ export default {
                     lyric: [
                         {
                             anchor: `lies that marionette`,
+                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
-                                        `There was comfort in having a five-year plan settle all my priorities in advance: Since the right course of action was always the one most closely aligned with the plan, I could pursue it with conviction— like a`,
+                                        `There was comfort in letting a five-year plan settle all my priorities in advance: Since the right course of action was always the one most closely aligned with the plan, I could pursue it with conviction— like a`,
                                         {
                                             anchor: `marionette`,
                                             wiki: `Marionette`,
