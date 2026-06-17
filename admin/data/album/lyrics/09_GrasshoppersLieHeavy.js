@@ -17,7 +17,7 @@ import {
     SOLO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REVISE } from '../../../containers/Annotations/constants/todos'
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Grasshoppers Lie Heavy',
@@ -388,10 +388,10 @@ export default {
                         `attached to your`,
                         {
                             anchor: `sci-fi paperback`,
-                            todo: REVISE,
+                            todo: REVIEW,
                             cards: [
                                 {
-                                    description: `At the time, I was obsessed with Dick's stories of altered states and dystopian worlds. On campus, I'd often try to be seen with one of his novels nestled under my arm.`,
+                                    description: `At the time, I was obsessed with Dick's stories of altered states and dystopian worlds. In my downtime between classes, I'd try to be seen reading one of his novels on a campus bench; it was a great way to start conversations with acquaintances who'd happen to pass by.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },

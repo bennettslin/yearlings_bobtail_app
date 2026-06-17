@@ -15,6 +15,7 @@ import {
     OUTRO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'क्यों? (Kyon?)',
@@ -183,8 +184,9 @@ export default {
                         `So baby, tell me then, when you`,
                         {
                             anchor: `take in her breasts`,
+                            todo: REVIEW,
                             card: {
-                                description: `It scared me, far more than I let on, to gamble away the warmth of Sita's love for a mere chance to date someone new. I then had to wonder if this fear would change my hormones, because upon seeing another woman's naked body for the first time, I was always struck by an urge to be mothered more than anything else.`,
+                                description: `It scared me, far more than I let on, to gamble away the warmth of Sita's love for a mere chance to date someone new. I then had to wonder if this fear would change my hormones, because upon seeing another woman's naked body for the first time, I was always struck by an urge to be mothered above all else.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
