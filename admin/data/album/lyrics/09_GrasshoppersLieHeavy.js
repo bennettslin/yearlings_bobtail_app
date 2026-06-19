@@ -433,9 +433,10 @@ export default {
                         `spurs tales of`,
                         {
                             anchor: `bare-knuckle defeats`,
+                            todo: REVIEW,
                             cards: [
                                 {
-                                    description: `Sita was intrigued by my rough-and-tumble past, despite my honest admission that these were literal beatdowns in which I'd never thrown a single punch.`,
+                                    description: `Sita was intrigued by my rough-and-tumble past, despite my honest admission that these were literal beatdowns in which I'd failed to land a single counterpunch.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
