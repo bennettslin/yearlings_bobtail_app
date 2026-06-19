@@ -186,7 +186,7 @@ export default {
                             anchor: `take in her breasts`,
                             todo: REVIEW,
                             card: {
-                                description: `It scared me, far more than I let on, to gamble away the warmth of Sita's love for a mere chance to date someone new. I then had to wonder if this fear would change my hormones, because upon seeing another woman's naked body for the first time, I was always struck by an urge to be mothered above all else.`,
+                                description: `It scared me, far more than I let on, to gamble away the warmth of Sita's love for a mere chance to date someone new. This fear would then affect my hormones somehow, because upon seeing another woman's naked body for the first time, I'd always be struck by how motherly she looked, and by my own urge to be mothered above all else.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
