@@ -391,7 +391,7 @@ export default {
                             todo: REVIEW,
                             cards: [
                                 {
-                                    description: `At the time, I was obsessed with Dick's stories of altered states and dystopian worlds. In my downtime between classes, I'd try to be seen reading one of his novels on a campus bench; it was a great way to start conversations with acquaintances who'd happen to pass by.`,
+                                    description: `In my downtime between classes, I'd read for pleasure on a campus bench, hoping to be seen; it was a great way to start conversations with acquaintances and mild crushes who'd happen to pass by. Although, given my obsession at the time with Dick's stories of altered states and dystopian futures, I can't be sure what kind of impression I left.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
