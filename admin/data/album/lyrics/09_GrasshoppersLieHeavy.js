@@ -388,7 +388,6 @@ export default {
                         `attached to your`,
                         {
                             anchor: `sci-fi paperback`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `In my downtime between classes, I'd read for pleasure on a campus bench, hoping to be seen; it was a great way to start conversations with acquaintances and mild crushes who'd happen to pass by. Although, given my obsession at the time with Dick's stories of altered states and dystopian futures, I can't be sure what kind of impression I left.`,
@@ -436,7 +435,7 @@ export default {
                             todo: REVIEW,
                             cards: [
                                 {
-                                    description: `Sita was intrigued by my rough-and-tumble past, despite my honest admission that these were literal beatdowns in which I'd failed to land a single counterpunch.`,
+                                    description: `Sita was intrigued by my rough-and-tumble past, despite my honest admission that these were literal beatdowns in which I'd never landed a single counterpunch.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
