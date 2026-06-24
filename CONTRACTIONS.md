@@ -13,3 +13,4 @@
 * If ambiguity between "had" or "would," or "had" and "did"
     * Verb to clarify which one must immediately follow
     * Or, if verb is "be" or "been," can have adverb in between
+* "how'll" and "it've" are acceptable, given that the logic is consistent
