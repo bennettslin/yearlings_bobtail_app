@@ -684,7 +684,7 @@ export default {
                                     `Having completed a grueling shift, I'm feeling dead tired in all my limbs as I make my way back home. So when a nighttime jogger calls out with`,
                                     {
                                         anchor: `euphoric cheer`,
-                                        wiki: `Neurobiological_effects_of_physical_exercise`,
+                                        wiki: `Runner's_high`,
                                     },
                                     `that he's about to pass from behind, I find it hard to be gracious.`,
                                 ],
