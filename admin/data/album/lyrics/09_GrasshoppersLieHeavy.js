@@ -17,6 +17,7 @@ import {
     SOLO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
+import { REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Grasshoppers Lie Heavy',
@@ -322,6 +323,7 @@ export default {
                         `At`,
                         {
                             anchor: `first she hedged`,
+                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
@@ -337,7 +339,7 @@ export default {
                                     },
                                 },
                                 {
-                                    description: `Unsure of my background, and feeling slightly ambushed, Sita hesitates. As we chat, though, I win her over with my knowledge of literature.`,
+                                    description: `Unsure of my background, and feeling slightly ambushed, Sita hesitates.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                     },
@@ -360,6 +362,8 @@ export default {
                         {
                             anchor: `Schwa stickers`,
                             properNoun: true,
+                            todo: REVISE,
+                            note: `Don't use "further" here.`,
                             cards: [
                                 {
                                     description: [
@@ -387,11 +391,19 @@ export default {
                         `attached to your`,
                         {
                             anchor: `sci-fi paperback`,
+                            todo: REVISE,
+                            note: `Use "further" here.`,
                             cards: [
                                 {
                                     description: `In my downtime between classes, I'd read for pleasure on a campus bench, hoping to be seen; it was a great way to start conversations with acquaintances and mild crushes who'd happen to pass by. Although, given my obsession at the time with Dick's stories of altered states and dystopian futures, I can't be sure what kind of impression I left.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
+                                    },
+                                },
+                                {
+                                    description: `As we chat, though, I win her over with my knowledge of literature.`,
+                                    dotKeys: {
+                                        [NARRATIVE]: true,
                                     },
                                 },
                                 {
