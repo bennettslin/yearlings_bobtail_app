@@ -263,6 +263,7 @@ export default {
                         `to`,
                         {
                             anchor: `fetch her lancet pen`,
+                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
@@ -283,7 +284,7 @@ export default {
                                     },
                                 },
                                 {
-                                    description: `Lost in thought, Sita forgets to take her lancing device with her after busing her tray.`,
+                                    description: `A colorful device shaped like a marker sits atop the tray I've just pulled out from the conveyor belt. Looking up, I notice Sita standing a few feet away.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                     },
@@ -299,6 +300,7 @@ export default {
                         `and stunned, by`,
                         {
                             anchor: `reflex you asked`,
+                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `By then, I was mostly on autopilot when it came to hitting on cute women in random places.`,
@@ -307,7 +309,7 @@ export default {
                                     },
                                 },
                                 {
-                                    description: `In awe of Sita's beauty, I'm determined not to screw this one up. So after handing back her lancing device, I try to engage in small talk before asking her on a date.`,
+                                    description: `In awe of Sita's beauty, I'm determined not to screw this one up. So after handing back her lancet pen, I engage in small talk before asking for a date.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                     },
@@ -339,7 +341,7 @@ export default {
                                     },
                                 },
                                 {
-                                    description: `Unsure of my background, and feeling slightly ambushed, Sita hesitates.`,
+                                    description: `Unsure of my background, along with feeling somewhat ambushed, Sita hesitates.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                     },
@@ -362,8 +364,7 @@ export default {
                         {
                             anchor: `Schwa stickers`,
                             properNoun: true,
-                            todo: REVISE,
-                            note: `Don't use "further" here.`,
+                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
@@ -378,7 +379,7 @@ export default {
                                     },
                                 },
                                 {
-                                    description: `Affixed to my belongings are stickers of underground art, further reassuring Sita that I'm a college student like her.`,
+                                    description: `Affixed to my belongings are a few whimsical art stickers, assuring Sita that I'm probably not too sketchy after all.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                     },
