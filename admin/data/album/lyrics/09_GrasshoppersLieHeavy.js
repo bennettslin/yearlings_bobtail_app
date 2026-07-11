@@ -17,7 +17,7 @@ import {
     SOLO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REVIEW, REVISE } from '../../../containers/Annotations/constants/todos'
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Grasshoppers Lie Heavy',
@@ -274,7 +274,7 @@ export default {
                                         },
                                         `, Sita had to monitor her blood sugar level. So before meals, she'd draw blood from her finger by pricking it with a`,
                                         {
-                                            anchor: `lancing device`,
+                                            anchor: `lancet pen`,
                                             wiki: `Blood_lancet`,
                                         },
                                         `.`,
@@ -379,7 +379,7 @@ export default {
                                     },
                                 },
                                 {
-                                    description: `Affixed to my belongings are a few whimsical art stickers, assuring Sita that I'm probably not too sketchy after all.`,
+                                    description: `Affixed to my belongings are a few whimsical art stickers, reassuring Sita that I'm probably not too sketchy.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                     },
@@ -392,8 +392,7 @@ export default {
                         `attached to your`,
                         {
                             anchor: `sci-fi paperback`,
-                            todo: REVISE,
-                            note: `Use "further" here.`,
+                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `In my downtime between classes, I'd read for pleasure on a campus bench, hoping to be seen; it was a great way to start conversations with acquaintances and mild crushes who'd happen to pass by. Although, given my obsession at the time with Dick's stories of altered states and dystopian futures, I can't be sure what kind of impression I left.`,
@@ -402,7 +401,7 @@ export default {
                                     },
                                 },
                                 {
-                                    description: `As we chat, though, I win her over with my knowledge of literature.`,
+                                    description: `Sita asks about the Dick novel I've just been reading. As we continue to chat, my passion for literature convinces her that I just might be a fun date after all.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                     },
