@@ -379,7 +379,7 @@ export default {
                                     },
                                 },
                                 {
-                                    description: `Affixed to my belongings are a few whimsical art stickers, reassuring Sita that I'm probably not too sketchy.`,
+                                    description: `Affixed to my belongings are a few whimsical art stickers, reassuring Sita that I'm probably not sketchy.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                     },
@@ -395,13 +395,13 @@ export default {
                             todo: REVIEW,
                             cards: [
                                 {
-                                    description: `In my downtime between classes, I'd read for pleasure on a campus bench, hoping to be seen; it was a great way to start conversations with acquaintances and mild crushes who'd happen to pass by. Although, given my obsession at the time with Dick's stories of altered states and dystopian futures, I can't be sure what kind of impression I left.`,
+                                    description: `In my downtime between classes, I'd find a campus bench to sit and read for pleasure, hoping to be seen; it was a great way to start conversations with acquaintances and mild crushes who'd happen to pass by. Although, given my obsession at the time with Dick's stories of altered states and dystopian futures, I can't be sure in retrospect what kind of impression I left.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                     },
                                 },
                                 {
-                                    description: `Sita asks about the Dick novel I've just been reading. As we continue to chat, my passion for literature convinces her that I just might be a fun date after all.`,
+                                    description: `As we chat, Sita asks about the Dick novel I've just been reading. My impassioned response convinces her I might be a fun date after all.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                     },
