@@ -284,7 +284,7 @@ export default {
                                     },
                                 },
                                 {
-                                    description: `A colorful device shaped like a marker sits atop the tray I've just pulled out from the conveyor belt. Looking up, I notice Sita standing a few feet away.`,
+                                    description: `A device shaped like a marker sits atop the tray I've just pulled from the conveyor belt. Looking up, I notice Sita standing a few feet away.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                     },
@@ -379,7 +379,7 @@ export default {
                                     },
                                 },
                                 {
-                                    description: `Affixed to my belongings are a few whimsical art stickers, reassuring Sita that I'm probably not sketchy.`,
+                                    description: `Affixed to my belongings are a few whimsical art stickers, reassuring Sita that I'm unlikely to be sketchy.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                     },
