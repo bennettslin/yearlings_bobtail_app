@@ -17,7 +17,6 @@ import {
     SOLO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Grasshoppers Lie Heavy',
@@ -263,7 +262,6 @@ export default {
                         `to`,
                         {
                             anchor: `fetch her lancet pen`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
@@ -300,7 +298,6 @@ export default {
                         `and stunned, by`,
                         {
                             anchor: `reflex you asked`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `By then, I was mostly on autopilot when it came to hitting on cute women in random places.`,
@@ -325,7 +322,6 @@ export default {
                         `At`,
                         {
                             anchor: `first she hedged`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
@@ -364,7 +360,6 @@ export default {
                         {
                             anchor: `Schwa stickers`,
                             properNoun: true,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: [
@@ -392,7 +387,6 @@ export default {
                         `attached to your`,
                         {
                             anchor: `sci-fi paperback`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `In my downtime between classes, I'd find a campus bench to sit and read for pleasure, hoping to be seen; it was a great way to start conversations with acquaintances and mild crushes who'd happen to pass by. Although, given my obsession at the time with Dick's stories of altered states and dystopian futures, I can't be sure in retrospect what kind of impression I left.`,
