@@ -10,37 +10,37 @@ export default getFormattedSlideMetadata({
         },
         {
             paragraph: [
-                `Rock is stagnating. Old music is`,
+                `Old music is now`,
                 {
                     anchor: `killing new music`,
                     externalLink: `https://tedgioia.substack.com/p/is-old-music-killing-new-music`,
                 },
-                `, and it's not hard to see why. The indie system for nurturing artists is badly in need of reform. The problem is, summoning the courage to reform is hard. We won't do it unless we catch the system betting on the wrong horses. And in these artist-friendly times, no artist will ever be seen as the wrong horse.`,
+                `, and it's not hard to see why: The indie way of discovering artists is badly outdated. The problem is, mustering the courage to reform is hard; we won't do it until we catch the indie camp betting on the wrong horses. And given our good intentions… no indie artist will ever be seen as the wrong horse.`,
             ],
         },
         {
             paragraph: [
-                `But there's hope! Courage to reform can also come if we catch the system betting against the`,
+                `But there's hope! Courage to reform can also come if we catch the indie camp betting against the`,
                 {
                     isEmphasis: true,
                     lyric: `right`,
                 },
-                `horses. This rarely happens, of course, since we don't hear about rejected artists. Yet against all odds, we're now hearing about the Bobtail Yearlings. The system bet against them a decade ago. What if they were the right horse?`,
+                `horses. This rarely happens, of course; once an artist gets rejected, we just don't hear about them. Yet, against all odds, we're now hearing about the Bobtail Yearlings. The indie camp bet against them over a decade ago. Well… what if they were the right horse?`,
             ],
         },
         {
             paragraph: [
-                `Early this century as home recording became affordable, Bobtail Yearlings singer Bennett Lin foresaw a coming renaissance. Any artist could now take pains to put out a demo so good, no label could refuse it. And each demo would raise artistic standards to new heights. As he pondered this while reading James Joyce's`,
+                `With home studios becoming affordable in the '00s, Bobtail Yearlings singer Bennett Lin foresaw a coming renaissance: Any artist could now take pains to put out a demo so good, no label would refuse it— and each such demo would then raise the bar for what music can be. As he pondered this while reading James Joyce's`,
                 {
                     isItalic: true,
                     lyric: `Ulysses`,
                 },
-                `, it dawned on him to make his demo the "`,
+                `, it dawned on him to make the "`,
                 {
                     isItalic: true,
                     lyric: `Ulysses`,
                 },
-                `of rock albums"— a work so innovative, it would change what music can be.`,
+                `of rock albums."`,
             ],
         },
         {
@@ -49,7 +49,7 @@ export default getFormattedSlideMetadata({
                     isItalic: true,
                     lyric: `Yearling's Bobtail`,
                 },
-                `is Bennett's autobiographical tale of a Taiwanese-American boy from Los Angeles whose autistic brother and first crush on a Jewish girl cause him to question his Buddhist upbringing. Bullied at school, he finds solace in a mail-order cult and shuts his feelings away. Years later, he embarks on a five-year plan for self-improvement that wins the hand of his first love, who brings him into her Hindu faith. But as his band gets popular in the local scene, he boosts his ego by seeking out other women, leading to heartbreak and loss.`,
+                `is a semi-autobiographical tale of a Taiwanese-American boy from Los Angeles, whose autistic brother and first crush on a Jewish girl cause him to question his Buddhist upbringing. Bullied at school, he finds solace in a mail-order cult. Years later, he embarks on a five-year plan for self-improvement that wins the hand of his first love, who brings him into her Hindu faith. But as his band gets popular in the local scene, he boosts his ego by seeking out other women, leading to heartbreak and loss.`,
             ],
         },
         {
@@ -69,7 +69,7 @@ export default getFormattedSlideMetadata({
                     anchor: `Constellations!`,
                     songIndex: 10,
                 },
-                `"). There's even a literary device he invented called doublespeaker rhyme, in which two columns of lyrics that rhyme syllable for syllable are panned hard into opposite speakers to create a musical split screen ("`,
+                `"). There's even a literary device of his invention called doublespeaker rhyme, in which two columns of lyrics that rhyme syllable for syllable are panned hard to opposite speakers, creating a musical "split screen," so to speak ("`,
                 {
                     anchor: `Odin`,
                     songIndex: 4,
@@ -124,25 +124,25 @@ export default getFormattedSlideMetadata({
         },
         {
             paragraph: [
-                `Since barriers to entry need to stay fixed, Bennett assumed that artistic standards had nowhere to go but up. But the system lowered the barriers instead! Artists could now self-release fully realized works to win over the public directly. So upon its completion five years later,`,
+                `Bennett's assumption in the '00s was that barriers to entry need to stay fixed— and thus our standards had nowhere to go but up. Yet the indie camp… lowered those barriers instead! Artists could now self-release fully realized works to win over the public directly. So upon completion five years later,`,
                 {
                     isItalic: true,
                     lyric: `Yearling's Bobtail`,
                 },
-                `was refused by all the indie labels. It no longer made sense to bet on a demo.`,
+                `was refused by all the indie labels; it no longer made sense to bet on a demo.`,
             ],
         },
         {
-            paragraph: `But Bennett insisted his forecast wasn't wrong, just premature. To bide his time, he learned music composition, web development, and illustration, allowing him to build an audio webcomic that presents the album's story as a theatrical play. Annotations offer background context, while music scores provide insight into how the songs were written.`,
+            paragraph: `But Bennett insisted his forecast wasn't wrong, just premature. To bide his time, he studied music composition, web development, and illustration, allowing him to build an audio webcomic that presents the album as a theatrical play. Musical scores provide insight into how the songs were crafted, while annotations offer surrounding context.`,
         },
         {
             paragraph: [
-                `So… was Bennett right? Is a demo renaissance inevitable? Past artists made demos, after all, and their music is now killing ours. Coincidence? Maybe not. A demo's audience agrees to hear what it can be in the`,
+                `So… was Bennett right? Will the next revolution call us back to making demos? That's how past artists got started, after all, and their music is now killing ours. Coincidence? Maybe not: A demo shows what a work can be in the`,
                 {
                     isEmphasis: true,
                     lyric: `future`,
                 },
-                `. This doesn't just free an artist to take creative risks; it awakens the very thought to do so. Had Bennett known he'd be judged on his ability to win over the public without label support, the idea for doublespeaker rhyme never would have come to him.`,
+                `. This doesn't just free an artist to take creative risks; it awakens the very thought to try. Had Bennett known upfront he'd need to win over the public on his own, for example, the idea for doublespeaker rhyme never would've come to him.`,
             ],
         },
         {
