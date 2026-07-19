@@ -802,12 +802,12 @@ export default {
                             anchor: `Paul Pena`,
                             wiki: `Paul_Pena`,
                         },
-                        `. Unlike Pena, who learned by ear, I managed to find a library book on it, so I was sounding out the main`,
+                        `. Unlike Pena, who taught himself, I found a library book on the subject and was sounding out the main`,
                         {
                             anchor: `partials`,
                             wiki: `Harmonic_series_(music)`,
                         },
-                        `within days— which impressed her greatly. I've been trying to recapture the glory of that moment ever since.`,
+                        `within a day— which impressed Catherine greatly. My whole life ever since has been about recapturing the glory of that moment.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
