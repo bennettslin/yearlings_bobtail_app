@@ -56,6 +56,7 @@ const _prependWithSpaceIfNeeded = text => {
         text.startsWith(`")`) ||
         text.startsWith(`)`) ||
         text.startsWith(`'`) ||
+        text.startsWith(`-`) ||
         hasSpecialCharacterAtIndex(text, 0)
     ) {
         return text

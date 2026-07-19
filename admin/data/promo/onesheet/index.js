@@ -25,7 +25,7 @@ export default getFormattedSlideMetadata({
                     isEmphasis: true,
                     lyric: `right`,
                 },
-                `horses. This rarely happens, of course; once an artist gets rejected, we just don't hear about them. Yet, against all odds, we're now hearing about the Bobtail Yearlings. The indie camp bet against them over a decade ago. Well… what if they were the right horse?`,
+                `horses. This rarely happens, of course; once an artist gets rejected, we just don't hear about them. Yet, against all odds, we're now hearing about the Bobtail Yearlings. The indie camp bet against them over a decade ago. What if they were the right horse?`,
             ],
         },
         {
@@ -124,7 +124,7 @@ export default getFormattedSlideMetadata({
         },
         {
             paragraph: [
-                `Bennett's assumption in the '00s was that barriers to entry need to stay fixed— and thus our standards had nowhere to go but up. Yet the indie camp… lowered those barriers instead! Artists could now self-release fully realized works to win over the public directly. So upon completion five years later,`,
+                `Bennett's assumption in the '00s was that barriers to entry need to stay fixed— and thus our standards had nowhere to go but up. Yet the indie camp… lowered those barriers instead! Now artists could self-release fully realized works to win over the public directly. So upon completion five years later,`,
                 {
                     isItalic: true,
                     lyric: `Yearling's Bobtail`,
@@ -137,16 +137,28 @@ export default getFormattedSlideMetadata({
         },
         {
             paragraph: [
-                `So… was Bennett right? Will the next revolution call us back to making demos? That's how past artists got started, after all, and their music is now killing ours. Coincidence? Maybe not: A demo shows what a work can be in the`,
+                `So… is Bennett right? Will the next renaissance call us back to making demos? That's how past artists got started, after all, and their music is now killing ours. Coincidence? It's unlikely. Remember, a demo shows what a work can be in the`,
                 {
                     isEmphasis: true,
                     lyric: `future`,
                 },
-                `. This doesn't just free an artist to take creative risks; it awakens the very thought to try. Had Bennett known upfront he'd need to win over the public on his own, for example, the idea for doublespeaker rhyme never would've come to him.`,
+                `. This doesn't just free an artist to take creative risks; it awakens the very thought to try. Had Bennett known he'd need to win over the public on his own, for example, the idea for doublespeaker rhyme never would've come to him.`,
             ],
         },
         {
-            paragraph: `The current indie system rests on the belief that when the next artist comes along to change what music can be, the people will lead, and the labels will follow. After two decades, this has yet to happen. What if it's the labels who need to lead? And what if rock can only be saved once we realize this?`,
+            paragraph: [
+                `Of course, to make demos, artists can't be`,
+                {
+                    isItalic: true,
+                    lyric: `indie`,
+                },
+                `-pendent; instead, they'll need labels and other business partners to advocate on their behalf. Which means the indie way; to usher in the next renaissance, we'll need those who grasp the concept of`,
+                {
+                    isItalic: true,
+                    lyric: `inter`,
+                },
+                `-dependence to pave the way.`,
+            ],
         },
     ],
 })
