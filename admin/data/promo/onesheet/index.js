@@ -10,12 +10,12 @@ export default getFormattedSlideMetadata({
         },
         {
             paragraph: [
-                `Old music is now`,
+                `Old music is`,
                 {
                     anchor: `killing new music`,
                     externalLink: `https://tedgioia.substack.com/p/is-old-music-killing-new-music`,
                 },
-                `, and it's not hard to see why: The indie way of discovering artists is badly outdated. The problem is, mustering the courage to revolt is hard; we won't do it unless we catch the indie camp betting on the wrong horses. And given our good intentions… no indie artist will ever be seen as the wrong horse.`,
+                `, and the Bobtail Yearlings know why: Indie rock's ideals are flawed, yet have completely taken over. The problem is, mustering the courage to revolt is hard; we won't do it unless we catch the indie camp betting on the wrong horses. And given our good intentions… no indie artist will ever be seen as the wrong horse.`,
             ],
         },
         {
@@ -25,7 +25,7 @@ export default getFormattedSlideMetadata({
                     isEmphasis: true,
                     lyric: `right`,
                 },
-                `horses. This is easier said than done, of course: Once an artist gets rejected, we'll never hear about them. Yet against all odds, we're now hearing about the Bobtail Yearlings. The indie camp bet against them over a decade ago. Except… what if they were the right horse?`,
+                `horses. This is easier said than done, of course: Once an artist gets rejected, we'll just never hear about them. Yet against all odds, we're finally hearing about the Bobtail Yearlings. The indie camp bet against them over a decade ago. Well… what if they were the right horse?`,
             ],
         },
         {
@@ -125,7 +125,7 @@ export default getFormattedSlideMetadata({
         },
         {
             paragraph: [
-                `Bennett's starting assumption was that barriers to entry would stay fixed— and thus our standards had nowhere to go but up. Yet the indie camp chose to lower those barriers instead! Now any artist could self-release a fully realized work to win over the public directly. And since they`,
+                `Bennett's starting assumption was that barriers to entry would stay fixed— and thus our standards had nowhere to go but up. Yet indie rock chose to lower those barriers instead! Now any artist could self-release a fully realized work to win over the public directly. And since they`,
                 {
                     isEmphasis: true,
                     lyric: `could`,
@@ -158,17 +158,22 @@ export default getFormattedSlideMetadata({
         },
         {
             paragraph: [
-                `Of course, any artist who makes a demo, by definition, isn't`,
+                `Of course, any artist who makes a demo, by definition, won't be`,
                 {
-                    isItalic: true,
+                    isEmphasis: true,
                     lyric: `indie`,
                 },
-                `-pendent— which means they'll be rejected by the indie camp, like the Bobtail Yearlings were. To usher in the next renaissance, then, we'll need others to help, who grasp the concept of`,
+                `-pendent— which means they'll get rejected by the indie camp, like the Bobtail Yearlings were. The next renaissance, then, can only be ushered in by those who grasp the concept of`,
                 {
-                    isItalic: true,
+                    isEmphasis: true,
                     lyric: `inter`,
                 },
-                `-dependence. If this is you, Yearling's Bobtail is here for your consideration!`,
+                `-dependence. If this is you,`,
+                {
+                    isItalic: true,
+                    lyric: `Yearling's Bobtail`,
+                },
+                `is here for your consideration!`,
             ],
         },
     ],
