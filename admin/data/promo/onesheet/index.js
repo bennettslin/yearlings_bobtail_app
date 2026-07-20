@@ -129,7 +129,7 @@ export default getFormattedSlideMetadata({
                     isEmphasis: true,
                     lyric: `could`,
                 },
-                `… many insisted they`,
+                `… the indie camp insisted they`,
                 {
                     isEmphasis: true,
                     lyric: `should`,
@@ -143,7 +143,7 @@ export default getFormattedSlideMetadata({
             ],
         },
         {
-            paragraph: `But Bennett insisted his forecast wasn't wrong, just premature. To bide his time, he studied music composition, web development, and illustration, allowing him to build an audio webcomic that presents the album as a theatrical play. Musical scores provide insight into how the songs were crafted, while annotations offer surrounding context.`,
+            paragraph: `But Bennett insisted his forecast wasn't wrong, just premature. To bide his time, he studied music composition, web development, and illustration, allowing him to build an audio webcomic that presents the album's story as a theatrical play. Additionally, musical scores provide insight into how the songs were crafted, while annotations offer surrounding context.`,
         },
         {
             paragraph: [
