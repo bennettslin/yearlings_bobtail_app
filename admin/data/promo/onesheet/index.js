@@ -15,12 +15,12 @@ export default getFormattedSlideMetadata({
                     anchor: `killing new music`,
                     externalLink: `https://tedgioia.substack.com/p/is-old-music-killing-new-music`,
                 },
-                `, and it's not hard to see why: The indie way of discovering artists is badly outdated. The problem is, mustering the courage to reform is hard; we won't do it until we catch the indie camp betting on the wrong horses. And given our good intentions… no indie artist will ever be seen as the wrong horse.`,
+                `, and it's not hard to see why: The indie way of discovering artists is badly outdated. The problem is, mustering the courage to revolt is hard; we won't do it until we catch the indie camp betting on the wrong horses. And given our good intentions… no indie artist will ever be seen as the wrong horse.`,
             ],
         },
         {
             paragraph: [
-                `But there's hope! Courage to reform can also come if we catch the indie camp betting against the`,
+                `But there's hope! Courage to revolt can also come if we catch the indie camp betting against the`,
                 {
                     isEmphasis: true,
                     lyric: `right`,
@@ -124,7 +124,17 @@ export default getFormattedSlideMetadata({
         },
         {
             paragraph: [
-                `Bennett's assumption in the '00s was that barriers to entry need to stay fixed— and thus our standards had nowhere to go but up. Yet the indie camp… lowered those barriers instead! Now artists could self-release fully realized works to win over the public directly. So upon completion five years later,`,
+                `Bennett's initial assumption was that barriers to entry would stay fixed— and thus our standards had nowhere to go but up. Yet the indie camp opted to lower those barriers instead! Now any artist could self-release a fully realized work to win over the public directly. And since they`,
+                {
+                    isEmphasis: true,
+                    lyric: `could`,
+                },
+                `… many insisted they`,
+                {
+                    isEmphasis: true,
+                    lyric: `should`,
+                },
+                `. Upon completion five years later, then,`,
                 {
                     isItalic: true,
                     lyric: `Yearling's Bobtail`,
@@ -147,12 +157,12 @@ export default getFormattedSlideMetadata({
         },
         {
             paragraph: [
-                `Of course, to make demos, artists can't be`,
+                `Of course, to make a demo, no artist can be`,
                 {
                     isItalic: true,
                     lyric: `indie`,
                 },
-                `-pendent; instead, they'll need labels and other business partners to advocate on their behalf. Which means the indie way; to usher in the next renaissance, we'll need those who grasp the concept of`,
+                `-pendent; instead, they'll need a label— or some other business partner— to advocate on their behalf. Which means the next renaissance won't be ushered in the indie way; we'll need those who grasp the concept of`,
                 {
                     isItalic: true,
                     lyric: `inter`,
