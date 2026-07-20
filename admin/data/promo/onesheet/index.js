@@ -15,7 +15,7 @@ export default getFormattedSlideMetadata({
                     anchor: `killing new music`,
                     externalLink: `https://tedgioia.substack.com/p/is-old-music-killing-new-music`,
                 },
-                `, and the Bobtail Yearlings know why: Indie rock's ideals are flawed, yet have completely taken over. The problem is, mustering the courage to revolt is hard; we won't do it unless we catch the indie camp betting on the wrong horses. And given our good intentions… no indie artist will ever be seen as the wrong horse.`,
+                `, and the Bobtail Yearlings know why: Indie rock's ideals are flawed, yet have taken over completely. The problem is, summoning the courage to revolt is hard; we won't do it unless we catch the indie camp betting on the wrong horses. And given our good intentions… no indie artist will ever be seen as the wrong horse.`,
             ],
         },
         {
@@ -145,31 +145,24 @@ export default getFormattedSlideMetadata({
                     isItalic: true,
                     lyric: `Yearling's Bobtail`,
                 },
-                `was rejected by all the indie labels; none were interested in helping to start a demo renaissance.`,
+                `was rejected by all the indie labels; none were interested in starting the next renaissance.`,
             ],
         },
         {
-            paragraph: `But Bennett insisted his forecast wasn't wrong, just premature. To bide his time, he learned music composition, web development, and illustration, allowing him to expand the album into an audio webcomic. With cartoon figures enacting the story as a theatrical play, annotations offer surrounding context, while musical scores demonstrate how the songs were crafted.`,
+            paragraph: `But Bennett insisted his forecast wasn't wrong, just premature. To bide his time, he learned music composition, web development, and illustration, allowing him to expand the album into an audio webcomic. With cartoon figures enacting the story as a theatrical play, annotations offer surrounding context, while musical scores provide insight into how the songs were crafted.`,
         },
         {
             paragraph: [
-                `So… is Bennett right? Will the next renaissance call us back to making demos? That's how past artists got started, after all, and their music is now killing ours. Coincidence? It's unlikely. Remember, a demo shows what a work can be in the`,
+                `So… is Bennett right? Will the next renaissance call us back to making demos? That's how past artists got started, after all, and their music is now killing ours. Remember, a demo shows what a work can be in the`,
                 {
                     isEmphasis: true,
                     lyric: `future`,
                 },
-                `. This doesn't just free an artist to take creative risks; it awakens the very thought to try. Had Bennett known he'd need to win over the public on his own, for example, the idea for doublespeaker rhyme never would've come to him.`,
+                `, with some label's help. This doesn't just free an artist to take creative risks; it awakens the very thought to try. Had Bennett known he'd need to win over the public on his own, for example, the idea for doublespeaker rhyme never would've come to him.`,
             ],
         },
         {
-            paragraph: [
-                `Of course, any other artist who makes a demo will be rejected by the indie camp, just like the Bobtail Yearlings were. The next renaissance, then, can only be ushered in by those with the courage to revolt. If this sounds like you…`,
-                {
-                    isItalic: true,
-                    lyric: `Yearling's Bobtail`,
-                },
-                `is here for your consideration!`,
-            ],
+            paragraph: `Picture, then, artist after artist, each making a demo to raise the bar for what music can be… only to be rejected by the indie labels. Does this summon your courage to revolt? If so, there's still time to bet on the Bobtail Yearlings— the first of many right horses to come!`,
         },
     ],
 })
