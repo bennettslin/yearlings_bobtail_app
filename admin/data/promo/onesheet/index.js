@@ -15,7 +15,7 @@ export default getFormattedSlideMetadata({
                     anchor: `killing new music`,
                     externalLink: `https://tedgioia.substack.com/p/is-old-music-killing-new-music`,
                 },
-                `, and it's not hard to see why: The indie way of discovering artists is badly outdated. The problem is, mustering the courage to revolt is hard; we won't do it until we catch the indie camp betting on the wrong horses. And given our good intentions… no indie artist will ever be seen as the wrong horse.`,
+                `, and it's not hard to see why: The indie way of discovering artists is badly outdated. The problem is, mustering the courage to revolt is hard; we won't do it unless we catch the indie camp betting on the wrong horses. And given our good intentions… no indie artist will ever be seen as the wrong horse.`,
             ],
         },
         {
@@ -25,7 +25,7 @@ export default getFormattedSlideMetadata({
                     isEmphasis: true,
                     lyric: `right`,
                 },
-                `horses. This rarely happens, of course; once an artist gets rejected, we just don't hear about them. Yet, against all odds, we're now hearing about the Bobtail Yearlings. The indie camp bet against them over a decade ago. What if they were the right horse?`,
+                `horses. This is easier said than done, of course: Once an artist gets rejected, we'll never hear about them. Yet against all odds, we're now hearing about the Bobtail Yearlings. The indie camp bet against them over a decade ago. What if they were the right horse?`,
             ],
         },
         {
@@ -157,17 +157,17 @@ export default getFormattedSlideMetadata({
         },
         {
             paragraph: [
-                `Of course, to make a demo, no artist can be`,
+                `Of course, any artist who makes a demo, by definition, isn't`,
                 {
                     isItalic: true,
                     lyric: `indie`,
                 },
-                `-pendent; instead, they'll need a label— or some other business partner— to advocate on their behalf. Which means the next renaissance won't be ushered in the indie way; we'll need those who grasp the concept of`,
+                `-pendent— which means they'll be rejected by the indie camp, like the Bobtail Yearlings were. To usher in the next renaissance, then, we'll need others to help, who grasp the concept of`,
                 {
                     isItalic: true,
                     lyric: `inter`,
                 },
-                `-dependence to pave the way.`,
+                `-dependence. If this is you, Yearling's Bobtail is here for your consideration!`,
             ],
         },
     ],
