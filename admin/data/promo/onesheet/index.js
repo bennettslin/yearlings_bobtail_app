@@ -25,7 +25,7 @@ export default getFormattedSlideMetadata({
                     isEmphasis: true,
                     lyric: `right`,
                 },
-                `horses. This is easier said than done, of course: Once an artist gets rejected, we'll never hear about them. Yet against all odds, we're now hearing about the Bobtail Yearlings. The indie camp bet against them over a decade ago. What if they were the right horse?`,
+                `horses. This is easier said than done, of course: Once an artist gets rejected, we'll never hear about them. Yet against all odds, we're now hearing about the Bobtail Yearlings. The indie camp bet against them over a decade ago. Except… what if they were the right horse?`,
             ],
         },
         {
