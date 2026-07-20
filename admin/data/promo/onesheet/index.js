@@ -45,11 +45,12 @@ export default getFormattedSlideMetadata({
         },
         {
             paragraph: [
+                `The result is`,
                 {
                     isItalic: true,
                     lyric: `Yearling's Bobtail`,
                 },
-                `is a semi-autobiographical tale of a Taiwanese-American boy from Los Angeles, whose autistic brother and first crush on a Jewish girl cause him to question his Buddhist upbringing. Bullied at school, he finds solace in a mail-order cult. Years later, he embarks on a five-year plan for self-improvement that wins the hand of his first love, who brings him into her Hindu faith. But as his band gets popular in the local scene, he boosts his ego by seeking out other women, leading to heartbreak and loss.`,
+                `, an autobiography of a Taiwanese-American boy from Los Angeles, whose autistic brother and first crush on a Jewish girl cause him to question his Buddhist upbringing. Bullied at school, he finds solace in a mail-order cult. Years later, he embarks on a five-year plan for self-improvement that wins the hand of his first love, who brings him into her Hindu faith. But as his band gets popular in the local scene, he boosts his ego by seeking out other women, leading to heartbreak and loss.`,
             ],
         },
         {
@@ -124,7 +125,7 @@ export default getFormattedSlideMetadata({
         },
         {
             paragraph: [
-                `Bennett's initial assumption was that barriers to entry would stay fixed— and thus our standards had nowhere to go but up. Yet the indie camp opted to lower those barriers instead! Now any artist could self-release a fully realized work to win over the public directly. And since they`,
+                `Bennett's starting assumption was that barriers to entry would stay fixed— and thus our standards had nowhere to go but up. Yet the indie camp chose to lower those barriers instead! Now any artist could self-release a fully realized work to win over the public directly. And since they`,
                 {
                     isEmphasis: true,
                     lyric: `could`,
@@ -139,11 +140,11 @@ export default getFormattedSlideMetadata({
                     isItalic: true,
                     lyric: `Yearling's Bobtail`,
                 },
-                `was refused by all the indie labels; it no longer made sense to bet on a demo.`,
+                `was rejected by all the indie labels; it no longer made sense to bet on a demo.`,
             ],
         },
         {
-            paragraph: `But Bennett insisted his forecast wasn't wrong, just premature. To bide his time, he studied music composition, web development, and illustration, allowing him to build an audio webcomic that presents the album's story as a theatrical play. Additionally, musical scores provide insight into how the songs were crafted, while annotations offer surrounding context.`,
+            paragraph: `But Bennett insisted his forecast wasn't wrong, just premature. To bide his time, he learned music composition, web development, and illustration, allowing him to build an audio webcomic to accompany the album. Now cartoon figures enact the story as a theatrical play, while musical scores provide insight into how the songs were crafted, and annotations offer surrounding context.`,
         },
         {
             paragraph: [
