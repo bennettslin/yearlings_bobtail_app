@@ -797,17 +797,17 @@ export default {
                                 wiki: `Genghis_Blues`,
                             },
                         },
-                        `, a documentary about blind blues musician`,
+                        `, a documentary about blind bluesman`,
                         {
                             anchor: `Paul Pena`,
                             wiki: `Paul_Pena`,
                         },
-                        `. Unlike Pena, who taught himself, I found a library book on the subject and was sounding out the main`,
+                        `. After finding a book on the subject in a campus library, I was sounding out the main`,
                         {
                             anchor: `partials`,
                             wiki: `Harmonic_series_(music)`,
                         },
-                        `within a day— which impressed Catherine greatly. My whole life ever since has been about recapturing the glory of that moment.`,
+                        `within a day— which impressed Catherine greatly. My life ever since has been all about recapturing the glory of that moment.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
