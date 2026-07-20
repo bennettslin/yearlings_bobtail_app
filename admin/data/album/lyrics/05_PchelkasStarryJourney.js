@@ -802,12 +802,12 @@ export default {
                             anchor: `Paul Pena`,
                             wiki: `Paul_Pena`,
                         },
-                        `. After finding a book on the subject in a campus library, I was sounding out the main`,
+                        `. Upon finding a book on the subject in a campus library, I was sounding out the main`,
                         {
                             anchor: `partials`,
                             wiki: `Harmonic_series_(music)`,
                         },
-                        `within a day— which impressed Catherine greatly. My life ever since has been all about recapturing the glory of that moment.`,
+                        `within a day— which impressed Catherine greatly. I've been trying to recapture the glory of that moment ever since.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
