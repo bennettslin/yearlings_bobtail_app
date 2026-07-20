@@ -125,26 +125,31 @@ export default getFormattedSlideMetadata({
         },
         {
             paragraph: [
-                `Bennett's starting assumption was that barriers to entry would stay fixed— and thus our standards had nowhere to go but up. Yet indie rock chose to lower those barriers instead! Now any artist could self-release a fully realized work to win over the public directly. And since they`,
-                {
-                    isEmphasis: true,
-                    lyric: `could`,
-                },
-                `… the indie camp insisted they`,
-                {
-                    isEmphasis: true,
-                    lyric: `should`,
-                },
-                `. Upon completion five years later, then,`,
+                `After spending five years to make`,
                 {
                     isItalic: true,
                     lyric: `Yearling's Bobtail`,
                 },
-                `was rejected by all the indie labels; it no longer made sense to bet on a demo.`,
+                `, Bennett reemerged to find that expectations in the arts had changed: Any artist could now self-release a fully realized work to win over the public directly. And since they`,
+                {
+                    isEmphasis: true,
+                    lyric: `could`,
+                },
+                `… indie rock insisted they`,
+                {
+                    isEmphasis: true,
+                    lyric: `should`,
+                },
+                `. For this reason,`,
+                {
+                    isItalic: true,
+                    lyric: `Yearling's Bobtail`,
+                },
+                `was rejected by all the indie labels; none were interested in helping to start a demo renaissance.`,
             ],
         },
         {
-            paragraph: `But Bennett insisted his forecast wasn't wrong, just premature. To bide his time, he learned music composition, web development, and illustration, allowing him to build an audio webcomic to accompany the album. Now cartoon figures enact the story as a theatrical play, while musical scores provide insight into how the songs were crafted, and annotations offer surrounding context.`,
+            paragraph: `But Bennett insisted his forecast wasn't wrong, just premature. To bide his time, he learned music composition, web development, and illustration, allowing him to expand the album into an audio webcomic. With cartoon figures enacting the story as a theatrical play, annotations offer surrounding context, while musical scores demonstrate how the songs were crafted.`,
         },
         {
             paragraph: [
@@ -158,17 +163,7 @@ export default getFormattedSlideMetadata({
         },
         {
             paragraph: [
-                `Of course, any artist who makes a demo, by definition, won't be`,
-                {
-                    isEmphasis: true,
-                    lyric: `indie`,
-                },
-                `-pendent— which means they'll get rejected by the indie camp, like the Bobtail Yearlings were. The next renaissance, then, can only be ushered in by those who grasp the concept of`,
-                {
-                    isEmphasis: true,
-                    lyric: `inter`,
-                },
-                `-dependence. If this is you,`,
+                `Of course, any other artist who makes a demo will be rejected by the indie camp, just like the Bobtail Yearlings were. The next renaissance, then, can only be ushered in by those with the courage to revolt. If this sounds like you…`,
                 {
                     isItalic: true,
                     lyric: `Yearling's Bobtail`,
