@@ -145,7 +145,7 @@ export default getFormattedSlideMetadata({
                     isItalic: true,
                     lyric: `Yearling's Bobtail`,
                 },
-                `was rejected by all the indie labels; none were interested in starting a demo renaissance.`,
+                `was rejected by all the indie labels; a "demo that can't be refused" was now an oxymoron.`,
             ],
         },
         {
