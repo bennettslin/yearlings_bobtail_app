@@ -130,12 +130,12 @@ export default getFormattedSlideMetadata({
                     isItalic: true,
                     lyric: `Yearling's Bobtail`,
                 },
-                `, Bennett reemerged to find that expectations in the arts had changed: Any artist could now self-release a fully realized work to win over the public directly. And since they`,
+                `, Bennett reemerged to find that expectations in the arts had changed: Any artist could now self-release a fully realized work to win over the public directly— and since they`,
                 {
                     isEmphasis: true,
                     lyric: `could`,
                 },
-                `… indie rock insisted they`,
+                `, indie rock insisted they`,
                 {
                     isEmphasis: true,
                     lyric: `should`,
