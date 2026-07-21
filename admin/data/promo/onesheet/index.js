@@ -50,7 +50,7 @@ export default getFormattedSlideMetadata({
                     isItalic: true,
                     lyric: `Yearling's Bobtail`,
                 },
-                `, an autobiography of a Taiwanese-American boy from Los Angeles, whose autistic brother and first crush on a Jewish girl cause him to question his Buddhist upbringing. Bullied at school, he finds solace in a mail-order cult. Years later, he embarks on a five-year plan for self-improvement that wins the hand of his first love, who brings him into her Hindu faith. But as his band gets popular in the local scene, he boosts his ego by seeking out other women, leading to heartbreak and loss.`,
+                `, an autobiography of a Taiwanese-American boy from Los Angeles, whose autistic brother and first crush on a Jewish girl cause him to question his Buddhist upbringing. Bullied at school, he finds solace in a mail-order cult. Years later, he embarks on a five-year plan for self-betterment that wins the hand of his first love, who brings him into her Hindu faith. But as his band gets popular in the local scene, he boosts his ego by seeking out other women, leading to heartbreak and loss.`,
             ],
         },
         {
