@@ -11,6 +11,7 @@ import {
     POSTCHORUS,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Good Night, Sita',
@@ -223,6 +224,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
                     description: [
                         `Back when I worked as a dishwasher, my supervisor would blast`,
@@ -232,7 +234,7 @@ export default {
                         },
                         `'s "`,
                         {
-                            anchor: `Don't Stop 'Til You Get Enough`,
+                            anchor: `Don't Stop Till You Get Enough`,
                             wiki: `Don't_Stop_'Til_You_Get_Enough`,
                         },
                         `" in the home stretch of every shift. Ever since, I've associated this song with the idea of psyching myself up to have fun when I'm not really having fun. So I borrowed its sound to convey where my head was at during those first few dates with Sita— hence the palm-muted electric guitars, rubbery bass trills, and ample cowbell.`,
@@ -945,9 +947,10 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
                     description: [
-                        `Children's songs from the '70s are a wellspring of musical wisdom: They were composed by those trained in older styles, but arranged to fit the newer styles of those times. One example is the soundtrack for`,
+                        `Children's songs from the '70s are a wellspring of musical wisdom: They were composed by those trained in older forms, yet arranged to fit the newer styles of those times. One example is the soundtrack for`,
                         {
                             anchor: `The New Mickey Mouse Club`,
                             wiki: `The_Mickey_Mouse_Club`,
