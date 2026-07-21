@@ -125,7 +125,7 @@ export default getFormattedSlideMetadata({
         },
         {
             paragraph: [
-                `After spending five years to make`,
+                `After holing up for five years to make`,
                 {
                     isItalic: true,
                     lyric: `Yearling's Bobtail`,
