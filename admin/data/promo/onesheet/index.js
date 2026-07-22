@@ -30,7 +30,7 @@ export default getFormattedSlideMetadata({
         },
         {
             paragraph: [
-                `With home studios becoming affordable in the '00s, Bobtail Yearlings singer Bennett Lin foresaw a coming renaissance: Any artist could now take pains to put out a demo so good, no label would refuse it— and each such demo would then raise the bar for what music can be. As he pondered this while reading James Joyce's`,
+                `With home studios becoming affordable in the '00s, Bobtail Yearlings singer Bennett Lin foresaw a coming renaissance: Any artist could now take pains to make a demo so good, no label would refuse it— and each such demo would then raise the bar for what music can be. As he pondered this while reading James Joyce's`,
                 {
                     isItalic: true,
                     lyric: `Ulysses`,
@@ -70,7 +70,7 @@ export default getFormattedSlideMetadata({
                     anchor: `Constellations!`,
                     songIndex: 10,
                 },
-                `"). There's even a literary device of his invention called doublespeaker rhyme, in which two columns of lyrics that rhyme syllable for syllable are panned hard to opposite speakers, creating a musical "split screen," so to speak ("`,
+                `"). There's even a literary device of his invention called "doublespeaker rhyme," in which two columns of lyrics that rhyme syllable for syllable are panned hard to opposite speakers, creating a musical "split screen," so to speak ("`,
                 {
                     anchor: `Odin`,
                     songIndex: 4,
@@ -140,12 +140,12 @@ export default getFormattedSlideMetadata({
                     isEmphasis: true,
                     lyric: `should`,
                 },
-                `. For this reason,`,
+                `. For this reason, every indie label passed on`,
                 {
                     isItalic: true,
                     lyric: `Yearling's Bobtail`,
                 },
-                `was rejected by all the indie labels; a "demo that can't be refused" was now an oxymoron.`,
+                `; the "demo that can't be refused" was now an oxymoron.`,
             ],
         },
         {
