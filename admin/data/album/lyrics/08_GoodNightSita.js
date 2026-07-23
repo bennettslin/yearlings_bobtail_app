@@ -11,7 +11,6 @@ import {
     POSTCHORUS,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Good Night, Sita',
@@ -224,7 +223,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: [
                         `Back when I worked as a dishwasher, my supervisor would blast`,
@@ -947,7 +945,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: [
                         `Children's songs from the '70s are a wellspring of musical wisdom: They were composed by those trained in older forms, yet arranged to fit the newer styles of those times. One example is the soundtrack for`,
