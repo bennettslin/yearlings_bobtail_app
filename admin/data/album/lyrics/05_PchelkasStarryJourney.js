@@ -802,12 +802,12 @@ export default {
                             anchor: `Paul Pena`,
                             wiki: `Paul_Pena`,
                         },
-                        `. Upon finding a book on the subject in a campus library, I was sounding out the main`,
+                        `. Luckily, I found a book on the subject in a campus library, so within a day I was sounding the main`,
                         {
                             anchor: `partials`,
                             wiki: `Harmonic_series_(music)`,
                         },
-                        `within a day— which impressed Catherine greatly. I've been trying to recapture the glory of that moment ever since.`,
+                        `— which impressed Catherine greatly. I've been trying to recapture the glory of that moment ever since.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
