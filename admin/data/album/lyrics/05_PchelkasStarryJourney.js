@@ -802,12 +802,12 @@ export default {
                             anchor: `Paul Pena`,
                             wiki: `Paul_Pena`,
                         },
-                        `. Luckily, I found a book on the subject in a campus library, so within days I was sounding the main`,
+                        `. Luckily, I found a book on the subject in a campus library, and within days I was sounding the main`,
                         {
                             anchor: `partials`,
                             wiki: `Harmonic_series_(music)`,
                         },
-                        `— which impressed Catherine to no end. I've been trying to recapture the glory of that moment ever since.`,
+                        `. This honestly took Catherine by surprise, and thus impressed her to no end. I've been trying to recapture the glory of that moment ever since.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
