@@ -807,7 +807,7 @@ export default {
                             anchor: `partials`,
                             wiki: `Harmonic_series_(music)`,
                         },
-                        `. This took Catherine by surprise and thus impressed her to no end; my life ever since has been all about recapturing the glory of that moment.`,
+                        `. This took Catherine by surprise, and thus impressed her to no end; my life ever since has been all about recapturing the glory of that moment.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
