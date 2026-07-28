@@ -789,7 +789,7 @@ export default {
                 todo: REVIEW,
                 card: {
                     description: [
-                        `I decided I'd learn to throat sing after my first girlfriend Catherine took me to see`,
+                        `I decided I'd learn to throat sing after my first girlfriend Catherine took me to see a documentary called`,
                         {
                             isItalic: true,
                             lyric: {
@@ -797,12 +797,7 @@ export default {
                                 wiki: `Genghis_Blues`,
                             },
                         },
-                        `, a documentary about blind bluesman`,
-                        {
-                            anchor: `Paul Pena`,
-                            wiki: `Paul_Pena`,
-                        },
-                        `. Luckily, I found a book on the subject in a campus library, so within days I was sounding all the`,
+                        `. Luckily, I found a book about it in a campus library, so within days I was sounding the main`,
                         {
                             anchor: `partials`,
                             wiki: `Harmonic_series_(music)`,
