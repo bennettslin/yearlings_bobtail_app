@@ -797,7 +797,7 @@ export default {
                                 wiki: `Genghis_Blues`,
                             },
                         },
-                        `. Luckily, I found a book about it in a campus library, so within days I was sounding the main`,
+                        `. Luckily, I found a book on the subject in a campus library, so within days I was sounding the main`,
                         {
                             anchor: `partials`,
                             wiki: `Harmonic_series_(music)`,
