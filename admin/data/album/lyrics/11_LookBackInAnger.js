@@ -16,7 +16,7 @@ import {
     FORESHADOW_OF_WORMHOLE_PREFIX,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REVISE } from '../../../containers/Annotations/constants/todos'
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Look Back in Anger',
@@ -382,16 +382,15 @@ export default {
                         `You wished a`,
                         {
                             anchor: `cancer nibbled off`,
-                            todo: REVISE,
-                            note: `Make it more about local punks being cooler, and knowing Green Day.`,
+                            todo: REVIEW,
                             card: {
                                 description: [
-                                    `There were a few times when a local punk would tell me how much they related to my songs about unrequited love. This surprised me, given that the punks skewed older, and thus seemed more mature than us scene kids. It made me wonder if`,
+                                    `The local punks, who skewed a bit older than us scene kids, were obviously much cooler as well. Some knew the members of`,
                                     {
-                                        isEmphasis: true,
-                                        lyric: `no one`,
+                                        anchor: `Green Day`,
+                                        wiki: `Green_Day`,
                                     },
-                                    `really knows what they're doing.`,
+                                    `from the beginning. So every now and then, when one would tell me how much they related to my songs about unrequited love and whatnot, I was always flattered, but also quite surprised.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
