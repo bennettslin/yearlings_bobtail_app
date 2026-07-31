@@ -802,7 +802,7 @@ export default {
                             anchor: `partials`,
                             wiki: `Harmonic_series_(music)`,
                         },
-                        `. This took Catherine by genuine surprise, and thus impressed her to no end; I've been working to recapture the glory of that moment ever since.`,
+                        `. This took Catherine by surprise, and thus impressed her to no end; I've been working to recapture the glory of that moment ever since.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,

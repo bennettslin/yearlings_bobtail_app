@@ -16,6 +16,7 @@ import {
     FORESHADOW_OF_WORMHOLE_PREFIX,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
+import { REVISE } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Look Back in Anger',
@@ -381,6 +382,8 @@ export default {
                         `You wished a`,
                         {
                             anchor: `cancer nibbled off`,
+                            todo: REVISE,
+                            note: `Make it more about local punks being cooler, and knowing Green Day.`,
                             card: {
                                 description: [
                                     `There were a few times when a local punk would tell me how much they related to my songs about unrequited love. This surprised me, given that the punks skewed older, and thus seemed more mature than us scene kids. It made me wonder if`,
