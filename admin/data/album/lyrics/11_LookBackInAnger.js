@@ -385,12 +385,12 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `The local punks, who skewed a bit older than us scene kids, were obviously much cooler as well. Some knew the members of`,
+                                    `The local punks, who skewed a bit older than us scene kids, were obviously way cooler as well; some had been friends with`,
                                     {
                                         anchor: `Green Day`,
                                         wiki: `Green_Day`,
                                     },
-                                    `from the beginning. So every now and then, when one would tell me how much they related to my songs about unrequited love and whatnot, I was always flattered, but also quite surprised.`,
+                                    `since the beginning. So every now and then, when one would tell me how much they related to my songs about unrequited love and whatnot, I was always flattered, but also quite surprised.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
