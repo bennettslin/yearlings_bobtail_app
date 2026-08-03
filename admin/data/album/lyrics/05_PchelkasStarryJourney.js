@@ -789,7 +789,7 @@ export default {
                 todo: REVIEW,
                 card: {
                     description: [
-                        `I decided I'd learn to throat sing after my first girlfriend Catherine took me to see a documentary called`,
+                        `I decided I'd learn to throat sing after Catherine, my first crush in college, took me to see a documentary called`,
                         {
                             isItalic: true,
                             lyric: {
@@ -797,12 +797,12 @@ export default {
                                 wiki: `Genghis_Blues`,
                             },
                         },
-                        `. Luckily, I found a book about it in a campus library, so within days I was sounding the main`,
+                        `. Luckily, I found a book on it in a campus library, so within days I was sounding the main`,
                         {
                             anchor: `partials`,
                             wiki: `Harmonic_series_(music)`,
                         },
-                        `. This took Catherine by surprise, and thus impressed her to no end; I've been working to recapture the glory of that moment ever since.`,
+                        `. This took Catherine by surprise, and thus impressed her greatly; she became my first girlfriend shortly after. For better or worse, this has been my standard playbook for winning over a crush ever since.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
