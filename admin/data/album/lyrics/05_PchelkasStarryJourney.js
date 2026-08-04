@@ -789,7 +789,7 @@ export default {
                 todo: REVIEW,
                 card: {
                     description: [
-                        `I decided I'd learn to throat sing after Catherine, my first crush in college, took me to see a documentary called`,
+                        `I decided I'd learn to throat sing after Catherine, my first crush in college, invited me to see a documentary called`,
                         {
                             isItalic: true,
                             lyric: {
@@ -802,7 +802,7 @@ export default {
                             anchor: `partials`,
                             wiki: `Harmonic_series_(music)`,
                         },
-                        `. This took Catherine by surprise, and thus impressed her greatly; she became my first girlfriend shortly after. For better or worse, this has been my standard playbook for winning over a crush ever since.`,
+                        `. This took Catherine by surprise, and thus impressed her greatly; we started dating soon after. I've been following the same playbook to win over any crush ever since.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
