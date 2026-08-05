@@ -797,12 +797,12 @@ export default {
                                 wiki: `Genghis_Blues`,
                             },
                         },
-                        `. Luckily, I found a book on it in a campus library, so within days I was sounding the main`,
+                        `. Luckily, I found a library book explaining the mechanics, so within days I was sounding the main`,
                         {
                             anchor: `partials`,
                             wiki: `Harmonic_series_(music)`,
                         },
-                        `. This took Catherine by surprise, and thus impressed her greatly; we started dating soon after. I've been following the same playbook to win over a crush ever since.`,
+                        `. This took Catherine by total surprise, and thus impressed her to no end; we became an item soon after. I've been following the same playbook to win over every crush ever since.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
