@@ -802,7 +802,7 @@ export default {
                             anchor: `partials`,
                             wiki: `Harmonic_series_(music)`,
                         },
-                        `. This took Catherine by total surprise, and thus impressed her to no end; we became an item soon after. I've been following the same playbook to win over every crush ever since.`,
+                        `. This took Catherine by total surprise, and thus impressed her to no end; we became an item soon after. I've been following the same playbook to win over every crush since.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
