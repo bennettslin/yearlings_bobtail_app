@@ -390,7 +390,7 @@ export default {
                                         anchor: `Green Day`,
                                         wiki: `Green_Day`,
                                     },
-                                    `since the beginning, for example. So every now and then, when one would tell me how much they related to my songs about unrequited love and whatnot, I'd be flattered, but also quite surprised.`,
+                                    `since the beginning, for example. So I was always surprised when, every now and then, one would tell me how much they related to my songs about unrequited love and whatnot. Coming from them, it just meant more somehow.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
