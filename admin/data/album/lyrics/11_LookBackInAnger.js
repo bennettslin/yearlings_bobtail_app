@@ -16,7 +16,6 @@ import {
     FORESHADOW_OF_WORMHOLE_PREFIX,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Look Back in Anger',
@@ -382,7 +381,6 @@ export default {
                         `You wished a`,
                         {
                             anchor: `cancer nibbled off`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `The local punks, who skewed a bit older than us scene kids, were obviously way cooler as well; some had been friends with`,
