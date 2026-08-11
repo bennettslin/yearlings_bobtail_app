@@ -14,7 +14,6 @@ import {
     OUTRO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'On a Golden Cord',
@@ -443,10 +442,9 @@ export default {
                         `past this`,
                         {
                             anchor: `avenue Möbius`,
-                            todo: REVIEW,
                             cards: [
                                 {
-                                    description: `As drunken me ambles along twisting sidewalks, revising the half-truths that once supported his defense, it occurs to him that perhaps there really aren't two sides to this story. Or two sides to his mind…`,
+                                    description: `As drunken me ambles along twisting sidewalks, revisiting the half-truths that once supported his defense, it occurs to him that perhaps there really aren't two sides to this story. Or two sides to his mind…`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                     },
