@@ -1302,7 +1302,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 todo: REVIEW,
                 card: {
-                    description: `Today, my brother lives in his own place with the help of a supported-living agency called Avenues. I recently asked him how old he is; he answered, "Seven."`,
+                    description: `Today, my brother lives in his own place with the help of a supported-living agency called Avenues. When I asked him recently how old he is, he answered, "Seven."`,
                     dotKeys: {
                         [AFTERWORD]: true,
                     },
