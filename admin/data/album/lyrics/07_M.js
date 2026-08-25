@@ -908,12 +908,12 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `It wasn't a mystery, then, how things ended up as they did, because`,
+                                    `It wasn't a mystery, then, how things ended up as they did, since`,
                                     {
                                         isEmphasis: true,
                                         lyric: `nothing`,
                                     },
-                                    `is ever a mystery; at worst, it's a puzzle— and puzzles can be solved. Not only that, it's`,
+                                    `is ever a mystery. At worst, it's a puzzle, and puzzles can be solved. Furthermore, it's`,
                                     {
                                         isEmphasis: true,
                                         lyric: `fun`,
@@ -988,7 +988,7 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `Recognizing my wish to be with someone like Mara, and taking stock of what was needed to fulfill it, I decided to return to what I do best: hole up in seclusion… this time to work on a magnum opus. My next five-year plan would see me write all the lyrics, score all the parts, and perform all the tracks on`,
+                                    `Recognizing my wish to be with someone like Mara, and taking stock of what was needed to fulfill it, I decided to return to what I do best: holing up in seclusion… this time to work on a magnum opus. My next five-year plan would see me write all the lyrics, score all the parts, and perform all the tracks on`,
                                     {
                                         isItalic: true,
                                         lyric: `Bobtail`,
