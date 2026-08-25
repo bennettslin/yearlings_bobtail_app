@@ -913,17 +913,17 @@ export default {
                                         isEmphasis: true,
                                         lyric: `nothing`,
                                     },
-                                    `is ever a mystery. At worst, it's a puzzle, and puzzles can be solved. Furthermore, it's`,
+                                    `is a mystery; at worst, it's only ever a puzzle. And puzzles can be solved! Not only that, it's`,
                                     {
                                         isEmphasis: true,
                                         lyric: `fun`,
                                     },
-                                    `to solve them! I found this thought reassuring, since it meant the Maras of the world`,
+                                    `to solve them. I found this thought reassuring, since it meant the Maras of the world`,
                                     {
                                         isEmphasis: true,
                                         lyric: `weren't`,
                                     },
-                                    `out of reach. I just needed to revise my theories regarding what they wanted, and then build myself up to become exactly that.`,
+                                    `out of reach. I just needed to revise my theories regarding what they wanted— and then build myself up to become exactly that.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -985,7 +985,6 @@ export default {
                                 `'s words`,
                             ],
                             properNoun: true,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `Recognizing my wish to be with someone like Mara, and taking stock of what was needed to fulfill it, I decided to return to what I do best: holing up in seclusion… this time to work on a magnum opus. My next five-year plan would see me write all the lyrics, score all the parts, and perform all the tracks on`,
