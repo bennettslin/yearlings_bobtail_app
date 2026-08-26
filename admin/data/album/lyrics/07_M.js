@@ -804,8 +804,9 @@ export default {
                         `But then I saw the`,
                         {
                             anchor: `world's a naked baby`,
+                            todo: REVIEW,
                             card: {
-                                description: `But at some point, I realized that a social scene isn't any different from the world at large, in that little is hidden from view. That is to say, any situation can be understood by reading everyone else's intentions and observing their actions— much like a holistic picture of the world emerges after reading books on all the important subject matters.`,
+                                description: `But at some point, I began to realize that a social scene is no different from the world at large, in that little is hidden from view. That is to say, any situation can be understood by reading everyone else's intentions and observing their actions— much like a holistic picture of the world emerges after reading books on all the important subject matters.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -908,12 +909,12 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `It wasn't a mystery, then, how things ended up as they did, since`,
+                                    `It wasn't a mystery, then, how things ended up as they did. In fact,`,
                                     {
                                         isEmphasis: true,
                                         lyric: `nothing`,
                                     },
-                                    `is a mystery; at worst, it's only ever a puzzle. And puzzles can be solved! Not only that, it's`,
+                                    `in life is a mystery; at worst, it's only ever a puzzle. And puzzles can be solved! Moreover, it's`,
                                     {
                                         isEmphasis: true,
                                         lyric: `fun`,
