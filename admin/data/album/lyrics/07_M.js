@@ -871,8 +871,9 @@ export default {
                         `is that the`,
                         {
                             anchor: `boy who's to love her baby`,
+                            todo: REVIEW,
                             card: {
-                                description: `Moreover, the world is as unwitting as a newborn infant. So if a woman's list of priorities in a partner includes what kind of father he'll be to her future child, then she's likely to judge him by how he treats the world at large.`,
+                                description: `On top of that, the world is as unwitting as a newborn. So if a woman's list of priorities in a partner includes what kind of father he'll be to her future child, then she's likely to judge him by how he treats the world at large.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -914,17 +915,12 @@ export default {
                                         isEmphasis: true,
                                         lyric: `nothing`,
                                     },
-                                    `in life is a mystery; at worst, it's only ever a puzzle. And puzzles can be solved! Moreover, it's`,
+                                    `in life is a mystery; at worst, it's only ever a puzzle. But puzzles can be solved! Moreover, they're`,
                                     {
                                         isEmphasis: true,
                                         lyric: `fun`,
                                     },
-                                    `to solve them. I found this thought reassuring, since it meant the Maras of the world`,
-                                    {
-                                        isEmphasis: true,
-                                        lyric: `weren't`,
-                                    },
-                                    `out of reach. I just needed to revise my theories regarding what they wanted— and then build myself up to become exactly that.`,
+                                    `to solve— and the puzzle of human nature is no exception.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -936,7 +932,27 @@ export default {
                 },
                 {
                     mixTime: `2:58:02.05`,
-                    lyric: `nothing comes a pure surprise.`,
+                    lyric: [
+                        `nothing comes a`,
+                        {
+                            anchor: `pure surprise`,
+                            todo: REVIEW,
+                            card: {
+                                description: [
+                                    `I found all these thoughts reassuring, since it meant the Maras of the world`,
+                                    {
+                                        isEmphasis: true,
+                                        lyric: `weren't`,
+                                    },
+                                    `out of reach. I just needed to revise my theories regarding what they wanted, and then build myself up to become exactly that.`,
+                                ],
+                                dotKeys: {
+                                    [OBSERVATION]: true,
+                                },
+                            },
+                        },
+                        `.`,
+                    ],
                 },
                 {
                     mixTime: `3:00:15.89`,
