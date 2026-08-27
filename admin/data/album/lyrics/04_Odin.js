@@ -19,6 +19,7 @@ import {
     IS_UNIT_DOT,
     RESPONSE,
 } from '../../../../src/constants/lyrics'
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Odin',
@@ -1339,8 +1340,9 @@ export default {
                         `Can a`,
                         {
                             anchor: `holed up hostage`,
+                            todo: REVIEW,
                             card: {
-                                description: `Yet the thought of being stuck with a soul forever— a fate promised by the faiths of my classmates— seemed no less disturbing.`,
+                                description: `Even so, the thought of being stuck with a soul forever— a fate promised by the faiths of my classmates— seemed no less disturbing.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
