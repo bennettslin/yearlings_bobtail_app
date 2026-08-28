@@ -873,7 +873,7 @@ export default {
                             anchor: `boy who's to love her baby`,
                             todo: REVIEW,
                             card: {
-                                description: `On top of that, the world is as unwitting as a newborn. So if a woman's list of demands in a partner includes what kind of father he'll be to her future child, then she's likely to judge him by how he treats the world at large.`,
+                                description: `On top of that, the world is as unwitting as a newborn. So if a woman's list of priorities in a partner includes what kind of father he'll be to her future child, then she's likely to judge him by how he treats the world at large.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -920,7 +920,7 @@ export default {
                                         isEmphasis: true,
                                         lyric: `fun`,
                                     },
-                                    `to solve— and the puzzle of human nature is no exception.`,
+                                    `to do so— and the puzzle of human nature is no exception.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -939,12 +939,12 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `So I`,
+                                    `So then, I`,
                                     {
                                         isEmphasis: true,
                                         lyric: `didn't`,
                                     },
-                                    `need to fundamentally relearn how to go about things— and thank goodness, since I wouldn't have known where to begin otherwise. All I had to do, then, was revise my theories about what the Maras of the world wanted… and then build myself up to become exactly that.`,
+                                    `need to fundamentally relearn how to go about things— and thank goodness, since I wouldn't have known where to begin if I did. As it was, though, all I had to do was revise my theories about what the Maras of the world wanted… and then build myself up to be just that.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
