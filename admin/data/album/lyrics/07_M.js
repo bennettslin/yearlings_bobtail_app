@@ -804,7 +804,6 @@ export default {
                         `But then I saw the`,
                         {
                             anchor: `world's a naked baby`,
-                            todo: REVIEW,
                             card: {
                                 description: `But at some point, I came to see that a social scene is no different from the world at large, in that little is hidden from view. That is to say, any situation can be understood by reading everyone else's intentions and observing their actions— much like a holistic picture of the world emerges after reading books on all the important subject matters.`,
                                 dotKeys: {
@@ -871,7 +870,6 @@ export default {
                         `is that the`,
                         {
                             anchor: `boy who's to love her baby`,
-                            todo: REVIEW,
                             card: {
                                 description: `On top of that, the world is as unwitting as a newborn. So if a woman's list of priorities in a partner includes what kind of father he'll be to her future child, then she's likely to judge him by how he treats the world at large.`,
                                 dotKeys: {
@@ -915,12 +913,12 @@ export default {
                                         isEmphasis: true,
                                         lyric: `nothing`,
                                     },
-                                    `in life is a mystery; at worst, it's only ever a puzzle. Which can be solved! Moreover, it's`,
+                                    `in life is a mystery; at worst, it's only ever a puzzle. Which can be solved! Moreover, puzzles are`,
                                     {
                                         isEmphasis: true,
                                         lyric: `fun`,
                                     },
-                                    `to do so— and the puzzle of human nature is no exception.`,
+                                    `to solve— and that of human nature is no exception.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
