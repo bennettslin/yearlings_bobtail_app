@@ -939,12 +939,12 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `So then, I`,
+                                    `In other words, I`,
                                     {
                                         isEmphasis: true,
                                         lyric: `didn't`,
                                     },
-                                    `need to fundamentally relearn how to go about things— and thank goodness, since I wouldn't have known where to begin if I did. As it was, though, all I had to do was revise my theories about what the Maras of the world wanted… and then build myself up to be just that.`,
+                                    `need to fundamentally relearn how to go about things— and thank goodness, since I wouldn't have known where to begin if I did. As it was, I just had to revise my theories regarding what the Maras of the world wanted… and then build myself up to become just that.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
