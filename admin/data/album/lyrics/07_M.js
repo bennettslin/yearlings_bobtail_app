@@ -806,7 +806,7 @@ export default {
                             anchor: `world's a naked baby`,
                             todo: REVIEW,
                             card: {
-                                description: `But at some point, I began to realize that a social scene is no different from the world at large, in that little is hidden from view. That is to say, any situation can be understood by reading everyone else's intentions and observing their actions— much like a holistic picture of the world emerges after reading books on all the important subject matters.`,
+                                description: `But at some point, I came to see that a social scene is no different from the world at large, in that little is hidden from view. That is to say, any situation can be understood by reading everyone else's intentions and observing their actions— much like a holistic picture of the world emerges after reading books on all the important subject matters.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -873,7 +873,7 @@ export default {
                             anchor: `boy who's to love her baby`,
                             todo: REVIEW,
                             card: {
-                                description: `On top of that, the world is as unwitting as a newborn. So if a woman's list of priorities in a partner includes what kind of father he'll be to her future child, then she's likely to judge him by how he treats the world at large.`,
+                                description: `On top of that, the world is as unwitting as a newborn. So if a woman's list of demands in a partner includes what kind of father he'll be to her future child, then she's likely to judge him by how he treats the world at large.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                 },
@@ -910,12 +910,12 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `It wasn't a mystery, then, how things ended up as they did. In fact,`,
+                                    `It was no mystery, then, how things ended up as they did. In fact,`,
                                     {
                                         isEmphasis: true,
                                         lyric: `nothing`,
                                     },
-                                    `in life is a mystery; at worst, it's only ever a puzzle. But puzzles can be solved! Moreover, they're`,
+                                    `in life is a mystery; at worst, it's only ever a puzzle. Which can be solved! Moreover, it's`,
                                     {
                                         isEmphasis: true,
                                         lyric: `fun`,
@@ -939,12 +939,12 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `I found all these thoughts reassuring, since it meant the Maras of the world`,
+                                    `So I`,
                                     {
                                         isEmphasis: true,
-                                        lyric: `weren't`,
+                                        lyric: `didn't`,
                                     },
-                                    `out of reach. I just needed to revise my theories regarding what they wanted, and then build myself up to become exactly that.`,
+                                    `need to fundamentally relearn how to go about things— and thank goodness, since I wouldn't have known where to begin otherwise. All I had to do, then, was revise my theories about what the Maras of the world wanted… and then build myself up to become exactly that.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
