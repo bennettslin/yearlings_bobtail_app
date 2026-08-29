@@ -1342,7 +1342,7 @@ export default {
                             anchor: `holed up hostage`,
                             todo: REVIEW,
                             card: {
-                                description: `The one other option, of course, was the fate promised by the faiths of my classmates— namely, to be stuck with a soul forever. And yet… how is this any less disturbing?`,
+                                description: `The one other option, of course, was that promised by the faiths of my classmates— namely, heaven. And yet, how is being stuck with a soul forever any less disturbing?`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
