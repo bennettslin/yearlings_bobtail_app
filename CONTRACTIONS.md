@@ -8,6 +8,7 @@
 * I'd (also he, she, they, who)
 * might've (also would, could, should)
 * means (without that)
+* who's, what's, where's, when's (but not why's or how's)
 
 # Rules
 * Keep "that is to say," as it sounds better, I think

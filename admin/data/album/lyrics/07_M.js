@@ -905,7 +905,6 @@ export default {
                         `it's up to me to`,
                         {
                             anchor: `be alert`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `It was no mystery, then, how things ended up as they did. In fact,`,
@@ -942,7 +941,7 @@ export default {
                                         isEmphasis: true,
                                         lyric: `didn't`,
                                     },
-                                    `need to fundamentally relearn how to go about things— and thank goodness, since I wouldn't have known where to begin if I did. As it was, I just had to revise my theories regarding what the Maras of the world wanted… and then build myself up to become just that.`,
+                                    `need to fundamentally relearn how to go about things— and thank goodness, since I wouldn't have known where to begin if I did. As it was, I just had to revise my theories regarding what the Maras of the world wanted… and then build myself up to be exactly that.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
