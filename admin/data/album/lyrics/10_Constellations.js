@@ -17,7 +17,6 @@ import {
     OUTRO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Constellations!',
@@ -1123,7 +1122,6 @@ export default {
                         {
                             anchor: `Khlmair city Ingcar Wet`,
                             properNoun: true,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `Taking in the "calm air, sitting in the car wet," we guzzle down the remaining Evian bottles that Howie's parents had bought in bulk and left in the trunk.`,

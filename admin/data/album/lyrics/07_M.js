@@ -14,7 +14,6 @@ import {
     FLASHBACK_TO_WORMHOLE_PREFIX,
     FORESHADOW_OF_WORMHOLE_PREFIX,
 } from '../../../../src/constants/lyrics'
-import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'M',
@@ -933,7 +932,6 @@ export default {
                         `nothing comes a`,
                         {
                             anchor: `pure surprise`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `In other words, I`,
