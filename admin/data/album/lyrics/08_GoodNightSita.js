@@ -856,12 +856,12 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `I'd often fantasize about mapping out a vast`,
+                                    `In those days, I'd often fantasize about mapping out a vast`,
                                     {
                                         anchor: `flowchart`,
                                         wiki: `Flowchart`,
                                     },
-                                    `of every possible way a date might unfold. I could then make one optimal decision after another, nudging the events of the evening toward my desired outcome.`,
+                                    `of the myriad ways a date might unfold. I could then make one optimal decision after another, guiding the events of the evening toward my desired outcome.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
