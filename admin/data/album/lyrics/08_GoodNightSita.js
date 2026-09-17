@@ -11,7 +11,6 @@ import {
     POSTCHORUS,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Good Night, Sita',
@@ -853,7 +852,6 @@ export default {
                         `as we wind an`,
                         {
                             anchor: `endless flowchart`,
-                            todo: REVIEW,
                             card: {
                                 description: [
                                     `In those days, I'd often fantasize about mapping out a vast`,
