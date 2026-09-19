@@ -145,7 +145,7 @@ export default getFormattedSlideMetadata({
                     isItalic: true,
                     lyric: `Yearling's Bobtail`,
                 },
-                `; the "demo that can't be refused" was now an oxymoron.`,
+                `; the very idea of a "demo that can't be refused" was now an oxymoron.`,
             ],
         },
         {
