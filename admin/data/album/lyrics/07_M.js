@@ -14,6 +14,7 @@ import {
     FLASHBACK_TO_WORMHOLE_PREFIX,
     FORESHADOW_OF_WORMHOLE_PREFIX,
 } from '../../../../src/constants/lyrics'
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'M',
@@ -904,6 +905,7 @@ export default {
                         `it's up to me to`,
                         {
                             anchor: `be alert`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `It was no mystery, then, how things ended up as they did. In fact,`,
@@ -911,12 +913,12 @@ export default {
                                         isEmphasis: true,
                                         lyric: `nothing`,
                                     },
-                                    `in life is a mystery; at worst, it's only ever a puzzle. Which can be solved! Moreover, puzzles are`,
+                                    `in life is a mystery; at worst, it's only ever a puzzle. But puzzles can be solved! Moreover, they're`,
                                     {
                                         isEmphasis: true,
                                         lyric: `fun`,
                                     },
-                                    `to solve— and that of human nature is no exception.`,
+                                    `to solve— and the puzzle of human nature is no exception.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
