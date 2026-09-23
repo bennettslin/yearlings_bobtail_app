@@ -908,7 +908,7 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `It was no mystery, then, how things ended up as they did. In fact,`,
+                                    `It wasn't a mystery, then, how things ended up as they did. In fact,`,
                                     {
                                         isEmphasis: true,
                                         lyric: `nothing`,
