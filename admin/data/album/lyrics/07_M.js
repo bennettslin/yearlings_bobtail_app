@@ -913,7 +913,7 @@ export default {
                                         isEmphasis: true,
                                         lyric: `nothing`,
                                     },
-                                    `in life is a mystery; at worst, it's only ever a puzzle. But puzzles can be solved! Moreover, they're`,
+                                    `in life is a mystery; at worst, it's only ever a puzzle. Yet puzzles can be solved! Moreover, they're`,
                                     {
                                         isEmphasis: true,
                                         lyric: `fun`,
