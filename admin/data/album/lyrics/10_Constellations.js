@@ -17,6 +17,7 @@ import {
     OUTRO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Constellations!',
@@ -533,6 +534,7 @@ export default {
                         },
                         {
                             anchor: `psealed off drains`,
+                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `The entrance to the steam tunnels is hidden "among old, sealed-off drains."`,
@@ -553,7 +555,7 @@ export default {
                                             anchor: `crystal meth`,
                                             wiki: `Methamphetamine`,
                                         },
-                                        `, it's no longer included in over-the-counter medicines.`,
+                                        `, it's no longer included in over-the-counter medication.`,
                                     ],
                                     dotKeys: {
                                         [PUN]: true,
