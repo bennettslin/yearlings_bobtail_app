@@ -16,7 +16,6 @@ import {
     OUTRO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
-import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Garryowen',
@@ -515,7 +514,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: REVIEW,
                 card: {
                     description: [
                         `Though I'd played violin for ten years as a child, my skills were rusty by the time I made this album. Rather than get up to speed through intense practice, I created the fiddle parts by recording one fragment at a time, then splicing those takes together. To make up for my cop-out, I threw in a complicated`,
