@@ -29,21 +29,21 @@
      * I'm baffled why padding-right can't just be applied to the scroll parent
      * itself here, the way padding-left can. But whatever, this works.
      */
-    // &:after {
-    //     content: '';
-    // }
+    &:after {
+        content: '';
+    }
 
-    // .DW__monitorWidth
-    // &:after {
-    //     padding-right:
-    //         $WIDTH_GOLDEN_CORD;
-    // }
+    .DW__monitorWidth
+    &:after {
+        padding-right:
+            $WIDTH_GOLDEN_CORD;
+    }
 
-    // .DW__laptopWidth
-    // &:after {
-    //     padding-right:
-    //         $WIDTH_UNCANNY_VALLEY;
-    // }
+    .DW__laptopWidth
+    &:after {
+        padding-right:
+            $WIDTH_UNCANNY_VALLEY;
+    }
 
     /**
     * These constants are used only to determine carousel right side margin in
