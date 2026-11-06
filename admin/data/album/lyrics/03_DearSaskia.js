@@ -13,6 +13,7 @@ import {
     REFRAIN,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Dear Saskia',
@@ -780,19 +781,20 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
                     description: [
-                        `After sending out demo copies of`,
+                        `After mailing out demos of`,
                         {
                             isItalic: true,
                             lyric: `Yearling's Bobtail`,
                         },
-                        `, I was confused by the lack of interest from the indie labels and press. So I wrote`,
+                        `, I was baffled by the lack of interest from the indie labels and press. So I wrote`,
                         {
                             isItalic: true,
                             lyric: `Bobtail Method`,
                         },
-                        `— a songwriting book that distills all the wisdom I'd gathered over the years from studying the Beatles— in the hope that this would finally get me taken seriously. Unfortunately, it was met with the same radio silence.`,
+                        `— a songwriting book that distills all the wisdom I'd gathered over the years from studying the Beatles— in the hope that this would finally get me taken seriously. Sadly, it was met with the same radio silence.`,
                     ],
                     dotKeys: {
                         [AFTERWORD]: true,
