@@ -794,7 +794,7 @@ export default {
                             isItalic: true,
                             lyric: `Bobtail Method`,
                         },
-                        `— a songwriting book that distills all the wisdom I'd gathered over the years from studying the Beatles— in the hope that this would finally get me taken seriously. Sadly, it was met with the same radio silence.`,
+                        `— a songwriting book that distills all the wisdom I'd gathered over the years from studying the Beatles— in hopes of finally getting taken seriously. Sadly, it was met with the same radio silence.`,
                     ],
                     dotKeys: {
                         [AFTERWORD]: true,
