@@ -17,6 +17,7 @@ import {
     OUTRO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Constellations!',
@@ -755,6 +756,7 @@ export default {
                         `of`,
                         {
                             anchor: `avatars`,
+                            todo: REVIEW,
                             card: {
                                 description: [
                                     `In Hinduism,`,
@@ -762,7 +764,7 @@ export default {
                                         anchor: `avatars`,
                                         wiki: `Avatar`,
                                     },
-                                    `are earthly incarnations of a major deity. Some are believed to have been folk heroes whose exploits predate written tradition.`,
+                                    `are earthly incarnations of a major deity, with some believed to have been folk heroes whose exploits predate written tradition. The word wasn't widely known when I wrote this, as weird as that might seem.`,
                                 ],
                             },
                         },
