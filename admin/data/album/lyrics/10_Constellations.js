@@ -764,7 +764,7 @@ export default {
                                         anchor: `avatars`,
                                         wiki: `Avatar`,
                                     },
-                                    `are earthly incarnations of a major deity, with some believed to have been folk heroes whose exploits predated written tradition. As weird as it sounds now, the word wasn't widely known when I wrote this.`,
+                                    `are earthly incarnations of a major deity, with some believed to have been folk heroes whose exploits predated written tradition. As weird as it seems now, the word wasn't widely known when I wrote this.`,
                                 ],
                             },
                         },
