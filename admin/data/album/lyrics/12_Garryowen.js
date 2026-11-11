@@ -16,6 +16,7 @@ import {
     OUTRO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Garryowen',
@@ -857,6 +858,7 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: REVIEW,
                 card: {
                     description: [
                         `After`,
@@ -864,7 +866,7 @@ export default {
                             isItalic: true,
                             lyric: `Yearling's Bobtail`,
                         },
-                        `was rejected by every last indie label, I got so depressed that I went on a months-long bender. Before long, I needed a box of wine by my bedside to calm my nerves at night. One day upon skipping my morning beers, I sensed my bedroom walls conspiring to attack me— a warning sign of`,
+                        `was rejected by every last indie label, I got so depressed that I went on a months-long bender. Before long, I needed a box of wine by my bedside to calm my nerves at night. One day, upon skipping my morning beers, I sensed my bedroom walls conspiring to attack me— a warning sign of`,
                         {
                             anchor: `delirium tremens`,
                             wiki: `Delirium_tremens`,
