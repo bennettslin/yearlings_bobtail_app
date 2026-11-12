@@ -759,12 +759,11 @@ export default {
                             todo: REVIEW,
                             card: {
                                 description: [
-                                    `In Hinduism,`,
                                     {
-                                        anchor: `avatars`,
+                                        anchor: `Avatars`,
                                         wiki: `Avatar`,
                                     },
-                                    `are earthly incarnations of a major deity, with some believed to have been folk heroes whose exploits predated written tradition. As weird as it seems now, the word wasn't well known when I wrote this song.`,
+                                    `are the earthly incarnations of a Hindu deity, with some believed to have been folk heroes whose exploits predated written tradition. As weird as it might seem now, the word wasn't widely known when I wrote this song.`,
                                 ],
                             },
                         },
