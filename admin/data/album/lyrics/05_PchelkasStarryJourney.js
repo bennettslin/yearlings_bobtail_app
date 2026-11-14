@@ -797,7 +797,7 @@ export default {
                                 wiki: `Genghis_Blues`,
                             },
                         },
-                        `. Luckily, I found a library book explaining the mechanics, so within days I was sounding the main`,
+                        `. Fortunately, I found a website explaining the mechanics, so within days I was sounding the main`,
                         {
                             anchor: `partials`,
                             wiki: `Harmonic_series_(music)`,
