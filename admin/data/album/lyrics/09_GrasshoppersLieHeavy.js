@@ -17,6 +17,7 @@ import {
     SOLO,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'Grasshoppers Lie Heavy',
@@ -358,21 +359,26 @@ export default {
                     mixTime: `0:45:18.00`,
                     lyric: [
                         {
-                            anchor: `Schwa stickers`,
+                            anchor: `Schwa`,
                             properNoun: true,
-                            cards: [
-                                {
-                                    description: [
-                                        {
-                                            anchor: `Schwa`,
-                                            wiki: `Schwa_(art)`,
-                                        },
-                                        `is the underground artwork of Bill Barker. In the '90s, stickers of his alien heads were stuck on newspaper racks and street signs everywhere. Truth be told, it was all a mystery to me; the Internet didn't explain most things back then, and I wasn't in the habit of checking if it did.`,
-                                    ],
-                                    dotKeys: {
-                                        [BACKSTORY]: true,
+                            todo: REVIEW,
+                            card: {
+                                description: [
+                                    {
+                                        anchor: `Schwa`,
+                                        wiki: `Schwa_(art)`,
                                     },
+                                    `is the underground artwork of Bill Barker. In the '90s, stickers of his alien heads were stuck on newspaper racks and street signs everywhere. Truth be told, it was all a mystery to me; the Internet didn't explain most things back then, and I wasn't in the habit of checking if it did.`,
+                                ],
+                                dotKeys: {
+                                    [BACKSTORY]: true,
                                 },
+                            },
+                        },
+                        {
+                            anchor: `stickers attached`,
+                            todo: REVIEW,
+                            cards: [
                                 {
                                     description: `Affixed to my belongings are a few whimsical art stickers, reassuring Sita that I'm unlikely to be sketchy.`,
                                     dotKeys: {
@@ -384,16 +390,21 @@ export default {
                                 },
                             ],
                         },
-                        `attached to your`,
+                        `to`,
                         {
-                            anchor: `sci-fi paperback`,
-                            cards: [
-                                {
-                                    description: `In my downtime between classes, I'd find a campus bench to sit and read for pleasure, hoping to be seen; it was a great way to start conversations with acquaintances and mild crushes who'd happen to pass by. Although, given my obsession at the time with Dick's stories of altered states and dystopian futures, I can't be sure in retrospect what kind of impression I left.`,
-                                    dotKeys: {
-                                        [BACKSTORY]: true,
-                                    },
+                            anchor: `your sci-fi`,
+                            todo: REVIEW,
+                            card: {
+                                description: `In my downtime between classes, I'd find a campus bench to sit and read for pleasure, hoping to be seen; it was a great way to start conversations with acquaintances and mild crushes who'd happen to pass by. Although, given my obsession at the time with Dick's stories of altered states and dystopian futures, I can't be sure in retrospect what kind of impression I left.`,
+                                dotKeys: {
+                                    [BACKSTORY]: true,
                                 },
+                            },
+                        },
+                        {
+                            anchor: `paperback`,
+                            todo: REVIEW,
+                            cards: [
                                 {
                                     description: `As we chat, Sita asks about the Dick novel I've just been reading. My impassioned response convinces her I might be a fun date after all.`,
                                     dotKeys: {
