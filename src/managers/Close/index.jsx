@@ -61,6 +61,7 @@ const CloseHandler = forwardRef((props, ref) => {
     const closeJustTopmost = ({
         exemptAudioOptions,
         exemptAbout,
+        exemptDots,
         exemptPromo,
         exemptScore,
         exemptWiki,
@@ -69,6 +70,9 @@ const CloseHandler = forwardRef((props, ref) => {
         // Close or collapse just one and do nothing else.
         if (!exemptAudioOptions && isAudioOptionsExpanded) {
             dispatch(updateIsAudioOptionsExpanded())
+
+        } else if (!exemptDots && isDotsSlideShown) {
+            dispatch(updateIsDotsSlideShown())
 
         } else if (!exemptWiki && isWikiShown) {
             dispatch(updateWikiIndices())
@@ -92,7 +96,6 @@ const CloseHandler = forwardRef((props, ref) => {
     const closeMainSections = ({
         exemptAnnotation,
         exemptCarousel = true, // Only body click closes carousel.
-        exemptDots,
         exemptLyric,
         exemptNav,
         exemptOverview,
@@ -106,10 +109,6 @@ const CloseHandler = forwardRef((props, ref) => {
 
         if (!exemptCarousel && isCarouselExpanded) {
             dispatch(updateIsCarouselExpanded())
-        }
-
-        if (!exemptDots && isDotsSlideShown) {
-            dispatch(updateIsDotsSlideShown())
         }
 
         if (!exemptLyric && isLyricExpanded) {
@@ -154,10 +153,9 @@ const CloseHandler = forwardRef((props, ref) => {
     useEffect(() => {
         if (didMount) {
             if (isCarouselExpanded) {
-                closeJustTopmost()
+                closeJustTopmost({ exemptDots: true })
                 closeMainSections({
                     exemptAnnotation: true,
-                    exemptDots: true,
 
                     /**
                      * Doesn't actually matter, since carousel can only expand
@@ -173,10 +171,8 @@ const CloseHandler = forwardRef((props, ref) => {
 
     useEffect(() => {
         if (isDotsSlideShown) {
-            closeJustTopmost()
-            closeMainSections({
-                exemptDots: true,
-            })
+            closeJustTopmost({ exemptDots: true })
+            closeMainSections()
         }
     }, [isDotsSlideShown])
 
