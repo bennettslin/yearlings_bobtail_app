@@ -10,7 +10,6 @@ export const getToggleDefaults = isPromoPage => ({
 
     ...!isPromoPage && {
         isAboutShown: false,
-        isAudioOptionsExpanded: false,
         isAutoScroll: true,
         isCarouselExpanded: IS_STORED_CAROUSEL_EXPANDED,
         isNavExpanded: false,

@@ -18,13 +18,11 @@ export const getToggleReducer = ({ isPromoPage = false } = {}) => (
             const
                 {
                     toggledIsAboutShown,
-                    toggledIsAudioOptionsExpanded,
                     toggledIsPromoShown,
                     ...remainingPayload
                 } = payload,
                 {
                     isAboutShown: prevAboutShown,
-                    isAudioOptionsExpanded: prevIsAudioOptionsExpanded,
                     isPromoShown: prevIsPromoShown,
                 } = state
             return {
@@ -32,9 +30,6 @@ export const getToggleReducer = ({ isPromoPage = false } = {}) => (
                 ...remainingPayload,
                 ...hasKey(toggledIsAboutShown) && {
                     isAboutShown: !prevAboutShown,
-                },
-                ...hasKey(toggledIsAudioOptionsExpanded) && {
-                    isAudioOptionsExpanded: !prevIsAudioOptionsExpanded,
                 },
                 ...hasKey(toggledIsPromoShown) && {
                     isPromoShown: !prevIsPromoShown,

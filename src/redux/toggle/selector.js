@@ -42,10 +42,6 @@ export const mapIsAboutShown = (
     { [TOGGLE_STORE]: { isAboutShown } },
 ) => isAboutShown
 
-export const mapIsAudioOptionsExpanded = (
-    { [TOGGLE_STORE]: { isAudioOptionsExpanded } },
-) => isAudioOptionsExpanded
-
 export const mapIsTextJustified = (
     { [TOGGLE_STORE]: { isTextJustified } },
 ) => isTextJustified

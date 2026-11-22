@@ -13,7 +13,6 @@ import {
 } from '../../redux/selected/action'
 import {
     updateIsAboutShown,
-    updateIsAudioOptionsExpanded,
     updateIsCarouselExpanded,
     updateIsDotsSlideShown,
     updateIsLyricExpanded,
@@ -28,7 +27,6 @@ import { mapIsSliderMoving } from '../../redux/slider/selector'
 import { mapIsTipsShown } from '../../redux/tips/selector'
 import {
     mapIsAboutShown,
-    mapIsAudioOptionsExpanded,
     mapIsCarouselExpanded,
     mapIsDotsSlideShown,
     mapIsLyricExpanded,
@@ -45,7 +43,6 @@ const CloseHandler = forwardRef((props, ref) => {
         isAboutShown = useSelector(mapIsAboutShown),
         isActivated = useSelector(mapIsActivated),
         isAnnotationShown = useSelector(mapIsAnnotationShown),
-        isAudioOptionsExpanded = useSelector(mapIsAudioOptionsExpanded),
         isCarouselExpanded = useSelector(mapIsCarouselExpanded),
         isDotsSlideShown = useSelector(mapIsDotsSlideShown),
         isLyricExpanded = useSelector(mapIsLyricExpanded),
@@ -59,7 +56,6 @@ const CloseHandler = forwardRef((props, ref) => {
         [didMount, setDidMount] = useState(false)
 
     const closeJustTopmost = ({
-        exemptAudioOptions,
         exemptAbout,
         exemptDots,
         exemptPromo,
@@ -68,10 +64,7 @@ const CloseHandler = forwardRef((props, ref) => {
 
     } = {}) => {
         // Close or collapse just one and do nothing else.
-        if (!exemptAudioOptions && isAudioOptionsExpanded) {
-            dispatch(updateIsAudioOptionsExpanded())
-
-        } else if (!exemptDots && isDotsSlideShown) {
+        if (!exemptDots && isDotsSlideShown) {
             dispatch(updateIsDotsSlideShown())
 
         } else if (!exemptWiki && isWikiShown) {

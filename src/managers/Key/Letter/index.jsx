@@ -22,7 +22,6 @@ import {
 import {
     toggleIsAboutShown,
     updateIsAboutShown,
-    updateIsAudioOptionsExpanded,
     updateIsAutoScroll,
     updateIsCarouselExpanded,
     updateIsNavExpanded,
@@ -63,7 +62,6 @@ import { mapIsAnnotationShown } from '../../../redux/selected/selector'
 import { mapIsTipsShown } from '../../../redux/tips/selector'
 import {
     mapIsAboutShown,
-    mapIsAudioOptionsExpanded,
     mapIsCarouselExpanded,
     mapIsDotsSlideShown,
     mapIsLyricExpanded,
@@ -93,7 +91,6 @@ const LetterManager = forwardRef((props, ref) => {
         dispatchTextJustified = useRef(),
         isAboutShown = useSelector(mapIsAboutShown),
         isAnnotationShown = useSelector(mapIsAnnotationShown),
-        isAudioOptionsExpanded = useSelector(mapIsAudioOptionsExpanded),
         isCarouselExpanded = useSelector(mapIsCarouselExpanded),
         isDotsSlideShown = useSelector(mapIsDotsSlideShown),
         isLyricExpanded = useSelector(mapIsLyricExpanded),
@@ -199,12 +196,8 @@ const LetterManager = forwardRef((props, ref) => {
     }
 
     const handleEscape = () => {
-        // Audio options.
-        if (isAudioOptionsExpanded) {
-            dispatch(updateIsAudioOptionsExpanded())
-
         // Close score popup.
-        } else if (isScoreShown) {
+        if (isScoreShown) {
             dispatchScore.current(false)
 
         // Close about popup.
