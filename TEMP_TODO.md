@@ -30,7 +30,6 @@
 
 # Annotation edit TODO:
 * Willy sparkles?
-* Carpenters thing?
 * Golden Cord Bungalow Bill?
 * Establish what exactly makes for a narrative, backstory, and observation.
 * Make sure backstory and narrative tenses are correct.
