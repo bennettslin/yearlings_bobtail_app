@@ -368,7 +368,7 @@ export default {
                                         anchor: `Schwa`,
                                         wiki: `Schwa_(art)`,
                                     },
-                                    `is the underground artwork of Bill Barker. In the '90s, stickers of his alien heads were stuck on newspaper racks and street signs everywhere. Truth be told, it was all a mystery to me; the Internet didn't explain most things back then, and I wasn't in the habit of checking if it did.`,
+                                    `is the underground artwork of Bill Barker. In the '90s, stickers of his alien heads were stuck to newspaper racks and street signs everywhere. Truth be told, it was all a mystery to me; the Internet didn't explain most things back then, and I wasn't in the habit of checking if it did.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -377,7 +377,6 @@ export default {
                         },
                         {
                             anchor: `stickers attached`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `Affixed to my belongings are a few whimsical art stickers, reassuring Sita that I'm unlikely to be sketchy.`,
@@ -393,7 +392,6 @@ export default {
                         `to`,
                         {
                             anchor: `your sci-fi`,
-                            todo: REVIEW,
                             card: {
                                 description: `In my downtime between classes, I'd find a campus bench to sit and read for pleasure, hoping to be seen; it was a great way to start conversations with acquaintances and mild crushes who'd happen to pass by. Although, given my obsession at the time with Dick's stories of altered states and dystopian futures, I can't be sure in retrospect what kind of impression I left.`,
                                 dotKeys: {
@@ -403,7 +401,6 @@ export default {
                         },
                         {
                             anchor: `paperback`,
-                            todo: REVIEW,
                             cards: [
                                 {
                                     description: `As we chat, Sita asks about the Dick novel I've just been reading. My impassioned response convinces her I might be a fun date after all.`,
