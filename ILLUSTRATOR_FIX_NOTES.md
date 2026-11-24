@@ -1,4 +1,5 @@
 # General fixes
+* Make Catherine puzzled foot perspective more realistic
 
 ## General consideration
 * Make constellation and sketch eyes more expressive, like other bubbles
