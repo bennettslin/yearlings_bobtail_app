@@ -1,6 +1,7 @@
 import {
     CARDBOARD,
     FIXTURE,
+    FLAT,
     PANEL,
     PUPPET,
 } from '../../../../../src/constants/scene/things'
@@ -12,6 +13,7 @@ import {
 import {
     RECORDING_MIC, WINE_BOTTLE,
 } from '../../../../../src/constants/scene/things/fixtures'
+import { SNOWGLOBE_FUTURE_LEFT, SNOWGLOBE_FUTURE_RIGHT } from '../../../../../src/constants/scene/things/flats'
 import {
     SNOWGLOBE_FUTURE__LIZ,
     SNOWGLOBE_FUTURE__BENNETT,
@@ -50,6 +52,16 @@ export default {
         [WINE_BOTTLE]: {
             yIndex: 1,
             xPosition: 7.3,
+        },
+    },
+    [FLAT]: {
+        [SNOWGLOBE_FUTURE_LEFT]: {
+            yIndex: -1,
+            xPosition: 0,
+        },
+        [SNOWGLOBE_FUTURE_RIGHT]: {
+            yIndex: -1,
+            xPosition: 10.5,
         },
     },
     [PANEL]: {

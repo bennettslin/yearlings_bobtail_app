@@ -1,6 +1,7 @@
 import {
     CARDBOARD,
     FIXTURE,
+    FLAT,
     PANEL,
 } from '../../../../../src/constants/scene/things'
 import {
@@ -8,6 +9,7 @@ import {
     SNOWGLOBE_LEAVING_CRUMBLED,
 } from '../../../../../src/constants/scene/things/cardboards'
 import { HEINEKEN_PACK, HEINEKEN__BENNETT } from '../../../../../src/constants/scene/things/fixtures'
+import { SNOWGLOBE_PRESENT_LEFT, SNOWGLOBE_PRESENT_RIGHT } from '../../../../../src/constants/scene/things/flats'
 import {
     SNOWGLOBE_PRESENT__LIZ,
     SNOWGLOBE_PRESENT__BENNETT,
@@ -43,6 +45,16 @@ export default {
             yIndex: 3,
             xPosition: 7,
             zOffset: -0.03,
+        },
+    },
+    [FLAT]: {
+        [SNOWGLOBE_PRESENT_LEFT]: {
+            yIndex: -1,
+            xPosition: 0,
+        },
+        [SNOWGLOBE_PRESENT_RIGHT]: {
+            yIndex: -1,
+            xPosition: 10.5,
         },
     },
     [PANEL]: {

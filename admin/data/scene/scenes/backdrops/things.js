@@ -45,12 +45,15 @@ export default {
         },
         [OCEAN_DEPTHS_VOLCANOES]: {},
         [OCEAN_FLOOR_VOLCANOES]: {},
-        [ROAD_FUTURE]: {},
+        [ROAD_FUTURE]: {
+            yIndex: 0,
+        },
         [ROAD_PAST]: {
             yIndex: 0,
             xPosition: 5.6,
         },
         [ROAD_PRESENT]: {
+            yIndex: 0,
             xPosition: 5.3,
         },
         [SHORE_BUOY_BACKDROP]: {},

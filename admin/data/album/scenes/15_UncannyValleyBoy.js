@@ -5,6 +5,7 @@ import {
     CUTOUT,
     DOOR,
     FIXTURE,
+    FLAT,
     FURNITURE,
     PANEL,
     PUPPET,
@@ -99,6 +100,14 @@ import {
     TETHERBALL_POLE,
     WINE_BOTTLE,
 } from '../../../../src/constants/scene/things/fixtures'
+import {
+    SNOWGLOBE_FUTURE_LEFT,
+    SNOWGLOBE_FUTURE_RIGHT,
+    SNOWGLOBE_PAST_LEFT,
+    SNOWGLOBE_PAST_RIGHT,
+    SNOWGLOBE_PRESENT_LEFT,
+    SNOWGLOBE_PRESENT_RIGHT,
+} from '../../../../src/constants/scene/things/flats'
 import { BENNETT_PILLOW__BED } from '../../../../src/constants/scene/things/furnitures'
 import {
     SNOWGLOBE_PAST,
@@ -220,6 +229,10 @@ export default [
             [FIXTURE]: {
                 [TETHERBALL_POLE]: true,
             },
+            [FLAT]: {
+                [SNOWGLOBE_PAST_LEFT]: true,
+                [SNOWGLOBE_PAST_RIGHT]: true,
+            },
             [PANEL]: {
                 [SNOWGLOBE_PAST]: true,
             },
@@ -261,6 +274,10 @@ export default [
             [FIXTURE]: {
                 [HEINEKEN__BENNETT]: true,
                 [HEINEKEN_PACK]: true,
+            },
+            [FLAT]: {
+                [SNOWGLOBE_PRESENT_LEFT]: true,
+                [SNOWGLOBE_PRESENT_RIGHT]: true,
             },
             [PANEL]: {
                 [SNOWGLOBE_PRESENT__LIZ]: true,
@@ -313,6 +330,10 @@ export default [
             [FIXTURE]: {
                 [RECORDING_MIC]: true,
                 [WINE_BOTTLE]: true,
+            },
+            [FLAT]: {
+                [SNOWGLOBE_FUTURE_LEFT]: true,
+                [SNOWGLOBE_FUTURE_RIGHT]: true,
             },
             [PANEL]: {
                 [SNOWGLOBE_FUTURE__LIZ]: true,

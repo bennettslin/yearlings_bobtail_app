@@ -1,6 +1,7 @@
 import {
     CARDBOARD,
     FIXTURE,
+    FLAT,
     PANEL,
 } from '../../../../../src/constants/scene/things'
 import {
@@ -8,6 +9,7 @@ import {
     SNOWGLOBE_ENRAGED_SOBBING,
 } from '../../../../../src/constants/scene/things/cardboards'
 import { TETHERBALL_POLE } from '../../../../../src/constants/scene/things/fixtures'
+import { SNOWGLOBE_PAST_LEFT, SNOWGLOBE_PAST_RIGHT } from '../../../../../src/constants/scene/things/flats'
 import { SNOWGLOBE_PAST } from '../../../../../src/constants/scene/things/panels'
 
 export default {
@@ -28,6 +30,16 @@ export default {
     [FIXTURE]: {
         [TETHERBALL_POLE]: {
             yIndex: 3,
+        },
+    },
+    [FLAT]: {
+        [SNOWGLOBE_PAST_LEFT]: {
+            yIndex: -1,
+            xPosition: 0,
+        },
+        [SNOWGLOBE_PAST_RIGHT]: {
+            yIndex: -1,
+            xPosition: 10.5,
         },
     },
     [PANEL]: {
