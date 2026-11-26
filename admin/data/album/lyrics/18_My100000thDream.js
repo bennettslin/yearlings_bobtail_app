@@ -14,6 +14,7 @@ import {
     FORESHADOW_OF_WORMHOLE_PREFIX,
     IS_UNIT_DOT,
 } from '../../../../src/constants/lyrics'
+import { REVIEW } from '../../../containers/Annotations/constants/todos'
 
 export default {
     title: 'My 100,000th Dream',
@@ -497,8 +498,9 @@ export default {
                     lyric: [
                         {
                             anchor: `When you'll be mine`,
+                            todo: REVIEW,
                             card: {
-                                description: `If this is just a dream, then what I'm holding onto isn't really Sita, but only a memory of her. And if all I have left is a memory, then somewhere along the way I must've lost the real Sita. So now as I exit this world, I carry the hope that I might find her again in the next.`,
+                                description: `If this is just a dream, then what I'm holding onto isn't really Sita, but only a memory of her. And if all I have left is a memory, then somewhere along the way I must've lost the real Sita. So now, as I exit this world, I carry the hope that I might find her again in the next.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
