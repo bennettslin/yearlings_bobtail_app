@@ -4,7 +4,6 @@ The BYCombo website links to these annotations.
 
 * Willy
     * 4
-    * 40
     * 45
 * Odin
     * 7
